@@ -46,12 +46,13 @@ Long-term goals that span several phases.
 | A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) | ⬜ Not started |
 | Move the server to the AI server (container, automated backups, snapshot analysis) | [plans/server-migration.md](plans/server-migration.md) | ⬜ Not started |
 | Live API: tokenized connection from the server to Grok Bot | [plans/live-api.md](plans/live-api.md) | ⬜ Not started |
+| In-game chat assistant: ask "where is the nearest pig" and the local LLM answers privately, using read-only game tools | [plans/chat-assistant.md](plans/chat-assistant.md) | ⬜ Not started |
 
 ## Repo map
 
 | Folder | What's in it |
 | --- | --- |
-| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md) and [stages](plans/storage-stages.md)), [building goals](plans/building-goals.md), [happy ghast](plans/happy-ghast.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), and [live API](plans/live-api.md) |
+| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md) and [stages](plans/storage-stages.md)), [building goals](plans/building-goals.md), [happy ghast](plans/happy-ghast.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), [live API](plans/live-api.md), and [chat assistant](plans/chat-assistant.md) |
 | [`progress/`](progress/) | [Phase tracker](progress/tracker.md), the [session log](progress/session-log.md), and the [session plan](progress/session-plan.md) for Sessions 2–6 |
 | [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [what's new (2-year catch-up)](notes/whats-new.md) |
 | [`templates/`](templates/) | Copy-paste templates for a [session log entry](templates/session-log-entry.md) and a [build/project](templates/build-project.md) |

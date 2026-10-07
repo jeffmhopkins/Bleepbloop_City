@@ -23,6 +23,7 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 - [Flying machine](flying-machine.md): an end-game redstone build that moves itself.
 - [Server migration](server-migration.md): move the Bedrock Dedicated Server to a container on the Linux AI server, with automated backups and world snapshots for analysis.
 - [Live API](live-api.md): a behavior pack + small web service with token auth, so Grok Bot can read live server data.
+- [Chat assistant](chat-assistant.md): an in-game `/ask` command that sends plain-English questions ("where is the nearest pig") to the local LLM, which answers privately using read-only game tools. Shares the Live API pack and service.
 
 ## Supporting plans
 

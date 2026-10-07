@@ -31,6 +31,7 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
 | [Server migration to the AI server](../plans/server-migration.md) | ⬜ Not started | | | Container + backups + snapshots |
 | [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first |
+| [In-game chat assistant](../plans/chat-assistant.md) | ⬜ Not started | | | Needs migration first; shares the Live API pack |
 
 ## Building goals
 
