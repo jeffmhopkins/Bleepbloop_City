@@ -478,6 +478,7 @@ Running total once Stage 5 is done: **113 DC-eq, 87 filter slices.**
 ## 5. Technical references
 
 - Bedrock WIKI: [Chest Halls](https://bedrockwiki.com/books/storage-tech/page/chest-halls), [Stackable Sorting](https://bedrockwiki.com/books/storage-tech/page/stackable-sorting), [Item Streams](https://bedrockwiki.com/books/storage-tech/page/item-streams), [Types of Input](https://bedrockwiki.com/books/storage-tech/page/types-of-input), [Box unloaders](https://bedrockwiki.com/books/storage-tech/page/box-unloaders)
+- Always loaded: [Server config: ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter). Every input and output link has to be inside the ticking area, or items freeze at the edge.
 - Minecraft Wiki: [Tutorial: Hopper](https://minecraft.wiki/w/Tutorial:Hopper) (Bedrock sorter notes, brewing-stand potion filter), [Copper Golem](https://minecraft.wiki/w/Copper_Golem)
 - Golem module designs (editions mostly not stated; test one on our server first):
   - [9 + 1 module (r/technicalminecraft)](https://www.reddit.com/r/technicalminecraft/comments/1r1jpfa/copper_golem_item_sorter_help/)

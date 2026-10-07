@@ -16,7 +16,7 @@
 
 ### 2. Automatic or semi-auto farms
 - [ ] Sugar cane farm
-- [ ] Iron farm
+- [ ] Iron farm (near the sorter, in the [ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter); golems still need a player nearby)
 - [ ] A simple mob grinder, or a spawner farm if you found a spawner
 
 ### 3. Nether
