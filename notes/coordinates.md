@@ -8,7 +8,7 @@ Write locations down the moment you find them. Dimension is Overworld, Nether, o
 
 | Name | Dimension | X | Y | Z | Notes |
 | --- | --- | --- | --- | --- | --- |
-| World spawn | Overworld | | | | |
+| World spawn | Overworld | | | | Big mountain in the distance comes down to cherry trees, then a normal biome; big caves and ocean nearby. Home base planned here. |
 | First bed | Overworld | | | | |
 | Starter outpost | Overworld | | | | |
 | Real base | Overworld | | | | Planned near world spawn |

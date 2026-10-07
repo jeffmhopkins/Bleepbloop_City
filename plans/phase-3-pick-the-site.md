@@ -12,10 +12,10 @@ Walk until you find most of these within a couple of minutes of each other.
 
 - [ ] Flat or gently sloped ground, not a swamp or a dark forest
 - [ ] A village, or at least a plains/meadow/river edge (villagers become your trading hall later)
-- [ ] Surface water
-- [ ] A cave entrance or a ravine
-- [ ] Trees
-- [ ] Ideally a second biome next door (desert for sand, or a cold biome if you want poplars)
+- [x] Surface water (ocean at spawn)
+- [x] A cave entrance or a ravine (big caves at spawn)
+- [x] Trees (cherry grove at spawn)
+- [x] Ideally a second biome next door (desert for sand, or a cold biome if you want poplars) (mountain, cherry grove, and a normal biome meet at spawn)
 
 ### Avoid
 
@@ -37,7 +37,7 @@ Walk until you find most of these within a couple of minutes of each other.
 
 | Candidate | Coordinates | Has | Missing | Verdict |
 | --- | --- | --- | --- | --- |
-| | | | | |
+| World spawn area | Coordinates are off (it's at world spawn) | Big mountain in the distance sloping down to cherry trees, then a normal biome; big caves; ocean | Flat ground and a village not confirmed yet | Strong candidate ("pretty decent"); base planned here |
 
 ## Done when
 
