@@ -17,10 +17,12 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 ## Big goals
 
 - [Storage and sorting](storage-and-sorting.md): a highly automated item sorter with heavy use of copper golems. Starts with the Phase 4 storage wall, grows into the Phase 5 storage system.
+- [Building goals](building-goals.md): nine architecture projects, from a thatch-roof starter cottage to a copper storage hall and a spawn town square.
 
 ## Supporting plans
 
 - [Building style](building-style.md): how to make it look good without stalling.
+- [Building goals](building-goals.md): nine architecture projects (optional theme: cozy autumn village).
 - [Multiplayer server](multiplayer-server.md): spawn protection, world border, public hub, plots.
 
 ## First-session checklist

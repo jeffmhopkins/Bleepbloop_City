@@ -26,6 +26,22 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 | --- | --- | --- | --- | --- |
 | [Automated item sorter with copper golems](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
 
+## Building goals
+
+See [plans/building-goals.md](../plans/building-goals.md).
+
+| # | Goal | Status | Started | Finished | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [Thatch-roof starter cottage](../plans/building-goals.md#1-thatch-roof-starter-cottage) | ⬜ Not started | | | |
+| 2 | [Copper storage hall](../plans/building-goals.md#2-copper-storage-hall) | ⬜ Not started | | | |
+| 3 | [Spawn town square](../plans/building-goals.md#3-spawn-town-square) | ⬜ Not started | | | |
+| 4 | [Village glow-up](../plans/building-goals.md#4-village-glow-up) | ⬜ Not started | | | |
+| 5 | [Gatehouse and wall](../plans/building-goals.md#5-gatehouse-and-wall) | ⬜ Not started | | | |
+| 6 | [Farm district](../plans/building-goals.md#6-farm-district) | ⬜ Not started | | | |
+| 7 | [Nether portal shrine](../plans/building-goals.md#7-nether-portal-shrine) | ⬜ Not started | | | |
+| 8 | [Lighthouse or watchtower](../plans/building-goals.md#8-lighthouse-or-watchtower) | ⬜ Not started | | | |
+| 9 | [Mine entrance building](../plans/building-goals.md#9-mine-entrance-building) | ⬜ Not started | | | |
+
 ## Milestones
 
 | Date | Milestone |

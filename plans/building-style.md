@@ -11,6 +11,8 @@ Pick one block palette and stick to it. Either of these reads as finished:
 
 **Chosen palette:** _not picked yet_
 
+Optional theme from the [building goals](building-goals.md): a cozy autumn village (spruce, cobble, thatch, copper accents).
+
 ## Guidelines
 
 - [ ] Pick a palette (above)
@@ -19,6 +21,10 @@ Pick one block palette and stick to it. Either of these reads as finished:
 - Cushions are seats. Put them at a table; they are not structural.
 - Build the shell one floor at a time. Roof and light the first floor before you start a tower.
 - Leave a 3-block service gap behind storage walls so you can run redstone later without tearing the front off.
+
+## Building goals
+
+The nine architecture projects that use this style live in [building-goals.md](building-goals.md).
 
 ## Notes
 

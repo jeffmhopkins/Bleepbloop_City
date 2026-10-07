@@ -2,6 +2,7 @@
 
 **Goal:** A highly automated item sorter for the real base that makes heavy use of copper golems.
 **Status:** ⬜ Not started
+**Showpiece build:** the [Copper storage hall](building-goals.md#2-copper-storage-hall) building goal is the home for this system.
 **Fits in:** grows out of the [Phase 4 storage wall](phase-4-the-base.md#1-storage-wall) and becomes the [Phase 5](phase-5-infrastructure.md) "proper storage system with item sorters".
 
 > **Sources.** Every copper golem, copper chest, and hopper fact below was checked against the Minecraft Wiki on 2026-10-07:
@@ -102,6 +103,7 @@
 - [ ] Maintenance routine: check wax on golems and chests
 
 ### Stage 3 — Expansion
+- [ ] House the system in the [Copper storage hall](building-goals.md#2-copper-storage-hall)
 - [ ] Move or extend the system with the Phase 5 "proper storage system with item sorters", away from the pretty part of the base
 - [ ] More hopper sorter slices as new farms come online (iron farm, sugar cane, mob grinder)
 - [ ] Backup storage room (Phase 5 backups)
