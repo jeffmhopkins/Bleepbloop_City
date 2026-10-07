@@ -42,12 +42,14 @@ Long-term goals that span several phases.
 | A highly automated item sorter with heavy use of copper golems | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) | ⬜ Not started |
 | Nine building goals (optional theme: cozy autumn village): thatch cottage, copper storage hall, spawn town square, village glow-up, gatehouse and wall, farm district, Nether portal shrine, lighthouse/watchtower, mine entrance building | [plans/building-goals.md](plans/building-goals.md) | ⬜ Not started |
 | A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) | ⬜ Not started |
+| Move the server to the AI server (container, automated backups, snapshot analysis) | [plans/server-migration.md](plans/server-migration.md) | ⬜ Not started |
+| Live API: tokenized connection from the server to Grok Bot | [plans/live-api.md](plans/live-api.md) | ⬜ Not started |
 
 ## Repo map
 
 | Folder | What's in it |
 | --- | --- |
-| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) and [building goals](plans/building-goals.md) |
+| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md), [building goals](plans/building-goals.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), and [live API](plans/live-api.md) |
 | [`progress/`](progress/) | [Phase tracker](progress/tracker.md) and the [session log](progress/session-log.md) |
 | [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [version features](notes/version-features.md) |
 | [`templates/`](templates/) | Copy-paste templates for a [session log entry](templates/session-log-entry.md) and a [build/project](templates/build-project.md) |

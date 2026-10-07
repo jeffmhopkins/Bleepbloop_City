@@ -26,6 +26,8 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 | --- | --- | --- | --- | --- |
 | [Automated item sorter with copper golems](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
+| [Server migration to the AI server](../plans/server-migration.md) | ⬜ Not started | | | Container + backups + snapshots |
+| [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first |
 
 ## Building goals
 
@@ -55,4 +57,8 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | | Storage sorter add-on: auto furnace (blast furnaces + smokers) running off the sorter |
 | | Storage sorter add-on: lava garbage disposal taking junk + overflow |
 | | Storage sorter add-on: shulker box auto unloader feeding the sorter |
+| | Server Stage 0: world migrated to the Linux container; Windows copy kept as rollback |
+| | Server Stage 1: automated backups running; test restore done |
+| | Server Stage 2: first snapshot analyzed (map + tracker update) |
+| | Server Stage 3: live API events flowing; read access via token |
 | | |
