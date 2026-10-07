@@ -18,7 +18,7 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 
 - [Storage and sorting](storage-and-sorting.md): a highly automated item sorter. A hopper chest hall does the sorting, and a copper golem gallery is the showpiece. Starts with the Phase 4 storage wall, grows into the Phase 5 storage system.
   - [Storage grouping](storage-layout.md): what sits next to what, the technical constraints, and item groups for the chest walls.
-  - [Storage stages](storage-stages.md): one table per growth stage (Stage 0–5), listing what each stage adds and which zone of [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch) it fills.
+  - [Storage stages](storage-stages.md): one table per growth stage (Stage 0–5), listing which wings of [Jeffrey's hall](storage-layout.md#hall-layout-jeffreys-sketch) each stage builds and the groups it automates ([final layout](storage-layout.md#final-layout-finished-hall)).
 - [Building goals](building-goals.md): nine architecture projects, from a thatch-roof starter cottage to a copper storage hall and a spawn town square.
 - [Flying machine](flying-machine.md): an end-game redstone build that moves itself.
 - [Server migration](server-migration.md): move the Bedrock Dedicated Server to a container on the Linux AI server, with automated backups and world snapshots for analysis.

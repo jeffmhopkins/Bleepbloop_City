@@ -211,14 +211,16 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 
 **The growth stages now live in one place: [storage-layout.md § Growth stages](storage-layout.md#4-growth-stages).** Each stage there lists what gets automated, the chests and slices added (from the [per-item allocation](storage-layout.md#3-item-by-item-chest-allocation)), its prerequisites, and a "done when".
 
-| Stage | Zone in [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch) | Summary |
-| --- | --- | --- |
-| 0 | Phase 4 storage wall | Manual chests by group, plus one test hopper slice |
-| 1 | Stage 1 wing | Input, router, overflow, and 15 bulk slices |
-| 2 | Stage 2 wing | The rest of groups 1–5 (39 slices), plus the smelter loop in Machinery ([auto furnace](#auto-furnace--smelter-array)) |
-| 3 | Both Stage 3 bands | Groups 6–10, 12, 14 (30 slices), plus the [lava disposal](#garbage-disposal-garbage-furnace) in Machinery |
-| 4 | Dome | Golem gallery showpiece (module 1) |
-| 5 | Both Stage 5 wings (unloader at the center of Machinery) | End group, shulker boxes, the [shulker unloader](#shulker-box-auto-unloader) above the router, then all expansion (★ items, promoted mixed items, golem module 2 in the Dome) |
+Stages follow the **build order** of Jeffrey's hall. Every group has one wing in the [finished hall](storage-layout.md#final-layout-finished-hall), and each stage automates the groups living in the wings it builds.
+
+| Stage | Wings built | Groups automated | Adds | Cumulative |
+| --- | --- | --- | --- | --- |
+| 0 | None (Phase 4 storage wall) | Manual chests by group, plus one test hopper slice | — | 0 / 0 |
+| 1 | Front-left, plus Machinery core and the whole U trunk | 1 Stone family; overflow + intake | 20 DC-eq, 13 slices | 20 / 13 |
+| 2 | Front-right, plus smokers ([auto furnace](#auto-furnace--smelter-array)) | 3 Farming & food; 10 Brewing | 18 DC-eq, 22 slices | 38 / 35 |
+| 3 | Mid-left and mid-right, plus blast furnaces and the [lava disposal](#garbage-disposal-garbage-furnace) (junk list only until Stage 5) | 4 Ores & metals; 5 Copper; 7 Redstone; 2 Wood; 6 Decorative build blocks | 33.5 DC-eq, 30 slices | 71.5 / 65 |
+| 4 | Dome | 11 Golem gallery (module 1) + spares | 6 DC-eq | 77.5 / 65 |
+| 5 | Back-left and back-right, plus the [shulker unloader](#shulker-box-auto-unloader) above the router | 6 Decorative colors & finishes; 12 Nether; 13 End; 9 Mob drops; 14 Tools, armor & enchanting; 8 Transport; 15 Shulker boxes | 35.5 DC-eq, 22 slices | 113 / 87, then growth in every wing |
 
 ## Materials (verified recipes only)
 

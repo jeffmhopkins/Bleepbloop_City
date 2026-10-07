@@ -28,7 +28,7 @@ def head(x0,y0,x1,y1,c,s=12):
 def arrow(pts,c,w=4,dash=None,mid=False):
     line(pts,c,w,dash); (x0,y0),(x1,y1)=pts[-2],pts[-1]; head(x0,y0,x1,y1,c)
 ORANGE=(235,120,0); GREEN=(20,140,70); RED=(200,30,30); GREY=(90,90,90)
-text(W/2,32,'Storage hall: item flow (schematic, not to scale)',24)
+text(W/2,32,'Storage hall: item flow and final wing contents (schematic, not to scale)',24)
 # machinery band
 MY0,MY1=70,250
 rect(80,MY0,1520,MY1,(205,214,245))
@@ -51,14 +51,15 @@ arrow([(330,214),(705,214)],RED,3); text(515,226,'ingots / cooked food back',11,
 text(515,130,'room for more machines',13,False,GREY)
 # wings
 LX0,LX1,AX0,AX1,RX0,RX1=80,680,680,920,920,1520
-bands=[(250,450,'Stage 5','End items, shulker shells, later expansion',(140,60,155),(140,60,155)),
-       (450,650,'Stage 3','Decorative, redstone, transport, mob drops, Nether, brewing, tools',(210,20,45),(210,20,45)),
-       (650,850,'Stage 1','Bulk: stone, wood, crops, coal, iron',(20,150,60),None)]
-right_bands=[(250,450,'Stage 5','End items, shulker shells, later expansion',(140,60,155)),
-       (450,650,'Stage 3','Decorative, redstone, transport, mob drops, Nether, brewing, tools',(210,20,45)),
-       (650,850,'Stage 2','Rest of stone, wood, farm, ores, copper',(240,170,0))]
+# (y0, y1, wing + build stage, final groups, DC-eq and growth room, colour)
+bands=[(250,450,'Back-left · Stage 5','Decorative (colors & finishes) · Nether · End','18.5 DC-eq + 3.5 growth room',(140,60,155)),
+       (450,650,'Mid-left · Stage 3','Ores & metals · Copper · Redstone','16 DC-eq + 6 growth room',(210,20,45)),
+       (650,850,'Front-left · Stage 1','Stone family','17 DC-eq + 5 growth room',(20,150,60))]
+right_bands=[(250,450,'Back-right · Stage 5','Mob drops · Tools, armor & enchanting · Transport','16 DC-eq + 6 growth room',(140,60,155)),
+       (450,650,'Mid-right · Stage 3','Wood family · Decorative (build blocks)','17.5 DC-eq + 4.5 growth room',(210,20,45)),
+       (650,850,'Front-right · Stage 2','Farming & food · Brewing (Dome end)','18 DC-eq + 4 growth room',(240,170,0))]
 def tint(c,a=0.78): return tuple(int(v+(255-v)*a) for v in c)
-def band(x0,x1,y0,y1,label,sub,col,side):
+def band(x0,x1,y0,y1,label,sub,cap,col,side):
     rect(x0,y0,x1,y1,tint(col))
     rect(x0,y0,x1,y0+36,(70,70,75)); rect(x0,y1-36,x1,y1,(70,70,75))
     text((x0+x1)/2,y0+9,'service gap + hopper filters',9,False,(220,220,220))
@@ -68,16 +69,17 @@ def band(x0,x1,y0,y1,label,sub,col,side):
         for i in range(n):
             cx=x0+18+i*30; rect(cx,cy0,cx+24,cy0+24,(170,110,50),(80,50,20),1.5)
     rect(x0,y0,x1,y1,None,(30,30,30),2.5)
-    text((x0+x1)/2,y0+88,label,22,c=col if sum(col)<500 else (130,90,0))
-    text((x0+x1)/2,y0+114,sub,12,False,(40,40,40))
+    text((x0+x1)/2,y0+80,label,19,c=col if sum(col)<500 else (130,90,0))
+    text((x0+x1)/2,y0+104,sub,13,True,(40,40,40))
+    text((x0+x1)/2,y0+122,cap,11,False,(70,70,70))
     ya,yb=y0+22,y1-22
     if side=='L':
         tx,ex=AX0+20,x0+10
     else:
         tx,ex=AX1-20,x1-10
     arrow([(tx,ya),(ex,ya)],ORANGE,3); line([(ex,ya),(ex,yb)],ORANGE,3,dash=6); arrow([(ex,yb),(tx,yb)],ORANGE,3)
-for y0,y1,l,s,c,_ in bands: band(LX0,LX1,y0,y1,l,s,c,'L')
-for y0,y1,l,s,c in right_bands: band(RX0,RX1,y0,y1,l,s,c,'R')
+for y0,y1,l,s,k,c in bands: band(LX0,LX1,y0,y1,l,s,k,c,'L')
+for y0,y1,l,s,k,c in right_bands: band(RX0,RX1,y0,y1,l,s,k,c,'R')
 # aisle
 rect(AX0,250,AX1,850,(236,236,230))
 text(800,560,'CENTRAL',14,c=GREY); text(800,580,'AISLE',14,c=GREY)
@@ -120,5 +122,5 @@ leg(90,ORANGE,'Main item stream (under floor; dashed = crosses under dome)')
 leg(640,RED,'Smelter loop')
 leg(830,GREEN,'Potion line to golem gallery',dash=8)
 d.text((90*S,1120*S),'Each wing is a hallway with chest walls on both sides; its branch runs out behind one wall and back behind the other. Unsorted items continue along the stream; anything left ends in Overflow, and only junk goes to Lava.',font=f(12,False),fill=(60,60,60),anchor='lm')
-d.text((90*S,1145*S),'Gallery overflow goes to the main Overflow, never back to the Router. New wings join at the open branch points.',font=f(12,False),fill=(60,60,60),anchor='lm')
+d.text((90*S,1145*S),'Gallery overflow goes to the main Overflow, never back to the Router. Stage = the order each wing is built; contents = the finished hall.',font=f(12,False),fill=(60,60,60),anchor='lm')
 im.resize((W,H),Image.LANCZOS).save(OUT)
