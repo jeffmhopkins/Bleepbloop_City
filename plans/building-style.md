@@ -30,6 +30,12 @@ Jeffrey's style references (2026-10-07). The direction is **grand architecture, 
 - **"Copper Castle" by sausbuilds:** a castle of oxidized copper towers with crenellations, at several different tower heights.
 - **A tall stone tower with an oxidized-copper spire.**
 
+These are other creators' builds, kept here only as style references.
+
+| Mossveil Cottage, Rale Design | Copper Castle, sausbuilds |
+| --- | --- |
+| ![Mossveil Cottage by Rale Design](../assets/inspiration/mossveil-cottage-rale-design.png) | ![Copper Castle by sausbuilds](../assets/inspiration/copper-castle-sausbuilds.png) |
+
 **Takeaways for our builds:**
 - Timber framing with overhangs and balconies for the living and village buildings.
 - Steep, mossy, overgrown roofs.
