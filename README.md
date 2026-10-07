@@ -39,7 +39,7 @@ Long-term goals that span several phases.
 
 | Goal | Plan | Status |
 | --- | --- | --- |
-| A highly automated item sorter: hopper chest hall doing the sorting, copper golem gallery as the showpiece ([grouping](plans/storage-layout.md)) | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) | ⬜ Not started |
+| A highly automated item sorter: hopper chest hall doing the sorting, copper golem gallery as the showpiece ([grouping](plans/storage-layout.md), [stages](plans/storage-stages.md)) | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) | ⬜ Not started |
 | Nine building goals (grand architecture: mossy timber frames and oxidized copper towers; see [inspiration](plans/building-style.md#inspiration)): thatch cottage, copper storage hall, spawn town square, village glow-up, gatehouse and wall, farm district, Nether portal shrine, lighthouse/watchtower, mine entrance building | [plans/building-goals.md](plans/building-goals.md) | ⬜ Not started |
 | A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) | ⬜ Not started |
 | Move the server to the AI server (container, automated backups, snapshot analysis) | [plans/server-migration.md](plans/server-migration.md) | ⬜ Not started |
@@ -49,7 +49,7 @@ Long-term goals that span several phases.
 
 | Folder | What's in it |
 | --- | --- |
-| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md)), [building goals](plans/building-goals.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), and [live API](plans/live-api.md) |
+| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md) and [stages](plans/storage-stages.md)), [building goals](plans/building-goals.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), and [live API](plans/live-api.md) |
 | [`progress/`](progress/) | [Phase tracker](progress/tracker.md) and the [session log](progress/session-log.md) |
 | [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [version features](notes/version-features.md) |
 | [`templates/`](templates/) | Copy-paste templates for a [session log entry](templates/session-log-entry.md) and a [build/project](templates/build-project.md) |

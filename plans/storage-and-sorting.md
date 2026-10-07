@@ -3,6 +3,7 @@
 **Goal:** A highly automated item sorter for the real base. **Hopper filters fed by a water/ice item stream (a Bedrock chest hall) do the primary sorting**, and **copper golems are the showpiece**: a glass-fronted golem gallery at the front of the hall where a few waxed golems sort a small set of everyday items (potions and tipped arrows) into display chests you can watch.
 **Role change (2026-10-07):** Jeffrey asked to make the golems "a visual thing in the front of the hall, not necessarily the primary sorting mechanism". The golem research below is still valid; it now applies to the gallery.
 **Status:** ⬜ Not started
+**Stages:** [one table per stage](storage-stages.md).
 **Grouping:** see [storage-layout.md](storage-layout.md) for functional adjacency rules, the hard technical constraints, and the item groups for the chest walls. The building itself is a custom build Jeffrey designs; no shape or size is prescribed.
 **Always loaded:** the sorter and iron farm go in a Bedrock ticking area so they run with nobody nearby. See [Server config: ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter) (mob spawning still needs a player nearby).
 **Showpiece build:** the [Copper storage hall](building-goals.md#2-copper-storage-hall) building goal is the home for this system.
@@ -202,6 +203,8 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 - [ ] Junk and true overflow are destroyed automatically, the sorter never backs up, and nothing valuable has been lost in testing
 
 ## Stages
+
+**Per-stage item tables:** [storage-stages.md](storage-stages.md) (one table per stage).
 
 **The growth stages now live in one place: [storage-layout.md § Growth stages](storage-layout.md#4-growth-stages).** Each stage there lists what gets automated, the chests and slices added (from the [per-item allocation](storage-layout.md#3-item-by-item-chest-allocation)), its prerequisites, and a "done when".
 

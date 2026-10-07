@@ -92,6 +92,8 @@ flowchart LR
 
 ## 3. Item-by-item chest allocation
 
+> **One table per stage:** [storage-stages.md](storage-stages.md) shows each growth stage on its own, listing only what that stage adds.
+
 Starting recommendations for a small survival server with a wheat farm, a tree farm, and mob farms later. These are counts, not a layout: where each chest sits is up to the hall design (and the [adjacency rules](#1-functional-grouping)).
 
 **Units**
@@ -389,13 +391,15 @@ Items from recent drops were checked against the Minecraft Wiki (2026-10-07): th
 
 ## 4. Growth stages
 
+> **One table per stage:** [storage-stages.md](storage-stages.md) breaks this down into a self-contained item table for each stage, generated from §3.
+
 **This is the one place the storage build-out stages live.** [Storage and sorting](storage-and-sorting.md#stages) points here, and the [tracker](../progress/tracker.md) milestones match these stage numbers. Function and order only: the hall's shape and size are Jeffrey's design.
 
 **Every stage keeps rule 8:** the end of the stream and the far ends of the chest walls stay open, so the next stage adds slices there without moving the input, router, or machines.
 
 | Stage | Game phase | What gets automated | Added (from §3) |
 | --- | --- | --- | --- |
-| 0 | [Phase 4](phase-4-the-base.md#1-storage-wall) | Nothing yet: manual chests by group, plus one test slice | 16 group chests + 1 input chest |
+| 0 | [Phase 4](phase-4-the-base.md#1-storage-wall) | Nothing yet: manual chests by group, plus one test slice | 16 group chests + 1 input chest (17 SC, temporary; not in the 113) |
 | 1 | Phase 4 → 5 | Input, router, overflow, bulk items | 29 DC-eq, 15 slices |
 | 2 | [Phase 5](phase-5-infrastructure.md) | The rest of groups 1–5, plus the smelter loop | 31.5 DC-eq, 39 slices |
 | 3 | Phase 5 | Groups 6–10, 12, 14, plus the lava disposal | 42.5 DC-eq, 30 slices |
