@@ -25,7 +25,7 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 
 ## First-session checklist
 
-- [ ] Bed set
+- [x] Bed set
 - [ ] Food farm planted
 - [ ] Iron tools
 - [ ] Site chosen
