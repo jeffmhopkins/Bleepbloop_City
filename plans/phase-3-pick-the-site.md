@@ -4,6 +4,8 @@
 **Goal:** Find a site you'll still want in a month.
 **Status:** ⬜ Not started
 
+> **Decision (2026-10-07):** home base will be near world spawn. Look for the real site close to spawn.
+
 Walk until you find most of these within a couple of minutes of each other.
 
 ## Site checklist

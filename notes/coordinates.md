@@ -11,7 +11,7 @@ Write locations down the moment you find them. Dimension is Overworld, Nether, o
 | World spawn | Overworld | | | | |
 | First bed | Overworld | | | | |
 | Starter outpost | Overworld | | | | |
-| Real base | Overworld | | | | |
+| Real base | Overworld | | | | Planned near world spawn |
 | Village | Overworld | | | | |
 | Nether portal (Overworld side) | Overworld | | | | |
 | Nether portal (Nether side) | Nether | | | | |
@@ -26,3 +26,12 @@ Write locations down the moment you find them. Dimension is Overworld, Nether, o
 | Name | Dimension | X | Y | Z | Notes |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
+
+## Navigating without coordinates
+
+- Home base is planned near world spawn, so a plain compass (4 iron ingots + 1 redstone dust) points home. No lodestone needed.
+- The sun and moon rise in the east and set in the west.
+- Hang a map in an item frame by the base door and carry copies.
+- Use tall torch-topped pillars, banners at junctions, and torch trails kept on one side.
+- A recovery compass (echo shards) points to your last death.
+- Later: lit roads or ice-boat roads, and a marked Nether hub (1 block there = 8 in the Overworld).
