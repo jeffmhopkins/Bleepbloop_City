@@ -2,6 +2,8 @@
 
 Update this when a phase starts or finishes, and mirror the current phase on the [README dashboard](../README.md).
 
+**Next sessions:** [session plan for Sessions 2–6](session-plan.md). It's a plan only: boxes here get ticked when Jeffrey reports them, not from the plan.
+
 **Status key:** ⬜ Not started · 🟨 In progress · ✅ Done · ⏸️ On hold
 
 | Phase | Status | Started | Finished | Notes |

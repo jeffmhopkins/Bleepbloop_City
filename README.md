@@ -12,6 +12,7 @@ Minecraft server planning: plans, progress, and notes for building Bleepbloop Ci
 **Current phase:** [Phase 1 — First night](plans/phase-1-first-night.md), in progress. Only a full stack of food is left. [Phase 2](plans/phase-2-starter-outpost.md) started early.
 
 **Last session:** [Session 1, 2026-10-06](progress/session-log.md)
+**Next sessions:** [plan for Sessions 2–6](progress/session-plan.md) (60–90 minutes each; plan only, nothing checked until reported)
 
 | Phase | Status |
 | --- | --- |
@@ -50,7 +51,7 @@ Long-term goals that span several phases.
 | Folder | What's in it |
 | --- | --- |
 | [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md) and [stages](plans/storage-stages.md)), [building goals](plans/building-goals.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), and [live API](plans/live-api.md) |
-| [`progress/`](progress/) | [Phase tracker](progress/tracker.md) and the [session log](progress/session-log.md) |
+| [`progress/`](progress/) | [Phase tracker](progress/tracker.md), the [session log](progress/session-log.md), and the [session plan](progress/session-plan.md) for Sessions 2–6 |
 | [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [version features](notes/version-features.md) |
 | [`templates/`](templates/) | Copy-paste templates for a [session log entry](templates/session-log-entry.md) and a [build/project](templates/build-project.md) |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Issue templates for tasks and ideas |
