@@ -17,7 +17,7 @@ Style direction: **grand architecture** (see [Inspiration](#inspiration) below).
 
 - [ ] Pick a palette (above)
 - Mix in stairs, slabs, and walls so walls are not flat.
-- Wool and concrete stairs and slabs (new in this drop) are useful for colored trim that is not just full blocks. Wool stairs also dampen sound.
+- Wool and concrete stairs and slabs (new in this drop) are useful for colored trim that is not just full blocks. Don't count on wool stairs to muffle a sculk sensor, though: per the wiki they **don't** block vibrations the way wool blocks do. Sculk sensors only fail to detect them being placed or broken and mobs walking on them ([Wool Stairs](https://minecraft.wiki/w/Wool_Stairs#Vibration_occlusion)).
 - Cushions are seats. Put them at a table; they are not structural.
 - Build the shell one floor at a time. Roof and light the first floor before you start a tower.
 - Leave a 3-block service gap behind storage walls so you can run redstone later without tearing the front off.

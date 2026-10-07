@@ -202,45 +202,17 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 
 ## Stages
 
-Grouping and constraints: [storage-layout.md](storage-layout.md). Hoppers come first; the golem gallery is a showcase stage.
+**The growth stages now live in one place: [storage-layout.md § Growth stages](storage-layout.md#4-growth-stages).** Each stage there lists what gets automated, the chests and slices added (from the [per-item allocation](storage-layout.md#3-item-by-item-chest-allocation)), its prerequisites, and a "done when".
 
-### Stage 0 — Prototypes (one filter slice, one golem)
-- [ ] Build one Bedrock hopper filter slice (from [Stackable Sorting](https://bedrockwiki.com/books/storage-tech/page/stackable-sorting)) in a test area, with an overflow chest, and test it with a junk item
-- [ ] Find copper (or raid an abandoned camp for an oxidized statue or copper chest)
-- [ ] Get honeycomb (shear a bee nest with a campfire under it)
-- [ ] Build one golem (copper block + carved pumpkin, pumpkin last), and wax it and its copper chest
-- [ ] Place 3–4 seeded chests plus one farthest overflow chest; check that glass in front doesn't confuse it (Bedrock line of sight)
-- [ ] Write down what surprised me in the notes below
-
-### Stage 1 — Input, router, and first hopper slices
-- [ ] Pick the site near the home base and log it in [coordinates](../notes/coordinates.md)
-- [ ] Design the hall around the [adjacency rules and constraints](storage-layout.md#1-functional-grouping), leaving the expansion end open
-- [ ] Input barrels by the door → input line → overflow chest at the far end (nothing lost while building)
-- [ ] Router feeding the item stream, with the non-stackable split to manual chests
-- [ ] First hopper slices with item frames, starting with the most-used [item groups](storage-layout.md#2-item-grouping-for-the-chest-walls): stone, wood, farming & food, ores & metals
-- [ ] Hopper locking when idle (lag)
-
-### Stage 2 — Full system + add-ons
-- [ ] Add slices for each new farm (highest-volume farm item first)
-- [ ] Auto furnace on the machine side: blast furnaces for ores and smokers for food, fed from filter slices, output back to the input line ([details](#auto-furnace--smelter-array))
-- [ ] Lava garbage disposal behind the overflow chest, plus junk slices ([details](#garbage-disposal-garbage-furnace))
-- [ ] Shulker box auto unloader feeding the input line ([details](#shulker-box-auto-unloader))
-- [ ] Item frames on every chest
-
-### Stage 3 — Golem gallery (showcase)
-- [ ] Brewing-stand potion filter + tipped-arrow slice feeding the gallery copper chest ([grouping](storage-layout.md#1-functional-grouping))
-- [ ] Golem module 1: 1 waxed golem, waxed copper input chest, 9 seeded display chests, farthest overflow → main overflow chest
-- [ ] Test one item per display chest, then build module 2
-- [ ] Glass viewing front and iron doors so golems stay in (styling is up to the hall design)
-- [ ] Check that no unseeded or empty chest is in golem range and no hopper drains a display chest
-- [ ] Maintenance routine: check wax on golems and copper
-
-### Stage 4 — Expansion
-- [ ] Extend slices at the open end as storage grows
-- [ ] Dress the hall as the [Copper storage hall](building-goals.md#2-copper-storage-hall)
-- [ ] Expand the furnace array as ore and food volume grows
-- [ ] Backup storage room (Phase 5 backups)
-- [ ] Clean up anything that causes lag
+| Stage | Summary |
+| --- | --- |
+| 0 | Manual chests by group, plus one test hopper slice |
+| 1 | Input, router, overflow, and 15 bulk slices |
+| 2 | The rest of groups 1–5 (39 slices), plus the smelter loop ([auto furnace](#auto-furnace--smelter-array)) |
+| 3 | Groups 6–10, 12, 14 (30 slices), plus the [lava disposal](#garbage-disposal-garbage-furnace) |
+| 4 | Golem gallery showpiece (module 1) |
+| 5 | End group, shulker boxes, plus the [shulker unloader](#shulker-box-auto-unloader) |
+| 6 | Expansion at the open end; golem module 2 |
 
 ## Materials (verified recipes only)
 
@@ -262,7 +234,7 @@ Grouping and constraints: [storage-layout.md](storage-layout.md). Hoppers come f
 | Piston | 3 planks + 4 cobblestone + 1 iron ingot + 1 redstone dust | Shulker unloader (breaks the empty box) |
 | Shulker box | 2 shulker shells + 1 chest | Test boxes for the unloader |
 
-Exact counts depend on how many golems and categories I end up with. Fill in once the layout is picked.
+Chest counts per item are in the [per-item allocation](storage-layout.md#3-item-by-item-chest-allocation) (113 DC-eq, 87 filter slices through Stage 5). Hopper counts depend on the slice design you pick: multiply its hoppers per slice by the slices in each stage.
 
 ## Open questions for Jeffrey
 

@@ -50,7 +50,7 @@ A small spruce and cobble cottage with a thatch roof made from straw beds. It's 
 The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest hall does the sorting out of sight, and a **glass-fronted golem gallery** near the entrance is the part you watch. The architecture is a grand custom build of Jeffrey's design. The functional grouping and technical constraints it has to fit are in [storage-layout.md](storage-layout.md).
 
 **Status:** ⬜ Not started
-**Suggested timing:** Phase 4–5, alongside [storage and sorting](storage-and-sorting.md) Stages 1–4 (gallery = Stage 3)
+**Suggested timing:** Phase 4–5, alongside the storage [growth stages](storage-layout.md#4-growth-stages) 1–6 (gallery = Stage 4)
 **Location:** _not recorded yet_ (near the home base at spawn)
 
 **Key materials and features**
