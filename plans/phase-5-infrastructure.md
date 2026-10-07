@@ -43,7 +43,7 @@ Build these away from the pretty part of the base so lag and wither blasts stay 
 - [ ] Mob switch or shard farm
 - [ ] Wither skeleton farm
 - [ ] Gold farm
-- [ ] A proper storage system with item sorters
+- [ ] A proper storage system with item sorters (see the [storage and sorting plan](storage-and-sorting.md): copper golems plus hopper sorters)
 
 ## Done when
 

@@ -37,3 +37,10 @@ Priority: librarians for Mending and Unbreaking.
 ## Storage layout
 
 Storage wall chests: wood, stone, ores, food, mob drops, redstone, junk, plus one input chest by the door.
+
+This grows into the big goal: [automated item sorter with copper golems](../plans/storage-and-sorting.md). Track it here as it gets built.
+
+| Area | Type (golem / hopper sorter / manual) | Location | Golems | Notes |
+| --- | --- | --- | --- | --- |
+| Storage wall input chest | | | | Copper chest? |
+| | | | | |

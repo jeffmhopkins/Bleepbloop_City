@@ -14,6 +14,10 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 | 4 | [The base that lasts](phase-4-the-base.md) | Week 1–2 | Function rooms before looks | Storage, workshop, food wing, mine entrance, perimeter, spawn control |
 | 5 | [Infrastructure](phase-5-infrastructure.md) | Once iron is boring | Each addition removes a chore | Trading hall, farms, boxed portal, roads, backups |
 
+## Big goals
+
+- [Storage and sorting](storage-and-sorting.md): a highly automated item sorter with heavy use of copper golems. Starts with the Phase 4 storage wall, grows into the Phase 5 storage system.
+
 ## Supporting plans
 
 - [Building style](building-style.md): how to make it look good without stalling.

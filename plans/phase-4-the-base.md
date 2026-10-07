@@ -11,6 +11,8 @@
 - [ ] Label them: wood, stone, ores, food, mob drops, redstone, junk
 - [ ] One input chest by the door so you can dump inventory fast
 
+> **Big goal:** this storage wall is the start of the [automated copper golem sorter](storage-and-sorting.md). Consider making the input chest a copper chest so golems can sort from it (Stage 1 of that plan).
+
 ### 2. Workshop
 - [ ] Crafting table
 - [ ] Furnaces

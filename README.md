@@ -30,11 +30,19 @@ Everything else is optional until these five are done.
 - [ ] Site chosen
 - [ ] Storage started
 
+## Big goals
+
+Long-term goals that span several phases.
+
+| Goal | Plan | Status |
+| --- | --- | --- |
+| A highly automated item sorter with heavy use of copper golems | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) | ⬜ Not started |
+
 ## Repo map
 
 | Folder | What's in it |
 | --- | --- |
-| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md) and [multiplayer server](plans/multiplayer-server.md) guidance |
+| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the [storage and sorting](plans/storage-and-sorting.md) big goal |
 | [`progress/`](progress/) | [Phase tracker](progress/tracker.md) and the [session log](progress/session-log.md) |
 | [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [version features](notes/version-features.md) |
 | [`templates/`](templates/) | Copy-paste templates for a [session log entry](templates/session-log-entry.md) and a [build/project](templates/build-project.md) |
