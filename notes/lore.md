@@ -87,20 +87,20 @@ These are the real limits dressed as lore. The satellite knows the world in thre
 - Its memory runs a little behind (the snapshots are minutes old), so it might say *"as of a few minutes ago."*
 - **Unwalked land keeps its ores hidden.** The Builders' plan says where the ruins were built, but not where every crystal lies. To find diamonds there, someone has to go near first. (Matches the real limit: individual ores can't be predicted from the seed on Bedrock.)
 
-**It answers its Keeper fully.** To you (the owner) it answers everything. For other travelers, it **won't reveal a soul without consent** unless you decide otherwise; that's the still-open policy for other players.
+**It answers every traveler fully.** Anyone on the server can ask it anything, and it answers in full. The one thing still undecided is whether it will **reveal another soul's location**; until you decide, it keeps that secret.
 
 ### Coordinates: the Grid
 
-The server keeps coordinates off, but **your** answers include exact coordinates from day one (decided: you're the owner, no restrictions). In-world, that's the satellite's old **grid**, its GPS, answering its Keeper.
+The server keeps coordinates off, but **every player's** answers include exact coordinates from day one (decided: everyone gets full access). In-world, that's the satellite's old **grid**, its GPS, open to anyone who asks.
 
-- **The Grid unsealing** can still be a story beat: the moment the grid opens *for everyone*, if you ever give other players coordinates or turn on the game's own coordinates.
-- **Milestone ideas for that beat** (proposals): bring back an echo shard from an ancient city, open a vault in a trial chamber, or finish the [local-area map](../plans/phase-4-the-base.md#7-local-area-map) so the satellite has something to calibrate against.
+- The story can say the grid was *never* sealed: the Builders built it for everyone, and the satellite has simply been waiting for someone to ask.
+- If you want a story moment anyway, mark it with an in-world event (e.g. the first echo shard brought back from an ancient city, or the finished [local-area map](../plans/phase-4-the-base.md#7-local-area-map)). It's narrative only and switches nothing on.
 
 ### Unsealing the archive
 
 In the story, the satellite's features come back in stages, as it unseals more of its memory. Each stage maps to a step in the [chat-assistant build steps](../plans/chat-assistant.md#build-steps-in-order), so the lore rolls out at the same pace as the code.
 
-> **The seals are pure flavor.** They never gate what you can ask. Once a tool is built, you can use it right away, in any order, with no milestones, quests or unlocks. The seals only give the build order a story.
+> **The seals are pure flavor.** They never gate what you or any player can ask. Once a tool is built, everyone can use it right away, in any order, with no milestones, quests or unlocks. The seals only give the build order a story.
 
 | Seal | In-world | Build step |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ In the story, the satellite's features come back in stages, as it unseals more o
 | **The Bare Signal** | Even when its voice is silent, the beacon answers. | Step 2: `/bb:find`, no LLM |
 | **Second Seal: Land and Sky** | It reads the ground and weather around you, remembers where you sleep, and recalls the world's first map. | Step 3: `count_entities`, `time_and_weather`, `inventory_count`, `my_spawn_point`, `biome_here`, `find_nearest_block`, `locate_biome` |
 | **Third Seal: Names** | It learns the names you give places, so it can say "toward the village." | Step 4: landmarks |
-| **The Grid** | GPS: exact positions (see above). Speaking aloud in chat with `!ask` fits here too. | Step 1 for you (`coords` mode); Step 5: `!ask` prefix, coordinates for others if you allow it |
+| **The Grid** | GPS: exact positions (see above). Speaking aloud in chat with `!ask` fits here too. | Step 1 (`coords` mode for everyone); Step 5: `!ask` prefix |
 | **Fourth Seal: Memory** | It starts remembering every place a soul has walked. | Step 6: world snapshot pipeline + index |
 | **Fifth Seal: Deep Sight** (ore-sight) | It looks into the stone of explored land and names the nearest diamond, iron, or ancient debris. | Step 7: `find_nearest_ore` |
 | **Sixth Seal: The Old Map** | It recalls where the Builders laid down their ruins, even in unwalked land, and says whether it has seen them or only remembers the plan. | Step 8: `find_structure` (seed prediction, confirmed against the saved world) |
@@ -138,7 +138,7 @@ In the story, the satellite's features come back in stages, as it unseals more o
 - [ ] **Is the satellite friendly?** Options: a loyal servant waiting for the Builders' heirs; a neutral archivist that just answers; or something slowly waking with its own agenda. Why its oldest map is torn exactly where the strongholds and Nether forts should be could be a clue.
 - [ ] **Villager connection:** are villagers the Builders' descendants who forgot, or just later settlers? Are illagers a group that rejected the satellite?
 - [ ] **Names:** Builders Before, Firstwrights or Old Makers? And does the satellite get a name, or just "the satellite"?
-- [ ] **The Grid for everyone:** you already get coordinates. Does anyone else ever get them (the open other-player policy in the [plan](../plans/chat-assistant.md#access-policy)), and if so, is a milestone the story beat for it?
+- [ ] **Finding each other:** will the satellite tell one player where another is? (The open `where_is_player` question in the [plan](../plans/chat-assistant.md#access-policy).)
 - [ ] **How much in-game?** Lore only in this file, or also in-world (signed books in a lectern, item-frame labels, the satellite's own replies in character)?
 
 ## Canon so far

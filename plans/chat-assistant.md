@@ -28,13 +28,12 @@
 
 ## What it does
 
-- A player on the allowlist types `/ask "where is the nearest pig"`, or just `/ask` to get a text box.
+- Any player on the server types `/ask "where is the nearest pig"`, or just `/ask` to get a text box.
 - They privately see "Thinking…", then an answer such as: *"Nearest pig: 38 blocks north-east, a little below you. That's toward the village."*
 - The LLM decides **which tool to call** (find an entity, find a block, check the time…) and phrases the answer. The **pack** does the live world reading, the **service** reads the seed and saved-world snapshots (structures and ores), and every tool is **read-only**.
 - Answers go **only to the asker** (`player.sendMessage`). Nobody else sees the question or the answer.
-- **Reply format is a per-player setting:**
-  - `direction` mode gives distance + compass direction + nearest landmark. It keeps the server's "coordinates off" rule.
-  - `coords` mode adds X Y Z. **Jeffrey gets `coords` mode** (decided 2026-10-07, see [Access policy](#access-policy)). Other players are still an open decision.
+- **Reply format:** **`coords` mode for every player** (decided 2026-10-07, see [Access policy](#access-policy)): distance + compass direction + nearest landmark, **plus X Y Z**. This deliberately bypasses the server's "coordinates off" rule for assistant answers.
+  - `direction` mode (no X Y Z) stays in the code as a setting, in case that ever changes.
 - It can also find **structures** (from the seed, confirmed against the saved world) and **ores** (from a scan of saved world snapshots). See [Structure and ore search](#structure-and-ore-search-world-files--seed).
 
 ## Architecture
@@ -71,8 +70,8 @@ The service is **never exposed to the internet**. It listens only on the contain
 
 | Option | Stable/beta (26.50) | Private? | Typing | Who can use it | Verdict |
 | --- | --- | --- | --- | --- | --- |
-| **Custom slash command `/bb:ask`** (alias `/ask`) | **Stable** in `@minecraft/server` 2.10.0 | Yes. Commands aren't broadcast, and the reply uses `sendMessage` | Multi-word text **must be in double quotes**: Bedrock `string` arguments are one word or a `"quoted string"` (wiki). `/ask` with **no text opens a text box** (no quotes needed). | `permissionLevel: Any` + `cheatsRequired: false`, then our own allowlist | **Recommended** |
-| Chat prefix `!ask …` via `world.beforeEvents.chatSend` | **Beta only** (not in 2.10.0) | Yes, if the handler sets `cancel = true` ("this message is not broadcast out") | Most natural: plain chat, no quotes | Anyone who can chat, then our allowlist | Optional extra, later. It would force the whole pack onto the beta `@minecraft/server` version, which breaks more often on updates. |
+| **Custom slash command `/bb:ask`** (alias `/ask`) | **Stable** in `@minecraft/server` 2.10.0 | Yes. Commands aren't broadcast, and the reply uses `sendMessage` | Multi-word text **must be in double quotes**: Bedrock `string` arguments are one word or a `"quoted string"` (wiki). `/ask` with **no text opens a text box** (no quotes needed). | `permissionLevel: Any` + `cheatsRequired: false`; every player on the server can use it | **Recommended** |
+| Chat prefix `!ask …` via `world.beforeEvents.chatSend` | **Beta only** (not in 2.10.0) | Yes, if the handler sets `cancel = true` ("this message is not broadcast out") | Most natural: plain chat, no quotes | Anyone who can chat | Optional extra, later. It would force the whole pack onto the beta `@minecraft/server` version, which breaks more often on updates. |
 | `/scriptevent bb:ask …` | Stable | Yes | Rest of the line is the message (no quotes) | **Operator level 1 and cheats on** (wiki) | Not suitable for normal players |
 
 **How the command works (verified against the docs):**
@@ -103,7 +102,7 @@ The LLM sees each tool as a function with a JSON schema. **Pack tools** run in t
 | `time_and_weather` | none | `world.getTimeOfDay()`, `world.getDay()`, `world.getMoonPhase()` (stable). Weather is tracked from the stable `world.afterEvents.weatherChange`. | `dimension.getWeather()` is **beta only**. Use the event so the pack stays on stable `@minecraft/server`. |
 | `my_spawn_point` | none | `player.getSpawnPoint()` (stable) | Returns bed/anchor spawn, if set |
 | `list_landmarks` / `nearest_landmark` | `name` (optional) | Landmarks stored in `variables.json` or world dynamic properties (`world.getDynamicProperty`) | Seeded from [notes/coordinates.md](../notes/coordinates.md) once coordinates are recorded. Gives answers like "toward the village". |
-| `where_is_player` | `name` | `world.getPlayers({ name })` → `location` | Allowed for **Jeffrey** (decided). For other players: only players who opted in (open decision) |
+| `where_is_player` | `name` | `world.getPlayers({ name })` → `location` | **Open decision:** whether players can look each other up (off until decided) |
 | `structure_here` | none | `dimension.getGeneratedStructures(player.location)` (**beta**) | "What structure am I standing in?" Loaded chunks only. Also used to confirm a predicted structure when someone is near it. |
 
 **Never:** a tool that runs commands (`runCommand`), places or breaks blocks, moves players or teleports. The chapmanjw MCP pack's `mc_run_command` (see [live-api.md](live-api.md#companion-bot-references-researched-2026-10-07)) is exactly what we leave out.
@@ -167,7 +166,7 @@ All bodies are JSON. Header: `Authorization: Bearer <token>`, where the token co
 }
 ```
 `tools` lists what this pack version supports, so the service only offers those to the LLM. The service adds its own tools (`find_structure`, `find_nearest_ore`, `index_status`) and runs those itself, without a round trip to the pack.
-- **Position:** the service tools need the asker's position, so the pack sends `"position": {x, y, z}` with every question. In `coords` mode (Jeffrey) the LLM may see coordinates. In `direction` mode the service turns results into distance and direction **before** the LLM sees them, so the LLM still never gets absolute coordinates.
+- **Position:** the service tools need the asker's position, so the pack sends `"position": {x, y, z}` with every question. In `coords` mode (everyone, decided) the LLM may see coordinates. In `direction` mode the service turns results into distance and direction **before** the LLM sees them, so the LLM still never gets absolute coordinates.
 
 **2. Service → pack: either tool calls…**
 ```json
@@ -211,7 +210,7 @@ All bodies are JSON. Header: `Authorization: Bearer <token>`, where the token co
 ## Example exchange: "where is the nearest pig"
 
 1. Jeffrey types `/ask "where is the nearest pig"`.
-2. The pack checks that he's on the allowlist and not rate-limited. It privately sends *"Thinking…"* and POSTs `/ask`.
+2. The pack checks that he's a player and not rate-limited. It privately sends *"Thinking…"* and POSTs `/ask`.
 3. The LLM picks `find_nearest_entity { type: "minecraft:pig", max_distance: 128 }`, and the service returns that tool call.
 4. The pack runs `getEntities({ location, type: "minecraft:pig", closest: 1, maxDistance: 128 })`. It finds one pig 38 blocks away (dx +27, dz −27, dy −4). That's north-east, and the nearest landmark is the Village to the north-east. It POSTs `/ask/continue`.
 5. The LLM answers: *"Nearest pig: 38 blocks north-east, a little below you, toward the village."* In `coords` mode it would add *"at X Y Z"*.
@@ -252,24 +251,25 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
   ```
   - The 26.10 changelog example used `force_https`. 26.20 renamed it **`force_tls`**. Leave it off for a plain-HTTP container-network address, or turn it on if the service gets TLS.
   - **To test:** whether `allowed_uris` is a prefix match.
-- [ ] **Player allowlist** in `variables.json` (e.g. `"assistantPlayers": ["<gamertag>"]`), checked before anything else. Everyone else gets "The assistant isn't enabled for you."
+- [ ] **Who can ask:** every player on the server (decided). The BDS allowlist already controls who can join; the pack only checks that the sender is a real player (not a command block or script).
 - [ ] **Rate limits:** a per-player cooldown in the pack (e.g. one question per 10 s, one in flight) and the same in the service. `max_concurrent_requests` caps the pack overall.
 - [ ] **Read-only tools only,** with a fixed list and validated arguments. No `runCommand`, and no free-form code from the LLM.
 - [ ] **Logging:** the service logs time, player, question, tool calls and answer, plus failed auth. Logs stay on the box and are **never committed**. Retention is an open decision.
-- [ ] Answers go only to the asker. `where_is_player` is on for Jeffrey; for anyone else it stays off unless players opt in (open decision).
+- [ ] Answers go only to the asker. `where_is_player` stays off until Jeffrey decides whether players can look each other up.
 - [ ] **World files:** the service and indexer read **snapshot copies only**, mounted read-only. Never the live `db/`.
 - [ ] **Seed and index stay on the box.** The seed, the SQLite index and the snapshots are **never committed** and never sent to a hosted seed API.
 
 ## Access policy
 
-**Decided 2026-10-07 (Jeffrey: "I should be able to ask, no restrictions"):**
-- **Jeffrey (owner/admin) has unrestricted access** to every tool: live entity and block search, `where_is_player`, structure search, ore search, and **coordinates in his replies** (`coords` mode).
-- Unrestricted means *what he can ask*, not what the tools can do. **Every LLM game tool stays read-only.** No tool runs commands, edits blocks, moves players or writes to the world files.
-- Lore "seals" in [notes/lore.md](../notes/lore.md) are story flavor only. They never gate what Jeffrey can ask.
+**Decided 2026-10-07.** Jeffrey: "I should be able to ask, no restrictions," then "Each player should have access."
+- **Every player on the server gets the same unrestricted access** to all tools: live entity and block search, structure search, ore search, and **coordinates in replies** (`coords` mode). There are no roles or tiers.
+- Unrestricted means *what players can ask*, not what the tools can do. **Every LLM game tool stays read-only.** No tool runs commands, edits blocks, moves players or writes to the world files.
+- Lore "seals" in [notes/lore.md](../notes/lore.md) are story flavor only. They never gate what anyone can ask.
+- Rate limits still apply to everyone (they protect the server and the LLM, not access).
 
-**Still open: the policy for other players** (see [Open decisions](#open-decisions-for-jeffrey)): whether they can use it at all, and if so with coordinates or not, with ore and structure search or not, and with `where_is_player` or not.
+**One smaller question is still open:** can players look each other up (`where_is_player`)? Until Jeffrey decides, that tool stays off. Options: everyone can find everyone, only players who opt in, or off. See [Open decisions](#open-decisions-for-jeffrey).
 
-The pack keeps a per-player profile in `variables.json`, e.g. `"assistantPlayers": { "<Jeffrey's gamertag>": { "role": "owner", "reply_mode": "coords", "tools": "all" } }`. The service enforces the same list, so a modified request can't widen access.
+The pack and the service share one access setting in `variables.json`, e.g. `"assistantAccess": { "players": "all", "reply_mode": "coords", "tools": "all", "where_is_player": "off" }`. The service enforces the same setting, so a modified request can't change it.
 
 ## Build steps (in order)
 
@@ -283,9 +283,9 @@ The pack keeps a per-player profile in `variables.json`, e.g. `"assistantPlayers
 ### Step 1: MVP (one command, one tool)
 - [ ] Service: `POST /ask` and `/ask/continue` with a token check, talking to the local LLM with **one tool**, `find_nearest_entity`
 - [ ] Pack: `/bb:ask` (alias `/ask`) with `cheatsRequired: false`, an optional quoted question, and a text box when empty
-- [ ] Pack: allowlist + cooldown, a private "Thinking…" message, and HTTP with a timeout and error handling
-- [ ] Pack: `find_nearest_entity` via `getEntities({ closest: 1, ... })`, replying with **distance + 8-point compass direction + up/down**, plus **X Y Z for Jeffrey** (`coords` mode, decided)
-- [ ] Pack + service: per-player profiles (Jeffrey = owner, all tools); everyone else refused until the other-player policy is decided
+- [ ] Pack: player check + cooldown, a private "Thinking…" message, and HTTP with a timeout and error handling
+- [ ] Pack: `find_nearest_entity` via `getEntities({ closest: 1, ... })`, replying with **distance + 8-point compass direction + up/down**, plus **X Y Z** (`coords` mode for everyone, decided)
+- [ ] Pack + service: the shared access setting (all players, all tools, coordinates on, `where_is_player` off until decided)
 - [ ] Test on the world copy: "where is the nearest pig / cow / sheep", plus "nothing in range" and "AI server down"
 
 ### Step 2: No-LLM fast path
@@ -302,7 +302,7 @@ The pack keeps a per-player profile in `variables.json`, e.g. `"assistantPlayers
 
 ### Step 5: Optional extras
 - [ ] `!ask` chat prefix through beta `chatSend` with `cancel = true` (only if Jeffrey wants it; moves the pack to beta `@minecraft/server`)
-- [ ] `coords` reply mode for other players, only if Jeffrey decides to allow it (it's already on for Jeffrey from Step 1)
+- [ ] `where_is_player`, once Jeffrey decides whether players can look each other up
 - [ ] Merge with the [Live API](live-api.md) pack so one pack and one service do telemetry, chat assistant and, later, the companion bot
 
 ### Step 6: World snapshot pipeline + index
@@ -334,8 +334,8 @@ The pack keeps a per-player profile in `variables.json`, e.g. `"assistantPlayers
 
 ## Open decisions for Jeffrey
 
-- [x] **Your access:** unrestricted, with coordinates in your replies and every tool, including ore and structure search (decided 2026-10-07, see [Access policy](#access-policy)). Tools stay read-only.
-- [ ] **Other players:** can they use it at all? If so: coordinates or distance + direction only? Ore and structure search? Can they look each other up (`where_is_player`), and can you look them up without asking them?
+- [x] **Who can use it and how much:** every player, with the same unrestricted access: every tool, ore and structure search, and coordinates in replies (decided 2026-10-07, see [Access policy](#access-policy)). Tools stay read-only.
+- [ ] **Player lookups:** can players look each other up (`where_is_player`)? Everyone, opt-in only, or off? (Off until decided.)
 - [ ] **LLM and service stack:** which model and server on the AI box (it needs OpenAI-style tool calling), and Python or Node for the service?
 - [ ] **Beta APIs:** OK to enable it on the world (shared with the Live API and Canopy; can't be undone)?
 - [ ] **Input:** `/ask` command only (stable, recommended), or also an `!ask` chat prefix (beta)?
@@ -346,8 +346,8 @@ The pack keeps a per-player profile in `variables.json`, e.g. `"assistantPlayers
 ## Done when
 
 - [ ] `/ask "where is the nearest pig"` privately returns the right distance and direction on the real server
-- [ ] Non-allowlisted players are refused, rate limits work, and nothing but the asker sees the answer
+- [ ] Every player can ask, rate limits work, and nothing but the asker sees the answer
 - [ ] The service is reachable only from the BDS container, with token auth and `server-net` allowed only for this pack
 - [ ] The starter tools from Step 3 work and stay within the script watchdog limits
-- [ ] `/ask "where is the nearest diamond"` returns the nearest indexed diamond ore with its snapshot time, and coordinates for Jeffrey
+- [ ] `/ask "where is the nearest diamond"` returns the nearest indexed diamond ore with its snapshot time and coordinates
 - [ ] `/ask "where is the nearest village"` returns a structure marked confirmed or predicted, and only predicts the reliable types

@@ -46,7 +46,7 @@ Long-term goals that span several phases.
 | A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) | ⬜ Not started |
 | Move the server to the AI server (container, automated backups, snapshot analysis) | [plans/server-migration.md](plans/server-migration.md) | ⬜ Not started |
 | Live API: tokenized connection from the server to Grok Bot | [plans/live-api.md](plans/live-api.md) | ⬜ Not started |
-| In-game chat assistant: ask "where is the nearest pig" (or the nearest diamond or village) and the local LLM answers privately, using read-only game tools; Jeffrey has unrestricted access, coordinates included | [plans/chat-assistant.md](plans/chat-assistant.md) | ⬜ Not started |
+| In-game chat assistant: ask "where is the nearest pig" (or the nearest diamond or village) and the local LLM answers privately, using read-only game tools; every player has unrestricted access, coordinates included | [plans/chat-assistant.md](plans/chat-assistant.md) | ⬜ Not started |
 
 ## Repo map
 
