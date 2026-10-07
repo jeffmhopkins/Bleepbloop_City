@@ -50,7 +50,8 @@ A small spruce and cobble cottage with a thatch roof made from straw beds. It's 
 The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest hall does the sorting out of sight, and a **glass-fronted golem gallery** near the entrance is the part you watch. The architecture is a grand custom build of Jeffrey's design. The functional grouping and technical constraints it has to fit are in [storage-layout.md](storage-layout.md).
 
 **Status:** ⬜ Not started
-**Suggested timing:** Phase 4–5, alongside the storage [growth stages](storage-layout.md#4-growth-stages) 1–6 (gallery = Stage 4)
+**Suggested timing:** Phase 4–5, alongside the storage [growth stages](storage-layout.md#4-growth-stages) 1–5 (gallery in the Dome = Stage 4)
+**Layout:** [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery across the back, a central aisle, the Stage 1/2 wings at the front, Stage 3 bands in the middle, Stage 5 wings at the back, and the Dome (golem gallery) at the entrance. Per-stage contents: [storage-stages.md](storage-stages.md).
 **Location:** _not recorded yet_ (near the home base at spawn)
 
 **Key materials and features**
@@ -62,6 +63,8 @@ The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest
 - Style: Jeffrey's design (e.g. the oxidized copper towers in the [inspiration](building-style.md#inspiration))
 
 **Tasks**
+- [x] Layout sketched by Jeffrey ([hall layout](storage-layout.md#hall-layout-jeffreys-sketch))
+- [ ] Decide the router/input location ([options](storage-layout.md#router-and-input-location-jeffreys-decision))
 - [ ] Design the hall around the [adjacency rules and constraints](storage-layout.md#1-functional-grouping)
 - [ ] Exposed copper beams
 - [ ] Glass-fronted golem gallery with waxed golems and copper chests

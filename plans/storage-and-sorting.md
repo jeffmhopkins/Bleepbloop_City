@@ -3,6 +3,7 @@
 **Goal:** A highly automated item sorter for the real base. **Hopper filters fed by a water/ice item stream (a Bedrock chest hall) do the primary sorting**, and **copper golems are the showpiece**: a glass-fronted golem gallery at the front of the hall where a few waxed golems sort a small set of everyday items (potions and tipped arrows) into display chests you can watch.
 **Role change (2026-10-07):** Jeffrey asked to make the golems "a visual thing in the front of the hall, not necessarily the primary sorting mechanism". The golem research below is still valid; it now applies to the gallery.
 **Status:** ⬜ Not started
+**Hall layout:** [Jeffrey's sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery at the back, a central aisle to the Dome (golem gallery) at the entrance, and wings named by stage.
 **Stages:** [one table per stage](storage-stages.md).
 **Grouping:** see [storage-layout.md](storage-layout.md) for functional adjacency rules, the hard technical constraints, and the item groups for the chest walls. The building itself is a custom build Jeffrey designs; no shape or size is prescribed.
 **Always loaded:** the sorter and iron farm go in a Bedrock ticking area so they run with nobody nearby. See [Server config: ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter) (mob spawning still needs a player nearby).
@@ -208,15 +209,14 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 
 **The growth stages now live in one place: [storage-layout.md § Growth stages](storage-layout.md#4-growth-stages).** Each stage there lists what gets automated, the chests and slices added (from the [per-item allocation](storage-layout.md#3-item-by-item-chest-allocation)), its prerequisites, and a "done when".
 
-| Stage | Summary |
-| --- | --- |
-| 0 | Manual chests by group, plus one test hopper slice |
-| 1 | Input, router, overflow, and 15 bulk slices |
-| 2 | The rest of groups 1–5 (39 slices), plus the smelter loop ([auto furnace](#auto-furnace--smelter-array)) |
-| 3 | Groups 6–10, 12, 14 (30 slices), plus the [lava disposal](#garbage-disposal-garbage-furnace) |
-| 4 | Golem gallery showpiece (module 1) |
-| 5 | End group, shulker boxes, plus the [shulker unloader](#shulker-box-auto-unloader) |
-| 6 | Expansion at the open end; golem module 2 |
+| Stage | Zone in [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch) | Summary |
+| --- | --- | --- |
+| 0 | Phase 4 storage wall | Manual chests by group, plus one test hopper slice |
+| 1 | Stage 1 wing | Input, router, overflow, and 15 bulk slices |
+| 2 | Stage 2 wing | The rest of groups 1–5 (39 slices), plus the smelter loop in Machinery ([auto furnace](#auto-furnace--smelter-array)) |
+| 3 | Both Stage 3 bands | Groups 6–10, 12, 14 (30 slices), plus the [lava disposal](#garbage-disposal-garbage-furnace) in Machinery |
+| 4 | Dome | Golem gallery showpiece (module 1) |
+| 5 | Both Stage 5 wings | End group, shulker boxes, the [shulker unloader](#shulker-box-auto-unloader), then all expansion (★ items, promoted mixed items, golem module 2 in the Dome) |
 
 ## Materials (verified recipes only)
 

@@ -51,12 +51,12 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | --- | --- |
 | 2026-10-06 | Server started; first bed made, spawn set (Session 1) |
 | | Storage sorter Stage 0: manual chests by group + one test hopper slice ([growth stages](../plans/storage-layout.md#4-growth-stages)) |
-| | Storage sorter Stage 1: input barrels + router + overflow + 15 bulk slices sorting |
-| | Storage sorter Stage 2: rest of groups 1–5 (39 slices) + smelter loop running |
-| | Storage sorter Stage 3: groups 6–10, 12, 14 (30 slices) + lava disposal running |
-| | Storage sorter Stage 4: golem gallery showpiece running behind glass |
-| | Storage sorter Stage 5: End group + shulker unloader running |
-| | Storage sorter Stage 6: slices extended at the open end; housed in the Copper storage hall |
+| | Storage sorter Stage 1: input dump + router + overflow + 15 bulk slices sorting (Stage 1 wing) |
+| | Storage sorter Stage 2: rest of groups 1–5 (39 slices, Stage 2 wing) + smelter loop running |
+| | Storage sorter Stage 3: groups 6–10, 12, 14 (30 slices, both Stage 3 bands) + lava disposal running |
+| | Storage sorter Stage 4: golem gallery showpiece running behind glass (Dome) |
+| | Storage sorter Stage 5: End group + shulker unloader running in the Stage 5 wings |
+| | Storage sorter Stage 5 expansion: ★ items grown into the Stage 5 wings; hall dressed as the Copper storage hall (ongoing) |
 | | Storage sorter add-on: auto furnace (blast furnaces + smokers) running off the sorter |
 | | Storage sorter add-on: lava garbage disposal taking junk + overflow |
 | | Storage sorter add-on: shulker box auto unloader feeding the sorter |
