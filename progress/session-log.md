@@ -35,6 +35,7 @@ One entry per play session, newest at the top. Copy the template below (also in 
 - One chest
 - Stone tools (that's the current tier)
 - Replanted 12 trees near base for easy wood
+- Gathered logs and cobblestone
 - No animal pens yet
 
 ### Deaths
@@ -49,4 +50,4 @@ One entry per play session, newest at the top. Copy the template below (also in 
 - [ ] Animal pen with 2+ cows
 - [ ] Second chest
 - [ ] Staircase mine toward Y=16 for iron and coal
-- [ ] Record spawn / first bed coordinates in [notes/coordinates.md](../notes/coordinates.md)
+- [ ] Record spawn / first bed location in [notes/coordinates.md](../notes/coordinates.md) (coordinates are off on the server, so use landmarks for now)

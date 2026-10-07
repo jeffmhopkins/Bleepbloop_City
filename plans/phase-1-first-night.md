@@ -16,8 +16,8 @@ Do this before you decorate anything.
 - [x] Make a stone sword
 
 ### Materials
-- [ ] Gather about a stack of logs
-- [ ] Gather 20–30 cobble
+- [x] Gather about a stack of logs
+- [x] Gather 20–30 cobble
 - [x] Get wool: kill sheep or find an abandoned camp (bed made in Session 1)
 
 ### Shelter and sleep
@@ -43,4 +43,4 @@ Do this before you decorate anything.
 
 ## Notes
 
-- 2026-10-06 (Session 1): bed, crafting table, furnace, one chest, stone tools, a little food. 12 trees replanted for easier wood. Stone tools were reported as "only stone tools right now"; the exact set wasn't listed. Log amount, cobble count, and shelter weren't reported, so those stay unchecked.
+- 2026-10-06 (Session 1): bed, crafting table, furnace, one chest, stone tools, a little food. 12 trees replanted for easier wood. Stone tools were reported as "only stone tools right now"; the exact set wasn't listed. Logs and cobble were confirmed afterward (amounts not given). Shelter wasn't reported, so it stays unchecked.
