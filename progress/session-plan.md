@@ -24,13 +24,61 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 
 ## At a glance
 
-| Session | Goal | Phases |
+| Session | Goal | Phases | Map thread |
+| --- | --- | --- | --- |
+| [2](#session-2-light-food-and-the-first-farm) | Light, a food stack, the wheat farm, an animal pen, a second chest | Finishes 1; advances 2 and 3 | Plant sugar cane |
+| [3](#session-3-iron-age) | Staircase mine for iron and coal; iron pick, shield, bucket | 2 | Look for redstone (compass) |
+| [4](#session-4-plant-the-flag) | Mark the real site near spawn, move the bed, Stage 0 storage chests, compass | 3, starts 4 | Compass; first locator map of base and spawn (90 block) |
+| [5](#session-5-diamonds-and-the-enchanting-path) | Branch mine for diamonds, redstone and lapis; obsidian; scout a village | 4, prep for 5 | Zoomed-out local-area map on the scouting trip (90 block) |
+| [6](#session-6-the-nether-gateway) | Enchanting table, a boxed Nether portal, a short quartz run | 4 and 5 | Wall map in item frames (90 block) |
+
+## Map thread: a local-area map
+
+Jeffrey wants a map of the local area. The steps are spread across Sessions 2–6, mostly in the "if you have 90" blocks, because each step depends on materials from earlier sessions: **sugar cane → paper**, **iron + redstone → compass**, **cows → leather → item frames**.
+
+| Step | Session | Needs |
 | --- | --- | --- |
-| [2](#session-2-light-food-and-the-first-farm) | Light, a food stack, the wheat farm, an animal pen, a second chest | Finishes 1; advances 2 and 3 |
-| [3](#session-3-iron-age) | Staircase mine for iron and coal; iron pick, shield, bucket | 2 |
-| [4](#session-4-plant-the-flag) | Mark the real site near spawn, move the bed, Stage 0 storage chests, compass | 3, starts 4 |
-| [5](#session-5-diamonds-and-the-enchanting-path) | Branch mine for diamonds, redstone and lapis; obsidian; scout a village | 4, prep for 5 |
-| [6](#session-6-the-nether-gateway) | Enchanting table, a boxed Nether portal, a short quartz run | 4 and 5 |
+| Plant sugar cane by water | 2 (during the farm step) | A few stalks found nearby |
+| Compass | 4 (core, last 5 minutes), or 5 | 4 iron + 1 redstone dust |
+| Cartography table + first locator map of base and spawn (zoom level 0) | 4, if you have 90 | 3 paper (2 for the table + 1 for the map) + the compass |
+| Zoomed-out local-area map, filled on the scouting trip (level 2 or 3) | 5, if you have 90 | 1 paper + a compass for a new locator map, plus 1 paper per zoom level |
+| Wall map by the base door or storage entrance | 6, if you have 90 | 1 item frame (leather) per map, plus 1 paper per clone |
+
+**Verified Bedrock facts** ([Map](https://minecraft.wiki/w/Map), [Cartography Table](https://minecraft.wiki/w/Cartography_Table), [Paper](https://minecraft.wiki/w/Paper), 2026-10-07)
+- **Paper:** 3 sugar cane make 3 paper.
+- **Empty map vs empty locator map:**
+  - On Bedrock, 9 paper crafts an **empty map**, which draws terrain but shows no player marker.
+  - 8 paper around a compass crafts an **empty locator map**, which shows player markers.
+  - At a cartography table it's much cheaper: 1 paper makes an empty map, and 1 paper + a compass makes an empty locator map.
+  - A plain map can get its marker later by combining it with a compass.
+- **Cartography table:** 2 paper + 4 planks. It zooms maps out (1 paper per level, versus 8 paper on a crafting table or anvil), clones them (map + empty map), and locks them (map + glass pane). On Bedrock it also makes empty maps, adds the compass marker, and renames maps for free.
+- **Zoom levels:**
+
+| Level | Covers | 1 map pixel = |
+| --- | --- | --- |
+| 0 | 128×128 blocks | 1 block |
+| 1 | 256×256 | 2×2 blocks |
+| 2 | 512×512 | 4×4 |
+| 3 | 1024×1024 | 8×8 |
+| 4 | 2048×2048 | 16×16 |
+
+- **Zooming wipes the drawing:** changing a map's zoom resets its contents, so it has to be explored again. Locked maps can't be zoomed.
+- **How a map fills in:**
+  - Use (activate) it once, then **hold it in either hand** while you move. It records terrain around you (up to 128 blocks away in the Overworld), and only the surface, even if you're underground.
+  - Changes to the world only show up when you go back there holding the map.
+  - **Clones stay in sync**, so one copy can sit in a frame while you fill another.
+- **Fixed grid:**
+  - A new map doesn't center on you. It shows the fixed grid square you were standing in when you first used it, and maps of the same size never partly overlap.
+  - Zoomed maps stay on the same grid. To cover a new area, start a level 0 map **inside** that area.
+- **Seamless wall map:** put maps of the **same zoom level** from neighboring grid squares in item frames side by side. Framed maps expand to fill the frame, so the squares line up into one picture.
+- **Markers on Bedrock:**
+  - Only **locator** maps show players. In multiplayer they show every player, colored by join order, with a skin face when they're 10–80 blocks away. When you're off the map, your marker becomes a dot on the edge.
+  - A framed locator map shows a **green marker** for the frame on its clones.
+  - **Banner markers are Java-only:** using a map on a banner does nothing on Bedrock.
+  - Maps don't mark lodestones, and an Overworld map doesn't mark world spawn. So **landmarks have to be written down**, and that's what [coordinates](../notes/coordinates.md) is for.
+- **Nether:** maps made there only show a red-and-gray pattern, so the Nether hub gets logged in coordinates, not mapped. On Bedrock, though, an **Overworld locator map carried into the Nether** shows where you are relative to the Overworld map. That helps line up the two portals.
+
+**Feeds the landmark log.** With coordinates off, the map is the best way to place landmarks. Each time a map fills in, note in [coordinates](../notes/coordinates.md) which map shows each landmark and roughly where on it, for example "base map, NE quarter". At level 0, 1 pixel is 1 block, so distances can be counted.
 
 ---
 
@@ -47,7 +95,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 **60-minute plan**
 - [ ] **0:00–0:10 Light.** Smelt logs into charcoal (planks or logs as fuel). Craft torches (1 coal or charcoal + 1 stick = 4 torches). Light the bed area and wherever you shelter, and add a door. Most monsters only spawn at block light 0, so every torch counts.
 - [ ] **0:10–0:25 Food stack.** Hunt nearby cows, pigs, sheep and chickens and cook the meat in the furnace. Aim for a full stack (64). Break tall grass as you go to collect wheat seeds.
-- [ ] **0:25–0:45 Wheat farm.** Till the Phase 2 plot next to water and plant the seeds. Water hydrates farmland up to 4 blocks away. Fence it so mobs don't trample it, and keep it lit: on Bedrock, wheat needs light 9 to grow ([Wheat Seeds](https://minecraft.wiki/w/Wheat_Seeds)).
+- [ ] **0:25–0:45 Wheat farm.** Till the Phase 2 plot next to water and plant the seeds. Water hydrates farmland up to 4 blocks away. Fence it so mobs don't trample it, and keep it lit: on Bedrock, wheat needs light 9 to grow ([Wheat Seeds](https://minecraft.wiki/w/Wheat_Seeds)). **Sugar cane:** if you pass any, grab a few stalks and plant them on dirt or sand right next to the water. It's slow to multiply, and it gates paper for both books and maps.
 - [ ] **0:45–0:55 Animal pen.** Fence a pen with a gate. Cows and sheep follow you while you hold **wheat**, and chickens follow **seeds**. If there's no wheat yet, fence the pen where cows already graze, or wait for the first harvest in Session 3. Two cows minimum.
 - [ ] **0:55–1:00 Second chest + log it.** Craft a chest (8 planks) and split your things into tools, food and blocks. Write the bed, spawn and tree-farm landmarks in [coordinates](../notes/coordinates.md).
 
@@ -130,6 +178,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 - **Labels:** item frames need leather (8 sticks + 1 leather each), so until the cows give leather, signs work as temporary labels.
 - Wool for a banner, a door, torches, and the bed (you pick it up and carry it).
 - Wheat, seeds, and any carrots or potatoes you've found.
+- For the 90-minute map step: the compass (or redstone to craft it) and about 3 paper (harvest the Session 2 sugar cane).
 
 **60-minute plan**
 - [ ] **0:00–0:10 Pick and mark the site** near spawn, using the Phase 3 checklist (flat-ish ground, plus what's already confirmed: ocean, caves, cherry trees, a second biome). Banner or pillar it, and log it in [coordinates](../notes/coordinates.md). Check the Phase 3 "avoid" list: not on a stronghold, not inside a mansion, not on the looted camp.
@@ -143,6 +192,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 - [ ] **Animals:** breed the cows with wheat for leather (books and item frames), and lure chickens with seeds.
 - [ ] **Food wing basics** (Phase 4): a composter, and a smoker if Session 3 didn't make one.
 - [ ] Bring the starter crops and animals over if the old spot is far, or keep both and log both.
+- [ ] **First map: base and spawn.** Needs the compass plus about 3 paper (sugar cane from Session 2). Craft a **cartography table** (2 paper + 4 planks), then make an **empty locator map** in it from 1 paper + the compass. That's much cheaper than the 8 paper + compass crafting recipe. Use the map, then walk around the new base and spawn while holding it until the area fills in. Log what it shows in [coordinates](../notes/coordinates.md). See the [map thread](#map-thread-a-local-area-map).
 
 **Done when**
 - [ ] The site is chosen, marked and logged.
@@ -160,6 +210,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 - [Tracker](tracker.md) and [README](../README.md): *Site chosen* and *Storage started*. Tracker milestone: *Storage sorter Stage 0* (manual chests; the test hopper slice comes later). Phase 4 row → 🟨.
 - [Phase 2](../plans/phase-2-starter-outpost.md): *Add carrots or potatoes*, *Add sheep*, *Add chickens* (90 block).
 - [Coordinates](../notes/coordinates.md): *Real base*.
+- [Phase 4](../plans/phase-4-the-base.md) §2 workshop: *Cartography table*; §7 local-area map: *First locator map of the base and spawn* (90 block).
 
 ---
 
@@ -180,6 +231,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 
 **If you have 90**
 - [ ] **Village scouting (daylight).** Follow the coast or a river from spawn. Log any village, and note librarians, fletchers and toolsmiths in [resources and farms](../notes/resources-and-farms.md) (Phase 5 trading hall). The village decides the remaining Phase 3 site item.
+- [ ] **Wider local-area map while scouting.** Start a fresh locator map at the base, then zoom it out at the cartography table (1 paper per level; zooming wipes what's drawn, so do it **before** filling). Level 2 covers 512×512 blocks and level 3 covers 1024×1024. Carry it on the village trip and swing past the mountain, the cherry grove, the cave entrance, the ocean and the ice so they all get drawn.
 - [ ] **Enchanting materials:** an **enchanting table** is 1 book + 2 diamonds + 4 obsidian ([Enchanting Table](https://minecraft.wiki/w/Enchanting_Table)). A book is 3 paper + 1 leather, and paper is 3 sugar cane. Start a stockpile; bookshelves come later.
 
 **Done when**
@@ -197,6 +249,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 - [Phase 4](../plans/phase-4-the-base.md) §4 mine entrance: *A lit staircase…*, *Branch at Y=−54 or around diamond level…*, *Keep a safe path back up*.
 - [Phase 3](../plans/phase-3-pick-the-site.md): *A village…*, if one turned up near the site.
 - [Resources and farms](../notes/resources-and-farms.md): a branch mine row, and the village or villager rows. [Coordinates](../notes/coordinates.md): *Branch mine*, *Village*.
+- [Phase 4](../plans/phase-4-the-base.md) §7 local-area map: *Zoomed-out local-area map* (90 block). The landmarks it shows go in [coordinates](../notes/coordinates.md).
 
 ---
 
@@ -221,6 +274,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 **If you have 90**
 - [ ] **Leather and books:** breed the cows and harvest the sugar cane toward books (enchanting) and item frames (proper Stage 0 labels).
 - [ ] **Iron stockpile:** more mining or caving for iron. Storage Stage 1 needs a lot of hoppers at 5 iron each ([Stage 1 needs](../plans/storage-layout.md#stage-1-front-left-wing-machinery-core-and-the-whole-trunk)).
+- [ ] **Wall map by the base door or storage entrance.** Each map needs an **item frame** (8 sticks + 1 leather), so this follows the leather above. Clone the filled maps at the cartography table (map + 1 empty map = 2 copies) so you keep one to carry. Frame the base map and the local-area map. Framed locator maps show a green marker for the frame on every clone. Where and how the wall looks is Jeffrey's call.
 - [ ] **Not yet: an iron farm.** On Bedrock, iron golems spawn only in villages with **at least 20 beds and 10 villagers** ([Iron Golem](https://minecraft.wiki/w/Iron_Golem)). That makes it a Phase 5 project for after the trading hall work. For now, just log a village that could host it.
 
 **Done when**
@@ -238,6 +292,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 - [Phase 5](../plans/phase-5-infrastructure.md) §3 Nether: *Nether portal in a boxed room with a door*, *Mark portal and hub coordinates*. Phase 5 row → 🟨.
 - [Coordinates](../notes/coordinates.md): both *Nether portal* rows.
 - [Building goals](../plans/building-goals.md) #7, Nether portal shrine: only if the portal room is built as the shrine.
+- [Phase 4](../plans/phase-4-the-base.md) §7 local-area map: *Wall map near the base door*. [Phase 5](../plans/phase-5-infrastructure.md) §4: *A map on an item frame at the door* (90 block).
 
 ---
 

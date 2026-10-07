@@ -27,7 +27,7 @@
 
 ### 4. Roads
 - [ ] Roads or ice boats between the starter shack, base, village, and portal
-- [ ] A map on an item frame at the door
+- [ ] A map on an item frame at the door (the first wall map is planned for [Session 6](../progress/session-plan.md#session-6-the-nether-gateway); see [Phase 4 §7](phase-4-the-base.md#7-local-area-map). Extend it with more same-zoom maps as roads reach new areas)
 
 ### 5. Backups
 - [ ] Backup storage in a second room
