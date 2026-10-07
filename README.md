@@ -2,7 +2,8 @@
 
 Minecraft server planning: plans, progress, and notes for building Bleepbloop City from first night to a base that lasts.
 
-**Game version:** Wilderness Bound (Java 26.3 / Bedrock 26.50). Straw beds, abandoned camps, and copper gear all matter in the first week.
+**Server edition:** Bedrock.
+**Game version:** Wilderness Bound (Bedrock 26.50; Java 26.3 is the matching Java release). Straw beds, abandoned camps, and copper gear all matter in the first week.
 
 > A good base is a logistics problem first and a building project second. Get safe, get food, get a bed, then pick a site you will still want in a month.
 
