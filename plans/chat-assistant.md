@@ -19,16 +19,23 @@
 > [BDS scripting](https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/scripting?view=minecraft-bedrock-stable) ·
 > [1.26.10 changelog: server-net HTTP config](https://learn.microsoft.com/en-us/minecraft/creator/documents/update1.26.10?view=minecraft-bedrock-stable) ·
 > wiki: [Argument types](https://minecraft.wiki/w/Argument_types), [/scriptevent](https://minecraft.wiki/w/Commands/scriptevent), [server.properties](https://minecraft.wiki/w/Server.properties), [Coordinates](https://minecraft.wiki/w/Coordinates), [Bedrock Edition 26.50](https://minecraft.wiki/w/Bedrock_Edition_26.50)
+>
+> **World files and structure search (checked 2026-10-07):**
+> wiki: [Bedrock level format](https://minecraft.wiki/w/Bedrock_Edition_level_format), [Stronghold (Bedrock generation)](https://minecraft.wiki/w/Stronghold#Bedrock_Edition), [/locate](https://minecraft.wiki/w/Commands/locate) ·
+> LevelDB readers: [Mojang/leveldb](https://github.com/Mojang/leveldb) (Mojang's fork with zlib), [Amulet-Core](https://github.com/Amulet-Team/Amulet-Core) (Python, 1.9.49 released 2026-09-24), [amulet-leveldb](https://pypi.org/project/amulet-leveldb/) (Cython wrapper for Mojang's LevelDB), [mcbe-leveldb](https://www.npmjs.com/package/mcbe-leveldb) (TypeScript, 1.23.0, 2026-09-13), [leveldb-mcpe-java](https://github.com/HiveGamesOSS/leveldb-mcpe-java), [rbedrock](https://github.com/reedacartwright/rbedrock) (R) ·
+> Seed prediction: [Chunkbase seed map accuracy notes](https://www.chunkbase.com/apps/seed-map), [MC Seed View accuracy postmortem (2026-07-15, checked against BDS 1.26.33 `/locate`)](https://mcseedview.com/blog/accuracy-report-july-2026), [SeedFinder](https://github.com/zebedelu/SeedFinder) (C engine + REST API for Bedrock; GitHub lists the license as Zlib, the README badge says Apache-2.0), [cubiomes-bedrock](https://github.com/FragrantResult186/cubiomes-bedrock) (MIT), [cubiomes](https://github.com/Cubitect/cubiomes) (Java-only original) ·
+> Live structure check: [`Dimension.getGeneratedStructures` (beta)](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/dimension?view=minecraft-bedrock-experimental#getgeneratedstructures)
 
 ## What it does
 
 - A player on the allowlist types `/ask "where is the nearest pig"`, or just `/ask` to get a text box.
 - They privately see "Thinking…", then an answer such as: *"Nearest pig: 38 blocks north-east, a little below you. That's toward the village."*
-- The LLM decides **which tool to call** (find an entity, find a block, check the time…) and phrases the answer. The **pack** does all the world reading, and every tool is **read-only**.
+- The LLM decides **which tool to call** (find an entity, find a block, check the time…) and phrases the answer. The **pack** does the live world reading, the **service** reads the seed and saved-world snapshots (structures and ores), and every tool is **read-only**.
 - Answers go **only to the asker** (`player.sendMessage`). Nobody else sees the question or the answer.
-- **Reply format is a server setting** (open decision below):
+- **Reply format is a per-player setting:**
   - `direction` mode gives distance + compass direction + nearest landmark. It keeps the server's "coordinates off" rule.
-  - `coords` mode adds X Y Z. That is what Jeffrey asked for, but it **bypasses the coordinates-off rule**, so it's Jeffrey's call.
+  - `coords` mode adds X Y Z. **Jeffrey gets `coords` mode** (decided 2026-10-07, see [Access policy](#access-policy)). Other players are still an open decision.
+- It can also find **structures** (from the seed, confirmed against the saved world) and **ores** (from a scan of saved world snapshots). See [Structure and ore search](#structure-and-ore-search-world-files--seed).
 
 ## Architecture
 
@@ -44,6 +51,12 @@ flowchart LR
     SVC["Assistant service<br/>/ask · /ask/continue<br/>token check · rate limit · log"]
     LLM["Local LLM<br/>(OpenAI-compatible tool calling)"]
     SVC <--> LLM
+    IDX["World index (SQLite)<br/>ores + structure signs<br/>built from snapshot copies"]
+    SEED["Structure predictor<br/>(seed, self-hosted)"]
+    SNAP["Snapshot copy of the world<br/>(save hold / query / resume)"]
+    SNAP --> IDX
+    SVC -- "read-only" --> IDX
+    SVC -- "read-only" --> SEED
   end
   BP -- "HTTP POST question + context (bearer token)" --> SVC
   SVC -- "tool_calls" --> BP
@@ -74,9 +87,9 @@ The service is **never exposed to the internet**. It listens only on the contain
   - `show()` can be rejected with `UserBusy` (for example while the chat screen is still open), so retry a few times over the next ticks. **Untested in game.**
 - **Fast path, no LLM:** a second command `/bb:find <EntityType>` (`CustomCommandParamType.EntityType` gives in-game autocomplete for mob names) runs the same "nearest entity" tool directly. It still works when the AI server is down.
 
-## Tools (starter set, all read-only)
+## Tools (all read-only)
 
-The LLM sees each tool as a function with a JSON schema. The pack implements it with these Script API calls. "Stable" means `@minecraft/server` 2.10.0.
+The LLM sees each tool as a function with a JSON schema. **Pack tools** run in the world through these Script API calls ("stable" means `@minecraft/server` 2.10.0). **Service tools** run on the AI server against the seed and saved-world snapshots; they're listed after the table.
 
 | Tool | Arguments | Script API behind it | Notes / limits |
 | --- | --- | --- | --- |
@@ -90,11 +103,48 @@ The LLM sees each tool as a function with a JSON schema. The pack implements it 
 | `time_and_weather` | none | `world.getTimeOfDay()`, `world.getDay()`, `world.getMoonPhase()` (stable). Weather is tracked from the stable `world.afterEvents.weatherChange`. | `dimension.getWeather()` is **beta only**. Use the event so the pack stays on stable `@minecraft/server`. |
 | `my_spawn_point` | none | `player.getSpawnPoint()` (stable) | Returns bed/anchor spawn, if set |
 | `list_landmarks` / `nearest_landmark` | `name` (optional) | Landmarks stored in `variables.json` or world dynamic properties (`world.getDynamicProperty`) | Seeded from [notes/coordinates.md](../notes/coordinates.md) once coordinates are recorded. Gives answers like "toward the village". |
-| `where_is_player` | `name` | `world.getPlayers({ name })` → `location` | **Privacy:** only for players who opted in (open decision) |
+| `where_is_player` | `name` | `world.getPlayers({ name })` → `location` | Allowed for **Jeffrey** (decided). For other players: only players who opted in (open decision) |
+| `structure_here` | none | `dimension.getGeneratedStructures(player.location)` (**beta**) | "What structure am I standing in?" Loaded chunks only. Also used to confirm a predicted structure when someone is near it. |
 
 **Never:** a tool that runs commands (`runCommand`), places or breaks blocks, moves players or teleports. The chapmanjw MCP pack's `mc_run_command` (see [live-api.md](live-api.md#companion-bot-references-researched-2026-10-07)) is exactly what we leave out.
 
-**No structure search.** The Script API has no "locate structure" call, and `runCommand("locate …")` doesn't return the text result. So "nearest village" can only come from landmarks or `locate_biome`.
+**Service tools** (run on the AI server, never in the pack; read-only):
+
+| Tool | Arguments | How | Notes / limits |
+| --- | --- | --- | --- |
+| **`find_structure`** | `type` (e.g. `village`, `trial_chambers`), `max_results` | Seed prediction near the asker, then each candidate is checked against the world index: **confirmed** (signature blocks found in a saved chunk), **predicted** (land not explored yet), or **missing** (explored but nothing there, so it probably failed to generate). | Reliability depends on the structure type (table below). Answers say which of the three it is. |
+| **`find_nearest_ore`** | `block` (e.g. `diamond_ore`; deepslate variants included), `max_results` | Nearest matching blocks in the world index, from the latest snapshot | **Explored (saved) chunks only.** Answers carry the snapshot time ("as of 4:10 PM"). Ore mined since then may be gone. |
+| `index_status` | none | Snapshot time, how many chunks are indexed per dimension | So the LLM can say how fresh its answer is |
+
+## Structure and ore search (world files + seed)
+
+The Script API alone can't do this. It has no "locate structure" call, `runCommand("locate …")` only returns a success count (not the text), and block search only covers loaded chunks. The AI server hosts the world, though, so the **service** can use two other sources. The LLM's tools stay read-only either way.
+
+**1. The saved world (what has been generated or explored).**
+- BDS saves the world in **Mojang's LevelDB fork with zlib compression** (`db/` folder; wiki: Bedrock level format). Normal LevelDB libraries can't read it; use a reader built on Mojang's fork:
+  - **Amulet-Core** (Python, actively released) or **amulet-leveldb** (just the Cython LevelDB wrapper) plus our own subchunk palette parsing for speed. **To test:** 26.50 support, same as the [snapshot pipeline](server-migration.md#snapshot-pipeline-stage-2).
+  - **mcbe-leveldb** (TypeScript) if the service is Node.
+- **Never read the live `db/`.** Use the same consistent copy method as the backups (`save hold` → `save query` → copy and truncate → `save resume`), from [server migration](server-migration.md#snapshot-pipeline-stage-2).
+- **Index it, don't scan per question.** After each snapshot, an indexer walks the chunks that changed and stores the positions of the ores (all ore blocks and ancient debris) and **structure signature blocks** in SQLite. Example signatures: `trial_spawner`/`vault` (trial chambers), `reinforced_deepslate` (ancient city), `end_portal_frame` (stronghold), `suspicious_gravel` (trail ruins). Questions then become a fast nearest-point lookup.
+  - The level format also has `HardcodedSpawners` records (bounding boxes for structure spawn areas) and `AABBVolumes` / `JigsawStructureBlueprint` records. **To test:** whether these can be decoded to list structures directly; the wiki doesn't document their contents.
+- **Saves lag behind play.** The snapshot only has what the server has written to disk, so it's minutes behind. Live mobs stay with the pack's Script API tools; only ores and structures use the files.
+
+**2. The seed (what the world was made to have, even where nobody has been).**
+- Seed maps like Chunkbase predict structure positions from the seed. For a self-hosted service, the open-source options for **Bedrock** are small, young projects: **SeedFinder** (C engine on cubiomes with Bedrock-specific placement, HTTP API, 17 structure types) and **cubiomes-bedrock** (MIT C library). The original **cubiomes** is Java-only. Chunkbase itself has no API.
+- **Self-host only.** Don't send the seed to a hosted API (for example SeedFinder's public endpoint): the seed reveals the whole world. The seed stays on the box (it's in `level.dat`) and is **never committed** to this public repo.
+- **Validate before trusting.** Check the predictor against our own world: structures confirmed in the index, and spot checks in game. Predictions are version-specific, so retest after BDS updates that change world generation.
+
+**How reliable is seed prediction on Bedrock?** (From Chunkbase's own accuracy notes, MC Seed View's July 2026 check against BDS 1.26.33 `/locate`, the SeedFinder support table, and the wiki's Bedrock stronghold rules.)
+
+| Reliability | Structures | Why |
+| --- | --- | --- |
+| **Good** (region-grid placement, verified by tools against BDS) | Villages, pillager outposts, desert pyramids, jungle temples, swamp huts, igloos, shipwrecks, ocean ruins, ocean monuments, woodland mansions, buried treasure, ruined portals, ancient cities, trail ruins, trial chambers, mineshafts | One placement attempt per region, so the position can be computed. Some can still fail to generate in game (villages about 2% in MC Seed View's check). Terrain-dependent ones (pyramids, jungle temples, mansions) can give false positives. Trail ruins, ruined portals and fossils may only be accurate to the chunk, and things can be buried. Accuracy drops millions of blocks from 0,0. |
+| **Unreliable or unsupported** | **Strongholds** (Bedrock places them randomly, at least 160 blocks out, plus 3 extra under village meeting points; MC Seed View hides them until verified), **Nether structures** (fortresses, bastions: approximate or not exposed), **Nether fossils and dried ghasts** (Chunkbase lists them as unreliable on Bedrock), **End cities** (not exposed in SeedFinder), **per-chunk features** (dungeons, amethyst geodes, desert wells, fossils), **abandoned camps** (new in 26.50; no open-source support found) | Different or unknown placement on Bedrock, or decided chunk by chunk during decoration |
+| **Not predictable** | **Individual ores** (diamonds and so on) in land that hasn't generated | Ore placement happens during chunk decoration. We found no tool that predicts individual Bedrock ore blocks from the seed. Ores only come from the saved-world scan. |
+
+For unreliable types, the answer comes from the saved world only (confirmed structures), or the bot says it can't predict them. For strongholds, the in-game answer stays the eye of ender.
+
+**3. Optional ground truth: the game's own `/locate`.** BDS can run `/locate structure <type>` from the console (the itzg image's `send-command`, output in the container logs). It's the game's own answer, so it's exact, including strongholds. **To test:** `/locate` is a **cheat-only** command on Bedrock, so check whether it works from the console with cheats off, and how to run it from the asker's position (e.g. `execute`). This would be the service sending a console command, so it stays service-side, limited to `locate`, and is never an LLM tool that runs arbitrary commands.
 
 ## LLM service contract (tool loop)
 
@@ -116,7 +166,8 @@ All bodies are JSON. Header: `Authorization: Bearer <token>`, where the token co
   }
 }
 ```
-`tools` lists what this pack version supports, so the service only offers those to the LLM. The asker's absolute position is **not sent** in `direction` mode.
+`tools` lists what this pack version supports, so the service only offers those to the LLM. The service adds its own tools (`find_structure`, `find_nearest_ore`, `index_status`) and runs those itself, without a round trip to the pack.
+- **Position:** the service tools need the asker's position, so the pack sends `"position": {x, y, z}` with every question. In `coords` mode (Jeffrey) the LLM may see coordinates. In `direction` mode the service turns results into distance and direction **before** the LLM sees them, so the LLM still never gets absolute coordinates.
 
 **2. Service → pack: either tool calls…**
 ```json
@@ -180,7 +231,7 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
   - `@minecraft/server-net` and `@minecraft/server-admin` exist only as beta (`1.0.0-beta.1.26.50-stable`) and need the **Beta APIs** experiment. Beta modules can change on any BDS update: pin the BDS version and retest before upgrading.
   - Experiments **can't be turned off** once a world uses them. Test on a copy first. The same experiment is already needed for Canopy and the Live API.
 - **Quotes.** Multi-word `/ask` text needs double quotes (Bedrock argument parsing); the text box avoids this.
-- **No structure locate** (see Tools).
+- **Structures and ores come from files, not the live world** (see [Structure and ore search](#structure-and-ore-search-world-files--seed)): ore answers are as fresh as the last snapshot, and seed predictions vary in reliability by structure type.
 
 ## Security
 
@@ -205,7 +256,20 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 - [ ] **Rate limits:** a per-player cooldown in the pack (e.g. one question per 10 s, one in flight) and the same in the service. `max_concurrent_requests` caps the pack overall.
 - [ ] **Read-only tools only,** with a fixed list and validated arguments. No `runCommand`, and no free-form code from the LLM.
 - [ ] **Logging:** the service logs time, player, question, tool calls and answer, plus failed auth. Logs stay on the box and are **never committed**. Retention is an open decision.
-- [ ] Answers go only to the asker. `where_is_player` stays off unless players opt in.
+- [ ] Answers go only to the asker. `where_is_player` is on for Jeffrey; for anyone else it stays off unless players opt in (open decision).
+- [ ] **World files:** the service and indexer read **snapshot copies only**, mounted read-only. Never the live `db/`.
+- [ ] **Seed and index stay on the box.** The seed, the SQLite index and the snapshots are **never committed** and never sent to a hosted seed API.
+
+## Access policy
+
+**Decided 2026-10-07 (Jeffrey: "I should be able to ask, no restrictions"):**
+- **Jeffrey (owner/admin) has unrestricted access** to every tool: live entity and block search, `where_is_player`, structure search, ore search, and **coordinates in his replies** (`coords` mode).
+- Unrestricted means *what he can ask*, not what the tools can do. **Every LLM game tool stays read-only.** No tool runs commands, edits blocks, moves players or writes to the world files.
+- Lore "seals" in [notes/lore.md](../notes/lore.md) are story flavor only. They never gate what Jeffrey can ask.
+
+**Still open: the policy for other players** (see [Open decisions](#open-decisions-for-jeffrey)): whether they can use it at all, and if so with coordinates or not, with ore and structure search or not, and with `where_is_player` or not.
+
+The pack keeps a per-player profile in `variables.json`, e.g. `"assistantPlayers": { "<Jeffrey's gamertag>": { "role": "owner", "reply_mode": "coords", "tools": "all" } }`. The service enforces the same list, so a modified request can't widen access.
 
 ## Build steps (in order)
 
@@ -216,11 +280,12 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
   - Depends on `@minecraft/server` **2.10.0** (stable), `@minecraft/server-ui` 2.2.0, `@minecraft/server-net` and `@minecraft/server-admin` `1.0.0-beta.1.26.50-stable`
   - Per-pack `permissions.json` / `variables.json` / `secrets.json`
 
-### Step 1: MVP (one command, one tool, direction + distance)
+### Step 1: MVP (one command, one tool)
 - [ ] Service: `POST /ask` and `/ask/continue` with a token check, talking to the local LLM with **one tool**, `find_nearest_entity`
 - [ ] Pack: `/bb:ask` (alias `/ask`) with `cheatsRequired: false`, an optional quoted question, and a text box when empty
 - [ ] Pack: allowlist + cooldown, a private "Thinking…" message, and HTTP with a timeout and error handling
-- [ ] Pack: `find_nearest_entity` via `getEntities({ closest: 1, ... })`, replying with **distance + 8-point compass direction + up/down**
+- [ ] Pack: `find_nearest_entity` via `getEntities({ closest: 1, ... })`, replying with **distance + 8-point compass direction + up/down**, plus **X Y Z for Jeffrey** (`coords` mode, decided)
+- [ ] Pack + service: per-player profiles (Jeffrey = owner, all tools); everyone else refused until the other-player policy is decided
 - [ ] Test on the world copy: "where is the nearest pig / cow / sheep", plus "nothing in range" and "AI server down"
 
 ### Step 2: No-LLM fast path
@@ -237,8 +302,27 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 
 ### Step 5: Optional extras
 - [ ] `!ask` chat prefix through beta `chatSend` with `cancel = true` (only if Jeffrey wants it; moves the pack to beta `@minecraft/server`)
-- [ ] `coords` reply mode, if Jeffrey turns it on
+- [ ] `coords` reply mode for other players, only if Jeffrey decides to allow it (it's already on for Jeffrey from Step 1)
 - [ ] Merge with the [Live API](live-api.md) pack so one pack and one service do telemetry, chat assistant and, later, the companion bot
+
+### Step 6: World snapshot pipeline + index
+- [ ] Reuse the backup copy method from [server migration](server-migration.md#snapshot-pipeline-stage-2) (`save hold` → `save query` → copy and truncate → `save resume`) to make a **local, on-box** snapshot for the assistant. This one isn't uploaded anywhere. Suggested cadence: every 10–15 minutes while someone is online, plus one on server stop.
+- [ ] Pick the reader: Amulet-Core / amulet-leveldb (Python) or mcbe-leveldb (Node), whichever matches the service stack. Test it on a 26.50 snapshot first.
+- [ ] Indexer: re-scan only chunks that changed since the last snapshot, and store ore and structure-signature block positions in SQLite (per dimension)
+- [ ] `index_status` tool (snapshot time, chunks indexed)
+- [ ] **To test:** how far behind a snapshot is, and how long a first full index and an incremental update take on our world
+- [ ] **To test:** whether `HardcodedSpawners` / `AABBVolumes` / `JigsawStructureBlueprint` records can be decoded into a structure list
+
+### Step 7: `find_nearest_ore`
+- [ ] Nearest-point lookup in the index (ore names include deepslate variants), with the snapshot time in every answer
+- [ ] "Nothing found" answer that explains it only knows explored land, and suggests where to look instead (for diamonds: deep, near the bottom of the world)
+
+### Step 8: `find_structure`
+- [ ] Self-host a Bedrock seed predictor (SeedFinder's engine or cubiomes-bedrock) in the service container. Seed from `level.dat`; no hosted API.
+- [ ] Only the **good-reliability** types from the [reliability table](#structure-and-ore-search-world-files--seed) are predicted. The others are answered from the index only (confirmed structures).
+- [ ] Mark each answer **confirmed / predicted / missing** by checking the index (and `structure_here` when someone is near)
+- [ ] Validate against our world before turning it on: every structure we've confirmed should match a prediction
+- [ ] Optional: test `/locate` from the BDS console as ground truth (cheat-only on Bedrock; see above)
 
 ## Overlap with the Live API and companion bot
 
@@ -246,15 +330,18 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
   - The assistant adds a command, a tool runner and two endpoints.
   - Build them as one pack (`bleepbloop-telemetry` + assistant) with one service on the AI server, keeping separate tokens per job.
 - The tool runner here is also the "eyes" a future [companion bot](live-api.md#plan-of-record) would need. The LLM controller there can reuse the same tool contract.
+- **Same snapshots.** The world index is built from the same consistent copies as the [snapshot pipeline](server-migration.md#snapshot-pipeline-stage-2) (Stage 2), and the [Live API](live-api.md) push-only option ships summaries of those snapshots. The assistant's copies just stay on the box and run more often.
 
 ## Open decisions for Jeffrey
 
-- [ ] **Reply format:** distance + direction only (keeps coordinates off), or include coordinates (what you asked for, but it bypasses the coordinates-off rule)? Could be per player.
-- [ ] **Who can use it:** just you, or every allowlisted player? Can players look each other up (`where_is_player`)?
+- [x] **Your access:** unrestricted, with coordinates in your replies and every tool, including ore and structure search (decided 2026-10-07, see [Access policy](#access-policy)). Tools stay read-only.
+- [ ] **Other players:** can they use it at all? If so: coordinates or distance + direction only? Ore and structure search? Can they look each other up (`where_is_player`), and can you look them up without asking them?
 - [ ] **LLM and service stack:** which model and server on the AI box (it needs OpenAI-style tool calling), and Python or Node for the service?
 - [ ] **Beta APIs:** OK to enable it on the world (shared with the Live API and Canopy; can't be undone)?
 - [ ] **Input:** `/ask` command only (stable, recommended), or also an `!ask` chat prefix (beta)?
 - [ ] **Logging:** keep question logs? For how long (suggest 30 days)?
+- [ ] **Snapshot cadence:** how fresh should ore answers be (suggest every 10–15 minutes while someone is online)? More often means more `save hold` pauses and disk churn.
+- [ ] **`/locate` from the console:** worth testing as exact ground truth, given it's a cheat-only command?
 
 ## Done when
 
@@ -262,3 +349,5 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 - [ ] Non-allowlisted players are refused, rate limits work, and nothing but the asker sees the answer
 - [ ] The service is reachable only from the BDS container, with token auth and `server-net` allowed only for this pack
 - [ ] The starter tools from Step 3 work and stay within the script watchdog limits
+- [ ] `/ask "where is the nearest diamond"` returns the nearest indexed diamond ore with its snapshot time, and coordinates for Jeffrey
+- [ ] `/ask "where is the nearest village"` returns a structure marked confirmed or predicted, and only predicts the reliable types

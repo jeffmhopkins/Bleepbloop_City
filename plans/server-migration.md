@@ -136,6 +136,7 @@ After each backup (or once a day), deliver the latest zip somewhere Grok Bot can
   - Animal counts near base; villages
 - [ ] Update `progress/tracker.md` and `progress/session-log.md` from the diffs since the last snapshot
 - [ ] Commit map images to wherever Jeffrey decides (private by default)
+- **Chat assistant reuse:** the [chat assistant](chat-assistant.md#structure-and-ore-search-world-files--seed) uses the same consistent-copy method for its own **on-box** snapshots (more often, never uploaded) to index ores and structures for `/ask`.
 - **Chunker** (Hive Games, open source) converts worlds between Java and Bedrock. It isn't needed for this migration, but it's noted in case a Java copy is ever wanted. ([repo](https://github.com/HiveGamesOSS/Chunker))
 
 ## Stages
