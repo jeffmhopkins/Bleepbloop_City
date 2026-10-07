@@ -54,7 +54,7 @@ Long-term goals that span several phases.
 | --- | --- |
 | [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md) and [stages](plans/storage-stages.md)), [building goals](plans/building-goals.md), [happy ghast](plans/happy-ghast.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), [live API](plans/live-api.md), and [chat assistant](plans/chat-assistant.md) |
 | [`progress/`](progress/) | [Phase tracker](progress/tracker.md), the [session log](progress/session-log.md), and the [session plan](progress/session-plan.md) for Sessions 2–6 |
-| [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [what's new (2-year catch-up)](notes/whats-new.md) |
+| [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), [what's new (2-year catch-up)](notes/whats-new.md), and [lore](notes/lore.md) (brainstorm: the Builders Before and their satellite) |
 | [`templates/`](templates/) | Copy-paste templates for a [session log entry](templates/session-log-entry.md) and a [build/project](templates/build-project.md) |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Issue templates for tasks and ideas |
 

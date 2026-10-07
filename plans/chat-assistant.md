@@ -4,6 +4,7 @@
 **Status:** ⬜ Not started. **This is a plan.** Nothing here is built or tested yet.
 **Depends on:** [Server migration](server-migration.md) Stage 0 (the server must be BDS in the container on the AI server). It shares a pack, a service and the Beta APIs decision with the [Live API](live-api.md).
 **Verdict:** **Feasible** on our setup (self-hosted BDS 26.50 + local LLM). It is not possible on Realms or in a normal client world, because the HTTP module is BDS-only.
+**Lore:** in-world, the assistant is the satellite left in orbit by an ancient civilization (brainstorm, not canon): see [notes/lore.md](../notes/lore.md).
 
 > **Sources (checked 2026-10-07, against Bedrock 26.50 / `@minecraft/server` 2.10.0 stable, 2.11.0-beta for beta):**
 > [Custom commands (Learn)](https://learn.microsoft.com/en-us/minecraft/creator/documents/scripting/custom-commands?view=minecraft-bedrock-stable) ·
