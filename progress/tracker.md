@@ -53,6 +53,6 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | | Storage sorter Stage 2: full system with first hopper sorter line |
 | | Storage sorter Stage 3: expanded into the Phase 5 storage system |
 | | Storage sorter add-on: auto furnace (blast furnaces + smokers) running off the sorter |
-| | Storage sorter add-on: garbage disposal taking junk + overflow |
+| | Storage sorter add-on: lava garbage disposal taking junk + overflow |
 | | Storage sorter add-on: shulker box auto unloader feeding the sorter |
 | | |

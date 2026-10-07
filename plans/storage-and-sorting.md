@@ -154,6 +154,8 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 
 ### Garbage disposal ("garbage furnace")
 
+> **Decision (2026-10-07):** use **lava**. Netherite-related items won't burn, so keep them out of the junk path.
+
 **What it does:** junk and overflow get destroyed automatically, so full chests never back up the sorter.
 
 **Verified options** ([Lava](https://minecraft.wiki/w/Lava), [Cactus](https://minecraft.wiki/w/Cactus), [Furnace](https://minecraft.wiki/w/Furnace), [Hopper](https://minecraft.wiki/w/Hopper))
@@ -170,7 +172,7 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 - Golem side: a golem junk chest drained by a hopper becomes an empty chest, and golems will fill it with anything. See the golem trap note above.
 
 **Tasks**
-- [ ] Decide the disposal type (see open questions)
+- [x] Decide the disposal type: lava (2026-10-07)
 - [ ] Decide the junk list
 - [ ] Filter slices for junk → disposal
 - [ ] Overflow chest → overflow → disposal
@@ -207,7 +209,7 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 - [ ] Item frames or signs on every chest
 - [ ] Maintenance routine: check wax on golems and chests
 - [ ] Auto furnace: blast furnaces for ores and smokers for food, fed from sorter filter slices, output back to storage ([details](#auto-furnace--smelter-array))
-- [ ] Garbage disposal for the junk category plus the overflow path ([details](#garbage-disposal-garbage-furnace))
+- [ ] Lava garbage disposal for the junk category plus the overflow path ([details](#garbage-disposal-garbage-furnace))
 
 ### Stage 3 — Expansion
 - [ ] House the system in the [Copper storage hall](building-goals.md#2-copper-storage-hall)
@@ -244,7 +246,7 @@ Exact counts depend on how many golems and categories I end up with. Fill in onc
 
 - [ ] How many sort categories to start with? The Phase 4 list (wood, stone, ores, food, mob drops, redstone, junk) or finer?
 - [x] Which edition? **Bedrock** (26.50). Golems can tell potion/arrow/stew types apart, and designs must be Bedrock-compatible.
-- [ ] **Garbage furnace:** which do you mean or want? A lava burner (most likely), a cactus, or something else? Note that a plain furnace doesn't destroy items, it just clogs.
+- [x] **Garbage furnace:** lava (decided 2026-10-07).
 - [ ] What counts as junk for the disposal (e.g. extra cobble, dirt, rotten flesh)?
 - [ ] Should true overflow (unsorted leftovers) go to the disposal once the overflow chest fills, or stop and wait for me?
 - [ ] Where does the sorting room go: under the base, behind the storage wall, or a separate building?
