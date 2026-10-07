@@ -3,7 +3,7 @@
 **Goal:** A highly automated item sorter for the real base. **Hopper filters fed by a water/ice item stream (a Bedrock chest hall) do the primary sorting**, and **copper golems are the showpiece**: a glass-fronted golem gallery at the front of the hall where a few waxed golems sort a small set of everyday items (potions and tipped arrows) into display chests you can watch.
 **Role change (2026-10-07):** Jeffrey asked to make the golems "a visual thing in the front of the hall, not necessarily the primary sorting mechanism". The golem research below is still valid; it now applies to the gallery.
 **Status:** ⬜ Not started
-**Hall layout:** [Jeffrey's sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery at the back, a central aisle to the Dome (golem gallery) at the entrance, and wings named by stage.
+**Hall layout:** [Jeffrey's sketch](storage-layout.md#hall-layout-jeffreys-sketch) and [item flow](storage-layout.md#item-flow): input, router, smelter, overflow and lava in Machinery at the back; a U-shaped under-floor stream down one side of the central aisle, under the Dome (golem gallery) at the entrance, and back up the other side; each wing a hallway with chest walls on both sides.
 **Stages:** [one table per stage](storage-stages.md).
 **Grouping:** see [storage-layout.md](storage-layout.md) for functional adjacency rules, the hard technical constraints, and the item groups for the chest walls. The building itself is a custom build Jeffrey designs; no shape or size is prescribed.
 **Always loaded:** the sorter and iron farm go in a Bedrock ticking area so they run with nobody nearby. See [Server config: ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter) (mob spawning still needs a player nearby).

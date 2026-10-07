@@ -21,58 +21,91 @@ Decided: **hopper filters fed by an item stream do the primary sorting** (Bedroc
 *Jeffrey's own layout, redrawn from his sketch. Zones are named by the stage that fills them. Sizes and the architecture are his; nothing here adds dimensions.*
 
 **Zones, back to front**
-- **Machinery:** the full width of the back. Auto smelter and other machines.
+- **Machinery:** the full width of the back. Input barrels, shulker unloader, router, intake, auto smelter, overflow, and lava, with room for more machines.
 - **Central aisle:** runs from Machinery to the Dome.
 - **Stage 5 wings:** the back band on both sides of the aisle. Both are one stage.
 - **Stage 3 bands:** the middle band on both sides.
 - **Stage 1 wing** (front, left of the aisle) and **Stage 2 wing** (front, right).
+- **Every wing is a hallway** with a chest wall on both sides, each wall backed by its own service gap with hopper filters ([item flow](#item-flow)).
 - **Dome:** a large overhead dome at the front-center entrance, home of the **Stage 4** golem gallery.
 - **Build order:** Stage 1 wing → Stage 2 wing → both Stage 3 bands → Dome → both Stage 5 wings.
+
+### Item flow
+
+![Storage hall item flow: input and router in Machinery at the back; the item stream runs under the floor down the left side of the aisle past the Stage 5, 3 and 1 wings, crosses under the Dome, runs up the right side past the Stage 2, 3 and 5 wings, and ends at the overflow and lava at the back right. Smelter loop between the router and the auto smelter; dashed potion line from the router to the copper chest in the Dome](../assets/storage-hall-flow.png)
+
+*Flow schematic drawn on Jeffrey's layout. Not to scale; it shows where items go, not sizes. Generator: [tools/storage_hall_flow.py](../tools/storage_hall_flow.py).*
+
+**How items move**
+1. **In (Machinery, back):** you dump into the **input barrels**, and the **shulker unloader** empties boxes into the same line. Both feed the **router** next door. The router splits off unstackables into the **intake** chest before any filter (rule 1).
+2. **Smelter loop (Machinery):** the router sends raw ore and raw food to the **auto smelter** (blast furnaces and smokers). Ingots and cooked food go back to the router and get sorted like any other item. There's room in Machinery for more machines.
+3. **Main stream, a U under the floor:** from the router the stream runs **down the left side of the central aisle**, past the branch points for the **Stage 5, Stage 3 and Stage 1** wings on the left. It **crosses under the Dome**, then runs **up the right side** past the **Stage 2, Stage 3 and Stage 5** wings on the right.
+4. **Each wing is a hallway with a chest wall on both sides.** Each wall's browse side faces the hallway, and each wall is backed by its **own service gap** holding that wall's **hopper filters**. The wing's **branch loop** leaves the stream, runs out along the service gap behind one wall, crosses under the hallway at the outer end (dashed in the diagram), and comes back along the service gap behind the other wall to rejoin the stream. Anything neither wall filters rides the loop back onto the stream.
+5. **End of the stream (Machinery, back right):** whatever is left lands in the **overflow**. Only junk goes on to the **lava** behind it. The lava stays at the back, away from the Dome and the wood-heavy wings (rule 5).
+6. **Potion line (dashed):** the router's potion filter and tipped-arrow slice send those items along a separate line up the aisle to the **copper chest in the Dome**. The golem sorts them into the display chests, which sit in a ring sealed behind glass. **Gallery overflow goes to the main overflow, never back to the router** (rule 6).
 
 ### What goes in each zone
 
 Counts are from [§3](#3-item-by-item-chest-allocation). Per-stage tables with a Zone column are in [storage-stages.md](storage-stages.md).
 
-| Zone | Stage | Groups and items | DC-eq | Slices |
-| --- | --- | --- | --- | --- |
-| Front, beside the Dome (outside its seal) | 1, 5 | Input dump + router (Stage 1); non-stackable intake, 1 DC (Stage 1); shulker unloader and the group 15 shulker-box chests, 2 SC (Stage 5) | 2 | 0 |
-| Stage 1 wing | 1 | Bulk: cobblestone, cobbled deepslate, dirt, stone, gravel, sand, main logs, main planks, wheat, wheat seeds, carrots, potatoes, sugar cane, coal, iron ingots | 26 | 15 |
-| Stage 2 wing | 2 | Rest of groups 1–5 (stone family, wood, farming & food, ores & metals, copper), plus glass, torches, item frames | 31.5 | 39 |
-| Stage 3 band, left | 3 | 6 Decorative (rest), 7 Redstone, 8 Transport | 21.5 | 8 |
-| Stage 3 band, right | 3 | 9 Mob drops, 10 Brewing, 12 Nether, 14 Tools/armor/enchanting | 21 | 22 |
-| Dome | 4 (+5) | 11 Golem gallery module 1 (11 chests) + gallery spares chest; golem module 2 later (+5.5, Stage 5 timing) | 6 | 0 |
-| Stage 5 wings | 5 | 13 End (end stone, purpur, shulker shells, mixed chests); the rest is expansion room | 3 | 3 |
-| Machinery | 1, 2, 3 | Main overflow, 2 DC (Stage 1, stream end); smelter (Stage 2); lava disposal (Stage 3) | 2 | 0 |
-| **Total** | | | **113** | **87** |
+| Zone | Stage | Groups and items | DC-eq | Slices | Chest walls |
+| --- | --- | --- | --- | --- | --- |
+| Machinery | 1, 2, 3, 5 | Input barrels + router, non-stackable intake 1 DC, main overflow 2 DC (Stage 1); auto smelter (Stage 2); lava (Stage 3); shulker unloader + the group 15 shulker-box chests, 2 SC (Stage 5) | 4 | 0 | — |
+| Stage 1 wing | 1 | Bulk: cobblestone, cobbled deepslate, dirt, stone, gravel, sand, main logs, main planks, wheat, wheat seeds, carrots, potatoes, sugar cane, coal, iron ingots | 26 | 15 | 2 |
+| Stage 2 wing | 2 | Rest of groups 1–5 (stone family, wood, farming & food, ores & metals, copper), plus glass, torches, item frames | 31.5 | 39 | 2 |
+| Stage 3 band, left | 3 | 6 Decorative (rest), 7 Redstone, 8 Transport | 21.5 | 8 | 2 |
+| Stage 3 band, right | 3 | 9 Mob drops, 10 Brewing, 12 Nether, 14 Tools/armor/enchanting | 21 | 22 | 2 |
+| Dome | 4 (+5) | 11 Golem gallery module 1 (11 chests) + gallery spares chest; golem module 2 later (+5.5, Stage 5 timing) | 6 | 0 | — |
+| Stage 5 wings | 5 | 13 End (end stone, purpur, shulker shells, mixed chests); the rest is expansion room | 3 | 3 | 4 (2 per wing) |
+| **Total** | | | **113** | **87** | |
+
+**Capacity check (two walls per wing).** Each wing has two chest walls, so every wing zone's chests and filter slices split across two walls and two service gaps, half as much per wall as a one-wall wing would need. This counts chest faces along a wall (a double chest is 2 faces, a single chest 1) without fixing how high Jeffrey stacks them or how long he makes the walls.
+
+| Zone | DC-eq | Chest faces | Walls | Faces per wall | Slices | Slices per service gap |
+| --- | --- | --- | --- | --- | --- | --- |
+| Stage 1 wing | 26 | 52 | 2 | 26 | 15 | 7–8 |
+| Stage 2 wing | 31.5 | 63 | 2 | 31–32 | 39 | 19–20 |
+| Stage 3 band, left | 21.5 | 43 | 2 | 21–22 | 8 | 4 |
+| Stage 3 band, right | 21 | 42 | 2 | 21 | 22 | 11 |
+| Stage 5 wings | 3 | 6 | 4 | 1–2 | 3 | 0–1 |
+
+- **The Stage 2 wing is the tightest:** the most chests and by far the most slices (39), so its two service gaps need the most hopper space. If its walls run short, overflow growth for groups 1–5 moves to the right Stage 5 wing (same side of the aisle).
+- **Stage 1 has the most headroom per slice:** 26 faces per wall but only 7–8 slices per gap. That suits the ★ bulk items, which grow first and can take extra chests at the wall ends.
+- **Stage 5 wings:** four walls with 3 DC-eq allocated, so they're nearly all expansion room. Two walls per wing doubles the room there too.
+- **Expanding a wing:** add chests at the outer end of either wall and stretch the branch loop's turnaround outward. The stream and the machines don't move (rule 8).
+
+The flow diagram lists the same Stage 3 contents on both bands. The left/right split above is a suggestion that balances the bands (21.5 vs 21 DC-eq); Jeffrey can swap groups between them freely.
 
 **How it fits the grouping rules**
 - **Busiest nearest the entrance:** the Stage 1 and 2 wings touch the Dome, so the most-used items are closest. Inside each wing, put the busiest items at the end nearest the Dome.
-- **Left/right split of Stage 3:** building materials go on the left, behind the Stage 1 wing's stone and wood. Farm and combat output goes on the right. That's 21.5 vs 21 DC-eq, balanced.
-- **Groups 1–4 sit on both sides of the aisle:** their bulk items are in the Stage 1 wing, the rest across the aisle in the Stage 2 wing. Keep each group in the same order on both sides so a group is easy to find.
-- **Brewing next to the gallery (rule 7):** put brewing at the Dome end of the right Stage 3 band, the closest band spot to the gallery. That's near the gallery but not touching it; moving brewing into the Stage 2 wing would change the stage counts.
-- **Ores next to the smelter output (rule 7), resolved for the front:** the smelter is in Machinery at the back, but its output goes back through the router and the stream to the ore chests anyway, so sorting doesn't need them to be close. Being close to the entrance wins for browsing. Ores and copper stay in the Stage 1 and 2 wings.
-- **Machinery together, away from wood and showpieces (rule 5):** smelter, overflow, and lava all sit in Machinery. Keep flammable building blocks away from the lava.
+- **Left/right split of Stage 3:** building materials go on the left, behind the Stage 1 wing's stone and wood. Farm and combat output goes on the right.
+- **Groups 1–4 sit on both sides of the aisle:** their bulk items are in the Stage 1 wing, the rest across the aisle in the Stage 2 wing. Keep each group in the same order in both wings so a group is easy to find. Inside a wing, a group can take both walls facing each other across the hallway, so you see the whole group from one spot.
+- **Brewing next to the gallery (rule 7):** no longer needed for the feed, because potions reach the Dome on their own line from the router. Brewing can sit anywhere in the right Stage 3 band; the Dome end is still the nicest spot for show.
+- **Ores next to the smelter output (rule 7):** the smelter sits next to the router at the back, and its output goes through the router and the stream to the ore chests. Sorting doesn't need the ore chests near the smelter, so being close to the entrance wins for browsing. Ores and copper stay in the Stage 1 and 2 wings.
+- **Machinery together, away from wood and showpieces (rule 5):** input, router, smelter, overflow, and lava all sit in Machinery, with the lava in the back-right corner. Keep flammable building blocks away from the lava.
 - **Stage 5 wings are mostly expansion room.** Only 3 DC-eq is allocated there (the End group). Grow each ★ item and each promoted mixed item into the Stage 5 wing on its own side of the aisle. Keep the outer wall ends open too (rule 8).
 
-**Trunk line and branch points.** The item stream runs along the central aisle and branches into each band. The front wings are built first, but the overflow and lava sit at the back. So **build the trunk the full length of the aisle in Stage 1** and leave a branch point for each later band: Stage 2 wing, both Stage 3 bands, both Stage 5 wings. Rule 8 still holds: the stream end and every wall end stay open.
+**Trunk line and branch points.** The trunk is the whole U: router → down the left side → under the Dome → up the right side → overflow. The Stage 1 wing is the last branch on the left, but the overflow is at the back right, so **Stage 1 builds the entire U**. That includes the crossing under the Dome site, so the Stage 4 Dome build doesn't dig up a live stream. Leave a capped branch point at each later wing: Stage 5 and Stage 3 on the left, Stage 2, Stage 3 and Stage 5 on the right. New wings join at those open branch points (rule 8). The stream end and the outer wall ends stay open.
 
-### Router and input location (Jeffrey's decision)
+**Order along the stream.** Items pass the left Stage 5 and Stage 3 branch points before reaching the Stage 1 wing. Those branches are empty until their stage is built, so this costs nothing early on. Once they're live, each item is caught by whichever filter it meets first. That's fine because every item has exactly one slice.
 
-Rule 1 puts the input next to the router, and the router feeds the start of the stream. With machinery at the back there are two options:
+### Router and input location (decided: back, by the router)
 
-| | (a) Input + router in Machinery | (b) Input + router at the front, beside the Dome |
-| --- | --- | --- |
-| Dumping | Every dump is a walk to the back | Dump at the entrance |
-| Stream direction | Starts at the back, runs forward past the Stage 1 and 2 wings, then has to come back to the overflow and lava. That's a loop, or the lava ends up beside the Dome, which breaks rule 5. | Runs from the front back along the aisle and ends at the overflow and lava in Machinery. Rules 1, 2, 5, 8 all hold. |
-| Smelter return | Short | One return line from the smelter (back) to the router (front) along the aisle |
-| Golem gallery feed | Long line forward to the Dome | Short: the router sits next to the gallery's copper chest |
-| Farm lines | Join at the back | Must reach the front router |
+Jeffrey's flow puts the **input barrels, shulker unloader, intake and router together in Machinery** (option (a)). The U-shaped stream solves the problem option (a) had before: the stream starts at the back, comes forward down one side, and goes back on the other, so it ends at the overflow and lava in the back without a loop and without lava near the Dome.
 
-**Recommendation: (b).** The router and dump point go at the front beside the Dome, outside the gallery seal. The non-stackable intake and the shulker unloader go next to the dump. The extra cost is one smelter return line along the aisle. **This is Jeffrey's call.** If he picks (a), the zone table changes only in where the intake and unloader sit, plus the loop back to the lava.
+| | Back, by the router (chosen) |
+| --- | --- |
+| Dumping | A walk to the back of the hall |
+| Stream | Router → U → overflow → lava, all ending at the back. Rules 1, 2, 5, 8 hold. |
+| Smelter loop | Short: the smelter is next to the router |
+| Golem gallery feed | One potion line up the aisle to the Dome's copper chest |
+| Farm lines | Join at the router in the back (rule 2) |
+
+**Optional later: a front dump point at the Dome.** If the walk to the back gets old, add a dump chest or barrel near the entrance, outside the gallery seal. It needs its own line back to the router at the start of the stream, not a drop into the U partway along it (rule 2). It's an add-on, not part of any stage.
 
 ### Golem gallery seal and ticking area
-- **Seal the Dome from the chest walls.** It sits right next to the Stage 1 and Stage 2 wings. Golems search **65×17×65** and reach chests 1 block up and 2 down, so wall or glass off the gallery so they can't walk out to the wing chests. Use iron doors (golems open other doors). Inside the gallery, the only wooden chests should be the seeded display chests ([Copper Golem](https://minecraft.wiki/w/Copper_Golem)).
-- **Router outside the seal.** With option (b), the dump and router sit beside the Dome but outside the gallery. The feed into the gallery's copper chest passes through the wall by hopper.
+- **Seal the Dome from the chest walls.** It sits right next to the Stage 1 and Stage 2 wings. Golems search **65×17×65** and reach chests 1 block up and 2 down, so wall or glass off the gallery so they can't walk out to the wing chests. Use iron doors (golems open other doors). Inside the gallery, the only wooden chests should be the seeded display chests, in their ring behind glass ([Copper Golem](https://minecraft.wiki/w/Copper_Golem)).
+- **Lines into and out of the Dome:** the potion line enters at the copper chest, and the gallery overflow leaves for the main overflow, both by hopper through the seal. The main stream passes under the Dome floor and has no chests, so it doesn't give the golems anything to reach. The search box reaches 2 blocks down, though, so keep any chest or container on the under-Dome stretch more than 2 blocks below the golem's floor.
 - **Ticking area:** if possible, fit the whole hall plus the iron farm inside one ticking area (max 100 chunks; [Server config: ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter)). Every input and output link must be inside it.
 
 ## 1. Functional grouping
@@ -461,11 +494,11 @@ Items from recent drops were checked against the Minecraft Wiki (2026-10-07): th
 | Stage | Game phase | Zone in [the hall sketch](#hall-layout-jeffreys-sketch) | What gets automated | Added (from §3) |
 | --- | --- | --- | --- | --- |
 | 0 | [Phase 4](phase-4-the-base.md#1-storage-wall) | Phase 4 storage wall (before the hall) | Nothing yet: manual chests by group, plus one test slice | 16 group chests + 1 input chest (17 SC, temporary; not in the 113) |
-| 1 | Phase 4 → 5 | Stage 1 wing, plus the router/input and overflow | Input, router, overflow, bulk items | 29 DC-eq, 15 slices |
+| 1 | Phase 4 → 5 | Stage 1 wing, plus input, router, intake and overflow in Machinery, and the whole U trunk | Input, router, overflow, bulk items | 29 DC-eq, 15 slices |
 | 2 | [Phase 5](phase-5-infrastructure.md) | Stage 2 wing, plus the smelter in Machinery | The rest of groups 1–5, plus the smelter loop | 31.5 DC-eq, 39 slices |
 | 3 | Phase 5 | Both Stage 3 bands, plus the lava in Machinery | Groups 6–10, 12, 14, plus the lava disposal | 42.5 DC-eq, 30 slices |
 | 4 | Phase 5 | Dome | Golem gallery showpiece (group 11) | 6 DC-eq (11 gallery chests + spares), 0 chest-wall slices |
-| 5 | After the End, then ongoing | Both Stage 5 wings | End group, shulker unloader, then all expansion | 4 DC-eq + 3 slices, then as needed (golem module 2 adds 5.5 DC-eq) |
+| 5 | After the End, then ongoing | Both Stage 5 wings (shulker unloader in Machinery) | End group, shulker unloader, then all expansion | 4 DC-eq + 3 slices, then as needed (golem module 2 adds 5.5 DC-eq) |
 
 Running total once Stage 5's End group and shulker chests are in: **113 DC-eq, 87 filter slices.** Everything after that is Stage 5 expansion.
 
@@ -477,7 +510,7 @@ Running total once Stage 5's End group and shulker chests are in: **113 DC-eq, 8
 
 ### Stage 1: input, router, overflow, and bulk slices
 - **Automated (15 slices):** cobblestone, cobbled deepslate, dirt, stone, gravel, sand, main wood logs, main wood planks, wheat, wheat seeds, carrots, potatoes, sugar cane, coal, iron ingots.
-- **Also built:** input barrels and the router, the non-stackable split into a 1 DC intake, and the 2 DC main overflow at the end of the stream (no lava yet).
+- **Also built:** input barrels and the router in Machinery, the non-stackable split into a 1 DC intake, the whole U-shaped [trunk](#hall-layout-jeffreys-sketch) with capped branch points (including the crossing under the Dome site), and the 2 DC main overflow at the stream end in the back right (no lava yet).
 - **Chests added:** 29 DC-eq. The Stage 0 group chests stay as manual chests for everything else.
 - **Needs:**
   - Iron for hoppers (5 iron ingots + 1 chest each). Count the chosen slice design's hoppers × 15, plus the input line.
@@ -510,7 +543,7 @@ Running total once Stage 5's End group and shulker chests are in: **113 DC-eq, 8
 
 ### Stage 4: golem gallery showpiece
 - **Automated:** group 11 (potions and tipped arrows), using module 1: 1 waxed golem, 1 waxed copper input chest, 9 seeded display chests, and the farthest overflow draining to the main overflow.
-- **Router side:** a brewing-stand potion filter and a tipped-arrow slice feed the gallery's copper chest.
+- **Router side:** a brewing-stand potion filter and a tipped-arrow slice at the router feed the potion line up the aisle to the gallery's copper chest.
 - **Chests added:** 6 DC-eq: the 11 gallery chests, plus the gallery spares chest in group 5.
 - **Needs:**
   - A block of copper (9 copper ingots) and a carved pumpkin per golem, plus honeycomb (shear a bee nest with a campfire under it).
@@ -525,7 +558,7 @@ Running total once Stage 5's End group and shulker chests are in: **113 DC-eq, 8
 
 ### Stage 5: End group, shulker unloader, and expansion (both Stage 5 wings)
 - **Automated (3 slices):** end stone, purpur blocks, shulker shells.
-- **Shulker unloader:** feeds the input line and returns empty boxes to the group 15 chest.
+- **Shulker unloader (Machinery, beside the input barrels):** feeds the input line and returns empty boxes to the group 15 chest next to it.
 - **Chests added:** 4 DC-eq: group 13, plus 2 SC for group 15.
 - **Then expansion, ongoing:**
   - Add slices at the open end. Grow the **★** items first, and promote mixed-chest items that keep filling the overflow.

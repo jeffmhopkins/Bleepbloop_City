@@ -32,19 +32,18 @@ Each stage below lists **only what that stage adds**, and which zone of the hall
 
 ## Summary by zone
 
-DC-eq here covers chests only; machines (router, smelter, lava, unloader) have no chest count. Router placement is [Jeffrey's decision](storage-layout.md#router-and-input-location-jeffreys-decision).
+DC-eq here covers chests only; machines (router, smelter, lava, unloader) have no chest count. Input and router sit in Machinery by the router ([decided](storage-layout.md#router-and-input-location-decided-back-by-the-router)). Each wing is a hallway with a chest wall on **both** sides, each wall backed by its own service gap and filters ([item flow](storage-layout.md#item-flow)), so a wing's chests and slices split over two walls. The Stage 5 wings are two wings, so four walls.
 
-| Zone | Stage(s) | DC-eq | Slices | What sits there |
-| --- | --- | --- | --- | --- |
-| Front, beside the Dome | 1, 5 | 2 | 0 | Input dump + router, non-stackable intake (Stage 1); shulker unloader + box chests (Stage 5). Assumes router option (b) |
-| Stage 1 wing | 1 | 26 | 15 | Stage 1 bulk items |
-| Stage 2 wing | 2 | 31.5 | 39 | Rest of groups 1–5, plus glass, torches, item frames |
-| Stage 3 band, left | 3 | 21.5 | 8 | Decorative, redstone, transport |
-| Stage 3 band, right | 3 | 21 | 22 | Mob drops, brewing (Dome end), Nether, tools/armor/enchanting |
-| Dome | 4 (+5) | 6 | 0 | Golem gallery module 1 + spares; module 2 later (Stage 5 timing) |
-| Stage 5 wings | 5 | 3 | 3 | End group; the rest is expansion room for ★ items and promoted mixed items |
-| Machinery | 1, 2, 3 | 2 | 0 | Main overflow (Stage 1), smelter (Stage 2), lava (Stage 3) |
-| **Total** | | **113** | **87** | |
+| Zone | Stage(s) | DC-eq | Slices | Chest walls | DC-eq per wall | What sits there |
+| --- | --- | --- | --- | --- | --- | --- |
+| Stage 1 wing | 1 | 26 | 15 | 2 | 13 | Stage 1 bulk items |
+| Stage 2 wing | 2 | 31.5 | 39 | 2 | 15.75 | Rest of groups 1–5, plus glass, torches, item frames |
+| Stage 3 band, left | 3 | 21.5 | 8 | 2 | 10.75 | Decorative, redstone, transport |
+| Stage 3 band, right | 3 | 21 | 22 | 2 | 10.5 | Mob drops, brewing, Nether, tools/armor/enchanting |
+| Dome | 4 (+5) | 6 | 0 | — | — | Golem gallery module 1 + spares; module 2 later (Stage 5 timing) |
+| Stage 5 wings | 5 | 3 | 3 | 4 | 0.75 | End group; the rest is expansion room for ★ items and promoted mixed items |
+| Machinery | 1, 2, 3, 5 | 4 | 0 | — | — | Input barrels + router, intake, main overflow (Stage 1); smelter (Stage 2); lava (Stage 3); shulker unloader + box chests (Stage 5) |
+| **Total** | | **113** | **87** | | | |
 
 **Why Stage 0 isn't counted:** its 17 chests (and the test rig) are the temporary Phase 4 storage wall. Once a group's items get hall chests (Stages 1–5), the old group chest is free to reuse as one of that group's mixed or manual chests, so counting it would double-count. The test slice is a prototype in a test area. Golem module 2 and the other Stage 5 expansion come on top of the 113.
 
@@ -98,13 +97,13 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
 | 4. Ores & metals | Coal | 2 DC | Hopper slice | Stage 1 wing | ★ room to grow. Smelter fuel and torches |
 | 4. Ores & metals | Iron ingots | 2 DC | Hopper slice | Stage 1 wing | ★ room to grow. 5 per hopper; more once an iron farm runs |
 | 16. Misc / overflow | Main overflow (end of the stream, in front of the lava) | 2 DC | Overflow | Machinery | Weekly review; also where mixed-chest items wait. Promote anything that keeps showing up |
-| 16. Misc / overflow | Non-stackable intake (from the split) | 1 DC | Manual | Front, beside the Dome | Sort by hand into groups 8, 14, 15 |
+| 16. Misc / overflow | Non-stackable intake (from the split) | 1 DC | Manual | Machinery | Sort by hand into groups 8, 14, 15 |
 
 - **Stage adds:** 29 DC + 0 SC = **29 DC-eq**, **15 hopper slices**
 - **Cumulative:** 29 DC-eq / 15 slices
 - **Phase:** Phase 4 → 5
-- **Zone:** Stage 1 wing; router and intake at the front beside the Dome; overflow in Machinery
-- **Also built:** input barrels and the router, the non-stackable split into a 1 DC intake, and the 2 DC main overflow at the end of the stream (no lava yet).
+- **Zone:** Stage 1 wing; input, router, intake and overflow in Machinery; the whole U trunk
+- **Also built:** input barrels and the router in Machinery, the non-stackable split into a 1 DC intake, the whole U-shaped [trunk](storage-layout.md#hall-layout-jeffreys-sketch) with capped branch points (including the crossing under the Dome site), and the 2 DC main overflow at the stream end in the back right (no lava yet).
 - **Needs:**
   - Iron for hoppers (5 iron ingots + 1 chest each). Count the chosen slice design's hoppers × 15, plus the input line.
   - Nether quartz for comparators (one Nether trip), and redstone.
@@ -280,7 +279,7 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
 - **Cumulative:** 109 DC-eq / 84 slices
 - **Phase:** Phase 5
 - **Zone:** Dome
-- **Router side:** a brewing-stand potion filter and a tipped-arrow slice feed the gallery's copper chest.
+- **Router side:** a brewing-stand potion filter and a tipped-arrow slice at the router feed the potion line up the aisle to the gallery's copper chest.
 - **Needs:**
   - A block of copper (9 copper ingots) and a carved pumpkin per golem, plus honeycomb (shear a bee nest with a campfire under it).
   - Optionally a spare copper chest (8 copper ingots + 1 chest).
@@ -301,14 +300,14 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
 | 13. End | Shulker shells | 1 SC | Hopper slice | Stage 5 wings | Never lava; 2 per shulker box |
 | 13. End | Chorus fruit, popped chorus fruit | 1 SC | Mixed chest (manual, from overflow) | Stage 5 wings |  |
 | 13. End | End rods, eyes of ender | 1 SC | Mixed chest (manual, from overflow) | Stage 5 wings |  |
-| 15. Shulker boxes (manual) | Empty shulker boxes | 1 SC | Manual | Front, beside the Dome | ★ room to grow. The unloader returns empties here. Unstackable, never lava |
-| 15. Shulker boxes (manual) | Packed boxes and kits | 1 SC | Manual | Front, beside the Dome | Never lava |
+| 15. Shulker boxes (manual) | Empty shulker boxes | 1 SC | Manual | Machinery | ★ room to grow. The unloader returns empties here. Unstackable, never lava |
+| 15. Shulker boxes (manual) | Packed boxes and kits | 1 SC | Manual | Machinery | Never lava |
 
 - **Stage adds:** 1 DC + 6 SC = **4 DC-eq**, **3 hopper slices**, then expansion
 - **Cumulative:** 113 DC-eq / 87 slices (the §3 grand total), then growing
 - **Phase:** After the End, then ongoing
-- **Zone:** Both Stage 5 wings; shulker unloader and box chests at the front beside the Dome; golem module 2 in the Dome
-- **Shulker unloader:** feeds the input line and returns empty boxes to the group 15 chest.
+- **Zone:** Both Stage 5 wings; shulker unloader and box chests in Machinery beside the input; golem module 2 in the Dome
+- **Shulker unloader (Machinery, beside the input barrels):** feeds the input line and returns empty boxes to the group 15 chest next to it.
 - **Needs:**
   - End city trips for shulker shells; each box is 2 shulker shells + 1 chest.
   - A dispenser and a piston for the unloader.
@@ -316,7 +315,7 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
 
 ### Stage 5 expansion (ongoing)
 
-"Chests now" is the §3 starting allocation and where it starts. Add capacity at the open wall ends, or in the Stage 5 wing on the same side of the aisle, as each one fills.
+"Chests now" is the §3 starting allocation and where it starts. Add capacity at the open wall ends (either wall of the wing), or in the Stage 5 wing on the same side of the aisle, as each one fills.
 
 | Group | Item | Chests now | How sorted | Zone | Notes |
 | --- | --- | --- | --- | --- | --- |
@@ -347,7 +346,7 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
 | 12. Nether | Netherrack | 1 DC (Stage 3, Stage 3 band, right) | Hopper slice | Right Stage 5 wing (or the open wall end) | ★ grow first. Grow it only if you build with it |
 | 13. End | End stone | 1 DC (Stage 5, Stage 5 wings) | Hopper slice | Stage 5 wings | ★ grow first. |
 | 14. Tools, armor & enchanting (manual) | Enchanted books | 1 DC (Stage 3, Stage 3 band, right) | Manual | Right Stage 5 wing (or the open wall end) | ★ grow first. Unstackable |
-| 15. Shulker boxes (manual) | Empty shulker boxes | 1 SC (Stage 5, Front, beside the Dome) | Manual | Front, beside the Dome (extra chest beside it) | ★ grow first. The unloader returns empties here. Unstackable, never lava |
+| 15. Shulker boxes (manual) | Empty shulker boxes | 1 SC (Stage 5, Machinery) | Manual | Machinery (extra chest beside it) | ★ grow first. The unloader returns empties here. Unstackable, never lava |
 
 - **Then expansion, ongoing:**
   - Add slices at the open end. Grow the **★** items first, and promote mixed-chest items that keep filling the overflow.
@@ -356,4 +355,4 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
   - Dress the hall as the [Copper storage hall](building-goals.md#2-copper-storage-hall).
   - Add a backup storage room (Phase 5 backups), and clean up anything that causes lag.
 
-**Every stage keeps rule 8:** the end of the stream and the far ends of the chest walls stay open ([adjacency rules](storage-layout.md#adjacency-rules)). The trunk runs the full aisle from Stage 1 with branch points left for each later band ([trunk line](storage-layout.md#what-goes-in-each-zone)).
+**Every stage keeps rule 8:** the end of the stream and the far ends of the chest walls stay open ([adjacency rules](storage-layout.md#adjacency-rules)). Stage 1 builds the whole U-shaped trunk (router, down the left of the aisle, under the Dome, up the right to the overflow) with a capped branch point for each later wing ([item flow](storage-layout.md#item-flow)).

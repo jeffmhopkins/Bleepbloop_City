@@ -51,7 +51,7 @@ The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest
 
 **Status:** ⬜ Not started
 **Suggested timing:** Phase 4–5, alongside the storage [growth stages](storage-layout.md#4-growth-stages) 1–5 (gallery in the Dome = Stage 4)
-**Layout:** [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery across the back, a central aisle, the Stage 1/2 wings at the front, Stage 3 bands in the middle, Stage 5 wings at the back, and the Dome (golem gallery) at the entrance. Per-stage contents: [storage-stages.md](storage-stages.md).
+**Layout:** [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery across the back, a central aisle, the Stage 1/2 wings at the front, Stage 3 bands in the middle, Stage 5 wings at the back, and the Dome (golem gallery) at the entrance. Each wing is a hallway with chest walls on both sides. [Item flow](storage-layout.md#item-flow): a U-shaped stream from the router in Machinery, under the Dome, and back to the overflow and lava. Per-stage contents: [storage-stages.md](storage-stages.md).
 **Location:** _not recorded yet_ (near the home base at spawn)
 
 **Key materials and features**
@@ -64,7 +64,8 @@ The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest
 
 **Tasks**
 - [x] Layout sketched by Jeffrey ([hall layout](storage-layout.md#hall-layout-jeffreys-sketch))
-- [ ] Decide the router/input location ([options](storage-layout.md#router-and-input-location-jeffreys-decision))
+- [x] Router/input location: in Machinery by the router, with an optional front dump point at the Dome later ([decided](storage-layout.md#router-and-input-location-decided-back-by-the-router))
+- [x] Item flow drawn on the layout ([flow diagram](storage-layout.md#item-flow))
 - [ ] Design the hall around the [adjacency rules and constraints](storage-layout.md#1-functional-grouping)
 - [ ] Exposed copper beams
 - [ ] Glass-fronted golem gallery with waxed golems and copper chests
