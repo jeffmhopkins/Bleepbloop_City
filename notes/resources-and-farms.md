@@ -10,7 +10,7 @@
 | Crop farm + composter (food wing) | Crops | | ⬜ Not started | Phase 4 |
 | Animal barn with a gate | Animals | | ⬜ Not started | Phase 4 |
 | Sugar cane farm | Auto / semi-auto | | ⬜ Not started | Books for enchanting; Phase 4–5 |
-| Iron farm | Auto | | ⬜ Not started | Phase 5. Build it near the sorter, inside the [ticking area](../plans/multiplayer-server.md#ticking-area-iron-farm-and-item-sorter). On Bedrock, golems only spawn with a player nearby, so it isn't AFK-free |
+| Iron farm | Auto | | ⬜ Not started | Phase 5. Build it near the sorter, inside the [ticking area](../plans/multiplayer-server.md#ticking-area-iron-farm-and-item-sorter). On Bedrock, golems only spawn with a player nearby, so it isn't AFK-free. Fix: a parked bot ([AFK bot options](../plans/multiplayer-server.md#keeping-the-iron-farm-running-afk-bot-options)) |
 | Mob grinder or spawner farm | Auto | | ⬜ Not started | Phase 5 |
 | Mob switch or shard farm | End-game | | ⬜ Not started | After elytra |
 | Wither skeleton farm | End-game | | ⬜ Not started | After elytra |

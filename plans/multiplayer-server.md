@@ -52,7 +52,7 @@ Server settings and world-level config live here. For the files themselves (`ser
   - One extra golem per 10 more villagers.
   - About 1 spawn attempt every 35 s.
 - **What the ticking area does do for the iron farm:** it keeps the kill and collection side running (lava, hoppers, the link to the sorter) and keeps villagers working, so iron already produced keeps flowing to the sorter.
-- **New golems only spawn while someone is within that range of the farm.** So put the iron farm where people actually spend time: near the home base and the sorter.
+- **New golems only spawn while someone is within that range of the farm.** So put the iron farm where people actually spend time: near the home base and the sorter. For a bot that stays at the farm, see [AFK bot options](#keeping-the-iron-farm-running-afk-bot-options).
 
 **Spawn chunks: Bedrock doesn't have any documented always-loaded spawn chunks.**
 - The wiki's spawn chunk page covers a Java-only mechanic and points Bedrock readers to ticking areas instead ([Spawn chunk](https://minecraft.wiki/w/Spawn_chunk)).
@@ -70,6 +70,47 @@ Server settings and world-level config live here. For the files themselves (`ser
   - [ ] Test whether `tickingarea` works from the BDS console with the current `allow-cheats` setting
   - [ ] Add the sorter + iron farm area, then check it with `tickingarea list`
   - [ ] Confirm it's still there after a server restart and after the Linux migration
+
+#### Keeping the iron farm running: AFK bot options
+
+**Short answer:** yes, very likely, but not with vanilla settings alone. Golems need a *player* near the village. That's a confirmed, unfixed Bedrock bug report: [MCPE-226025](https://mojira.dev/MCPE-226025), "Iron Golems do not spawn in tickingareas", still open in 26.40. So the job is to give the farm a player that never leaves. Ranked by ease:
+
+| # | Option | How | Counts as a player for golems? | Main caveats |
+| --- | --- | --- | --- | --- |
+| 1 | **Canopy simplayer** (recommended first try) | [Canopy](https://github.com/ForestOfLight/Canopy) (MIT, v1.6.2 "for MC 26.50", 2026-09-16) on the server. Stand at the farm and run `/playerjoin <name>`. Turn on the `simplayerRejoining` global rule so it comes back after a restart. | **Likely, unverified.** It's a real `Player` entity, and Understudy (now part of Canopy) advertised "AFK your farms, load areas". An Understudy issue reports a simplayer loading an Overworld chunk well enough to run a mob switch ([Understudy #14](https://github.com/ForestOfLight/Understudy/issues/14)). Nobody we found has tested golem spawning specifically. | Needs the **Beta APIs** experiment (permanent, disables achievements). Not supported by Mojang: beta APIs can change in any update. |
+| 2 | **Spare real device** | An old phone, tablet or PC logged into a second Microsoft account, parked at the farm. | **Yes**: it's a normal client. | Needs a second account and a device left running. Set `player-idle-timeout=0` (default 30 min kicks idlers) ([server.properties](https://minecraft.wiki/w/Server.properties)). |
+| 3 | **Headless bot client** in a container next to BDS | [bedrock-protocol](https://github.com/PrismarineJS/bedrock-protocol) (Node) or [gophertunnel](https://github.com/Sandertv/gophertunnel) (Go) joins as a second account and just stands there. | Should, as a real connection, but **unverified**: a bot that sends no movement input may not be treated like an active client. | 26.50 NetherNet (details below). Second Microsoft account. Idle timeout. More code to maintain. |
+| — | Endstone / LeviLamina | [Endstone](https://github.com/EndstoneMC/endstone) (BDS plugin platform, supports 1.26.52) has no built-in fake player that we found. Non-Script-API fake players such as LeviLamina's can crash BDS when a Script API pack is loaded ([Canopy #72](https://github.com/ForestOfLight/Canopy/issues/72)). | — | Set aside |
+
+**Facts behind option 1** (Script API, 26.50)
+- `@minecraft/server-gametest` has a top-level **`spawnSimulatedPlayer(location, name, gameMode)`**. Microsoft Learn: it "spawns a simulated player that isn't associated to a specific Test"; it stays until `disconnect()`. So **no GameTest needs to be running**. The module is still beta ([Microsoft Learn: server-gametest](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-gametest/minecraft-server-gametest?view=minecraft-bedrock-experimental)). Canopy uses exactly this call (`Understudy.js`).
+- **Restarts:** a simulated player doesn't survive a restart on its own. Canopy's `simplayerRejoining` rule (default **off**) saves the online simplayers at shutdown and rejoins them at startup. `simplayerSaving` (default on) keeps their inventory and location ([Canopy wiki: Global Rules](https://github.com/ForestOfLight/Canopy/wiki/Global-Rules)).
+- **Spawn it in the Overworld.** Canopy warns that simplayers spawned in another dimension don't load chunks unless a real player is in that dimension (a Mojang bug) ([Understudy #14](https://github.com/ForestOfLight/Understudy/issues/14)).
+- **On BDS:** add `@minecraft/debug-utilities` to `config/default/permissions.json` ([Canopy wiki: Adding Canopy to Servers](https://github.com/ForestOfLight/Canopy/wiki/Installation-&-Updates#adding-canopy-to-servers)). Check that the allowed modules also cover what Canopy's manifest asks for: `server`, `server-ui`, `server-gametest`.
+- **Beta APIs:**
+  - On Bedrock, turning on an experiment **disables achievements**, and an experiment **can't be turned off** once the world has it. Turning one on for an existing world makes a copy first ([Experiments](https://minecraft.wiki/w/Experiments)).
+  - BDS has no world-options screen, so turn it on in a client on a **copy** of the world, then put that copy on the server.
+  - The world already loses achievements once cheats are on for `/tickingarea`.
+
+**Facts behind option 3**
+- 26.50 BDS defaults to the **NetherNet** transport. RakNet is still available with `transport=raknet` ([itzg README](https://github.com/itzg/docker-minecraft-bedrock-server#nethernet)). Our [migration notes](server-migration.md#verified-facts-this-plan-relies-on) record that 26.51 may only support NetherNet.
+- bedrock-protocol joined BDS 1.26.51 over NetherNet only with `enable-lan-visibility=true`, and that test used `online-mode=false`. Direct HTTP signaling is still open ([bedrock-protocol #830](https://github.com/PrismarineJS/bedrock-protocol/issues/830)).
+- gophertunnel merged NetherNet dialing in Aug 2026 (PRs #486, #508). We haven't tested it against our server.
+- **Don't use `online-mode=false`** to get a bot in. With it off, players aren't authenticated to Xbox Live ([server.properties](https://minecraft.wiki/w/Server.properties)), so anyone who can reach the port can join under any name, including an allowlisted one. Use a second Microsoft account with normal sign-in and add it to the allowlist.
+
+**Same bot as the future companion.** The [companion plan](live-api.md) already ranks Canopy simplayers (#2) and our own `SimulatedPlayer` script as the base for a follow-and-fight bot. bedrock-protocol and gophertunnel are #5 and #5b there. Installing Canopy for the farm is the first step of that plan too. The farm bot can stay parked while a second simplayer becomes the companion.
+
+**Recommended path**
+1. On a **copy** of the world (local client is fine): turn on Beta APIs, add Canopy, build or borrow a test village, and add a ticking area.
+2. Run `/playerjoin IronBot` at the farm. Send your real player far away, then log off completely.
+3. Watch the collection chest; a ~35 s spawn cycle shows up fast.
+4. Test both ways: real player far away, and no real players online at all. A simulated player is the only "player" when nobody's online. Whether that satisfies the ticking area's "a player in the dimension" rule is **unverified**, and this test answers it.
+5. If golems spawn, do it on the real server: Beta APIs on a copy, Canopy, `permissions.json`, `simplayerRejoining` on. Then check it after a server restart and after the Linux migration.
+6. If they don't, fall back to option 2 (simplest) or option 3 (fully headless, more work).
+- Checklist:
+  - [ ] Simplayer test on a world copy: golems with real player far away
+  - [ ] Simplayer test on a world copy: golems with no real players online
+  - [ ] Decide: Canopy on the live world (Beta APIs permanent) vs. spare device vs. headless bot
 
 ## Public hub at spawn
 - [ ] Map
