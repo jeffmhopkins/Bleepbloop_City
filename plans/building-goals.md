@@ -51,7 +51,7 @@ The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest
 
 **Status:** ⬜ Not started
 **Suggested timing:** Phase 4–5, alongside the storage [growth stages](storage-layout.md#4-growth-stages) 1–5 (gallery in the Dome = Stage 4)
-**Layout:** [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery across the back, a central aisle, the Stage 1/2 wings at the front, Stage 3 bands in the middle, Stage 5 wings at the back, and the Dome (golem gallery) at the entrance. Each wing is a hallway with chest walls on both sides. [Item flow](storage-layout.md#item-flow): a U-shaped stream from the router in Machinery, under the Dome, and back to the overflow and lava. Per-stage contents: [storage-stages.md](storage-stages.md).
+**Layout:** [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery across the back, a central aisle, the Stage 1/2 wings at the front, Stage 3 bands in the middle, Stage 5 wings at the back, and the Dome (golem gallery) at the entrance. Each wing is a hallway with chest walls on both sides. [Item flow](storage-layout.md#item-flow): the shulker unloader at the center of Machinery feeds the router below it, with dump barrels to its right; a U-shaped stream runs from the router, under the Dome, and back to the overflow and lava on the right. Per-stage contents: [storage-stages.md](storage-stages.md).
 **Location:** _not recorded yet_ (near the home base at spawn)
 
 **Key materials and features**

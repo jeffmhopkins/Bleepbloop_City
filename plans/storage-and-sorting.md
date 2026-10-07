@@ -3,7 +3,7 @@
 **Goal:** A highly automated item sorter for the real base. **Hopper filters fed by a water/ice item stream (a Bedrock chest hall) do the primary sorting**, and **copper golems are the showpiece**: a glass-fronted golem gallery at the front of the hall where a few waxed golems sort a small set of everyday items (potions and tipped arrows) into display chests you can watch.
 **Role change (2026-10-07):** Jeffrey asked to make the golems "a visual thing in the front of the hall, not necessarily the primary sorting mechanism". The golem research below is still valid; it now applies to the gallery.
 **Status:** ⬜ Not started
-**Hall layout:** [Jeffrey's sketch](storage-layout.md#hall-layout-jeffreys-sketch) and [item flow](storage-layout.md#item-flow): input, router, smelter, overflow and lava in Machinery at the back; a U-shaped under-floor stream down one side of the central aisle, under the Dome (golem gallery) at the entrance, and back up the other side; each wing a hallway with chest walls on both sides.
+**Hall layout:** [Jeffrey's sketch](storage-layout.md#hall-layout-jeffreys-sketch) and [item flow](storage-layout.md#item-flow): shulker unloader at the center of Machinery feeding the router below it, dump barrels to the right, smelter on the left, intake/overflow/lava on the right; a U-shaped under-floor stream down one side of the central aisle, under the Dome (golem gallery) at the entrance, and back up the other side; each wing a hallway with chest walls on both sides.
 **Stages:** [one table per stage](storage-stages.md).
 **Grouping:** see [storage-layout.md](storage-layout.md) for functional adjacency rules, the hard technical constraints, and the item groups for the chest walls. The building itself is a custom build Jeffrey designs; no shape or size is prescribed.
 **Always loaded:** the sorter and iron farm go in a Bedrock ticking area so they run with nobody nearby. See [Server config: ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter) (mob spawning still needs a player nearby).
@@ -146,7 +146,9 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 
 ### Shulker box auto unloader
 
-**What it does:** drop a full shulker box in, its contents get emptied into the sorter input, and the empty box comes back out.
+**What it does:** drop a full shulker box in, its contents get emptied into the sorter, and the empty box comes back out.
+
+**Where:** at the center of the back Machinery section, at the head of the aisle, feeding straight down into the router directly below it ([hall layout](storage-layout.md#item-flow)). The dump barrels are to the router's right.
 
 **Verified mechanics** ([Shulker Box](https://minecraft.wiki/w/Shulker_Box), [Dispenser](https://minecraft.wiki/w/Dispenser), [Hopper](https://minecraft.wiki/w/Hopper), [Tutorial: Hopper, special item filters](https://minecraft.wiki/w/Tutorial:Hopper#Potions,_books_and_shulker_boxes))
 - Hoppers can both put items into and pull items out of a placed shulker box.
@@ -216,7 +218,7 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 | 2 | Stage 2 wing | The rest of groups 1–5 (39 slices), plus the smelter loop in Machinery ([auto furnace](#auto-furnace--smelter-array)) |
 | 3 | Both Stage 3 bands | Groups 6–10, 12, 14 (30 slices), plus the [lava disposal](#garbage-disposal-garbage-furnace) in Machinery |
 | 4 | Dome | Golem gallery showpiece (module 1) |
-| 5 | Both Stage 5 wings | End group, shulker boxes, the [shulker unloader](#shulker-box-auto-unloader), then all expansion (★ items, promoted mixed items, golem module 2 in the Dome) |
+| 5 | Both Stage 5 wings (unloader at the center of Machinery) | End group, shulker boxes, the [shulker unloader](#shulker-box-auto-unloader) above the router, then all expansion (★ items, promoted mixed items, golem module 2 in the Dome) |
 
 ## Materials (verified recipes only)
 

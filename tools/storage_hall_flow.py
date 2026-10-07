@@ -1,7 +1,8 @@
 """Draw the storage hall item-flow diagram (assets/storage-hall-flow.png).
 
-Schematic of Jeffrey's hall layout (plans/storage-layout.md): router and input in
-Machinery, U-shaped under-floor item stream, smelter loop, potion line to the
+Schematic of Jeffrey's hall layout (plans/storage-layout.md): shulker unloader at
+the center of Machinery feeding the router below it, dump barrels to the right,
+smelter loop on the left, U-shaped under-floor item stream, potion line to the
 golem gallery. Each wing is a hallway with a chest wall on both sides,
 each backed by its own service gap. Not to scale. Needs Pillow and the DejaVu fonts.
 Run: python3 tools/storage_hall_flow.py
@@ -10,7 +11,6 @@ from PIL import Image, ImageDraw, ImageFont
 import math, os
 OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','assets','storage-hall-flow.png')
 S=2; W,H=1600,1180
-im=Image.new('RGB',(W*S,H*S),(250,250,247)); d=ImageDraw.Draw(im)
 im=Image.new('RGB',(W*S,H*S),(250,250,247)); d=ImageDraw.Draw(im)
 def f(sz,b=True): return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf' if b else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',int(sz*S))
 def rect(x0,y0,x1,y1,fill,ol=(30,30,30),w=2): d.rectangle([x0*S,y0*S,x1*S,y1*S],fill=fill,outline=ol,width=int(w*S))
@@ -32,22 +32,23 @@ text(W/2,32,'Storage hall: item flow (schematic, not to scale)',24)
 # machinery band
 MY0,MY1=70,250
 rect(80,MY0,1520,MY1,(205,214,245))
-text(800,88,'MACHINERY (back section)',15,c=(30,50,140))
-def box(x0,x1,t,sub=None,fill=(255,255,255)):
-    rect(x0,110,x1,200,fill); text((x0+x1)/2,145 if sub else 155,t,15)
-    if sub: text((x0+x1)/2,172,sub,12,False)
+text(250,86,'MACHINERY (back section)',15,c=(30,50,140))
+def box(x0,x1,t,sub=None,fill=(255,255,255),y0=110,y1=200):
+    rect(x0,y0,x1,y1,fill); m=(y0+y1)/2
+    text((x0+x1)/2,m-10 if sub else m,t,15)
+    if sub: text((x0+x1)/2,m+13,sub,12,False)
 box(110,330,'Auto smelter','furnaces, smokers, blast',fill=(255,235,215))
-box(700,900,'ROUTER','splits items',fill=(255,225,170))
-box(930,1110,'Input','barrels, shulker unloader',fill=(230,245,255))
-box(1130,1250,'Intake','unstackables',fill=(240,240,240))
+box(705,895,'Shulker unloader','center of back',fill=(235,220,250),y0=98,y1=148)
+box(705,895,'ROUTER','splits items',fill=(255,225,170),y0=172,y1=228)
+box(935,1095,'Input','dump barrels',fill=(230,245,255))
+box(1120,1250,'Intake','unstackables',fill=(240,240,240))
 box(1290,1400,'Overflow','end of stream',fill=(240,240,240))
 box(1420,1505,'Lava','junk only',fill=(255,200,180))
-text(515,155,'room for more machines',13,False,GREY)
-# input->router
-arrow([(930,140),(900,140)],ORANGE)
-# router <-> smelter
-arrow([(700,135),(330,135)],RED,3); text(515,125,'raw ore / raw food',11,False,RED)
-arrow([(330,178),(700,178)],RED,3); text(515,190,'ingots / cooked food back',11,False,RED)
+arrow([(800,148),(800,172)],ORANGE)
+arrow([(935,200),(895,200)],ORANGE)
+arrow([(705,186),(330,186)],RED,3); text(515,176,'raw ore / raw food',11,False,RED)
+arrow([(330,214),(705,214)],RED,3); text(515,226,'ingots / cooked food back',11,False,RED)
+text(515,130,'room for more machines',13,False,GREY)
 # wings
 LX0,LX1,AX0,AX1,RX0,RX1=80,680,680,920,920,1520
 bands=[(250,450,'Stage 5','End items, shulker shells, later expansion',(140,60,155),(140,60,155)),
@@ -81,7 +82,7 @@ for y0,y1,l,s,c in right_bands: band(RX0,RX1,y0,y1,l,s,c,'R')
 rect(AX0,250,AX1,850,(236,236,230))
 text(800,560,'CENTRAL',14,c=GREY); text(800,580,'AISLE',14,c=GREY)
 # trunk U: router down left, across under dome, up right to overflow
-arrow([(760,200),(760,250)],ORANGE)
+arrow([(760,228),(760,250)],ORANGE)
 line([(760,250),(700,250),(700,860)],ORANGE,5)
 line([(900,860),(900,240)],ORANGE,5)
 arrow([(900,240),(1345,240),(1345,200)],ORANGE,5)
@@ -89,7 +90,7 @@ for y in (420,620,820): head(700,y-20,700,y,ORANGE,13)
 for y in (640,440,300): head(900,y+20,900,y,ORANGE,13)
 arrow([(1400,155),(1420,155)],GREY,3)
 # golem line
-arrow([(830,200),(830,250),(830,712)],GREEN,3,dash=8)
+arrow([(830,228),(830,250),(830,712)],GREEN,3,dash=8)
 text(842,690,'',1)
 # dome
 cx,cy,r=800,860,150

@@ -32,7 +32,7 @@ Each stage below lists **only what that stage adds**, and which zone of the hall
 
 ## Summary by zone
 
-DC-eq here covers chests only; machines (router, smelter, lava, unloader) have no chest count. Input and router sit in Machinery by the router ([decided](storage-layout.md#router-and-input-location-decided-back-by-the-router)). Each wing is a hallway with a chest wall on **both** sides, each wall backed by its own service gap and filters ([item flow](storage-layout.md#item-flow)), so a wing's chests and slices split over two walls. The Stage 5 wings are two wings, so four walls.
+DC-eq here covers chests only; machines (router, smelter, lava, unloader) have no chest count. All input is in Machinery: the shulker unloader at the center feeds straight down into the router, and the dump barrels sit to its right ([decided](storage-layout.md#router-and-input-location-decided-back-by-the-router)). Each wing is a hallway with a chest wall on **both** sides, each wall backed by its own service gap and filters ([item flow](storage-layout.md#item-flow)), so a wing's chests and slices split over two walls. The Stage 5 wings are two wings, so four walls.
 
 | Zone | Stage(s) | DC-eq | Slices | Chest walls | DC-eq per wall | What sits there |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
 | Stage 3 band, right | 3 | 21 | 22 | 2 | 10.5 | Mob drops, brewing, Nether, tools/armor/enchanting |
 | Dome | 4 (+5) | 6 | 0 | — | — | Golem gallery module 1 + spares; module 2 later (Stage 5 timing) |
 | Stage 5 wings | 5 | 3 | 3 | 4 | 0.75 | End group; the rest is expansion room for ★ items and promoted mixed items |
-| Machinery | 1, 2, 3, 5 | 4 | 0 | — | — | Input barrels + router, intake, main overflow (Stage 1); smelter (Stage 2); lava (Stage 3); shulker unloader + box chests (Stage 5) |
+| Machinery | 1, 2, 3, 5 | 4 | 0 | — | — | Center: router at the head of the aisle, shulker unloader above it (Stage 5) + box chests. Right: dump barrels, intake, main overflow (Stage 1), lava (Stage 3). Left: smelter (Stage 2) |
 | **Total** | | **113** | **87** | | | |
 
 **Why Stage 0 isn't counted:** its 17 chests (and the test rig) are the temporary Phase 4 storage wall. Once a group's items get hall chests (Stages 1–5), the old group chest is free to reuse as one of that group's mixed or manual chests, so counting it would double-count. The test slice is a prototype in a test area. Golem module 2 and the other Stage 5 expansion come on top of the 113.
@@ -306,8 +306,8 @@ DC-eq here covers chests only; machines (router, smelter, lava, unloader) have n
 - **Stage adds:** 1 DC + 6 SC = **4 DC-eq**, **3 hopper slices**, then expansion
 - **Cumulative:** 113 DC-eq / 87 slices (the §3 grand total), then growing
 - **Phase:** After the End, then ongoing
-- **Zone:** Both Stage 5 wings; shulker unloader and box chests in Machinery beside the input; golem module 2 in the Dome
-- **Shulker unloader (Machinery, beside the input barrels):** feeds the input line and returns empty boxes to the group 15 chest next to it.
+- **Zone:** Both Stage 5 wings; shulker unloader at the center of Machinery, directly above the router, with the box chests beside it; golem module 2 in the Dome
+- **Shulker unloader (center of Machinery, at the head of the aisle):** sits directly above the router and feeds straight down into it. Empty boxes go to the group 15 chest beside it. Stage 1 leaves this spot and the router's top input free.
 - **Needs:**
   - End city trips for shulker shells; each box is 2 shulker shells + 1 chest.
   - A dispenser and a piston for the unloader.

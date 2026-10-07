@@ -55,7 +55,7 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | | Storage sorter Stage 2: rest of groups 1–5 (39 slices, Stage 2 wing) + smelter loop running |
 | | Storage sorter Stage 3: groups 6–10, 12, 14 (30 slices, both Stage 3 bands) + lava disposal running |
 | | Storage sorter Stage 4: golem gallery showpiece running behind glass (Dome) |
-| | Storage sorter Stage 5: End group + shulker unloader running in the Stage 5 wings |
+| | Storage sorter Stage 5: End group running in the Stage 5 wings + shulker unloader feeding the router from the center of Machinery |
 | | Storage sorter Stage 5 expansion: ★ items grown into the Stage 5 wings; hall dressed as the Copper storage hall (ongoing) |
 | | Storage sorter add-on: auto furnace (blast furnaces + smokers) running off the sorter |
 | | Storage sorter add-on: lava garbage disposal taking junk + overflow |
