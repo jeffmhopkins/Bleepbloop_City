@@ -102,7 +102,7 @@ The LLM sees each tool as a function with a JSON schema. **Pack tools** run in t
 | `time_and_weather` | none | `world.getTimeOfDay()`, `world.getDay()`, `world.getMoonPhase()` (stable). Weather is tracked from the stable `world.afterEvents.weatherChange`. | `dimension.getWeather()` is **beta only**. Use the event so the pack stays on stable `@minecraft/server`. |
 | `my_spawn_point` | none | `player.getSpawnPoint()` (stable) | Returns bed/anchor spawn, if set |
 | `list_landmarks` / `nearest_landmark` | `name` (optional) | Landmarks stored in `variables.json` or world dynamic properties (`world.getDynamicProperty`) | Seeded from [notes/coordinates.md](../notes/coordinates.md) once coordinates are recorded. Gives answers like "toward the village". |
-| `where_is_player` | `name` | `world.getPlayers({ name })` → `location` | **Open decision:** whether players can look each other up (off until decided) |
+| `where_is_player` | `name` | **Online:** `world.getPlayers({ name })` → `location` + `dimension` (stable, live). **Offline:** last known position (see notes). | **On for every player** (decided 2026-10-07). Read-only: it only reads positions. Offline answers say "last seen … at <time>". Last-known positions come from the pack recording online players' positions every ~30 s in a world dynamic property (pack bookkeeping, not an LLM tool). The fallback is the player's `player_…` record in the saved-world snapshot, which needs the player ID ↔ gamertag mapping from [server migration](server-migration.md#snapshot-pipeline-stage-2) Stage 2. **To test:** which is simpler on 26.50. |
 | `structure_here` | none | `dimension.getGeneratedStructures(player.location)` (**beta**) | "What structure am I standing in?" Loaded chunks only. Also used to confirm a predicted structure when someone is near it. |
 
 **Never:** a tool that runs commands (`runCommand`), places or breaks blocks, moves players or teleports. The chapmanjw MCP pack's `mc_run_command` (see [live-api.md](live-api.md#companion-bot-references-researched-2026-10-07)) is exactly what we leave out.
@@ -255,7 +255,7 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 - [ ] **Rate limits:** a per-player cooldown in the pack (e.g. one question per 10 s, one in flight) and the same in the service. `max_concurrent_requests` caps the pack overall.
 - [ ] **Read-only tools only,** with a fixed list and validated arguments. No `runCommand`, and no free-form code from the LLM.
 - [ ] **Logging:** the service logs time, player, question, tool calls and answer, plus failed auth. Logs stay on the box and are **never committed**. Retention is an open decision.
-- [ ] Answers go only to the asker. `where_is_player` stays off until Jeffrey decides whether players can look each other up.
+- [ ] Answers go only to the asker. Any player can look up any other player with `where_is_player` (decided); the looked-up player isn't notified.
 - [ ] **World files:** the service and indexer read **snapshot copies only**, mounted read-only. Never the live `db/`.
 - [ ] **Seed and index stay on the box.** The seed, the SQLite index and the snapshots are **never committed** and never sent to a hosted seed API.
 
@@ -267,9 +267,9 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 - Lore "seals" in [notes/lore.md](../notes/lore.md) are story flavor only. They never gate what anyone can ask.
 - Rate limits still apply to everyone (they protect the server and the LLM, not access).
 
-**One smaller question is still open:** can players look each other up (`where_is_player`)? Until Jeffrey decides, that tool stays off. Options: everyone can find everyone, only players who opt in, or off. See [Open decisions](#open-decisions-for-jeffrey).
+- **Anyone can look up any other player** (`where_is_player`, decided 2026-10-07): live position if they're online, last known position if they're offline. Still read-only.
 
-The pack and the service share one access setting in `variables.json`, e.g. `"assistantAccess": { "players": "all", "reply_mode": "coords", "tools": "all", "where_is_player": "off" }`. The service enforces the same setting, so a modified request can't change it.
+The pack and the service share one access setting in `variables.json`, e.g. `"assistantAccess": { "players": "all", "reply_mode": "coords", "tools": "all", "where_is_player": "all" }`. The service enforces the same setting, so a modified request can't change it.
 
 ## Build steps (in order)
 
@@ -285,7 +285,7 @@ The pack and the service share one access setting in `variables.json`, e.g. `"as
 - [ ] Pack: `/bb:ask` (alias `/ask`) with `cheatsRequired: false`, an optional quoted question, and a text box when empty
 - [ ] Pack: player check + cooldown, a private "Thinking…" message, and HTTP with a timeout and error handling
 - [ ] Pack: `find_nearest_entity` via `getEntities({ closest: 1, ... })`, replying with **distance + 8-point compass direction + up/down**, plus **X Y Z** (`coords` mode for everyone, decided)
-- [ ] Pack + service: the shared access setting (all players, all tools, coordinates on, `where_is_player` off until decided)
+- [ ] Pack + service: the shared access setting (all players, all tools, coordinates on, player lookups on)
 - [ ] Test on the world copy: "where is the nearest pig / cow / sheep", plus "nothing in range" and "AI server down"
 
 ### Step 2: No-LLM fast path
@@ -302,7 +302,7 @@ The pack and the service share one access setting in `variables.json`, e.g. `"as
 
 ### Step 5: Optional extras
 - [ ] `!ask` chat prefix through beta `chatSend` with `cancel = true` (only if Jeffrey wants it; moves the pack to beta `@minecraft/server`)
-- [ ] `where_is_player`, once Jeffrey decides whether players can look each other up
+- [ ] `where_is_player` for everyone: live position for online players, last known position (with time) for offline players
 - [ ] Merge with the [Live API](live-api.md) pack so one pack and one service do telemetry, chat assistant and, later, the companion bot
 
 ### Step 6: World snapshot pipeline + index
@@ -335,7 +335,7 @@ The pack and the service share one access setting in `variables.json`, e.g. `"as
 ## Open decisions for Jeffrey
 
 - [x] **Who can use it and how much:** every player, with the same unrestricted access: every tool, ore and structure search, and coordinates in replies (decided 2026-10-07, see [Access policy](#access-policy)). Tools stay read-only.
-- [ ] **Player lookups:** can players look each other up (`where_is_player`)? Everyone, opt-in only, or off? (Off until decided.)
+- [x] **Player lookups:** anyone can look up any other player with `where_is_player` (decided 2026-10-07): live if online, last known position if offline.
 - [ ] **LLM and service stack:** which model and server on the AI box (it needs OpenAI-style tool calling), and Python or Node for the service?
 - [ ] **Beta APIs:** OK to enable it on the world (shared with the Live API and Canopy; can't be undone)?
 - [ ] **Input:** `/ask` command only (stable, recommended), or also an `!ask` chat prefix (beta)?

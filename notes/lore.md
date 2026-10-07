@@ -87,7 +87,7 @@ These are the real limits dressed as lore. The satellite knows the world in thre
 - Its memory runs a little behind (the snapshots are minutes old), so it might say *"as of a few minutes ago."*
 - **Unwalked land keeps its ores hidden.** The Builders' plan says where the ruins were built, but not where every crystal lies. To find diamonds there, someone has to go near first. (Matches the real limit: individual ores can't be predicted from the seed on Bedrock.)
 
-**It answers every traveler fully.** Anyone on the server can ask it anything, and it answers in full. The one thing still undecided is whether it will **reveal another soul's location**; until you decide, it keeps that secret.
+**It answers every traveler fully.** Anyone on the server can ask it anything, and it answers in full. That includes **where another soul is**: where they stand now, or where it last saw them.
 
 ### Coordinates: the Grid
 
@@ -138,7 +138,7 @@ In the story, the satellite's features come back in stages, as it unseals more o
 - [ ] **Is the satellite friendly?** Options: a loyal servant waiting for the Builders' heirs; a neutral archivist that just answers; or something slowly waking with its own agenda. Why its oldest map is torn exactly where the strongholds and Nether forts should be could be a clue.
 - [ ] **Villager connection:** are villagers the Builders' descendants who forgot, or just later settlers? Are illagers a group that rejected the satellite?
 - [ ] **Names:** Builders Before, Firstwrights or Old Makers? And does the satellite get a name, or just "the satellite"?
-- [ ] **Finding each other:** will the satellite tell one player where another is? (The open `where_is_player` question in the [plan](../plans/chat-assistant.md#access-policy).)
+- [x] **Finding each other:** yes, the satellite tells any player where another is (decided; `where_is_player` in the [plan](../plans/chat-assistant.md#access-policy)).
 - [ ] **How much in-game?** Lore only in this file, or also in-world (signed books in a lectern, item-frame labels, the satellite's own replies in character)?
 
 ## Canon so far
