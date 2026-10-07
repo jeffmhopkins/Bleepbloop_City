@@ -3,7 +3,7 @@
 **Goal:** A highly automated item sorter for the real base. **Hopper filters fed by a water/ice item stream (a Bedrock chest hall) do the primary sorting**, and **copper golems are the showpiece**: a glass-fronted golem gallery at the front of the hall where a few waxed golems sort a small set of everyday items (potions and tipped arrows) into display chests you can watch.
 **Role change (2026-10-07):** Jeffrey asked to make the golems "a visual thing in the front of the hall, not necessarily the primary sorting mechanism". The golem research below is still valid; it now applies to the gallery.
 **Status:** ⬜ Not started
-**Layout and block palette:** see [storage-layout.md](storage-layout.md) for the recommended hall arrangement, dimensions (estimates), block palette, floor plan and cross-section diagrams, and references.
+**Grouping:** see [storage-layout.md](storage-layout.md) for functional adjacency rules, the hard technical constraints, and the item groups for the chest walls. The building itself is a custom build Jeffrey designs; no shape or size is prescribed.
 **Showpiece build:** the [Copper storage hall](building-goals.md#2-copper-storage-hall) building goal is the home for this system.
 > **Bedrock server.** Bleepbloop City runs on **Bedrock Edition** (26.50, Wilderness Bound). Every mechanic and design here has to be Bedrock-compatible. Redstone, hopper, and piston timing differ from Java, so many Java tutorials and schematics won't work as-is. Look for Bedrock-tested designs, and treat any Java-only note below as not applying.
 
@@ -68,7 +68,7 @@
 
 **Plan (updated 2026-10-07):**
 - **Hoppers are the primary system.** A Bedrock chest hall (1-wide slices, filters under a water/ice item stream) sorts everything stackable, from "dump and walk away" inventory to high-volume farm output.
-- **Golems are the showpiece.** The golem gallery in the foyer sorts potions and tipped arrows, which golems can tell apart on Bedrock and hopper filters can't easily handle. It's small (about 2 golems), visible through glass, and doesn't carry the main load.
+- **Golems are the showpiece.** The golem gallery near the entrance sorts potions and tipped arrows, which golems can tell apart on Bedrock and hopper filters can't easily handle. It's small (about 2 golems), visible through glass, and doesn't carry the main load.
 
 ### Golem gallery rules (from the mechanics)
 - **No empty destination chests.** A golem will put anything into an empty wooden chest, so seed every destination chest with at least one of the item(s) it should hold. Keep spare empty chests out of golem range or make them copper chests.
@@ -81,18 +81,20 @@
 - **Seal the golem gallery.** The search area is big (65×17×65). Keep the gallery sealed and far enough from other chests (the storage wall, the workshop, farm chests) that golems don't wander off and fill them.
 
 ### Fitting it into the base
-- **Input by the door:** the Phase 4 storage wall calls for one input chest by the door. With hoppers primary, make the input **barrels** in the foyer (hoppers empty barrels, and golems ignore them). Copper chests are used only as the golem gallery's input, fed by the router.
+- **Input by the door:** the Phase 4 storage wall calls for one input chest by the door. With hoppers primary, make the input **barrels** by the entrance (hoppers empty barrels, and golems ignore them). Copper chests are used only as the golem gallery's input, fed by the router.
 - **3-block service gap:** keep the 3-block gap behind the storage wall from [building style](building-style.md) for hopper lines and redstone, so the sorter can grow without tearing the front off.
 - **Away from the pretty part:** Phase 5 says to build sorting systems away from the pretty part of the base so lag stays outside. The wiki notes that long hopper pipes can add steady lag, and water item streams can add more while items are flowing.
 - **Doors:** golems open non-iron doors, so use iron doors (or no door) wherever golems must stay in.
 - **Lighting and spawn control** as in Phase 4. The golem gallery counts as part of the build.
 
-## Layout and block palette
+## Grouping
 
-Recommended layout, in short (full detail, diagrams, and palette in **[storage-layout.md](storage-layout.md)**; all dimensions are estimates):
-- **Two levels.** Ground floor: **foyer** (golem gallery + input barrels) → **browsing hall** (3-wide aisle, chest walls 4 high, labeled with item frames) with **3-block service gaps** behind each wall for filters and the item stream. Basement: router/lift, **auto smelter**, **overflow + lava**, maintenance walkway.
-- **Footprint:** about 13 × 33 blocks built, 13 × 57 with northward expansion (estimate). The first 6 slices hold ~48 item types.
-- **Palette:** spruce + cobblestone, hay-bale "thatch" accents, waxed copper beams, copper lanterns/bulbs, glass and copper grate in the golem gallery.
+The storage hall's architecture is Jeffrey's own grand custom build (see [building style: inspiration](building-style.md#inspiration)). The plan only fixes **what sits next to what** and **how items are grouped**. Full detail in **[storage-layout.md](storage-layout.md)**:
+- Input next to the router, and the router feeding the start of the item stream.
+- Filters directly behind the chest walls they fill, with 3-block service access behind every wall.
+- Smelter, overflow, and lava together on the machine side, away from wood and showpiece areas.
+- The golem gallery near the entrance as the showpiece, sealed from other chests.
+- The expansion end kept open.
 
 Key rules:
 - **Golem gallery module = 1 copper input chest + 9 display chests + 1 overflow chest per golem.** The overflow is the **farthest** chest from the golem. The golem is pinned forward (trapdoor/chains or a minecart).
@@ -200,7 +202,7 @@ Jeffrey's ask: the item sorter also needs an **auto furnace**, a **shulker box a
 
 ## Stages
 
-Build order and hall layout: [storage-layout.md](storage-layout.md#6-build-order). Hoppers come first; the golem gallery is a showcase stage.
+Grouping and constraints: [storage-layout.md](storage-layout.md). Hoppers come first; the golem gallery is a showcase stage.
 
 ### Stage 0 — Prototypes (one filter slice, one golem)
 - [ ] Build one Bedrock hopper filter slice (from [Stackable Sorting](https://bedrockwiki.com/books/storage-tech/page/stackable-sorting)) in a test area, with an overflow chest, and test it with a junk item
@@ -210,32 +212,31 @@ Build order and hall layout: [storage-layout.md](storage-layout.md#6-build-order
 - [ ] Place 3–4 seeded chests plus one farthest overflow chest; check that glass in front doesn't confuse it (Bedrock line of sight)
 - [ ] Write down what surprised me in the notes below
 
-### Stage 1 — Hall shell + input + first hopper slices
+### Stage 1 — Input, router, and first hopper slices
 - [ ] Pick the site near the home base and log it in [coordinates](../notes/coordinates.md)
-- [ ] Reserve the full footprint (about 13 × 57 incl. expansion; estimate) and dig the basement
-- [ ] Browsing hall shell + foyer, roofed and lit in the [chosen palette](storage-layout.md#2-block-palette-recommendation-cozy-autumn-village)
+- [ ] Design the hall around the [adjacency rules and constraints](storage-layout.md#1-functional-grouping), leaving the expansion end open
 - [ ] Input barrels by the door → input line → overflow chest at the far end (nothing lost while building)
-- [ ] Router + lift to the item stream, with the non-stackable split to a return chest in the foyer
-- [ ] First 6 hopper slices (≈48 item types; estimate) with item frames, starting with the Phase 4 categories: wood, stone, ores, food, mob drops, redstone
+- [ ] Router feeding the item stream, with the non-stackable split to manual chests
+- [ ] First hopper slices with item frames, starting with the most-used [item groups](storage-layout.md#2-item-grouping-for-the-chest-walls): stone, wood, farming & food, ores & metals
 - [ ] Hopper locking when idle (lag)
 
 ### Stage 2 — Full system + add-ons
 - [ ] Add slices for each new farm (highest-volume farm item first)
-- [ ] Auto furnace in the basement: blast furnaces for ores and smokers for food, fed from filter slices, output back to the input line ([details](#auto-furnace--smelter-array))
+- [ ] Auto furnace on the machine side: blast furnaces for ores and smokers for food, fed from filter slices, output back to the input line ([details](#auto-furnace--smelter-array))
 - [ ] Lava garbage disposal behind the overflow chest, plus junk slices ([details](#garbage-disposal-garbage-furnace))
 - [ ] Shulker box auto unloader feeding the input line ([details](#shulker-box-auto-unloader))
 - [ ] Item frames on every chest
 
 ### Stage 3 — Golem gallery (showcase)
-- [ ] Brewing-stand potion filter + tipped-arrow slice feeding the gallery copper chest ([layout](storage-layout.md#golem-gallery-showpiece))
+- [ ] Brewing-stand potion filter + tipped-arrow slice feeding the gallery copper chest ([grouping](storage-layout.md#1-functional-grouping))
 - [ ] Golem module 1: 1 waxed golem, waxed copper input chest, 9 seeded display chests, farthest overflow → main overflow chest
 - [ ] Test one item per display chest, then build module 2
-- [ ] Glass front, waxed copper frame, copper grate floor, iron door into the walkway
+- [ ] Glass viewing front and iron doors so golems stay in (styling is up to the hall design)
 - [ ] Check that no unseeded or empty chest is in golem range and no hopper drains a display chest
 - [ ] Maintenance routine: check wax on golems and copper
 
 ### Stage 4 — Expansion
-- [ ] Extend slices north as storage grows (same cross-section)
+- [ ] Extend slices at the open end as storage grows
 - [ ] Dress the hall as the [Copper storage hall](building-goals.md#2-copper-storage-hall)
 - [ ] Expand the furnace array as ore and food volume grows
 - [ ] Backup storage room (Phase 5 backups)
@@ -249,7 +250,7 @@ Build order and hall layout: [storage-layout.md](storage-layout.md#6-build-order
 | Carved pumpkin or jack o'lantern | — | 1 per golem |
 | Honeycomb | Shear a full bee nest or beehive (3 per shear) | 1 per golem, copper chest, or statue to wax |
 | Copper chest | 8 copper ingots around 1 chest | 1 per extra input chest (each new golem also makes one) |
-| Wooden chests | — | 1 per sorted item type (8 per hall slice), plus overflow and gallery display chests |
+| Wooden chests | — | 1 per sorted item type, plus overflow and gallery display chests |
 | Hopper | 5 iron ingots + 1 chest | Several per hopper sorter slice and pipe |
 | Redstone comparator | 3 redstone torches + 1 nether quartz + 3 stone | 1 or more per hopper sorter slice, depending on the design |
 | Axe | — | For scraping oxidation and wax |
@@ -265,14 +266,14 @@ Exact counts depend on how many golems and categories I end up with. Fill in onc
 
 ## Open questions for Jeffrey
 
-- [ ] How many sort categories to start with? The Phase 4 list (wood, stone, ores, food, mob drops, redstone, junk) or finer?
+- [ ] Item groups: is the [recommended group list](storage-layout.md#2-item-grouping-for-the-chest-walls) right, or finer/coarser?
 - [x] **Golem role:** showpiece gallery at the front; hoppers do the main sorting (decided 2026-10-07).
 - [ ] Golem gallery set: potions + tipped arrows, or something else?
 - [x] Which edition? **Bedrock** (26.50). Golems can tell potion/arrow/stew types apart, and designs must be Bedrock-compatible.
 - [x] **Garbage furnace:** lava (decided 2026-10-07).
 - [ ] What counts as junk for the disposal (e.g. extra cobble, dirt, rotten flesh)?
 - [ ] Should true overflow (unsorted leftovers) go to the disposal once the overflow chest fills, or stop and wait for me?
-- [ ] Where does the storage hall go near the home base? Is the recommended two-level layout OK? See [storage-layout.md](storage-layout.md#7-open-questions-for-jeffrey)
+- [ ] Where does the storage hall go near the home base? (The architecture is Jeffrey's design; it just has to fit the [adjacency rules](storage-layout.md#1-functional-grouping).)
 - [ ] Wax everything, or let some golems oxidize on purpose for looks and scrape them?
 - [ ] Which farm outputs get hopper sorters first?
 - [ ] Is anyone else on the server sharing this storage?
@@ -280,13 +281,13 @@ Exact counts depend on how many golems and categories I end up with. Fill in onc
 ## Done when
 
 - [ ] Dumping inventory into the input barrels by the door gets everything sorted by the hopper chest hall without me touching it
-- [ ] The browsing hall has labeled chest walls and room to grow north
+- [ ] The chest walls are labeled and grouped per [storage-layout.md](storage-layout.md#2-item-grouping-for-the-chest-walls), with room to grow
 - [ ] The golem gallery runs at the front of the hall: waxed golems visibly sorting into display chests behind glass
 - [ ] Every golem and copper chest is waxed (or on a scraping schedule)
 - [ ] Auto furnace, shulker box unloader, and garbage disposal are all running off the sorter
 - [ ] Every redstone build in the system is a Bedrock-tested design
 - [ ] No empty or unseeded chests in any golem's range, and no hopper drains a golem display chest
-- [ ] The machines sit out of sight (basement) and the hall runs without noticeable lag
+- [ ] The machine side (smelter, overflow, lava) is kept away from wood and the showpiece areas, and the hall runs without noticeable lag
 
 ## Notes
 

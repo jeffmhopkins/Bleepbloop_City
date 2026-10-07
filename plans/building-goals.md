@@ -2,7 +2,7 @@
 
 Nine architecture projects to turn the base into a place worth coming home to. Function still comes first (see the [phases](README.md)). These are the "make it look good" goals that sit on top.
 
-**Optional overall theme: a cozy autumn village.** Spruce, cobble, thatch, and copper accents. If you go with it, record it as the chosen palette in [building style](building-style.md).
+**Style direction: grand architecture.** Mossy timber-framed buildings and oxidized copper towers and spires. See Jeffrey's references under [building style: inspiration](building-style.md#inspiration). (An earlier "cozy autumn village" theme was only a placeholder suggestion.)
 
 Each goal follows the [build/project template](../templates/build-project.md) style. Copy a section into its own file once a build gets serious.
 
@@ -47,30 +47,30 @@ A small spruce and cobble cottage with a thatch roof made from straw beds. It's 
 
 ## 2. Copper storage hall
 
-The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest hall does the sorting out of sight; a **glass-fronted golem gallery** in the entrance foyer is the part you watch. Recommended layout, palette, and diagrams: [storage-layout.md](storage-layout.md).
+The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest hall does the sorting out of sight, and a **glass-fronted golem gallery** near the entrance is the part you watch. The architecture is a grand custom build of Jeffrey's design. The functional grouping and technical constraints it has to fit are in [storage-layout.md](storage-layout.md).
 
 **Status:** ⬜ Not started
 **Suggested timing:** Phase 4–5, alongside [storage and sorting](storage-and-sorting.md) Stages 1–4 (gallery = Stage 3)
 **Location:** _not recorded yet_ (near the home base at spawn)
 
 **Key materials and features**
-- Exposed copper beams (waxed cut copper with stripped spruce)
-- Glass so you can watch the golems: the golem gallery in the foyer
-- Copper chests as the golems' input; display chests along the glass; labeled chest walls (item frames) in the browsing hall
+- Exposed copper beams
+- Glass so you can watch the golems: the golem gallery near the entrance
+- Copper chests as the golems' input, display chests behind the glass, and labeled chest walls (item frames)
 - Wax the copper once it reaches the color you like
-- Spruce + cobblestone shell, hay-bale "thatch" accents, copper lanterns ([palette](storage-layout.md#2-block-palette-recommendation-cozy-autumn-village))
-- Machines (router, smelter, lava) in the basement, out of sight
+- Machine side (router, smelter, lava) kept away from wood and the showpiece areas
+- Style: Jeffrey's design (e.g. the oxidized copper towers in the [inspiration](building-style.md#inspiration))
 
 **Tasks**
-- [ ] Lay out the hall from [storage-layout.md](storage-layout.md) (foyer + gallery, browsing hall, basement)
+- [ ] Design the hall around the [adjacency rules and constraints](storage-layout.md#1-functional-grouping)
 - [ ] Exposed copper beams
 - [ ] Glass-fronted golem gallery with waxed golems and copper chests
-- [ ] Labeled chest walls with item frames along the browsing aisle
+- [ ] Labeled chest walls with item frames, grouped per the [item groups](storage-layout.md#2-item-grouping-for-the-chest-walls)
 - [ ] Wax the copper at the preferred color
 
 **Done when**
 - [ ] The golem gallery runs at the front of the hall and you can watch it through glass
-- [ ] The browsing hall is built, lit, and labeled, with the hopper sorter behind the walls
+- [ ] The chest walls are built, lit, and labeled, with the hopper sorter behind them
 - [ ] The copper is waxed at the color you want
 
 ---

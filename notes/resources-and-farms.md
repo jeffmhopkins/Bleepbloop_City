@@ -39,7 +39,7 @@ Priority: librarians for Mending and Unbreaking.
 
 Storage wall chests: wood, stone, ores, food, mob drops, redstone, junk, plus one input chest by the door.
 
-This grows into the big goal: [automated item sorter](../plans/storage-and-sorting.md) (hopper chest hall + copper golem gallery; [layout](../plans/storage-layout.md)). Track it here as it gets built.
+This grows into the big goal: [automated item sorter](../plans/storage-and-sorting.md) (hopper chest hall + copper golem gallery; [grouping](../plans/storage-layout.md)). Track it here as it gets built.
 
 | Area | Type (golem / hopper sorter / manual) | Location | Golems | Notes |
 | --- | --- | --- | --- | --- |

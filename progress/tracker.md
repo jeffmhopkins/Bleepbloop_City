@@ -51,10 +51,10 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | --- | --- |
 | 2026-10-06 | Server started; first bed made, spawn set (Session 1) |
 | | Storage sorter Stage 0: one hopper filter slice and one waxed copper golem tested (prototypes) |
-| | Storage sorter Stage 1: hall shell + input barrels + router + first 6 hopper slices sorting |
+| | Storage sorter Stage 1: input barrels + router + first hopper slices sorting |
 | | Storage sorter Stage 2: add-ons running (auto furnace, lava disposal, shulker unloader) |
 | | Storage sorter Stage 3: golem gallery showpiece running behind glass |
-| | Storage sorter Stage 4: hall extended north; dressed as the Copper storage hall |
+| | Storage sorter Stage 4: slices extended at the open end; housed in the Copper storage hall |
 | | Storage sorter add-on: auto furnace (blast furnaces + smokers) running off the sorter |
 | | Storage sorter add-on: lava garbage disposal taking junk + overflow |
 | | Storage sorter add-on: shulker box auto unloader feeding the sorter |

@@ -11,7 +11,7 @@
 - [ ] Label them: wood, stone, ores, food, mob drops, redstone, junk
 - [ ] One input chest by the door so you can dump inventory fast
 
-> **Big goal:** this storage wall is the start of the [automated item sorter](storage-and-sorting.md). Hopper sorting is the main system; copper golems are a showpiece gallery. Recommended hall layout and blocks: [storage-layout.md](storage-layout.md). Barrels make a good input by the door (hoppers empty them).
+> **Big goal:** this storage wall is the start of the [automated item sorter](storage-and-sorting.md). Hopper sorting is the main system; copper golems are a showpiece gallery. How to group things: [storage-layout.md](storage-layout.md). Barrels make a good input by the door (hoppers empty them).
 
 ### 2. Workshop
 - [ ] Crafting table
