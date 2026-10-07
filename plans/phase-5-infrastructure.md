@@ -40,6 +40,7 @@ One creeper should not end the world.
 Build these away from the pretty part of the base so lag and wither blasts stay outside.
 
 - [ ] Elytra
+- [ ] Flying machine (see [flying-machine.md](flying-machine.md))
 - [ ] Mob switch or shard farm
 - [ ] Wither skeleton farm
 - [ ] Gold farm

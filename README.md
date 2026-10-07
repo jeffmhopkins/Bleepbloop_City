@@ -40,6 +40,7 @@ Long-term goals that span several phases.
 | --- | --- | --- |
 | A highly automated item sorter with heavy use of copper golems | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) | ⬜ Not started |
 | Nine building goals (optional theme: cozy autumn village): thatch cottage, copper storage hall, spawn town square, village glow-up, gatehouse and wall, farm district, Nether portal shrine, lighthouse/watchtower, mine entrance building | [plans/building-goals.md](plans/building-goals.md) | ⬜ Not started |
+| A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) | ⬜ Not started |
 
 ## Repo map
 

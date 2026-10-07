@@ -25,6 +25,7 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 | Goal | Status | Started | Finished | Notes |
 | --- | --- | --- | --- | --- |
 | [Automated item sorter with copper golems](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
+| [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
 
 ## Building goals
 

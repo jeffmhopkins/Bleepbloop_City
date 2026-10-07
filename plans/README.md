@@ -18,6 +18,7 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 
 - [Storage and sorting](storage-and-sorting.md): a highly automated item sorter with heavy use of copper golems. Starts with the Phase 4 storage wall, grows into the Phase 5 storage system.
 - [Building goals](building-goals.md): nine architecture projects, from a thatch-roof starter cottage to a copper storage hall and a spawn town square.
+- [Flying machine](flying-machine.md): an end-game redstone build that moves itself.
 
 ## Supporting plans
 
