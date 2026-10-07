@@ -2,6 +2,8 @@
 
 Write locations down the moment you find them. Dimension is Overworld, Nether, or End.
 
+> **To do:** spawn and first bed coordinates (bed made 2026-10-06) still need recording. Same for the 12-tree wood farm.
+
 | Name | Dimension | X | Y | Z | Notes |
 | --- | --- | --- | --- | --- | --- |
 | World spawn | Overworld | | | | |

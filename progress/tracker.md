@@ -6,19 +6,19 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 
 | Phase | Status | Started | Finished | Notes |
 | --- | --- | --- | --- | --- |
-| [1 — First night](../plans/phase-1-first-night.md) | ⬜ Not started | | | |
-| [2 — Starter outpost](../plans/phase-2-starter-outpost.md) | ⬜ Not started | | | |
+| [1 — First night](../plans/phase-1-first-night.md) | 🟨 In progress | 2026-10-06 | | Bed, chest, stone tools done; food stack left |
+| [2 — Starter outpost](../plans/phase-2-starter-outpost.md) | 🟨 In progress | 2026-10-06 | | Started early: crafting table, furnace, 1 of 2 chests |
 | [3 — Pick the real site](../plans/phase-3-pick-the-site.md) | ⬜ Not started | | | |
 | [4 — The base that lasts](../plans/phase-4-the-base.md) | ⬜ Not started | | | |
 | [5 — Infrastructure](../plans/phase-5-infrastructure.md) | ⬜ Not started | | | |
 
 ## First-session checklist
 
-- [ ] Bed set
+- [x] Bed set (2026-10-06)
 - [ ] Food farm planted
 - [ ] Iron tools
 - [ ] Site chosen
-- [ ] Storage started
+- [ ] Storage started (one chest so far)
 
 ## Big goals
 
@@ -30,6 +30,7 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 
 | Date | Milestone |
 | --- | --- |
+| 2026-10-06 | Server started; first bed made, spawn set (Session 1) |
 | | Storage sorter Stage 0: first copper golem built and waxed (prototype) |
 | | Storage sorter Stage 1: small golem room sorting from the input chest by the door |
 | | Storage sorter Stage 2: full system with first hopper sorter line |

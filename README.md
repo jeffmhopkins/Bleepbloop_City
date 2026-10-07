@@ -8,12 +8,14 @@ Minecraft server planning: plans, progress, and notes for building Bleepbloop Ci
 
 ## Status dashboard
 
-**Current phase:** Not started (next up: [Phase 1 — First night](plans/phase-1-first-night.md))
+**Current phase:** [Phase 1 — First night](plans/phase-1-first-night.md), in progress. Only a full stack of food is left. [Phase 2](plans/phase-2-starter-outpost.md) started early.
+
+**Last session:** [Session 1, 2026-10-06](progress/session-log.md)
 
 | Phase | Status |
 | --- | --- |
-| [1 — First night](plans/phase-1-first-night.md) | ⬜ Not started |
-| [2 — Starter outpost](plans/phase-2-starter-outpost.md) | ⬜ Not started |
+| [1 — First night](plans/phase-1-first-night.md) | 🟨 In progress |
+| [2 — Starter outpost](plans/phase-2-starter-outpost.md) | 🟨 In progress (started early) |
 | [3 — Pick the real site](plans/phase-3-pick-the-site.md) | ⬜ Not started |
 | [4 — The base that lasts](plans/phase-4-the-base.md) | ⬜ Not started |
 | [5 — Infrastructure](plans/phase-5-infrastructure.md) | ⬜ Not started |
@@ -24,11 +26,11 @@ Full details and dates live in [progress/tracker.md](progress/tracker.md).
 
 Everything else is optional until these five are done.
 
-- [ ] Bed set
+- [x] Bed set
 - [ ] Food farm planted
 - [ ] Iron tools
 - [ ] Site chosen
-- [ ] Storage started
+- [ ] Storage started (one chest so far)
 
 ## Big goals
 

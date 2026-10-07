@@ -2,14 +2,14 @@
 
 **When:** Days 1–3
 **Goal:** A shack, not a home. Put it near spawn or your first bed so you can find it.
-**Status:** ⬜ Not started
+**Status:** 🟨 In progress (started early, 2026-10-06)
 
 ## Tasks
 
 ### Minimum kit
-- [ ] Crafting table
-- [ ] Furnace
-- [ ] Two chests
+- [x] Crafting table
+- [x] Furnace
+- [ ] Two chests (1 of 2 so far)
 - [ ] A door
 - [ ] Torches every 7–8 blocks
 
@@ -22,7 +22,7 @@
 Bread and baked potatoes carry you until you have a cow pen.
 
 ### Animal pen
-- [ ] Pen with two cows minimum
+- [ ] Pen with two cows minimum (not started; no animal pens yet)
 - [ ] Add sheep
 - [ ] Add chickens
 - [ ] Breed only when you have extra food

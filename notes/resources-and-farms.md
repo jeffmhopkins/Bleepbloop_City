@@ -4,6 +4,7 @@
 
 | Farm | Type | Location | Status | Notes |
 | --- | --- | --- | --- | --- |
+| Tree farm (12 trees replanted for easier wood) | Trees | Not recorded yet | 🟨 Planted 2026-10-06 | Session 1 |
 | Starter crop farm (9×9, wheat → carrots/potatoes) | Crops | | ⬜ Not started | Phase 2 |
 | Animal pen (cows, sheep, chickens) | Animals | | ⬜ Not started | Phase 2 |
 | Crop farm + composter (food wing) | Crops | | ⬜ Not started | Phase 4 |
