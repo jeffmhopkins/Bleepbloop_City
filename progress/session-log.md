@@ -36,6 +36,8 @@ One entry per play session, newest at the top. Copy the template below (also in 
 - Stone tools (that's the current tier)
 - Replanted 12 trees near base for easy wood
 - Gathered logs and cobblestone
+- Extra wool on hand
+- No lighting yet
 - No animal pens yet
 
 ### Deaths
@@ -45,6 +47,7 @@ One entry per play session, newest at the top. Copy the template below (also in 
 - 
 
 ### Next steps
+- [ ] Make torches (coal, or charcoal by smelting logs in the furnace) and light the bed area
 - [ ] Build food up to a full stack (finishes Phase 1)
 - [ ] Start the 9×9 wheat farm
 - [ ] Animal pen with 2+ cows

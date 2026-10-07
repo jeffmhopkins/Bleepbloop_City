@@ -11,7 +11,7 @@
 - [x] Furnace
 - [ ] Two chests (1 of 2 so far)
 - [ ] A door
-- [ ] Torches every 7–8 blocks
+- [ ] Torches every 7–8 blocks (no lighting yet)
 
 ### Farm
 - [ ] Till a 9×9 plot of dirt with a water source in the middle
