@@ -47,27 +47,30 @@ A small spruce and cobble cottage with a thatch roof made from straw beds. It's 
 
 ## 2. Copper storage hall
 
-The showpiece home for the [copper golem sorter](storage-and-sorting.md): a hall where you can watch the golems work.
+The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest hall does the sorting out of sight; a **glass-fronted golem gallery** in the entrance foyer is the part you watch. Recommended layout, palette, and diagrams: [storage-layout.md](storage-layout.md).
 
 **Status:** ⬜ Not started
-**Suggested timing:** Phase 4–5, alongside [storage and sorting](storage-and-sorting.md) Stages 1–3
-**Location:** _not recorded yet_
+**Suggested timing:** Phase 4–5, alongside [storage and sorting](storage-and-sorting.md) Stages 1–4 (gallery = Stage 3)
+**Location:** _not recorded yet_ (near the home base at spawn)
 
 **Key materials and features**
-- Exposed copper beams
-- Glass so you can watch the golems
-- Copper chests along the walls
+- Exposed copper beams (waxed cut copper with stripped spruce)
+- Glass so you can watch the golems: the golem gallery in the foyer
+- Copper chests as the golems' input; display chests along the glass; labeled chest walls (item frames) in the browsing hall
 - Wax the copper once it reaches the color you like
+- Spruce + cobblestone shell, hay-bale "thatch" accents, copper lanterns ([palette](storage-layout.md#2-block-palette-recommendation-cozy-autumn-village))
+- Machines (router, smelter, lava) in the basement, out of sight
 
 **Tasks**
-- [ ] Lay out the hall around the sorter design in [storage-and-sorting.md](storage-and-sorting.md)
+- [ ] Lay out the hall from [storage-layout.md](storage-layout.md) (foyer + gallery, browsing hall, basement)
 - [ ] Exposed copper beams
-- [ ] Glass viewing walls or windows
-- [ ] Copper chests along the walls
+- [ ] Glass-fronted golem gallery with waxed golems and copper chests
+- [ ] Labeled chest walls with item frames along the browsing aisle
 - [ ] Wax the copper at the preferred color
 
 **Done when**
-- [ ] The golem sorter runs inside the hall and you can watch it through glass
+- [ ] The golem gallery runs at the front of the hall and you can watch it through glass
+- [ ] The browsing hall is built, lit, and labeled, with the hopper sorter behind the walls
 - [ ] The copper is waxed at the color you want
 
 ---

@@ -16,7 +16,8 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 
 ## Big goals
 
-- [Storage and sorting](storage-and-sorting.md): a highly automated item sorter with heavy use of copper golems. Starts with the Phase 4 storage wall, grows into the Phase 5 storage system.
+- [Storage and sorting](storage-and-sorting.md): a highly automated item sorter. A hopper chest hall does the sorting, and a copper golem gallery is the showpiece. Starts with the Phase 4 storage wall, grows into the Phase 5 storage system.
+  - [Storage layout](storage-layout.md): recommended hall arrangement, block palette, and floor plan/cross-section diagrams.
 - [Building goals](building-goals.md): nine architecture projects, from a thatch-roof starter cottage to a copper storage hall and a spawn town square.
 - [Flying machine](flying-machine.md): an end-game redstone build that moves itself.
 - [Server migration](server-migration.md): move the Bedrock Dedicated Server to a container on the Linux AI server, with automated backups and world snapshots for analysis.

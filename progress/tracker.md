@@ -24,7 +24,7 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 
 | Goal | Status | Started | Finished | Notes |
 | --- | --- | --- | --- | --- |
-| [Automated item sorter with copper golems](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
+| [Automated item sorter (hopper chest hall + golem gallery)](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
 | [Server migration to the AI server](../plans/server-migration.md) | ⬜ Not started | | | Container + backups + snapshots |
 | [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first |
@@ -50,10 +50,11 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | Date | Milestone |
 | --- | --- |
 | 2026-10-06 | Server started; first bed made, spawn set (Session 1) |
-| | Storage sorter Stage 0: first copper golem built and waxed (prototype) |
-| | Storage sorter Stage 1: small golem room sorting from the input chest by the door |
-| | Storage sorter Stage 2: full system with first hopper sorter line |
-| | Storage sorter Stage 3: expanded into the Phase 5 storage system |
+| | Storage sorter Stage 0: one hopper filter slice and one waxed copper golem tested (prototypes) |
+| | Storage sorter Stage 1: hall shell + input barrels + router + first 6 hopper slices sorting |
+| | Storage sorter Stage 2: add-ons running (auto furnace, lava disposal, shulker unloader) |
+| | Storage sorter Stage 3: golem gallery showpiece running behind glass |
+| | Storage sorter Stage 4: hall extended north; dressed as the Copper storage hall |
 | | Storage sorter add-on: auto furnace (blast furnaces + smokers) running off the sorter |
 | | Storage sorter add-on: lava garbage disposal taking junk + overflow |
 | | Storage sorter add-on: shulker box auto unloader feeding the sorter |

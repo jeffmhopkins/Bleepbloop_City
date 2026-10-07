@@ -1,153 +1,223 @@
-# Storage layout and zones (draft)
+# Storage hall: recommended layout and block palette (draft)
 
-**Part of:** [Storage and sorting](storage-and-sorting.md), the automated item sorter with copper golems + hopper pipes
-**Status:** ⬜ Draft, not built
+**Part of:** [Storage and sorting](storage-and-sorting.md)
+**Status:** ⬜ Draft recommendation, not built
 **Server:** Bedrock 26.50. Every redstone build must be a Bedrock-tested design.
 
-Jeffrey's ask: *"Since we will be using golems and hopper pipes… we need to clearly define the areas and responsibilities."* This file splits the system into **zones**. Each zone has one job, defined inputs and outputs, and things it must never do. It also collects the real community layouts we're borrowing from.
+Jeffrey's direction (2026-10-07): *"focus on making the golems a visual thing in the front of the hall, not necessarily as the primary sorting mechanism… what I was mainly wanting is a recommended layout of block types and halls."*
 
-> **How to read the sizes:** a size is only quoted from a source when that source actually states it. Everything else is marked **(estimate)** and is our own guess, to be adjusted once Jeffrey picks a footprint.
+So, the recommendation in one paragraph:
+- **Hopper filters fed by a water/ice item stream do all the real sorting**, Bedrock chest-hall style.
+- **Copper golems are the showpiece:** a glass-fronted **golem gallery** in the entrance foyer, where two waxed golems sort potions and tipped arrows into display chests you can watch.
+- **Two levels:** the browsing hall on the ground floor, the machines (router lift, smelter, overflow + lava) in a basement directly underneath.
+- **Palette:** spruce + cobblestone shell, a hay-bale "thatch" accent, and waxed copper as the accent metal (the repo's cozy-autumn-village theme).
 
-## 1. Reference layouts found
+> **Labels used below.** **Verified** = checked on the Minecraft Wiki or Bedrock WIKI (linked). **Recommendation** = a style or design choice, open to change. **(estimate)** = our own dimension or count, not from any source.
 
-Checked 2026-10-07. Reddit pages were read through search snippets (Reddit blocks direct fetches), so dates are shown only where they could be confirmed.
+![Draft floor plan](../assets/storage-floorplan.png)
+*Draft concept floor plan: ground floor (left) and basement (right). All dimensions are estimates. Source script: [tools/storage_diagrams.py](../tools/storage_diagrams.py).*
 
-### Copper golem sorters
+![Draft cross-section](../assets/storage-section.png)
+*Draft concept cross-section through the browsing hall, looking north. All dimensions are estimates.*
 
-| Layout | Source (date) | Edition | What it says | What we borrow |
-| --- | --- | --- | --- | --- |
-| **3×3 module: 9 double chests + 1 overflow per golem** | ["Copper golem item sorter help", r/technicalminecraft](https://www.reddit.com/r/technicalminecraft/comments/1r1jpfa/copper_golem_item_sorter_help/) (date not confirmed) | Not stated | 9 double chests sideways in a 3×3. Golem held on a stair under an open trapdoor and pinned with chains. Copper chest on one side; a regular **10th chest one level higher** as overflow. Tileable side by side; overflow → **one hopper** → next module's copper chest. Reason given: golems remember ~10 chests, and walking is slow. | The **9 + 1 module** as our golem building block, chained by overflow hoppers |
-| **"Tutorial – Copper Golem Auto Sorter … 200+ Chests"** | [YouTube, *small guy*](https://www.youtube.com/watch?v=MGCl8oHpA6k) (2025-10-31) | Not stated | 3×3 of chests per golem. Golem in a **minecart on a rail on a mud block** behind the chests, fenced in. Copper chest + overflow chest above. A comparator closes a **trapdoor** when the copper chest is empty so the golem stays quiet. Tileable: **two hoppers** under the overflow → next module. Used for 200+ chests. | Golem confinement (minecart), the trapdoor "quiet when idle" trick, and the proof that it scales to 200+ chests |
-| **"Silent 3x3 Copper Golem Sorter"** | [YouTube, *Kaji*](https://www.youtube.com/watch?v=TLwnKMX_GEk) (2026-07-20) | Not stated | A trapdoor blocks the copper chest until items arrive. The golem is positioned forward so it checks all 9 chests before the overflow, and a shelf blocks it from reaching a chest. **"Only two blocks deep"**, but needs space below. An alternate version stacks modules into a **six-high wall** of sorted chests. (He credits the trapdoor trick to a Cortez Reno video.) | The **2-deep** module depth (source-stated), and the option to stack modules into a tall wall |
-| **"EASY Copper Golem SORTING SYSTEM (5 Designs)"** | [YouTube, *silentwisperer*](https://www.youtube.com/watch?v=4XM68iqBkGU) (2025-10-01) | **Bedrock & Java** (per title) | Layers of 9 sorting chests per golem, zig-zagging upward with a hopper + chest linking each layer to the next copper chest. Golems are boxed in with glass/solid blocks. | A layered (vertical) option if floor space is tight. Bedrock-claimed. |
-| **One-wide tileable golem sorter** | [r/technicalminecraft, u/Alicorns](https://www.reddit.com/r/technicalminecraft/comments/1lrrkqp/one_wide_tillable_copper_golem_sorter/) (2025-07-04) | Not stated (posted before the full release) | **8 chests per golem** in a line with a 1-wide walkway on top. Carry-over chest one block higher with 2 hoppers → next copper chest. Notes that 9 caused pauses near the 10-chest limit. | The **line layout** alternative, and "8 per golem is safer than 9" |
-| **Smallest/cheapest tileable** | [r/redstone, u/RevealAcademic804](https://www.reddit.com/r/redstone/comments/1ostx6m/smallest_cheapest_tileable_copper_golem_sorter/) (2025-11-09) | Not stated | 1 hopper + 1 chest + 1 golem per 3 double chests. The author notes you must keep at least 1 item in each chest. | Confirms the **seeded-chest rule** |
-| **Bedrock overflow-priority problem** | ["Copper Golem sorter on Bedrock keeps prioritizing the overflow chest", r/minecraftbedrock](https://www.reddit.com/r/minecraftbedrock/comments/1vtq2mx/copper_golem_sorter_on_bedrock_keeps_prioritizing/) (date not confirmed) | **Bedrock** | A 9 + 1 module where the auto-emptied overflow got used first. Replies: golems check chests **closest first**, so the overflow must be the **farthest** chest. In a grid, hold the golem forward (trapdoor, minecart on stairs). In a line it isn't an issue. | **Rule: overflow is always the farthest chest from the golem** |
-| Bedrock troubleshooting threads | [r/technicalminecraft "copper golem not checking all chest"](https://www.reddit.com/r/technicalminecraft/comments/1unndi3/copper_golem_not_checking_all_chest/) (2026-07-04), [r/MinecraftBedrockers "Copper Golem not working properly"](https://www.reddit.com/r/MinecraftBedrockers/comments/1uswxuv/copper_golem_not_working_properly/) (2026-07-10) | Bedrock (in replies / subreddit) | Golems skipping a chest. Fixes: push the golem up against the chest wall, and make the dump chest require a short walk. One case was fixed by replacing the golem. | Commissioning checklist: test each module with one item per chest |
+## 1. Hall arrangement (recommendation)
 
-Mechanics behind these, from [Copper Golem (Minecraft Wiki)](https://minecraft.wiki/w/Copper_Golem):
-- A golem remembers 9 chests, and after 10 failures it wanders 7 s.
-- Its reach is 1 block up and 2 blocks down, and its search area is 65×17×65.
-- On Bedrock it ignores chests it can't see.
+Walk-through order, south to north: **door → foyer with golem gallery and input → browsing hall → overflow at the far end**, with the machines one floor down. The hall grows **north** along the same cross-section.
 
-### Bedrock hopper sorters and storage halls
+| Hall / area | Where | What's in it | Size (W × L × H) |
+| --- | --- | --- | --- |
+| **Foyer** | Entrance, south end, ground floor | Door; central walkway; **input** barrels + shulker box drop (east side); stairs down + non-stackable return chest (east); **golem gallery** (west side) | 13 × 7 × 6 interior (estimate) |
+| **Golem gallery** | West side of the foyer | 2 golem modules behind glass, display chests the player can open from the foyer | 4 × 6 floor area, 5 high (estimate) |
+| **Browsing hall** | North of the foyer, ground floor | 3-wide aisle; a **chest wall 4 chests high** on each side, labeled with item frames; pillars every 6 blocks | 13 × 25 × 6 interior to the ceiling (estimate) |
+| **Service gaps** | Behind each chest wall (both sides) | Filter hoppers + comparators feeding each chest; the **item stream** runs along the top; this is the [3-block service gap](building-style.md) | 3 wide each, full hall length (3 from building-style.md; rest estimate) |
+| **Overflow chest** | North end of the aisle | Unmatched items land here; it drains to the lava cell below only when full | 1 double chest (estimate) |
+| **Basement: input line + router/lift** | Under the foyer and east service gap | Non-stackable split, shulker unloader mechanism, dropper lift carrying input up to the item stream | 4 × 12 (estimate) |
+| **Basement: auto smelter** | Under the west service gap | Blast furnaces (ores) + smokers (food), output returned to the input line | 3 × 12 (estimate) |
+| **Basement: overflow + lava** | Under the north end | Sealed lava cell, no wood nearby | 3 × 7 (estimate) |
+| **Basement: maintenance walkway** | Under the aisle, full length | Access to the underside of filters, lift, and smelter | 3 wide (estimate) |
+| **Expansion** | North, both levels | Same cross-section, +24 blocks | 13 × 24 (estimate) |
 
-| Layout | Source (date) | Edition | What it says | What we borrow |
-| --- | --- | --- | --- | --- |
-| **Chest halls (octa / deca)** | [Bedrock WIKI: Chest Halls](https://bedrockwiki.com/books/storage-tech/page/chest-halls) (storage-tech book, last activity ~2025) | **Bedrock** | A chest hall is a hall where each **1-block-wide slice** holds several chests, each fed by its own filter. The most common are **octa (8 chests per slice)** and **deca (10 per slice)**. Display blocks or item frames show what's in each chest. **Hopper locking** roughly halves hopper lag. Mangrove roots are noted as a conductive block a chest can still open under; copper grates let comparators read through while non-conductive. | The **1-wide slice** unit, item-frame labels, and global hopper locking when the hall is idle |
-| **SS3 item filters (TechRock / ImpulseSV filters)** | [Bedrock WIKI: Stackable Sorting](https://bedrockwiki.com/books/storage-tech/page/stackable-sorting) | **Bedrock** | Compact, tileable, overflow-proof filters. The SS3 filter hopper needs **≥46 items** of prefill. One hopper = **2.5 items/s ≈ 9,000/hour**. 2× hopper-speed filters are better for farm outputs than main storage. | Filter type for our hopper hall slices. **2×HS filters for farm lines.** |
-| **Item streams (ice + water)** | [Bedrock WIKI: Item Streams](https://bedrockwiki.com/books/storage-tech/page/item-streams) | **Bedrock** | Hopper lines are the slowest and most expensive way to distribute items. An ice/water stream over the filters is common. **One water source pushes items across up to 9 blocks.** | Use a water/ice stream over the hopper hall filters instead of a long hopper pipe |
-| **Input types, input buffers, box unloaders** | Bedrock WIKI: [Types of Input](https://bedrockwiki.com/books/storage-tech/page/types-of-input), [Input Buffers](https://bedrockwiki.com/books/storage-tech/page/input-buffers), [Box unloaders](https://bedrockwiki.com/books/storage-tech/page/box-unloaders) | **Bedrock** | Loose-item input is simplest, and loose input often splits out non-stackables. Shulker box input is more efficient. An input buffer holds items until the storage "runs" (useful if the area might unload). Unloader types: FIT, arrays, SSU. | Input zone design: loose dump chests + shulker unloader, and the non-stackable split |
-| **Bedrock-optimized and hybrid hopper sorters** | [Tutorial: Hopper (Minecraft Wiki)](https://minecraft.wiki/w/Tutorial:Hopper#Item_sorter) | **Bedrock** variants listed | The wiki lists a "Bedrock optimized hopper item sorter". For hybrid sorters on Bedrock it suggests 20 instead of 21 filler items, and 15/14 for 16-stack items. Bedrock hopper pipes at full speed leak a few items past filters (MCPE-28890). | Fallback filter designs, plus the "don't run full stacks at full speed" rule |
+**Overall footprint (estimate):** **13 × 33 blocks built, 13 × 57 with expansion**. About 19 blocks top to bottom: a 6-high basement + floor + a 6-high hall + ceiling + a roof about 4.5 high.
 
-> ⚠️ **Prefill numbers differ by design** (e.g. 41 + 4 fillers in simple sorters, ≥46 for SS3, 20/21 fillers in hybrids). Use the exact numbers from the one Bedrock design we pick, and test each slice with a junk item first.
+**Capacity (estimate, simple arithmetic):** 25 blocks of hall minus 5 pillars ≈ **20 one-block slices** per side. 20 slices × 4 chests × 2 sides ≈ **160 item types** at full length; double that with the expansion. Build **6 slices first (48 item types)**.
 
-## 2. Zones and responsibilities
+**Why two levels (recommendation):** the browsing hall stays clean and quiet-looking, the lava and smelter stay away from wood and players, and the hall can grow north without moving machines. *Single-level alternative:* put the basement contents in a ~10-block annex on the west side. That's easier to dig, but longer to walk and harder to keep pretty.
+
+**Where it sits (recommendation):** next to the home base at world spawn, with the door facing the base's main path or the planned [spawn town square](building-goals.md#3-spawn-town-square). The spawn area has big caves, so check that the basement doesn't break into one. If it does, wall it off and light it.
+
+### Chest hall slice (how the sorting works)
+
+- A **slice** is one block wide: chests stacked on the aisle side, a filter behind each chest, and the item stream passing over the filters. Bedrock WIKI calls 8-chest slices "octa" halls and 10-chest slices "deca" halls; ours, with 4 chests on each side of the aisle, is octa-style. **Verified** concept ([Chest Halls](https://bedrockwiki.com/books/storage-tech/page/chest-halls)).
+- **Filters:** use a Bedrock filter design from [Stackable Sorting](https://bedrockwiki.com/books/storage-tech/page/stackable-sorting) (e.g. the tileable, overflow-proof SS3 filters). One hopper moves 2.5 items/s (~9,000/hour). Bedrock WIKI notes the **bottom chest's filter often needs a dropper elevator**, so pick a hall design that shows the full 4-high wiring.
+- **Item stream:** water + ice over the filter hoppers. One water source carries items across **up to 9 blocks**, so plan a source every ≤9 blocks ([Item Streams](https://bedrockwiki.com/books/storage-tech/page/item-streams)).
+- **End of the line:** whatever no filter catches reaches the **overflow chest**, which drains to lava only when full.
+
+### Golem gallery (showpiece)
+
+- **What it sorts (recommendation):** **potions** and **tipped arrows**. On Bedrock, golems tell potion and tipped-arrow types apart ([Copper Golem](https://minecraft.wiki/w/Copper_Golem)), which hopper filters can't do well.
+  - Potions are non-stackable, so the router separates them with a **brewing-stand filter** (the brewing stand only accepts potions; [Tutorial: Hopper, special item filters](https://minecraft.wiki/w/Tutorial:Hopper#Potions,_books_and_shulker_boxes)) and sends them to the gallery's copper chest. The wiki design isn't marked Bedrock-specific, so test it on a world copy first.
+  - Optional third set: dyes and flowers, as a colorful display.
+- **Module (from the reference designs):** 1 golem, **1 copper input chest, 9 display chests, and 1 overflow chest that is the farthest from the golem**. The golem is pinned forward (trapdoor/chains or a minecart) so it checks all 9 before the overflow.
+- **Layout (recommendation):** display chests 2 high along the glass partition. The player opens them from the foyer side, since chests open from any side and only the block above matters. Glass sits above the chests so you can see the golem working behind them. The golem walkway is behind, sealed on all sides.
+- **Gallery rules (verified mechanics):**
+  - Every display chest keeps **at least 1 item** (golems put anything into an empty chest).
+  - **Never drain a display chest with a hopper**, which would empty it.
+  - Gallery overflow goes to the **main overflow chest**, not back into the router, to avoid loops.
+  - Wax every golem and copper chest.
+  - **No bottom slab on top of any chest or copper chest** (blocks opening on Bedrock).
+  - Keep line of sight: on Bedrock, golems ignore chests they can't see.
+  - **Iron door** (or none) into the golem walkway, since golems open non-iron doors.
+  - Seal the gallery so golems can't path to the hall's chests (their search area is 65×17×65).
+
+## 2. Block palette (recommendation, cozy autumn village)
+
+One palette, used everywhere, per [building style](building-style.md): **spruce + cobblestone**, with **waxed copper** accents and **hay-bale "thatch"** as a roof accent. Use stairs, slabs, and walls for depth. Wool/concrete stairs and slabs (new in this drop) give the colored trim.
+
+| Element | Recommended block | Notes |
+| --- | --- | --- |
+| Outer wall, base course (2 high) | Cobblestone, with cobblestone wall blocks as a plinth | Style |
+| Outer wall, upper | Spruce planks between stripped spruce log posts | Style |
+| Pillars (every 6 blocks) | Spruce logs, capped with spruce stairs | Style. Pillars also mark slice groups. |
+| Beams | Stripped spruce logs + **waxed cut copper** strips | Style. Wax at the color you like (honeycomb stops oxidation). **Verified:** waxing ([Block of Copper](https://minecraft.wiki/w/Block_of_Copper)). |
+| Roof | Spruce stairs/slabs, with **hay bale** ridge and eaves as "thatch" | A full hay roof is roughly 500+ hay bales (~4,500+ wheat; estimate), so use hay as an accent. Jeffrey's straw-bed thatch idea works for the [starter cottage](building-goals.md#1-thatch-roof-starter-cottage). |
+| Ceiling | Spruce planks + spruce slabs | Style |
+| Aisle floor | Spruce planks with an **orange/brown carpet runner** down the middle | **Verified (Bedrock):** mobs can't spawn on carpet ([Mob spawning](https://minecraft.wiki/w/Mob_spawning)) |
+| Foyer floor | Cobblestone + spruce in a checker or border | Style |
+| Trim above the top chest row | **Spruce stairs**, or **orange/brown wool stairs** for color | **Verified:** stairs don't stop a chest opening. **Never a bottom slab or a conductive block directly on a chest.** ([Chest](https://minecraft.wiki/w/Chest)) |
+| Chest labels | **Item frames** on each chest front (sneak to place) | **Verified:** item frames go on chests while sneaking. On Bedrock an item frame is a block: one per spot, it can't share space ([Item Frame](https://minecraft.wiki/w/Item_Frame)). |
+| Main lighting | **Copper lanterns** hanging over the aisle every ~5 blocks | **Verified:** copper lantern light 15 ([Copper Lantern](https://minecraft.wiki/w/Copper_Lantern)) |
+| Accent lighting | **Copper bulbs** in the pillars, waxed while unoxidized | **Verified:** bulb light drops with oxidation: 15 / 12 / 8 / 4 ([Copper Bulb](https://minecraft.wiki/w/Copper_Bulb)) |
+| Golem gallery front | **Glass** above the display chests; **waxed exposed or weathered cut copper** frame; **copper grate** floor | **Verified:** mobs can't spawn on glass or copper grates; glass doesn't stop a chest opening ([Glass](https://minecraft.wiki/w/Glass), [Copper Grate](https://minecraft.wiki/w/Copper_Grate)) |
+| Gallery chests | **Copper chests** (golem input only) + regular chests (display) | Golem rules above |
+| Player input | **Barrels** in the foyer | **Verified:** hoppers fill and empty barrels; barrels open even with a block above; golems ignore barrels ([Barrel](https://minecraft.wiki/w/Barrel), [Copper Golem](https://minecraft.wiki/w/Copper_Golem)) |
+| Storage chests | Plain chests, stacked 4 high | **Verified:** chests aren't conductive, so stacked chests still open ([Chest](https://minecraft.wiki/w/Chest)) |
+| Service gaps | Whatever the filter design needs; cover the top with spruce slabs or glass for looks | Bedrock WIKI notes **mangrove roots** are the only conductive block a chest can still open under, and **copper grates** let comparators read through while non-conductive ([Chest Halls](https://bedrockwiki.com/books/storage-tech/page/chest-halls)) |
+| Basement | Cobblestone / cobbled deepslate walls, stone floor, lanterns | Style. **No wood near the lava cell.** |
+| Lava cell | Sealed with cobblestone/glass, no wood within a few blocks | **Verified:** lava can set nearby flammable blocks on fire, including through gaps ([Lava](https://minecraft.wiki/w/Lava)) |
+| Doors | Spruce door at the entrance; **iron door** into the golem walkway | Golems open non-iron doors |
+
+### Bedrock practical notes (verified)
+- **Spawn-proofing:** on Bedrock, most Overworld monsters can't spawn where the **block light is above 0**. They also can't spawn on **carpet, bottom slabs, stairs, chests, or glass** ([Mob spawning, Bedrock conditions](https://minecraft.wiki/w/Mob_spawning)). With lanterns every ~5 blocks and a carpet runner, the hall shouldn't spawn mobs. Light the basement and service gaps too.
+- **Chest opening:** a chest can't open with a **conductive block** above it. On Bedrock a **bottom slab** also blocks it. Stairs, glass, and ice are fine ([Chest](https://minecraft.wiki/w/Chest)). Copper chests follow the same rule ([Copper Chest](https://minecraft.wiki/w/Copper_Chest)).
+- **Noise:** wool **blocks vibrations** for sculk sensors. The wiki says **wool stairs don't occlude vibrations** (they're just not detected when walked on) ([Wool](https://minecraft.wiki/w/Wool), [Wool Stairs](https://minecraft.wiki/w/Wool_Stairs)). We couldn't verify that wool dampens ordinary sound, so treat wool trim as color, not soundproofing. For quiet golems, the reference designs use a **trapdoor that closes when the copper chest is empty** (community videos, not wiki-verified).
+- **Lag:**
+  - Prefer **water/ice streams** over long hopper pipes.
+  - **Lock the hall's hoppers when it isn't sorting**; Bedrock WIKI says locked hoppers lag about half as much ([Chest Halls](https://bedrockwiki.com/books/storage-tech/page/chest-halls)).
+  - On Bedrock, hopper chains with **air or non-container blocks on top** run better than ones topped with containers ([Hopper](https://minecraft.wiki/w/Hopper)).
+  - Keep the golem gallery small (2 golems).
+
+## 3. Item routing (draft)
+
+| Route | Items (draft; Jeffrey to edit) |
+| --- | --- |
+| **Hopper chest hall** (primary) | Everything stackable you keep: building blocks (cobblestone, cobbled deepslate, stone, dirt, sand, gravel, spruce/other logs and planks), ores and ingots, farm output (wheat, carrots, potatoes, sugar cane), mob drops (bones, string, gunpowder, rotten flesh), redstone parts, food, decorative blocks |
+| **Auto smelter** (basement) | Raw iron/copper/gold and ore blocks → blast furnaces; raw meat/fish/potatoes → smokers; output → back to the input line |
+| **Golem gallery** (showpiece) | Potions (via a brewing-stand filter) and tipped arrows; optional dyes/flowers set |
+| **Non-stackable chest** (foyer, manual) | Tools, armor, enchanted books, shulker boxes |
+| **Overflow → lava** | Unmatched items once the overflow chest is full; junk list (Jeffrey decides). Never non-stackables or netherite (netherite doesn't burn). |
 
 ```mermaid
 flowchart LR
-    P[Player dump chests] --> R
-    SB[Shulker box input] --> U[Shulker unloader] --> R
-    F[Farm outputs] --> H
-    R{Pre-sort router<br/>hopper filters} -->|high-volume / farm items| H[Hopper sorter hall]
-    R -->|raw ores / raw food| S[Auto smelter]
-    R -->|non-stackables<br/>tools, armor, books| N[Non-stackable chest]
-    R -->|shulker boxes found in loose input| EB[Empty/loose box chest]
-    R -->|everything else, mixed| G[Golem sorting hall<br/>copper chest of module 1]
-    S -->|ingots / cooked food| H
-    G -->|module overflow → next module| G
-    G -->|last module overflow| O[Overflow chest]
-    H -->|unmatched| O
-    H -->|junk filter slices| L[Lava disposal]
-    O -->|only when overflow chest is full| L
-    G -.browse.-> B[Storage / retrieval hall]
-    H -.browse.-> B
+    P[Foyer barrels] --> NS{Non-stackable split}
+    SB[Shulker box drop] --> U[Unloader] --> NS
+    NS -->|potions: brewing-stand filter| G[Golem gallery copper chest]
+    NS -->|tools, armor, books, boxes| N[Non-stackable return chest]
+    NS -->|stackables| L[Lift to item stream]
+    L --> H[Chest hall filters]
+    H -->|raw ores / raw food slices| S[Auto smelter] --> NS
+    H -->|tipped arrow slice| G
+    H -->|everything else, matched| C[Labeled chests: browse here]
+    H -->|unmatched| O[Overflow chest]
+    G -->|gallery overflow| O
+    O -->|only when full| LV[Lava]
 ```
 
-Golem and hopper hall chests *are* the retrieval hall: the player browses their front faces. The service corridor runs behind them.
+## 4. ASCII versions (draft, estimates)
 
-### Zone table
-
-| Zone | Responsibility | Inputs | Outputs | Must NOT | Rough size | Bedrock notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| **A. Input** | Take items from the player fast | Player (dump chests by the door); shulker boxes | Router input line | Hold items long-term. Feed golem chests directly. | 3–5 wide × 3 deep × 3 high, incl. unloader (estimate) | The Phase 4 "input chest by the door" lives here. If the storage might unload while away, add an input buffer (Bedrock WIKI). |
-| **A2. Shulker unloader** | Empty full boxes into the router; return empty boxes | Shulker boxes from Input | Items → Router; empty boxes → box chest | Send boxes into the sorter or lava | 3 × 3 × 4 (estimate) | Dispenser places the box, piston breaks it (see [storage plan](storage-and-sorting.md#shulker-box-auto-unloader)). Pick a Bedrock unloader design. |
-| **B. Pre-sort / router** | Split the stream: farm/bulk items → hoppers; ores/raw food → smelter; non-stackables and boxes → their own chests; **everything else → golem hall** | Input, unloader | Hopper hall, smelter, non-stackable chest, golem module 1 copper chest | **Feed any golem destination (wooden) chest.** The golem "empty chest" trap: hopper-drained wooden chests become empty, and golems fill them with anything. Never route to lava directly. | 1 slice per routed item type + ~4 for the non-stackable split (estimate); ~10 × 4 × 5 to start (estimate) | Use Bedrock SS3/hybrid filters. Avoid full-stack full-speed hopper pipes (MCPE-28890). A water/ice stream over the filters is fine (≤9 blocks per source). |
-| **C. Hopper sorter hall** | Bulk and farm items, one item type per chest (or per double chest) | Router; farm lines; smelter output | Storage chests (browsable); unmatched → overflow; junk slices → lava | Take golem-hall items. Destroy anything that isn't on the junk list. | **1-block-wide slices**, octa (8) or deca (10) chests per slice (Bedrock WIKI). Start with ~8 slices: 8 × 5 deep × 6 high (estimate) | Global hopper locking when idle cuts lag (Bedrock WIKI). Label with item frames. |
-| **D. Golem sorting hall** | Everyday mixed items from copper chests into seeded wooden chests | Copper chest of module 1 (from Router) | Wooden storage chests; overflow → next module's copper chest; last overflow → overflow zone | Have any **unseeded or empty** wooden chest in reach except the module's overflow. Let golems reach another module's chests. Use barrels or ender chests (golems ignore them). | Module = **9 chests + 1 overflow per golem** (sources above). Kaji's module is "only two blocks deep" (source). Footprint per module of 3×3 double chests ≈ 6 wide × 2–3 deep × 4 high (estimate). | Overflow chest must be the **farthest** from the golem. Hold the golem forward (trapdoor, chains, minecart). On Bedrock, golems ignore chests they can't see. Wax golems and copper chests. A trapdoor + comparator keeps idle golems quiet. |
-| **E. Auto smelter** | Smelt ores (blast furnaces) and cook food (smokers) | Router ore/raw-food lines; fuel chest | Output → Hopper hall input (or straight to storage chests) | Get unfiltered input (hoppers push *any* item into a furnace top) | 4–8 furnaces in a row: ~8 × 3 × 4 (estimate) | See [storage plan](storage-and-sorting.md#auto-furnace--smelter-array). Pick a Bedrock furnace-array design. |
-| **F. Overflow + lava disposal** | Hold unmatched items; burn junk and true overflow | Last golem module overflow; hopper hall end; junk slices | Overflow chest (kept); lava (destroyed) | Receive non-stackables, shulker boxes, or netherite (netherite doesn't burn) | Overflow double chest + lava cell: 4 × 3 × 3 (estimate) | Decision: lava. Overflow → lava only after the overflow chest fills. |
-| **G. Storage / retrieval hall** | Where the player browses and grabs items | — (the front faces of zones C and D) | Player | Contain hoppers or golems on the player side | 3-wide aisle between two chest walls (estimate) | Item frames on chests (Bedrock WIKI: most solid blocks stop chests opening). No bottom slabs on top of copper chests (they block opening on Bedrock). |
-| **H. Service corridor** | Space behind the chest walls for golem cells, filters, wiring | — | — | Become a walkway golems can escape into | **3 blocks** behind each storage wall ([building style](building-style.md)) | Golem cells (2–3 deep) fit inside the 3-block gap. Iron doors only (golems open non-iron doors). |
-| **I. Expansion space** | Room to add golem modules and hopper slices | — | — | Be filled with anything permanent | Reserve ≥ 50% of each hall's length (estimate) | Leave the router line extendable at the far end. |
-
-## 3. What goes to golems vs. hoppers (draft)
-
-| Route | Items (draft; Jeffrey to edit) | Why |
-| --- | --- | --- |
-| **Hopper hall** (high-volume, exact item) | Cobblestone, cobbled deepslate, dirt, stone, gravel, sand; iron farm output (iron ingots, poppies); sugar cane; mob farm drops (rotten flesh, bones, arrows, string, gunpowder); smelter output (iron/copper/gold ingots) | Volume beats golem speed (16 items per trip, 3 s per chest checked) |
-| **Smelter** | Raw iron/copper/gold, ore blocks → blast furnaces; raw meat/fish/potatoes → smokers | From the plan's auto-furnace section |
-| **Golem hall** (everyday mixed) | Logs, planks, saplings by wood type; seeds and crops; cooked food; flowers and dyes; wool; redstone components; decorative blocks; low-volume mob drops; copper items; **potions and tipped arrows** (Bedrock golems can tell their types apart) | Many item types at low volume, where golem modules are cheap |
-| **Non-stackable chest** (manual) | Tools, armor, enchanted books, shulker boxes | Golems ignore enchantments and durability. Keep these away from lava. |
-| **Lava** | Junk list only (Jeffrey to decide, e.g. extra dirt, rotten flesh beyond 1 chest) | Decision: lava. Never non-stackables or netherite. |
-
-## 4. Floor plan (DRAFT, all dimensions are estimates)
-
-Top-down, north up, 1 character ≈ 1 block, not to scale in height. Assumes everything on one level. A stacked or underground version is an open question.
-
+Ground floor (north up, 1 char ≈ 1 block wide; lengths compressed):
 ```
-   ←──────────────────────── ~36 blocks (estimate) ────────────────────────→
-  ┌──────────────────────────────────────────────────────────────────────────┐
-  │ H service corridor (3) — golem cells + router/filter wiring              │
-  ├──────────────────────────────────────────────────────────────────────────┤
-  │ D GOLEM HALL wall: [M1 9+1][M2 9+1][M3 9+1][M4 9+1]   [ I expansion → ]  │  each module ≈ 6 wide
-  ├──────────────────────────────────────────────────────────────────────────┤
-  │ G RETRIEVAL AISLE (3 wide) — item frames on every chest                  │
-  ├──────────────────────────────────────────────────────────────────────────┤
-  │ C HOPPER HALL wall: [s1][s2][s3][s4][s5][s6][s7][s8]  [ I expansion → ]  │  1-wide slices, octa/deca
-  ├──────────────────────────────────────────────────────────────────────────┤
-  │ H service corridor (3) — filters, water/ice stream, hopper locking       │
-  └──────────────────────────────────────────────────────────────────────────┘
-   west end:                                              east end:
-   [A INPUT + A2 UNLOADER] → [B ROUTER] (feeds C and D)   [F OVERFLOW + LAVA]
-   [E SMELTER] beside B, output back into C               (sealed, away from wood)
+ N  ┌─────────────────────────────┐   ← expansion continues north (+24)
+    │ S S S c . O . c S S S       │   O = overflow chest (drains to lava below)
+    │ S S S c . . . c S S S       │
+    │ S S S P . . . P S S S       │   P = spruce log pillar (every 6)
+    │ S S S c . ~ . c S S S       │   c = chest wall, 4 chests high, item frames
+    │ S S S c . ~ . c S S S       │   . = aisle (3 wide), ~ = carpet runner
+    │ S S S c . ~ . c S S S       │   S = service gap (3): filters + item stream
+    │ S S S P . . . P S S S       │
+    ├─────────────────────────────┤
+    │ G G G G | f f f | B B B B   │   G = golem gallery (glass front at |)
+    │ G G G G | f f f | s s s s   │   f = foyer walkway, B = input barrels/box drop
+    │ G G G G | f f f | s s n n   │   s = stairs down, n = non-stackable return chest
+ S  └──────────── door ───────────┘
+      ←──────── 13 wide (est.) ──────→
 ```
 
-| Block of the plan | Width (E–W) | Depth (N–S) | Height | Basis |
-| --- | --- | --- | --- | --- |
-| Service corridor, each side | full length | 3 | 4–6 | 3 blocks from building-style.md; height estimate |
-| Golem hall wall (4 modules to start) | ~24 + expansion | 2–3 | 4 | 9 + 1 module (sources); 2-deep per Kaji; widths estimate |
-| Retrieval aisle | full length | 3 | 3–4 | estimate |
-| Hopper hall wall (8 slices) | 8 + expansion | 5 | 6 | 1-wide slices (Bedrock WIKI); depth/height estimate |
-| Input + unloader + router + smelter (west end) | ~12 | ~17 (full depth) | 5 | estimate |
-| Overflow + lava (east end) | ~4 | ~6 | 3 | estimate |
-| **Total draft footprint** | **~36–48** | **~17** | **~6–8** | estimate |
+Cross-section, looking north (heights in blocks, estimates):
+```
+ +11  ................/\..................   hay "thatch" ridge on spruce stairs roof
+  +7  ==== spruce ceiling + waxed copper beams ====
+  +5  | stream | st |   lantern  | st | stream |   st = stair trim above chests
+  +4  | filt   | C  |            | C  | filt   |   C = chest (4 high)
+  +1  | filt   | C  |  aisle 3w  | C  | filt   |
+   0  ===== cobble/spruce floor  (carpet runner) =====
+  -1  | smelter | maintenance walkway | lift/router |
+  -6  ===== basement floor (stone) =====
+```
 
-## 5. Build order (fits the stages in the storage plan)
+## 5. Materials summary (rough; simple arithmetic from the estimated dimensions)
 
-1. **Pick the site and footprint** (open questions below). Reserve all zones, including expansion, before building anything.
-2. **Input + overflow chest** first, so nothing is ever lost while the rest is built.
-3. **Golem module M1** in its final position (Stage 1). Seed all 9 chests and test with one item per chest.
-4. **Router skeleton:** the non-stackable split + "everything else → M1 copper chest".
-5. **More golem modules** (M2–M4), chained through overflow hoppers.
-6. **Hopper hall slices** for the first farm items, plus the router lines feeding them.
-7. **Auto smelter**, fed by router lines, output into the hopper hall.
-8. **Lava disposal** behind the overflow chest, and junk slices.
-9. **Shulker unloader** in the Input zone.
-10. Dress it up as the [Copper storage hall](building-goals.md#2-copper-storage-hall).
+| Area | Main counts (estimate) |
+| --- | --- |
+| **Hall shell** (13 × 33 footprint) | Floor ~430 blocks (spruce + cobble), carpet runner ~75, ceiling ~430 spruce. Outer walls ~92-block perimeter × 7 high ≈ 640 blocks (≈185 cobblestone base + ≈460 spruce/logs). Roof: spruce stairs/slabs, hay bales as accent only. |
+| **Browsing hall, first 6 slices** | 48 chests + 48 item frames. Filters ≈ 2 hoppers + 1 comparator per chest ⇒ ~96 hoppers (~480 iron) + ~48 comparators (~48 nether quartz); depends on the chosen Bedrock design. Full hall (20 slices/side): ~160 chests. |
+| **Golem gallery** | 2 copper blocks (18 copper ingots) + 2 carved pumpkins → 2 golems + 2 copper chests; ~4 honeycomb (2 golems + 2 copper chests); 18 display chests + 2 overflow chests; ~24 glass; copper grate floor ~16; 1 iron door |
+| **Lighting** | ~5 copper lanterns over the aisle, ~4 in the foyer, ~8 lanterns in the basement, copper bulbs in pillars (optional) |
+| **Basement** | Dig ~13 × 33 × 6; cobblestone walls; furnaces/blast furnaces/smokers per the [storage plan](storage-and-sorting.md#materials-verified-recipes-only); dropper lift |
 
-## 6. Open questions for Jeffrey
+## 6. Build order
 
-- [ ] **Footprint limit:** how big can it be? The draft is ~36–48 × 17 blocks.
-- [ ] **Underground or above ground?** Underground hides the wiring and lava. Above ground fits the Copper storage hall showpiece.
-- [ ] **How close to the Copper storage hall build?** Same building (golems behind glass) or the machinery underneath it?
-- [ ] **One level or stacked?** Kaji and silentwisperer show stacked golem modules (six-high wall / layers).
-- [ ] **Golem confinement style:** stair + trapdoor + chains, or minecart on rail?
-- [ ] **Which farm items get hopper slices first?**
-- [ ] **Junk list** for lava.
+1. **Reserve the footprint** (13 × 57 incl. expansion) and dig the basement.
+2. **Shell first:** foyer + first 6–8 blocks of the browsing hall, roofed and lit. Build one floor at a time ([building style](building-style.md)).
+3. **Input + overflow:** foyer barrels → input line → overflow chest at the far end, so nothing is lost while building.
+4. **Router + lift + first hopper slices** (6 slices = 48 item types) with item frames.
+5. **Auto smelter** in the basement, fed by ore/raw-food slices.
+6. **Lava** behind the overflow chest, plus junk slices.
+7. **Golem gallery** (showcase stage): build one module, test one item per chest, then the second module.
+8. **Shulker unloader** in the foyer/basement input line.
+9. Extend slices north as storage grows; dress the hall as the [Copper storage hall](building-goals.md#2-copper-storage-hall).
 
-## 7. Unverified / to test on our server
+## 7. Open questions for Jeffrey
 
-- None of the golem module videos and posts above state that they were tested on **Bedrock 26.50** specifically, except silentwisperer's title ("Bedrock & Java") and the Bedrock subreddit threads. Build one module and test it before tiling.
-- Chest **check order** (closest first) and the "overflow must be farthest" rule come from community replies, not the wiki. They match the wiki's "nearest chest" wording.
-- All widths, depths, and heights marked **(estimate)** are ours.
+- [ ] OK with **two levels** (browsing hall on top, machines in the basement)?
+- [ ] **Footprint:** is 13 × 33 (13 × 57 with expansion) OK near spawn?
+- [ ] **Chest wall height:** 4 high (more items per slice, needs elevator wiring) or 3 high (simpler)?
+- [ ] **Golem gallery set:** potions + tipped arrows, or something else on display?
+- [ ] **Palette:** spruce + cobble + waxed copper OK, or deepslate + spruce (the other building-style option)?
+- [ ] **Roof:** spruce with hay accents, or go all-in on hay/straw-bed thatch?
+- [ ] Junk list for lava.
+
+## 8. References
+
+**Bedrock storage tech** (Bedrock-specific):
+- [Bedrock WIKI: Chest Halls](https://bedrockwiki.com/books/storage-tech/page/chest-halls). Borrowed: the slice concept, octa/deca halls, item-frame labels, hopper locking.
+- [Bedrock WIKI: Stackable Sorting](https://bedrockwiki.com/books/storage-tech/page/stackable-sorting). Borrowed: SS3 filters, hopper speed (2.5/s, ~9,000/h).
+- [Bedrock WIKI: Item Streams](https://bedrockwiki.com/books/storage-tech/page/item-streams). Borrowed: water/ice streams, ≤9 blocks per water source.
+- Bedrock WIKI [Types of Input](https://bedrockwiki.com/books/storage-tech/page/types-of-input), [Input Buffers](https://bedrockwiki.com/books/storage-tech/page/input-buffers), [Box unloaders](https://bedrockwiki.com/books/storage-tech/page/box-unloaders). Borrowed: input zone design.
+- [Minecraft Wiki: Tutorial: Hopper](https://minecraft.wiki/w/Tutorial:Hopper). Borrowed: the Bedrock-optimized/hybrid sorter notes, and the brewing-stand potion filter.
+
+**Copper golem sorter designs** (used for the gallery module; editions mostly not stated):
+- ["Copper golem item sorter help", r/technicalminecraft](https://www.reddit.com/r/technicalminecraft/comments/1r1jpfa/copper_golem_item_sorter_help/). The 9 + 1 module, golem pinned with trapdoor/chains.
+- [small guy: "Copper Golem Auto Sorter… 200+ Chests" (2025-10-31)](https://www.youtube.com/watch?v=MGCl8oHpA6k). Minecart confinement, trapdoor quiet trick.
+- [Kaji: "Silent 3x3 Copper Golem Sorter" (2026-07-20)](https://www.youtube.com/watch?v=TLwnKMX_GEk). A 2-deep module.
+- [silentwisperer: "EASY Copper Golem SORTING SYSTEM (5 Designs)" (2025-10-01)](https://www.youtube.com/watch?v=4XM68iqBkGU). Title says Bedrock & Java.
+- [u/Alicorns: one-wide tileable (2025-07-04)](https://www.reddit.com/r/technicalminecraft/comments/1lrrkqp/one_wide_tillable_copper_golem_sorter/). The line layout.
+- [r/minecraftbedrock: overflow-priority problem](https://www.reddit.com/r/minecraftbedrock/comments/1vtq2mx/copper_golem_sorter_on_bedrock_keeps_prioritizing/). Bedrock: the overflow must be farthest.
+
+**Mechanics** (Minecraft Wiki): [Copper Golem](https://minecraft.wiki/w/Copper_Golem), [Chest](https://minecraft.wiki/w/Chest), [Copper Chest](https://minecraft.wiki/w/Copper_Chest), [Mob spawning](https://minecraft.wiki/w/Mob_spawning), [Item Frame](https://minecraft.wiki/w/Item_Frame), [Barrel](https://minecraft.wiki/w/Barrel), [Glass](https://minecraft.wiki/w/Glass), [Copper Grate](https://minecraft.wiki/w/Copper_Grate), [Copper Lantern](https://minecraft.wiki/w/Copper_Lantern), [Copper Bulb](https://minecraft.wiki/w/Copper_Bulb), [Wool](https://minecraft.wiki/w/Wool), [Wool Stairs](https://minecraft.wiki/w/Wool_Stairs), [Lava](https://minecraft.wiki/w/Lava), [Hopper](https://minecraft.wiki/w/Hopper), [Hay Bale](https://minecraft.wiki/w/Hay_Bale)
+
+## 9. Not verified / to test
+- All dimensions, counts, and the floor plans are **estimates**.
+- Whether glass blocks a golem's "line of sight" on Bedrock: the wiki only says golems ignore chests they can't see. Test the gallery with glass before committing.
+- Golem module behavior on Bedrock 26.50: the reference designs mostly don't state an edition. Build and test one module.
+- Ordinary sound dampening by wool (not found on the wiki).
+- The hopper/comparator counts per slice depend on the Bedrock filter design chosen.
