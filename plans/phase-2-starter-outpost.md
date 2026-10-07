@@ -12,6 +12,7 @@
 - [ ] Two chests (1 of 2 so far)
 - [ ] A door
 - [ ] Torches every 7–8 blocks (no lighting yet)
+- [ ] Optional: a **bundle** (1 string + 1 leather) holds a stack's worth of mixed items in one slot
 
 ### Farm
 - [ ] Till a 9×9 plot of dirt with a water source in the middle
@@ -30,10 +31,12 @@ Bread and baked potatoes carry you until you have a cow pen.
 ### Mining
 - [ ] Mine a staircase down to around Y=16 for iron and coal
 - [ ] Do not chase diamonds yet. Iron armor and an iron pick change the game more than a pretty roof.
+- [ ] Smelt the **copper ore** you pass, too. Copper tools mine the same blocks as stone, but faster and with more durability.
 
 ### Iron upgrades
 - [ ] Iron pick
 - [ ] Iron tools
+- [ ] Optional stopgap: **copper armor** (10 armor points for a full set, vs. leather 7 and iron 15; 24 copper ingots) while iron goes to the pick, bucket and shield
 - [ ] Iron armor
 - [ ] Smoker (cuts cook time in half)
 - [ ] Blast furnace (cuts smelt time in half)

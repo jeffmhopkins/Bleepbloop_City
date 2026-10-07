@@ -32,6 +32,15 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 | [5](#session-5-diamonds-and-the-enchanting-path) | Branch mine for diamonds, redstone and lapis; obsidian; scout a village | 4, prep for 5 | Zoomed-out local-area map on the scouting trip (90 block) |
 | [6](#session-6-the-nether-gateway) | Enchanting table, a boxed Nether portal, a short quartz run | 4 and 5 | Wall map in item frames (90 block) |
 
+## New content woven in
+
+Jeffrey's last game was around October 2024, so this plan includes a few things added since then. Each is marked **(new)** and is optional unless it's in a core step. The full catch-up is in [what's new](../notes/whats-new.md).
+
+- S2: a **bundle**, and pale garden and night-mob warnings.
+- S3: **copper** tools and armor as a stopgap.
+- S5: night mobs on the scouting trip, and cartographer maps.
+- S6: a **dried ghast** stretch for the [happy ghast](../plans/happy-ghast.md).
+
 ## Map thread: a local-area map
 
 Jeffrey wants a map of the local area. The steps are spread across Sessions 2–6, mostly in the "if you have 90" blocks, because each step depends on materials from earlier sessions: **sugar cane → paper**, **iron + redstone → compass**, **cows → leather → item frames**.
@@ -72,7 +81,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
   - Zoomed maps stay on the same grid. To cover a new area, start a level 0 map **inside** that area.
 - **Seamless wall map:** put maps of the **same zoom level** from neighboring grid squares in item frames side by side. Framed maps expand to fill the frame, so the squares line up into one picture.
 - **Markers on Bedrock:**
-  - Only **locator** maps show players. In multiplayer they show every player, colored by join order, with a skin face when they're 10–80 blocks away. When you're off the map, your marker becomes a dot on the edge.
+  - Only **locator** maps show players. In multiplayer they show every player, colored by join order, with a skin face when they're 10–80 blocks away. When you're off the map, your marker sits on the edge and, since 26.50, still shows which way you're facing.
   - A framed locator map shows a **green marker** for the frame on its clones.
   - **Banner markers are Java-only:** using a map on a banner does nothing on Bedrock.
   - Maps don't mark lodestones, and an Overworld map doesn't mark world spawn. So **landmarks have to be written down**, and that's what [coordinates](../notes/coordinates.md) is for.
@@ -103,6 +112,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [ ] **Site walk near spawn (daylight only).** Check the two Phase 3 items that aren't confirmed yet: **flat or gently sloped ground**, and a **village** (or a plains, meadow or river edge). If one spot has both, mark it with a banner (6 wool of one color + 1 stick) or a tall pillar.
 - [ ] **Look at the mountain.** Iron also generates high up (it shows up from Y=80 to the top of the world, so mountains have plenty), and emerald ore appears in mountain and cherry grove biomes ([Ore](https://minecraft.wiki/w/Ore)). Note any exposed iron or coal for Session 3.
 - [ ] **Abandoned camp.** If you spot one, raid it and leave (copper gear, buckets, compasses, sometimes iron). Log it.
+- [ ] **(new) Bundle:** if the cows dropped leather and you have string, 1 string + 1 leather makes a bundle. It holds a stack's worth of mixed items in one slot, which helps for the Session 3 mine (torches, food, odd ores). Optional: leather is also needed for books and item frames.
 
 **Done when**
 - [ ] The bed area and shelter are lit, with a door.
@@ -113,6 +123,9 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 
 **Safety and night**
 - Light first, then food. Don't walk far at dusk; sleep instead.
+- **(new) Pale gardens:** foggy forests with gray-white trees, often on mountain slopes. At night they release **creakings**, which can't be hurt and move only when you look away. Break their **creaking heart** (the block in a pale oak trunk) to kill them, or just leave. Don't go in after dark.
+- **(new) Zombie horsemen** (a zombie with a spear on a zombie horse) now spawn in plains and savannas at night. Spears reach 4.5 blocks.
+- **(new) Animals near the ice look different** (cold cows, pigs and chickens; mostly black sheep). The biome picks the look.
 - If you die, dropped items stay on the ground for about 5 minutes. Keep the bed (your spawn) close to where you work.
 
 **Repo boxes this should tick (once reported)**
@@ -136,7 +149,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 
 **60-minute plan**
 - [ ] **0:00–0:05 Prep.** Eat, top up torches (craft more from coal as you find it), and set out at the start of a day.
-- [ ] **0:05–0:35 Staircase down.** Dig a staircase (never straight down) toward the deepslate line, lighting as you go. Mine every coal and iron ore you see. The big caves at spawn are faster but more dangerous; stay in lit sections. Coal ore needs any pickaxe; iron needs stone or better.
+- [ ] **0:05–0:35 Staircase down.** Dig a staircase (never straight down) toward the deepslate line, lighting as you go. Mine every coal and iron ore you see, and **(new)** copper ore too. The big caves at spawn are faster but more dangerous; stay in lit sections. Coal ore needs any pickaxe; iron needs stone or better.
 - [ ] **0:35–0:45 Smelt and craft, in this order:**
   - Iron pick (3 iron).
   - Bucket (3 iron), then fill it with water.
@@ -147,6 +160,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **If you have 90**
 - [ ] **Iron armor**, in priority order: chestplate (8), leggings (7), helmet (5), boots (4). The full set is 24 iron.
 - [ ] **Smoker** (furnace + 4 logs) to halve cooking time. **Blast furnace** (furnace + 5 iron + 3 smooth stone) to halve ore smelting; smooth stone is stone smelted again.
+- [ ] **(new) Copper as a stopgap:** smelt the copper ore. **Copper armor** (24 ingots, 10 armor points vs. iron's 15) can cover you while iron goes to the pick, bucket and shield. Copper tools mine like stone (no diamonds or redstone) but faster and longer. Skip it if iron armor is already happening.
 - [ ] **Bank toward a compass:** 4 iron + 1 redstone dust. Redstone ore only appears at Y=15 and below, so pick some up if you see it near the deepslate line.
 
 **Done when**
@@ -157,6 +171,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Safety and night**
 - **Never dig straight down, and never mine the block you're standing on.** Lava pools get common deeper down.
 - The water bucket puts out fire and stops falls: carry it once you have it. Use the shield against skeletons and creepers.
+- **(new) Sulfur caves** (yellow sulfur and red cinnabar) spawn **cave spiders** naturally, and their bite poisons. The pools there give Nausea near the gas. Note it and go around.
 - Caves have the same monsters day or night. Light every junction, and keep torches on one wall (for example the right side going in) so the way out is obvious.
 - Come back up and sleep at dusk if the bed is near; otherwise wall yourself in and keep mining.
 
@@ -230,7 +245,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [ ] **0:55–1:00 Back up and store.** Diamonds and valuables go in the group chests. Craft the compass now if Session 4 didn't.
 
 **If you have 90**
-- [ ] **Village scouting (daylight).** Follow the coast or a river from spawn. Log any village, and note librarians, fletchers and toolsmiths in [resources and farms](../notes/resources-and-farms.md) (Phase 5 trading hall). The village decides the remaining Phase 3 site item.
+- [ ] **Village scouting (daylight).** Follow the coast or a river from spawn. Log any village, and note librarians, fletchers and toolsmiths in [resources and farms](../notes/resources-and-farms.md) (Phase 5 trading hall). The village decides the remaining Phase 3 site item. **(new)** Village chests can hold bundles. A cartographer (once in the trading hall) sells maps to other villages.
 - [ ] **Wider local-area map while scouting.** Start a fresh locator map at the base, then zoom it out at the cartography table (1 paper per level; zooming wipes what's drawn, so do it **before** filling). Level 2 covers 512×512 blocks and level 3 covers 1024×1024. Carry it on the village trip and swing past the mountain, the cherry grove, the cave entrance, the ocean and the ice so they all get drawn.
 - [ ] **Enchanting materials:** an **enchanting table** is 1 book + 2 diamonds + 4 obsidian ([Enchanting Table](https://minecraft.wiki/w/Enchanting_Table)). A book is 3 paper + 1 leather, and paper is 3 sugar cane. Start a stockpile; bookshelves come later.
 
@@ -242,6 +257,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Safety and night**
 - **Lava is the main danger this deep.** Never dig down or toward the unknown with an empty hand; keep the water bucket on your hotbar.
 - Don't mine the block above lava or the block under your feet.
+- **(new) Scouting at dusk:** be back before night. Zombie horsemen spawn in plains and savannas at night, and pale gardens release creakings.
 - The deep dark (sculk, shriekers) is around this depth. If you hear or see sculk, leave quietly; don't explore it.
 - Deepslate mines slower than stone, so pace yourself and keep track of time.
 
@@ -263,18 +279,21 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - **Flint and steel:** 1 iron + 1 flint (flint comes from gravel).
 - **At least one piece of golden armor,** so piglins stay neutral ([Piglin](https://minecraft.wiki/w/Piglin)). A golden helmet is 5 gold.
 - Full iron gear, a shield, food, a stack of cobble, a pick for quartz, and a few torches.
-- **No bed:** beds explode in the Nether.
+- **No bed:** beds explode in the Nether. (A straw bed won't explode there; it just breaks and drops nothing.)
+- **(new, stretch)** Room in your inventory for a **dried ghast**, which breaks instantly by hand. For later: **10 snowballs** from the snow by spawn (a shovel on snow) and the **water bucket**, to start a [happy ghast](../plans/happy-ghast.md).
 
 **60-minute plan**
 - [ ] **0:00–0:10 Enchanting table.** Place it in the base (1 book + 2 diamonds + 4 obsidian) and do a first low-level enchant with lapis. Bookshelves come later; a level-30 table needs 15.
 - [ ] **0:10–0:25 Portal room.** The portal goes **in a room with a door, not in the open** (Phase 5), so nothing wanders through near the base. The room itself is Jeffrey's design, or the start of the [Nether portal shrine](../plans/building-goals.md#7-nether-portal-shrine). Build the frame and light it.
 - [ ] **0:25–0:50 Short Nether trip.** Step through. If the arrival spot is exposed, box it in with cobble. Mine **nether quartz** within sight of the portal; it's very common below Y=128. Head back by 0:50. Bring back 20+ quartz if you can.
+  - **(new, stretch) Dried ghast:** only if you've landed in or next to a **soul sand valley** and a **Nether fossil** (big bone-block skeleton) is within sight of the portal. About 1 fossil in 3 has a dried ghast next to it. Grab it and go back. Don't go looking for one on this trip.
 - [ ] **0:50–1:00 Log both sides.** Write down the Overworld and Nether portal landmarks (1 block in the Nether = 8 in the Overworld). Store the quartz.
 
 **If you have 90**
 - [ ] **Leather and books:** breed the cows and harvest the sugar cane toward books (enchanting) and item frames (proper Stage 0 labels).
 - [ ] **Iron stockpile:** more mining or caving for iron. Storage Stage 1 needs a lot of hoppers at 5 iron each ([Stage 1 needs](../plans/storage-layout.md#stage-1-front-left-wing-machinery-core-and-the-whole-trunk)).
 - [ ] **Wall map by the base door or storage entrance.** Each map needs an **item frame** (8 sticks + 1 leather), so this follows the leather above. Clone the filled maps at the cartography table (map + 1 empty map = 2 copies) so you keep one to carry. Frame the base map and the local-area map. Framed locator maps show a green marker for the frame on every clone. Where and how the wall looks is Jeffrey's call.
+- [ ] **(new) If you brought back a dried ghast:** waterlog it at the base (place it in water or pour water on it). It turns into a ghastling in about **20 minutes**, which runs while you do the rest of this block. On Bedrock, **10 snowballs** grow the ghastling to an adult at once. Leave room for a 4×4×4 adult; where it lives is Jeffrey's call. The harness (3 leather + 2 glass + 1 wool) comes after Session 6.
 - [ ] **Not yet: an iron farm.** On Bedrock, iron golems spawn only in villages with **at least 20 beds and 10 villagers** ([Iron Golem](https://minecraft.wiki/w/Iron_Golem)). That makes it a Phase 5 project for after the trading hall work. For now, just log a village that could host it.
 
 **Done when**
@@ -285,6 +304,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Safety and night**
 - **Follow the repo's rule: don't explore the Nether in iron armor without fire resistance potions.** This trip is a short quartz grab near the portal, not exploration.
 - Ghast fireballs can be blocked with cobble. Don't dig down; lava seas sit low in the Nether. Don't hit piglins or zombified piglins (whole groups retaliate).
+- **(new)** Soul sand valleys have lots of skeletons and ghasts, and soul sand slows you down. That's why the dried ghast stays within sight of the portal.
 - If something goes wrong, go straight back through the portal. Before leaving, make sure the portal room's door is closed.
 
 **Repo boxes this should tick (once reported)**
@@ -292,10 +312,11 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [Phase 5](../plans/phase-5-infrastructure.md) §3 Nether: *Nether portal in a boxed room with a door*, *Mark portal and hub coordinates*. Phase 5 row → 🟨.
 - [Coordinates](../notes/coordinates.md): both *Nether portal* rows.
 - [Building goals](../plans/building-goals.md) #7, Nether portal shrine: only if the portal room is built as the shrine.
+- [Phase 5](../plans/phase-5-infrastructure.md) §3: *Bring back a dried ghast* (stretch). §6 / [happy ghast](../plans/happy-ghast.md): *Find a dried ghast*, *Rehydrate it* (90 block).
 - [Phase 4](../plans/phase-4-the-base.md) §7 local-area map: *Wall map near the base door*. [Phase 5](../plans/phase-5-infrastructure.md) §4: *A map on an item frame at the door* (90 block).
 
 ---
 
 ## After Session 6
 
-Phase 4 keeps going: the workshop, perimeter and spawn control, the sugar cane farm, and 15 bookshelves. Phase 5's trading hall follows, along with stockpiling iron and quartz for [storage Stage 1](../plans/storage-layout.md#4-growth-stages). The next plan should be drawn up from whatever actually got done, using the carry-over rule above.
+Phase 4 keeps going: the workshop, perimeter and spawn control, the sugar cane farm, and 15 bookshelves. Phase 5's trading hall follows, along with stockpiling iron and quartz for [storage Stage 1](../plans/storage-layout.md#4-growth-stages). **(new) Happy ghast:** if Session 6 found a dried ghast, finish it next: snowballs, a harness (3 leather + 2 glass + 1 wool), first flight. If not, look again on the next Nether trip; piglin barters can also give one. See [happy-ghast.md](../plans/happy-ghast.md). The next plan should be drawn up from whatever actually got done, using the carry-over rule above.

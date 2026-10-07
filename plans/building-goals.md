@@ -20,6 +20,8 @@ Each goal follows the [build/project template](../templates/build-project.md) st
 
 Track status and dates in [progress/tracker.md](../progress/tracker.md#building-goals).
 
+**Tall builds:** once there's a [happy ghast](happy-ghast.md), it can serve as a flying platform for towers and spires, since it holds still while you stand on it.
+
 ---
 
 ## 1. Thatch-roof starter cottage

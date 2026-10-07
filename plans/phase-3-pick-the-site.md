@@ -22,6 +22,7 @@ Walk until you find most of these within a couple of minutes of each other.
 - [ ] Not on a stronghold
 - [ ] Not inside a woodland mansion
 - [ ] Not on the camp you already looted
+- [ ] Not next to a **pale garden** (foggy, gray-white trees, often on mountain slopes). Creakings come out of it at night, and they can only be killed by breaking their creaking heart ([what's new](../notes/whats-new.md#the-garden-awakens-december-2024-bedrock-12150))
 
 ## Tasks
 

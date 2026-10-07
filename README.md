@@ -3,7 +3,7 @@
 Minecraft server planning: plans, progress, and notes for building Bleepbloop City from first night to a base that lasts.
 
 **Server edition:** Bedrock.
-**Game version:** Wilderness Bound (Bedrock 26.50; Java 26.3 is the matching Java release). Straw beds, abandoned camps, and copper gear all matter in the first week.
+**Game version:** Wilderness Bound (Bedrock 26.50; Java 26.3 is the matching Java release). Straw beds, abandoned camps, and copper gear all matter in the first week. Back after a break? See [what's new since late 2024](notes/whats-new.md).
 
 > A good base is a logistics problem first and a building project second. Get safe, get food, get a bed, then pick a site you will still want in a month.
 
@@ -42,6 +42,7 @@ Long-term goals that span several phases.
 | --- | --- | --- |
 | A highly automated item sorter: hopper chest hall doing the sorting, copper golem gallery as the showpiece ([grouping](plans/storage-layout.md), [stages](plans/storage-stages.md)) | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) | ⬜ Not started |
 | Nine building goals (grand architecture: mossy timber frames and oxidized copper towers; see [inspiration](plans/building-style.md#inspiration)): thatch cottage, copper storage hall, spawn town square, village glow-up, gatehouse and wall, farm district, Nether portal shrine, lighthouse/watchtower, mine entrance building | [plans/building-goals.md](plans/building-goals.md) | ⬜ Not started |
+| A happy ghast: a flying mount for 4 and a stand-on sky platform for the grand builds (from a Nether dried ghast) | [plans/happy-ghast.md](plans/happy-ghast.md) | ⬜ Not started |
 | A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) | ⬜ Not started |
 | Move the server to the AI server (container, automated backups, snapshot analysis) | [plans/server-migration.md](plans/server-migration.md) | ⬜ Not started |
 | Live API: tokenized connection from the server to Grok Bot | [plans/live-api.md](plans/live-api.md) | ⬜ Not started |
@@ -50,9 +51,9 @@ Long-term goals that span several phases.
 
 | Folder | What's in it |
 | --- | --- |
-| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md) and [stages](plans/storage-stages.md)), [building goals](plans/building-goals.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), and [live API](plans/live-api.md) |
+| [`plans/`](plans/) | The [master plan](plans/README.md), one file per phase, plus [building style](plans/building-style.md), [multiplayer server](plans/multiplayer-server.md), and the big goals: [storage and sorting](plans/storage-and-sorting.md) (+ [storage grouping](plans/storage-layout.md) and [stages](plans/storage-stages.md)), [building goals](plans/building-goals.md), [happy ghast](plans/happy-ghast.md), [flying machine](plans/flying-machine.md), [server migration](plans/server-migration.md), and [live API](plans/live-api.md) |
 | [`progress/`](progress/) | [Phase tracker](progress/tracker.md), the [session log](progress/session-log.md), and the [session plan](progress/session-plan.md) for Sessions 2–6 |
-| [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [version features](notes/version-features.md) |
+| [`notes/`](notes/) | [Coordinates](notes/coordinates.md), [resources and farms](notes/resources-and-farms.md), [ideas](notes/ideas.md), and [what's new (2-year catch-up)](notes/whats-new.md) |
 | [`templates/`](templates/) | Copy-paste templates for a [session log entry](templates/session-log-entry.md) and a [build/project](templates/build-project.md) |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Issue templates for tasks and ideas |
 

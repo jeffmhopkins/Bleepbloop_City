@@ -10,6 +10,12 @@ If this is a multiplayer server, do these early.
 
 Server settings and world-level config live here. For the files themselves (`server.properties`, `allowlist.json`, `permissions.json`) and moving them to the Linux box, see [server migration](server-migration.md#verified-facts-this-plan-relies-on).
 
+### Game version and new game rules
+
+- **Keep the server on the clients' version.** Bedrock **26.60** is scheduled for **October 27, 2026** ([wiki](https://minecraft.wiki/w/Bedrock_Edition_26.60)). When players' games update, plan to update the server to match the same day, or they may not be able to join.
+- **Locator bar:** friends show as colored markers on the HUD, which helps with coordinates off. The Bedrock game rule is `playerwaypoints` (since 26.30): `everyone` (default) or `off` ([Game rule](https://minecraft.wiki/w/Game_rule)). Players can hide their marker by sneaking or wearing a carved pumpkin.
+- **Group travel:** a harnessed [happy ghast](happy-ghast.md) carries 4 players.
+
 ### Ticking area: iron farm and item sorter
 
 **Plan:** keep the [item sorter](storage-and-sorting.md) and the iron farm inside a permanently loaded area, so hoppers, furnaces, and item transport keep running when nobody is standing next to them. On Bedrock that's a **ticking area**, made with `/tickingarea` (Bedrock and Education only; Java uses `/forceload` instead).

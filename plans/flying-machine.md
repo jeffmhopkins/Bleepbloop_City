@@ -13,7 +13,7 @@ A flying machine is a redstone contraption that moves itself across the world, b
 ## Open questions
 
 - [x] Which edition is the server? Bedrock
-- [ ] What's it for: just for fun, a moving platform or bridge, a world-eater or tunnel bore, or a mobile farm?
+- [ ] What's it for: just for fun, a moving platform or bridge, a world-eater or tunnel bore, or a mobile farm? (A [happy ghast](happy-ghast.md) already covers a *flying build platform* much earlier, without redstone.)
 - [ ] One direction only, or one that can return?
 
 ## Tasks

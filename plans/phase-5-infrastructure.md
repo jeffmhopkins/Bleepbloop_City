@@ -24,6 +24,7 @@
 - [ ] Small Nether hub
 - [ ] Mark portal and hub coordinates in [notes/coordinates.md](../notes/coordinates.md)
 - [ ] Do not explore the Nether in iron armor with no fire resistance potions
+- [ ] Bring back a **dried ghast** for the [happy ghast](happy-ghast.md). Look by the Nether fossils in a soul sand valley (1 in 3 has one); a piglin barter can also give one
 
 ### 4. Roads
 - [ ] Roads or ice boats between the starter shack, base, village, and portal
@@ -33,13 +34,20 @@
 - [ ] Backup storage in a second room
 - [ ] Backup bed in a second room
 
+### 6. Happy ghast
+A flying mount for up to 4 players and a platform you can stand on in midair for the tall builds. Full plan: [happy-ghast.md](happy-ghast.md).
+- [ ] Rehydrate a dried ghast in water at the base (about 20 minutes)
+- [ ] Grow the ghastling (10 snowballs on Bedrock)
+- [ ] Harness: 3 leather + 2 glass + 1 wool
+- [ ] First flight; log its home spot
+
 One creeper should not end the world.
 
 ## Later: end-game rooms (after an elytra)
 
 Build these away from the pretty part of the base so lag and wither blasts stay outside.
 
-- [ ] Elytra
+- [ ] Elytra (the [happy ghast](happy-ghast.md) flies much earlier but slowly, at about 3.6 m/s; elytra glide at about 30)
 - [ ] Flying machine (see [flying-machine.md](flying-machine.md))
 - [ ] Mob switch or shard farm
 - [ ] Wither skeleton farm
@@ -48,7 +56,7 @@ Build these away from the pretty part of the base so lag and wither blasts stay 
 
 ## Done when
 
-- [ ] Trading hall, farms, boxed Nether portal and hub, roads, and backups are all in
+- [ ] Trading hall, farms, boxed Nether portal and hub, roads, backups, and a harnessed happy ghast are all in
 
 ## Notes
 

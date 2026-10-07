@@ -11,6 +11,8 @@
 - [ ] Label them: wood, stone, ores, food, mob drops, redstone, junk
 - [ ] One input chest by the door so you can dump inventory fast
 
+> **Display option:** shelves (Copper Age) show 3 stacks each, which suits a sample or display wall in the storage hall. On Bedrock a powered shelf only reacts on certain redstone ticks, so test any shelf redstone first.
+
 > **Big goal:** this storage wall is the start of the [automated item sorter](storage-and-sorting.md). Hopper sorting is the main system; copper golems are a showpiece gallery. How to group things: [storage-layout.md](storage-layout.md). Barrels make a good input by the door (hoppers empty them).
 
 ### 2. Workshop
@@ -22,6 +24,7 @@
 - [ ] Loom
 - [ ] Later: smithing table
 - [ ] Later: enchanting setup (15 bookshelves)
+- [ ] Later: **shelves** (6 stripped logs make 6). Each holds 3 stacks on display. A **powered** shelf swaps its items with the right side of your hotbar, so a row of them makes a quick-swap kit station (mining kit, building kit). Placement is Jeffrey's call.
 
 ### 3. Food wing
 - [ ] Crop farm

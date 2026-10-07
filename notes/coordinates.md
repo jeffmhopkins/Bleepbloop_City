@@ -29,7 +29,9 @@ Write locations down the moment you find them. Dimension is Overworld, Nether, o
 
 ## Navigating without coordinates
 
-- Home base is planned near world spawn, so a plain compass (4 iron ingots + 1 redstone dust) points home. No lodestone needed.
+- Home base is planned near world spawn, so a plain compass (4 iron ingots + 1 redstone dust) points home. No lodestone needed for home.
+- **Lodestones are cheap now** (Spring to Life): 8 chiseled stone bricks + **1 iron ingot**. Use a compass on one and that compass points to it, in the Overworld, the Nether or the End (same dimension only). That's good for the village, the portal, or the Nether-side portal ([Lodestone](https://minecraft.wiki/w/Lodestone)).
+- **Locator bar:** in multiplayer, other players show as markers on the HUD (game rule `playerwaypoints`).
 - The sun and moon rise in the east and set in the west.
 - **Local-area map** (planned for Sessions 4–6; see the [map thread](../progress/session-plan.md#map-thread-a-local-area-map)). Hang a map in an item frame by the base door or storage entrance and carry clones.
   - Make it at a cartography table: 1 paper + a compass gives a **locator** map, which shows your position. Maps made from paper alone don't.

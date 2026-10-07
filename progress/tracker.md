@@ -27,6 +27,7 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 | Goal | Status | Started | Finished | Notes |
 | --- | --- | --- | --- | --- |
 | [Automated item sorter (hopper chest hall + golem gallery)](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
+| [Happy ghast](../plans/happy-ghast.md) | ⬜ Not started | | | Phase 5; dried ghast is a Session 6 stretch |
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
 | [Server migration to the AI server](../plans/server-migration.md) | ⬜ Not started | | | Container + backups + snapshots |
 | [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first |
