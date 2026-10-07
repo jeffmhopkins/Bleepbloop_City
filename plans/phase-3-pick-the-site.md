@@ -15,7 +15,7 @@ Walk until you find most of these within a couple of minutes of each other.
 - [x] Surface water (ocean at spawn)
 - [x] A cave entrance or a ravine (big caves at spawn)
 - [x] Trees (cherry grove at spawn)
-- [x] Ideally a second biome next door (desert for sand, or a cold biome if you want poplars) (mountain, cherry grove, and a normal biome meet at spawn)
+- [x] Ideally a second biome next door (desert for sand, or a cold biome if you want poplars) (mountain, cherry grove, and a normal biome meet at spawn; ice nearby means a cold biome too)
 
 ### Avoid
 
@@ -37,7 +37,7 @@ Walk until you find most of these within a couple of minutes of each other.
 
 | Candidate | Coordinates | Has | Missing | Verdict |
 | --- | --- | --- | --- | --- |
-| World spawn area | Coordinates are off (it's at world spawn) | Big mountain in the distance sloping down to cherry trees, then a normal biome; big caves; ocean | Flat ground and a village not confirmed yet | Strong candidate ("pretty decent"); base planned here |
+| World spawn area | Coordinates are off (it's at world spawn) | Big mountain in the distance sloping down to cherry trees, then a normal biome; big caves; ocean; ice nearby (cold biome) | Flat ground and a village not confirmed yet | Strong candidate ("pretty decent"); base planned here |
 
 ## Done when
 
