@@ -3,6 +3,7 @@
 **Goal:** A behavior pack on the Bedrock Dedicated Server sends live game events (joins, deaths, block placements, positions, inventories) to a small web service on Jeffrey's Linux box. Grok Bot reads that service through a **read-only, token-protected** API to keep Bleepbloop City's plans and logs current.
 **Status:** ⬜ Not started
 **Depends on:** [Server migration](server-migration.md) Stage 0 (the server must be BDS on the Linux box)
+**See also:** [Companion bot references](#companion-bot-references-researched-2026-10-07) for an LLM-directed bot that follows and fights.
 
 > **Sources (checked 2026-10-07):**
 > [Scripting Bedrock Dedicated Server (Microsoft Learn)](https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/scripting?view=minecraft-bedrock-stable) ·
@@ -152,6 +153,49 @@ Grok Bot's computer is **outside** Jeffrey's home network.
 - [ ] Choose a tunnel (open question), and publish read endpoints only
 - [ ] Create the read token and hand it to Grok Bot via secure secret input
 - [ ] Rate limits, retention jobs, and a rotation runbook in place
+
+## Companion bot references (researched 2026-10-07)
+
+Goal: a bot player that follows Jeffrey, helps fight, and takes directions from an LLM on the AI server. Dates are from GitHub, CurseForge, MCPEDL, or the wiki as of Oct 7, 2026. Recheck before building, because beta modules change between Bedrock releases.
+
+### Shortlist (best fit first)
+
+| # | Project | What it is | Bedrock status | Last activity | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [MineMind – AI Companion](https://www.curseforge.com/minecraft-bedrock/addons/minemind-ai-companion) ([MCPEDL](https://mcpedl.com/minemind-ai-companion/)) | BDS behavior pack. Spawn companions, give plain-language orders (`/scriptevent ai:talk <name> ...`), Follow Me menu. Any OpenAI-compatible API with a custom base URL. | Needs BDS 26.0+ with Beta APIs; listed for 26.0–26.30, not confirmed on 26.50 | Published 2026-07-24, updated 2026-07-31 | Closed source. "Better combat" is still planned. Quickest thing to test, on a world copy. |
+| 2 | [Canopy](https://github.com/ForestOfLight/Canopy) | MIT add-on. Absorbed Understudy in v1.6.0; spawns and controls simulated players with `/canopy:player*` commands (join, move to me, attack, look, use, sprint, inventory). | v1.6.2 "for MC 26.50"; needs Beta APIs | Release 2026-09-16, push 2026-10-06 | Best open base for our own companion. Vanilla pathfinding only goes short distances per command. |
+| 3 | [minecraft-bedrock-mcp-server](https://github.com/chapmanjw/minecraft-bedrock-mcp-server) + [behavior pack](https://github.com/chapmanjw/minecraft-bedrock-mcp-behavior-pack) | MCP server exposing ~78 tools (world, blocks, entities, inventory, events, `mc_run_command`). No player body. | BDS 1.21+ with Beta APIs; not confirmed on 26.50 | v0.3.0 2026-05-19, push 2026-08-14 / 2026-07-17 | Reference design for this API (bearer tokens, HTTP long-polling). Its run-command tool could drive Canopy commands (untested). |
+| 4 | [prismarine-bedrock](https://github.com/deepslate-bedrock/prismarine-bedrock) | Mineflayer-style Bedrock client (PoC): world/entity tracking, physics, inventory, crafting, runs `mineflayer-pathfinder`. | Updated to 1.26.51 | Commit 2026-09-23 | Follow goal untested, no combat, no block placing. License is proprietary/all rights reserved, so it isn't usable without permission. Watch only. |
+| 5 | [bedrock-protocol](https://github.com/PrismarineJS/bedrock-protocol) | Low-level Node Bedrock client library. | Up to 1.26.51; NetherNet support merged Sep 2026 | 3.60.1 2026-09-22, push 2026-10-07 | Their BDS 1.26.51 test only joined with `enable-lan-visibility=true` (issue #830 open). No follow/fight logic. |
+| 5b | [gophertunnel](https://github.com/Sandertv/gophertunnel) | Go equivalent of bedrock-protocol. | Reported working with 26.5x (issue #803 on bedrock-protocol) | Push 2026-10-06 | No follow/fight logic. |
+| 6 | [Mindcraft](https://github.com/mindcraft-bots/mindcraft) | Mature LLM-driven bots on Mineflayer: follow, fight, gather. | Java only (no Bedrock port); would need Java server + [Geyser](https://geysermc.org) (Bedrock 26.30–26.52, Java 26.2) | v0.1.4 2026-03-20, commit 2026-10-03 | Only mature follow + fight + LLM option, but means converting the world to Java. |
+
+### Relevant Script API facts (Bedrock 26.50)
+
+- `SimulatedPlayer` in `@minecraft/server-gametest` is still beta (`1.0.0-beta.1.26.50`). It has `navigateToEntity`, `attackEntity`, and `useItem`, so a custom script can follow and fight.
+- `@minecraft/server-net` gained a WebSocket client in 26.20, so a behavior pack can hold a live link to a controller on the AI server. Since 26.10, HTTP limits can be set in `permissions.json`.
+- 26.10 added beta `@minecraft/server-admin` `LevelStorage` save-state APIs (could help backups) and `AllowList` (signatures changed again in 26.40 and 26.50).
+- 26.50 made NetherNet the default dedicated-server transport. This affects bots that join as separate players, not the add-on route.
+- Mojang has announced no official AI companion, agent, or NPC API (nothing at Minecraft Live, 2026-09-26).
+
+### Plan of record
+
+1. Test MineMind on a **copy** of the world with Beta APIs on, pointed at the AI server's OpenAI-compatible endpoint. Experiments can't be turned off once a world uses them.
+2. Long term, build the companion into this API's behavior pack: a simulated player (Canopy commands or our own `SimulatedPlayer` script) for following and fighting, and a `server-net` WebSocket to an LLM controller on the AI server, using the chapmanjw MCP stack as a bridge reference. Pin the BDS version.
+3. Fallback: Java + Geyser + Mindcraft if Mindcraft-level ability is wanted now.
+
+### Checked and set aside
+
+- Ollama-BE (last release 2025-03-02, chat only)
+- FlashFakePlayerPack (2025-12-08, built for 1.21.120)
+- mineflayer-for-bedrock / "bedrockflayer" (push 2026-05-17, no license, author stuck)
+- MineToring (v0.7.6 2026-08-14, only up to 1.21.100)
+- Understudy (deprecated in 26.40, merged into Canopy)
+- AI Friend | Multiplayer (2026-08-29, up to 26.40, combat "future", separate Node bridge to OpenAI)
+- rice-awa/MCBE-AI-Agent (active, but chat/command agent over `/wsserver`, no body)
+- hanweg/minecraft-bedrock-command-mcp (last activity May 2025)
+- CFSP (v26.51.0 2026-09-18, but needs the LeviLamina mod loader; Linux support unconfirmed)
+- ferraroroberto/minecraft-bedrock-bot (Realm-only, no pathfinding)
 
 ## Open questions for Jeffrey
 
