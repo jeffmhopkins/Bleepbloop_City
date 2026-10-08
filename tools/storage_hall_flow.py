@@ -8,9 +8,13 @@ each backed by its own service gap. Not to scale.
 
 Regenerate (from the repo root): pip install -r tools/requirements.txt && python3 tools/storage_hall_flow.py
 
-Fonts: uses DejaVu Sans if it's installed (that's what the committed PNG was
-drawn with), then Arial/Helvetica on macOS or Arial/Segoe UI on Windows, then
-Pillow's built-in default font. Other fonts work but shift the text slightly.
+Fonts: uses DejaVu Sans if it's installed, then Arial/Helvetica on macOS or
+Arial/Segoe UI on Windows, then Pillow's built-in default font. On non-Linux
+machines, or anywhere DejaVu Sans is missing, the script still runs but the text
+shifts slightly, so the regenerated PNG will differ from the committed one. Only
+DejaVu Sans reproduces it exactly: install the DejaVu fonts (e.g. apt install
+fonts-dejavu-core, brew install --cask font-dejavu) for an identical render.
+See tools/README.md.
 """
 from PIL import Image, ImageDraw, ImageFont
 import math, os

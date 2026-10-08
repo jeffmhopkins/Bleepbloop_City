@@ -29,7 +29,7 @@ This is written as a spec that Jeffrey, or his AI server, can build from. Anythi
   - **UDP 7551** for LAN discovery.
   - The old RakNet UDP 19132/19133 setup is only used if `transport=raknet`. That README also reports 26.51 logging NetherNet as the only supported transport.
   - Microsoft Learn's getting-started page still lists UDP 19132/19133, so **verify** in `bedrock_server_how_to.html` for the exact version you run. ([itzg README, NetherNet section](https://github.com/itzg/docker-minecraft-bedrock-server#nethernet))
-- **Allowlist is on by default** in recent BDS. An empty list refuses everyone. ([itzg README](https://github.com/itzg/docker-minecraft-bedrock-server#allowlist-is-on-by-default))
+- **The allowlist is off by default.** Microsoft documents `allow-list` as defaulting to `false` ([BDS server.properties](https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/server-properties)). Set `allow-list=true` explicitly in the `server.properties` the container uses, and keep `online-mode=true`, which the allowlist depends on. With it on, only gamertags in `allowlist.json` can join, so add everyone (`allowlist add <Gamertag>`) before the first join.
 - **Safe live backups** use `save hold` → poll `save query` → copy → `save resume`. ([Minecraft Wiki /save](https://minecraft.wiki/w/Commands/save))
   - `save hold` prepares a backup and returns immediately.
   - Poll `save query` until it reports the files are ready. It then lists every file as `path:length`.

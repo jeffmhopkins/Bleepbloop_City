@@ -13,7 +13,7 @@ Server settings and world-level config live here. For the files themselves (`ser
 ### Game version and new game rules
 
 - **Keep the server on the clients' version.** Bedrock **26.60** is scheduled for **October 27, 2026** ([wiki](https://minecraft.wiki/w/Bedrock_Edition_26.60)). When players' games update, plan to update the server to match the same day, or they may not be able to join.
-- **Locator bar:** friends show as colored markers on the HUD, which helps with coordinates off. The Bedrock game rule is `playerwaypoints` (since 26.30): `everyone` (default) or `off` ([Game rule](https://minecraft.wiki/w/Game_rule)). Players can hide their marker by sneaking or wearing a carved pumpkin.
+- **Locator bar:** friends show as colored markers on the HUD, which helps with coordinates off. The Bedrock game rule is `playerwaypoints` (since 26.30): `everyone` (default) or `off` ([Game rule](https://minecraft.wiki/w/Game_rule)). It shows every online player's position to everyone, so it's on the [chat assistant's rethink list](chat-assistant.md#access-policy) if a stranger ever joins. Players can hide their marker by sneaking or wearing a carved pumpkin.
 - **Group travel:** a harnessed [happy ghast](happy-ghast.md) carries 4 players.
 
 ### Ticking area: iron farm and item sorter
