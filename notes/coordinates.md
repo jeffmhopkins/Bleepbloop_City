@@ -25,7 +25,7 @@ Write locations down the moment you find them. Dimension is Overworld, Nether, o
 
 | Name | Dimension | X | Y | Z | Notes |
 | --- | --- | --- | --- | --- | --- |
-| | | | | | |
+| Lava pool behind the first house | Overworld | | | | Right behind Jeffrey's first house (the cherry-wood one), close to water (reported 2026-10-07; coordinates off, so by landmark). **Fire risk:** lava can set wood alight a block or two away, so cover any lava within a couple of blocks of the house with cobble. **Later:** pour water from a bucket onto the still lava (a source block) to make obsidian for the Nether portal and the enchanting table; water on flowing lava only makes cobblestone ([Lava](https://minecraft.wiki/w/Lava)). |
 
 ## Navigating without coordinates
 
