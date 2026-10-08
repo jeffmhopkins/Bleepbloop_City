@@ -10,6 +10,13 @@ If this is a multiplayer server, do these early.
 
 Server settings and world-level config live here. For the files themselves (`server.properties`, `allowlist.json`, `permissions.json`) and moving them to the Linux box, see [server migration](server-migration.md#verified-facts-this-plan-relies-on).
 
+### Open server settings (Jeffrey to decide)
+
+Not set yet. Decide these before more players join; nothing here has been changed on the server.
+
+- [ ] **Multiplayer sleep: `playerssleepingpercentage`** (Bedrock game rule; Java spells it `players_sleeping_percentage`). It's the percentage of players in the Overworld who must be asleep to skip the night. Default `100`, meaning everyone. `0` or less lets one sleeper skip the night, and over `100` means the night is never skipped. It can be changed without cheats, so achievements stay on ([Game rule](https://minecraft.wiki/w/Game_rule)). From the BDS console: `gamerule playerssleepingpercentage <number>`. **Value: undecided.**
+- [ ] **Difficulty:** the `difficulty` line in `server.properties` (`peaceful`, `easy`, `normal` or `hard`; Microsoft documents the default as `easy`) ([BDS server.properties](https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/server-properties)). **The current value is unknown;** check the file. It changes the plan's hazards: cave spider bites only poison on Normal and Hard ([Cave Spider](https://minecraft.wiki/w/Cave_Spider)), and a TNT sulfur cube's blast tops out at 22.5 / 43 / 64.5 damage on Easy / Normal / Hard ([Sulfur Cube](https://minecraft.wiki/w/Sulfur_Cube)). **Value: undecided.**
+
 ### Game version and new game rules
 
 - **Keep the server on the clients' version.** Bedrock **26.60** is scheduled for **October 27, 2026** ([wiki](https://minecraft.wiki/w/Bedrock_Edition_26.60)). When players' games update, plan to update the server to match the same day, or they may not be able to join.

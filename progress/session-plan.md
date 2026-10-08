@@ -16,7 +16,7 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 ## How a session fits in real time
 
 - **A Minecraft day is 20 minutes:** 10 minutes of daytime, then sunset, night and sunrise ([Daylight cycle](https://minecraft.wiki/w/Daylight_cycle)). If you sleep at every dusk, a 60-minute session gets about four or five daytimes.
-- **Sleep at dusk.** In multiplayer, everyone in the Overworld has to be in bed at once, unless the server's `playerssleepingpercentage` game rule is lowered ([Bed](https://minecraft.wiki/w/Bed)). Skipping sleep for several nights brings phantoms.
+- **Sleep at dusk.** In multiplayer, everyone in the Overworld has to be in bed at once, unless the server's `playerssleepingpercentage` game rule is lowered ([Bed](https://minecraft.wiki/w/Bed)). Its value is still an [open server setting](../plans/multiplayer-server.md#open-server-settings-jeffrey-to-decide). Skipping sleep for several nights brings phantoms.
 - **Spend the first 2–3 minutes** of each session finishing the last session's carry-over items. Spend the last 5 minutes putting things in chests, writing the **X Y Z of every new place** in [coordinates](../notes/coordinates.md), and noting what got done for the session log.
 
 ## Carry-over rule
