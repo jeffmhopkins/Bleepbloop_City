@@ -9,21 +9,22 @@
 ### Minimum kit
 - [x] Crafting table
 - [x] Furnace
-- [ ] Two chests (1 of 2 so far)
-- [ ] A door
-- [ ] Torches every 7–8 blocks (no lighting yet)
+- [ ] Two chests (1 of 2 confirmed; a second chest wasn't reported in Session 2)
+- [ ] A door (not reported yet)
+- [ ] Torches every 7–8 blocks (a stack of torches made 2026-10-07; placement not reported)
 - [ ] Optional: a **bundle** (1 string + 1 leather) holds a stack's worth of mixed items in one slot
 
 ### Farm
-- [ ] Till a 9×9 plot of dirt with a water source in the middle
-- [ ] Fence it
-- [ ] Plant wheat
+- [ ] Till a 9×9 plot of dirt with a water source in the middle (partial: a starter patch tilled right beside the water instead, since there's no bucket yet)
+- [ ] Fence it (not reported)
+- [x] Plant wheat (about 15 next to water, 2026-10-07; not mature yet)
 - [ ] Add carrots or potatoes once you find them
 
 Bread and baked potatoes carry you until you have a cow pen.
 
 ### Animal pen
-- [ ] Pen with two cows minimum (not started; no animal pens yet)
+- [x] Build the pen (2026-10-07; empty so far)
+- [ ] Pen with two cows minimum (no cows yet: lead them in with wheat once it's ready)
 - [ ] Add sheep
 - [ ] Add chickens
 - [ ] Breed only when you have extra food
@@ -50,3 +51,6 @@ Bread and baked potatoes carry you until you have a cow pen.
 ## Notes
 
 _Add notes from this phase here. Log the outpost location in [coordinates](../notes/coordinates.md)._
+
+- 2026-10-06 (Session 1): crafting table, furnace, one chest.
+- 2026-10-07 (Session 2): about 15 wheat planted next to water (no bucket, so beside the water), animal pen built but empty because the wheat hasn't matured. Lots of wood gathered, mostly cherry, with cherry trees replanted for saplings. Found sand, a couple of sugar cane (planting by the water likely but unconfirmed) and some kelp. Still on stone tools; no iron yet. Not reported: a second chest, a door, and whether the field and pen are fenced and lit.

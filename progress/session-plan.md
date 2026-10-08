@@ -1,6 +1,6 @@
 # Session plan: Sessions 2–6
 
-**Status:** 📋 Plan only. Nothing here is checked off until Jeffrey reports it in the [session log](session-log.md).
+**Status:** 📋 Plan only. Nothing here is checked off until Jeffrey reports it in the [session log](session-log.md). Session 2 was played 2026-10-07 and is marked below (✅ done, ⏳ partial or not reported); its carry-over is at the top of Session 3.
 **Based on:** [Session 1 (2026-10-06)](session-log.md), the [tracker](tracker.md), and the phase files ([1](../plans/phase-1-first-night.md), [2](../plans/phase-2-starter-outpost.md), [3](../plans/phase-3-pick-the-site.md), [4](../plans/phase-4-the-base.md), [5](../plans/phase-5-infrastructure.md)).
 **Server:** Bedrock 26.50 (Wilderness Bound). Mechanics below were checked on the [Minecraft Wiki](https://minecraft.wiki) (2026-10-07).
 **Time box:** each session is planned for **60 minutes**, plus an optional **"if you have 90"** block.
@@ -94,6 +94,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 ## Session 2: Light, food, and the first farm
 
 **Goal:** finish Phase 1 (a lit shelter and a full stack of food), and get the Phase 2 farm, pen and second chest started.
+**Result (2026-10-07):** ✅ Phase 1 finished. ⏳ Farm and pen started; cows, second chest, door, fence and light still open ([session log](session-log.md)).
 **Advances:** Phase 1 (finishes it), Phase 2, Phase 3 (a first look at the site).
 
 **Bring / have ready**
@@ -102,24 +103,24 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - A few spare wool, for a banner if you find the site.
 
 **60-minute plan**
-- [ ] **0:00–0:10 Light.** Smelt logs into charcoal (planks or logs as fuel). Craft torches (1 coal or charcoal + 1 stick = 4 torches). Light the bed area and wherever you shelter, and add a door. Most monsters only spawn at block light 0, so every torch counts.
-- [ ] **0:10–0:25 Food stack.** Hunt nearby cows, pigs, sheep and chickens and cook the meat in the furnace. Aim for a full stack (64). Break tall grass as you go to collect wheat seeds.
-- [ ] **0:25–0:45 Wheat farm.** Till the Phase 2 plot next to water and plant the seeds. Water hydrates farmland up to 4 blocks away. Fence it so mobs don't trample it, and keep it lit: on Bedrock, wheat needs light 9 to grow ([Wheat Seeds](https://minecraft.wiki/w/Wheat_Seeds)). **Sugar cane:** if you pass any, grab a few stalks and plant them on dirt or sand right next to the water. It's slow to multiply, and it gates paper for both books and maps.
-- [ ] **0:45–0:55 Animal pen.** Fence a pen with a gate. Cows and sheep follow you while you hold **wheat**, and chickens follow **seeds**. If there's no wheat yet, fence the pen where cows already graze, or wait for the first harvest in Session 3. Two cows minimum.
-- [ ] **0:55–1:00 Second chest + log it.** Craft a chest (8 planks) and split your things into tools, food and blocks. Write the bed, spawn and tree-farm landmarks in [coordinates](../notes/coordinates.md).
+- [ ] ⏳ **0:00–0:10 Light.** *(Done: charcoal and a stack of torches. Not reported: torch placement, door.)* Smelt logs into charcoal (planks or logs as fuel). Craft torches (1 coal or charcoal + 1 stick = 4 torches). Light the bed area and wherever you shelter, and add a door. Most monsters only spawn at block light 0, so every torch counts.
+- [x] ✅ **0:10–0:25 Food stack.** *(Full stack.)* Hunt nearby cows, pigs, sheep and chickens and cook the meat in the furnace. Aim for a full stack (64). Break tall grass as you go to collect wheat seeds.
+- [ ] ⏳ **0:25–0:45 Wheat farm.** *(About 15 wheat planted beside water, not mature yet. Fence and light not reported. A couple of sugar cane found; planting unconfirmed.)* Till the Phase 2 plot next to water and plant the seeds. Water hydrates farmland up to 4 blocks away. Fence it so mobs don't trample it, and keep it lit: on Bedrock, wheat needs light 9 to grow ([Wheat Seeds](https://minecraft.wiki/w/Wheat_Seeds)). **Sugar cane:** if you pass any, grab a few stalks and plant them on dirt or sand right next to the water. It's slow to multiply, and it gates paper for both books and maps.
+- [ ] ⏳ **0:45–0:55 Animal pen.** *(Pen built; no cows yet because there's no wheat to lead them.)* Fence a pen with a gate. Cows and sheep follow you while you hold **wheat**, and chickens follow **seeds**. If there's no wheat yet, fence the pen where cows already graze, or wait for the first harvest in Session 3. Two cows minimum.
+- [ ] ⏳ **0:55–1:00 Second chest + log it.** *(Not reported. No new landmarks given.)* Craft a chest (8 planks) and split your things into tools, food and blocks. Write the bed, spawn and tree-farm landmarks in [coordinates](../notes/coordinates.md).
 
 **If you have 90**
-- [ ] **Site walk near spawn (daylight only).** Check the two Phase 3 items that aren't confirmed yet: **flat or gently sloped ground**, and a **village** (or a plains, meadow or river edge). If one spot has both, mark it with a banner (6 wool of one color + 1 stick) or a tall pillar.
-- [ ] **Look at the mountain.** Iron also generates high up (it shows up from Y=80 to the top of the world, so mountains have plenty), and emerald ore appears in mountain and cherry grove biomes ([Ore](https://minecraft.wiki/w/Ore)). Note any exposed iron or coal for Session 3.
-- [ ] **Abandoned camp.** If you spot one, raid it and leave (copper gear, buckets, compasses, sometimes iron). Log it.
-- [ ] **(new) Bundle:** if the cows dropped leather and you have string, 1 string + 1 leather makes a bundle. It holds a stack's worth of mixed items in one slot, which helps for the Session 3 mine (torches, food, odd ores). Optional: leather is also needed for books and item frames.
+- [ ] ⏳ **Site walk near spawn (daylight only).** *(Not reported.)* Check the two Phase 3 items that aren't confirmed yet: **flat or gently sloped ground**, and a **village** (or a plains, meadow or river edge). If one spot has both, mark it with a banner (6 wool of one color + 1 stick) or a tall pillar.
+- [ ] ⏳ **Look at the mountain.** *(Not done: no iron search yet.)* Iron also generates high up (it shows up from Y=80 to the top of the world, so mountains have plenty), and emerald ore appears in mountain and cherry grove biomes ([Ore](https://minecraft.wiki/w/Ore)). Note any exposed iron or coal for Session 3.
+- [ ] ⏳ **Abandoned camp.** *(Not reported.)* If you spot one, raid it and leave (copper gear, buckets, compasses, sometimes iron). Log it.
+- [ ] ⏳ **(new) Bundle:** *(Not reported.)* if the cows dropped leather and you have string, 1 string + 1 leather makes a bundle. It holds a stack's worth of mixed items in one slot, which helps for the Session 3 mine (torches, food, odd ores). Optional: leather is also needed for books and item frames.
 
 **Done when**
-- [ ] The bed area and shelter are lit, with a door.
-- [ ] A full stack of food is in the chest or your inventory.
-- [ ] The wheat is planted, fenced and lit.
-- [ ] A pen with a gate exists, with at least 2 cows in it (or the pen is built and cows come once there's wheat).
-- [ ] Two chests.
+- [ ] ⏳ The bed area and shelter are lit, with a door. *(Torches made; door not reported.)*
+- [x] ✅ A full stack of food is in the chest or your inventory.
+- [ ] ⏳ The wheat is planted, fenced and lit. *(Planted; fence and light not reported.)*
+- [ ] ⏳ A pen with a gate exists, with at least 2 cows in it (or the pen is built and cows come once there's wheat). *(Pen built, empty; gate not reported.)*
+- [ ] ⏳ Two chests. *(Not reported.)*
 
 **Safety and night**
 - Light first, then food. Don't walk far at dusk; sleep instead.
@@ -146,6 +147,12 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - 2–3 stone picks, a stone sword, a full stack of food, and 1–2 stacks of torches.
 - Cobble for blocking lava and water, plus a crafting table and furnace (or come back up to smelt).
 - **Depth without coordinates:** iron is most common around **Y=14–16**. Stone turns into **deepslate between Y=8 and Y=0** ([Deepslate](https://minecraft.wiki/w/Deepslate)). When deepslate starts appearing, you're just below the iron sweet spot, so mine along there. Alternatively, an operator can turn coordinates on (see the [coordinates note](../notes/coordinates.md)).
+
+**Carry-over from Session 2 (do these first)**
+- [ ] **Cows into the pen** once the wheat is ready: hold wheat and the cows follow you. At least 2.
+- [ ] **Second chest** if there isn't one yet (8 planks).
+- [ ] **Check the wheat field is fenced and lit** (light 9 on Bedrock), and add a door to the house if it doesn't have one.
+- [ ] **Sugar cane:** plant the stalks on dirt or sand right next to the water if they aren't in yet, and spread new stalks along the bank.
 
 **60-minute plan**
 - [ ] **0:00–0:05 Prep.** Eat, top up torches (craft more from coal as you find it), and set out at the start of a day.

@@ -1,7 +1,7 @@
 # Phase 1 — First night
 
 **Goal:** Do not die.
-**Status:** 🟨 In progress (started 2026-10-06). Only food is left: a full stack is still needed.
+**Status:** ✅ Done (started 2026-10-06, finished 2026-10-07 in Session 2).
 
 Do this before you decorate anything.
 
@@ -21,8 +21,8 @@ Do this before you decorate anything.
 - [x] Get wool: kill sheep or find an abandoned camp (bed made in Session 1)
 
 ### Shelter and sleep
-- [ ] Dig a 1×2 hole in a hillside, or pillar up if you're in a bad biome
-- [ ] Light it (no lighting yet as of 2026-10-07)
+- [x] Dig a 1×2 hole in a hillside, or pillar up if you're in a bad biome (a small cherry-wood house instead, 2026-10-07)
+- [x] Light it (charcoal torches made 2026-10-07; a stack on hand)
 - [ ] If there's no real bed yet, use a straw bed to skip the night
 - [x] Sleep in a real bed as soon as you have 3 wool and 3 planks, so your spawn is set (bed made 2026-10-06)
 
@@ -37,10 +37,11 @@ Do this before you decorate anything.
 ## Done when
 
 - [x] I have a bed
-- [ ] I have a stack of food (partial: only a little food as of 2026-10-06)
+- [x] I have a stack of food (2026-10-07)
 - [x] I have a stone tool set
 - [x] I have a chest
 
 ## Notes
 
 - 2026-10-06 (Session 1): bed, crafting table, furnace, one chest, stone tools, a little food. 12 trees replanted for easier wood. Stone tools were reported as "only stone tools right now"; the exact set wasn't listed. Logs and cobble were confirmed afterward (amounts not given). Extra wool on hand. No lighting yet; shelter not reported, so both stay unchecked.
+- 2026-10-07 (Session 2): charcoal and torches made (a stack on hand), first little house built and dressed up with cherry wood, full stack of food. That finishes Phase 1. Exact torch placement and a door weren't reported; those stay open in [Phase 2](phase-2-starter-outpost.md).

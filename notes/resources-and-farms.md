@@ -5,8 +5,10 @@
 | Farm | Type | Location | Status | Notes |
 | --- | --- | --- | --- | --- |
 | Tree farm (12 trees replanted for easier wood) | Trees | Not recorded yet | 🟨 Planted 2026-10-06 | Session 1 |
-| Starter crop farm (9×9, wheat → carrots/potatoes) | Crops | | ⬜ Not started | Phase 2 |
-| Animal pen (cows, sheep, chickens) | Animals | | ⬜ Not started | Phase 2 |
+| Cherry tree farm (cherry trees replanted for more saplings) | Trees | Not recorded yet | 🟨 Replanted 2026-10-07 | Session 2. Cherry wood is going into the first house |
+| Starter crop farm (9×9, wheat → carrots/potatoes) | Crops | Next to water (spot not recorded) | 🟨 Planted 2026-10-07 | Phase 2. About 15 wheat, not mature yet. Fence and light unconfirmed |
+| Animal pen (cows, sheep, chickens) | Animals | Not recorded yet | 🟨 Built 2026-10-07, empty | Phase 2. No animals yet; lead cows in with wheat once it's ready |
+| Starter sugar cane (by water) | Crops | Not recorded yet | 🟨 Started 2026-10-07 (unconfirmed) | A couple of stalks found in Session 2; planting by the water not confirmed. Paper for maps and books |
 | Crop farm + composter (food wing) | Crops | | ⬜ Not started | Phase 4 |
 | Animal barn with a gate | Animals | | ⬜ Not started | Phase 4 |
 | Sugar cane farm | Auto / semi-auto | | ⬜ Not started | Books for enchanting; Phase 4–5 |

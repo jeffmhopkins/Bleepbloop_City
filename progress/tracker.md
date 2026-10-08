@@ -2,14 +2,14 @@
 
 Update this when a phase starts or finishes, and mirror the current phase on the [README dashboard](../README.md).
 
-**Next sessions:** [session plan for Sessions 2–6](session-plan.md). It's a plan only: boxes here get ticked when Jeffrey reports them, not from the plan.
+**Next sessions:** [session plan for Sessions 2–6](session-plan.md) (Session 2 played 2026-10-07; Session 3 is next). It's a plan only: boxes here get ticked when Jeffrey reports them, not from the plan.
 
 **Status key:** ⬜ Not started · 🟨 In progress · ✅ Done · ⏸️ On hold
 
 | Phase | Status | Started | Finished | Notes |
 | --- | --- | --- | --- | --- |
-| [1 — First night](../plans/phase-1-first-night.md) | 🟨 In progress | 2026-10-06 | | Bed, chest, stone tools done; food stack left |
-| [2 — Starter outpost](../plans/phase-2-starter-outpost.md) | 🟨 In progress | 2026-10-06 | | Started early: crafting table, furnace, 1 of 2 chests |
+| [1 — First night](../plans/phase-1-first-night.md) | ✅ Done | 2026-10-06 | 2026-10-07 | Bed, chest, stone tools (Session 1); torches and a full food stack (Session 2) |
+| [2 — Starter outpost](../plans/phase-2-starter-outpost.md) | 🟨 In progress | 2026-10-06 | | Crafting table, furnace, ~15 wheat by water, pen built (no cows yet). Second chest and door unconfirmed; no iron yet |
 | [3 — Pick the real site](../plans/phase-3-pick-the-site.md) | ⬜ Not started | | | |
 | [4 — The base that lasts](../plans/phase-4-the-base.md) | ⬜ Not started | | | |
 | [5 — Infrastructure](../plans/phase-5-infrastructure.md) | ⬜ Not started | | | |
@@ -17,7 +17,7 @@ Update this when a phase starts or finishes, and mirror the current phase on the
 ## First-session checklist
 
 - [x] Bed set (2026-10-06)
-- [ ] Food farm planted
+- [x] Food farm planted (2026-10-07: ~15 starter wheat by water)
 - [ ] Iron tools
 - [ ] Site chosen
 - [ ] Storage started (one chest so far)
@@ -54,6 +54,7 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | Date | Milestone |
 | --- | --- |
 | 2026-10-06 | Server started; first bed made, spawn set (Session 1) |
+| 2026-10-07 | Phase 1 done: torches and a full food stack; first wheat planted and animal pen built (Session 2) |
 | | Storage sorter Stage 0: manual chests by group + one test hopper slice ([growth stages](../plans/storage-layout.md#4-growth-stages)) |
 | | Storage sorter Stage 1: front-left wing (stone family, 13 slices) + router, input barrels, intake and overflow in Machinery; whole U trunk laid |
 | | Storage sorter Stage 2: front-right wing (farming & food + brewing, 22 slices) + smokers running |
