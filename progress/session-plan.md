@@ -276,7 +276,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [ ] At least 5 diamonds: 3 for a pick and 2 for the enchanting table. A diamond pick is crafted.
 - [ ] At least 4 obsidian mined (14 if Session 6 will build a portal from mined blocks).
 - [ ] Redstone and lapis in the chests. A compass is crafted.
-- [ ] Gold for Session 6: at least 5 ingots for a golden helmet, plus any spares for piglin bartering.
+- [ ] Gold for Session 6: at least 4 ingots for golden boots (or 5 for a helmet), plus any spares for piglin bartering.
 
 **Safety and night**
 - **Lava is the main danger this deep.** Never dig down or toward the unknown with an empty hand; keep the water bucket on your hotbar.
@@ -302,7 +302,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Bring / have ready**
 - **10 obsidian.** A portal frame is at least 4×5, and the four corners are optional ([Nether Portal](https://minecraft.wiki/w/Nether_Portal)). You can also cast obsidian in place with a water bucket and lava, or complete a ruined portal.
 - **Flint and steel:** 1 iron + 1 flint (flint comes from gravel).
-- **At least one piece of golden armor, worn the whole trip.** Piglins attack players who aren't wearing any gold armor ([Piglin](https://minecraft.wiki/w/Piglin)). A golden helmet is 5 gold ingots, which is the cheapest piece.
+- **At least one piece of golden armor, worn the whole trip.** Piglins attack players who aren't wearing any gold armor ([Piglin](https://minecraft.wiki/w/Piglin)). Golden boots (4 gold ingots) are the cheapest piece; a helmet is 5 ([Golden Boots](https://minecraft.wiki/w/Golden_Boots), [Golden Helmet](https://minecraft.wiki/w/Golden_Helmet)).
 - **Spare gold ingots for bartering** (optional, from the Session 5 gold). Piglins trade **1 gold ingot per barter**: drop one near a piglin or use it on one, and after it looks at it (about 8 seconds on Bedrock) it throws back a random item ([Bartering](https://minecraft.wiki/w/Bartering)). Per ingot, the chances include about **2.1%** for a dried ghast, about **1.7%** for a potion of Fire Resistance and another 1.7% for a splash one, plus common junk like gravel, blackstone and nether bricks.
 - **A fire resistance potion,** if you have one (from a barter, say), to drink if you catch fire. You almost certainly won't yet. Either way, this trip stays next to the portal.
 - Full iron gear, a shield, food, a stack of cobble, a pick for quartz, and a few torches.
