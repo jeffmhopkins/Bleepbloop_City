@@ -229,7 +229,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Repo boxes this should tick (once reported)**
 - [Phase 3](../plans/phase-3-pick-the-site.md): the remaining site checklist items, *Mark the site…*, *Record the coordinates…*, *Give the new site a door / light / a chest*, *Move the bed*, and all three *Done when* boxes. Phase 3 row → ✅.
 - [Phase 4](../plans/phase-4-the-base.md) §1 storage wall: *Double chests in a row* (or the group chests), *Label them*, *One input chest by the door*. §3 food wing: *Composter* (90 block).
-- [Tracker](tracker.md) first-session checklist: *Site chosen* and *Storage started*. Tracker milestone: *Storage sorter Stage 0* (manual chests; the test hopper slice comes later). Phase 4 row → 🟨.
+- [Tracker](tracker.md) first-session checklist: *Site chosen* and *Storage started*. Tracker: move *Storage sorter Stage 0* from Planned milestones to Achieved (manual chests; the test hopper slice comes later). Phase 4 row → 🟨.
 - [Phase 2](../plans/phase-2-starter-outpost.md): *Add carrots or potatoes*, *Add sheep*, *Add chickens* (90 block).
 - [Coordinates](../notes/coordinates.md): *Real base*.
 - [Phase 4](../plans/phase-4-the-base.md) §2 workshop: *Cartography table*; §7 local-area map: *First locator map of the base and spawn* (90 block).

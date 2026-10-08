@@ -49,24 +49,35 @@ See [plans/building-goals.md](../plans/building-goals.md).
 | 8 | [Lighthouse or watchtower](../plans/building-goals.md#8-lighthouse-or-watchtower) | ⬜ Not started | | | |
 | 9 | [Mine entrance building](../plans/building-goals.md#9-mine-entrance-building) | ⬜ Not started | | | |
 
-## Milestones
+## Achieved
+
+Only things that actually happened, with the date Jeffrey reported them. Add a row when a milestone below is reached (or anything else worth remembering).
 
 | Date | Milestone |
 | --- | --- |
 | 2026-10-06 | Server started; first bed made, spawn set (Session 1) |
 | 2026-10-07 | Phase 1 done: torches and a full food stack; first wheat planted and animal pen built (Session 2) |
-| | Storage sorter Stage 0: manual chests by group + one test hopper slice ([growth stages](../plans/storage-layout.md#4-growth-stages)) |
-| | Storage sorter Stage 1: front-left wing (stone family, 13 slices) + router, input barrels, intake and overflow in Machinery; whole U trunk laid |
-| | Storage sorter Stage 2: front-right wing (farming & food + brewing, 22 slices) + smokers running |
-| | Storage sorter Stage 3: mid-left (ores, copper, redstone) + mid-right (wood, build blocks) wings, 30 slices + blast furnaces + lava (junk list) running |
-| | Storage sorter Stage 4: golem gallery showpiece running behind glass (Dome) |
-| | Storage sorter Stage 5: back-left (decor colors, Nether, End) + back-right (mob drops, tools/armor/enchanting, transport) wings, 22 slices + shulker unloader feeding the router |
-| | Storage sorter Stage 5 expansion: ★ items grown into each wing's reserved room; hall dressed as the Copper storage hall (ongoing) |
-| | Storage sorter add-on: auto furnace (blast furnaces + smokers) running off the sorter |
-| | Storage sorter add-on: lava garbage disposal taking junk + overflow |
-| | Storage sorter add-on: shulker box auto unloader feeding the sorter |
-| | Server Stage 0: world migrated to the Linux container; Windows copy kept as rollback |
-| | Server Stage 1: automated backups running; test restore done |
-| | Server Stage 2: first snapshot analyzed (map + tracker update) |
-| | Server Stage 3: live API events flowing; read access via token |
-| | |
+
+## Planned milestones
+
+Not reached yet. When one is, move it up to [Achieved](#achieved) with its date. Wording rule: **stages** are for the storage sorter and the server; **phases** are for the game.
+
+**Storage sorter** ([growth stages](../plans/storage-layout.md#4-growth-stages), [one table per stage](../plans/storage-stages.md)):
+
+- Stage 0: manual chests by group + one test hopper slice
+- Stage 1: front-left wing (stone family, 13 slices) + router, input barrels, intake and overflow in Machinery; whole U trunk laid
+- Stage 2: front-right wing (farming & food + brewing, 22 slices) + smokers running
+- Stage 3: mid-left (ores, copper, redstone) + mid-right (wood, build blocks) wings, 30 slices + blast furnaces + lava (junk list) running
+- Stage 4: golem gallery showpiece running behind glass (Dome)
+- Stage 5: back-left (decor colors, Nether, End) + back-right (mob drops, tools/armor/enchanting, transport) wings, 22 slices + shulker unloader feeding the router
+- Stage 5 expansion: ★ items grown into each wing's reserved room; hall dressed as the Copper storage hall (ongoing)
+- Add-on: auto furnace (blast furnaces + smokers) running off the sorter
+- Add-on: lava garbage disposal taking junk + overflow
+- Add-on: shulker box auto unloader feeding the sorter
+
+**Server** ([server migration](../plans/server-migration.md)):
+
+- Stage 0: world migrated to the Linux container; Windows copy kept as rollback
+- Stage 1: automated backups running; test restore done
+- Stage 2: first snapshot analyzed (map + tracker update)
+- Stage 3: live API events flowing; read access via token

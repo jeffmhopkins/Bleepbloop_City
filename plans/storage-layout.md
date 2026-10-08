@@ -500,7 +500,7 @@ Items from recent drops were checked against the Minecraft Wiki (2026-10-07): th
 
 > **One table per stage:** [storage-stages.md](storage-stages.md) breaks this down into a self-contained item table for each stage, generated from §3.
 
-**This is the one place the storage build-out stages live.** [Storage and sorting](storage-and-sorting.md#stages) points here, and the [tracker](../progress/tracker.md) milestones match these stage numbers.
+**This is the one place the storage build-out stages live.** [Storage and sorting](storage-and-sorting.md#stages) points here, and the [tracker](../progress/tracker.md#planned-milestones) planned milestones match these stage numbers.
 
 **Stages follow the build order of Jeffrey's hall.** His stage labels say which wings get built when. Each stage builds its wing(s) and automates **exactly the groups that live there** in the [final layout](#final-layout-finished-hall). A group whose wing isn't built yet stays in its Stage 0 manual group chest until then.
 
