@@ -31,6 +31,7 @@ One entry per play session, newest at the top. Copy the template below (also in 
 - Made charcoal and torches; a stack of torches on hand
 - Spent time making the first little house pretty with cherry wood
 - Gathered a lot of wood, mostly cherry, and replanted a bunch of cherry trees for more saplings
+- Nine oak trees planted and growing
 - Full stack of food (finishes Phase 1)
 - About 15 wheat growing next to water (no bucket yet, so planted right beside the water); not mature yet
 - Built an animal pen, but no cows in it yet: the wheat hasn't matured, so there's nothing to lead them with

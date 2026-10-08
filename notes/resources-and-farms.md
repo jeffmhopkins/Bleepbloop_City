@@ -4,7 +4,7 @@
 
 | Farm | Type | Location | Status | Notes |
 | --- | --- | --- | --- | --- |
-| Tree farm (12 trees replanted for easier wood) | Trees | Not recorded yet | 🟨 Planted 2026-10-06 | Session 1 |
+| Tree farm (12 trees replanted for easier wood) | Trees | Not recorded yet | 🟨 Planted 2026-10-06 | Session 1. Plus 9 oak growing (Session 2, 2026-10-07) |
 | Cherry tree farm (cherry trees replanted for more saplings) | Trees | Not recorded yet | 🟨 Replanted 2026-10-07 | Session 2. Cherry wood is going into the first house |
 | Starter crop farm (9×9, wheat → carrots/potatoes) | Crops | Next to water (spot not recorded) | 🟨 Planted 2026-10-07 | Phase 2. About 15 wheat, not mature yet. Fence and light unconfirmed |
 | Animal pen (cows, sheep, chickens) | Animals | Not recorded yet | 🟨 Built 2026-10-07, empty | Phase 2. No animals yet; lead cows in with wheat once it's ready |
