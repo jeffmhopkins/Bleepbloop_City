@@ -2,7 +2,7 @@
 
 **When:** Week 1–2
 **Goal:** Build function rooms before looks.
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md). Checkboxes below are this phase's task list.
 
 ## Tasks
 

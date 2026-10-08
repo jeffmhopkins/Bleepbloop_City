@@ -1,6 +1,6 @@
 # Progress tracker
 
-Update this when a phase starts or finishes, and mirror the current phase on the [README dashboard](../README.md).
+**This is the one status file for the repo.** Phase status, the first-session checklist, big-goal and building-goal status, and milestones live here only; the README, the master plan, and the phase files link here instead of copying it. Update it when a phase starts or finishes or a checklist item is reached.
 
 **Next sessions:** [session plan for Sessions 2–6](session-plan.md) (Session 2 played 2026-10-07; Session 3 is next). It's a plan only: boxes here get ticked when Jeffrey reports them, not from the plan.
 

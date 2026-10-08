@@ -2,7 +2,7 @@
 
 **When:** Days 1–3
 **Goal:** A shack, not a home. Put it near spawn or your first bed so you can find it.
-**Status:** 🟨 In progress (started early, 2026-10-06)
+**Status:** see the [tracker](../progress/tracker.md). Checkboxes below are this phase's task list.
 
 ## Tasks
 

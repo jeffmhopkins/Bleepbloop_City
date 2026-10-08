@@ -31,12 +31,6 @@ Game version: Wilderness Bound (Java 26.3 / Bedrock 26.50), so straw beds, aband
 - [Building goals](building-goals.md): nine architecture projects (style direction: grand architecture; see [inspiration](building-style.md#inspiration)).
 - [Multiplayer server](multiplayer-server.md): spawn protection, world border, public hub, plots.
 
-## First-session checklist
+## Status
 
-- [x] Bed set
-- [ ] Food farm planted
-- [ ] Iron tools
-- [ ] Site chosen
-- [ ] Storage started
-
-Everything else is optional until those five are done.
+The first-session checklist (bed, food farm, iron tools, site, storage: everything else is optional until those five are done) and the status of every phase live in [progress/tracker.md](../progress/tracker.md). This file is the plan; the tracker is the status.

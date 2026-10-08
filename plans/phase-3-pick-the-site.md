@@ -2,7 +2,7 @@
 
 **When:** Before you build walls
 **Goal:** Find a site you'll still want in a month.
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md). Checkboxes below are this phase's task list.
 
 > **Decision (2026-10-07):** home base will be near world spawn. Look for the real site close to spawn.
 

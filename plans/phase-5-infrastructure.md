@@ -2,7 +2,7 @@
 
 **When:** Once iron is boring
 **Goal:** Add these in order. Each one removes a chore.
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md). Checkboxes below are this phase's task list.
 
 ## Tasks
 

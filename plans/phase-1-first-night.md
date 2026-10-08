@@ -1,7 +1,7 @@
 # Phase 1 — First night
 
 **Goal:** Do not die.
-**Status:** ✅ Done (started 2026-10-06, finished 2026-10-07 in Session 2).
+**Status:** see the [tracker](../progress/tracker.md). Checkboxes below are this phase's task list.
 
 Do this before you decorate anything.
 

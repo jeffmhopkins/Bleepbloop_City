@@ -7,46 +7,26 @@ Minecraft server planning: plans, progress, and notes for building Bleepbloop Ci
 
 > A good base is a logistics problem first and a building project second. Get safe, get food, get a bed, then pick a site you will still want in a month.
 
-## Status dashboard
+## Status
 
-**Current phase:** [Phase 2 — Starter outpost](plans/phase-2-starter-outpost.md), in progress. [Phase 1](plans/phase-1-first-night.md) finished 2026-10-07. Next up: cows into the pen, then iron (Session 3).
+**Where things stand lives in one place: [progress/tracker.md](progress/tracker.md).** Phase status, the first-session checklist, big-goal status, and achieved milestones are all there, and nowhere else.
 
-**Last session:** [Session 2, 2026-10-07](progress/session-log.md)
-**Next sessions:** [plan for Sessions 2–6](progress/session-plan.md) (60–90 minutes each; plan only, nothing checked until reported)
-
-| Phase | Status |
-| --- | --- |
-| [1 — First night](plans/phase-1-first-night.md) | ✅ Done |
-| [2 — Starter outpost](plans/phase-2-starter-outpost.md) | 🟨 In progress |
-| [3 — Pick the real site](plans/phase-3-pick-the-site.md) | ⬜ Not started |
-| [4 — The base that lasts](plans/phase-4-the-base.md) | ⬜ Not started |
-| [5 — Infrastructure](plans/phase-5-infrastructure.md) | ⬜ Not started |
-
-Full details and dates live in [progress/tracker.md](progress/tracker.md).
-
-### First-session checklist
-
-Everything else is optional until these five are done.
-
-- [x] Bed set
-- [x] Food farm planted
-- [ ] Iron tools
-- [ ] Site chosen
-- [ ] Storage started (one chest so far)
+- [Session log](progress/session-log.md): what happened each session
+- [Session plan](progress/session-plan.md): the next sessions (60–90 minutes each; plan only, nothing checked until reported)
 
 ## Big goals
 
-Long-term goals that span several phases.
+Long-term goals that span several phases. Their status is in the [tracker](progress/tracker.md#big-goals).
 
-| Goal | Plan | Status |
-| --- | --- | --- |
-| A highly automated item sorter: hopper chest hall doing the sorting, copper golem gallery as the showpiece ([grouping](plans/storage-layout.md), [stages](plans/storage-stages.md)) | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) | ⬜ Not started |
-| Nine building goals (grand architecture: mossy timber frames and oxidized copper towers; see [inspiration](plans/building-style.md#inspiration)): thatch cottage, copper storage hall, spawn town square, village glow-up, gatehouse and wall, farm district, Nether portal shrine, lighthouse/watchtower, mine entrance building | [plans/building-goals.md](plans/building-goals.md) | ⬜ Not started |
-| A happy ghast: a flying mount for 4 and a stand-on sky platform for the grand builds (from a Nether dried ghast) | [plans/happy-ghast.md](plans/happy-ghast.md) | ⬜ Not started |
-| A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) | ⬜ Not started |
-| Move the server to the AI server (container, automated backups, snapshot analysis) | [plans/server-migration.md](plans/server-migration.md) | ⬜ Not started |
-| Live API: tokenized connection from the server to Grok Bot | [plans/live-api.md](plans/live-api.md) | ⬜ Not started |
-| In-game chat assistant: ask "where is the nearest pig" (or the nearest diamond or village) and the local LLM answers privately, using read-only game tools; every player has unrestricted access, coordinates included | [plans/chat-assistant.md](plans/chat-assistant.md) | ⬜ Not started |
+| Goal | Plan |
+| --- | --- |
+| A highly automated item sorter: hopper chest hall doing the sorting, copper golem gallery as the showpiece ([grouping](plans/storage-layout.md), [stages](plans/storage-stages.md)) | [plans/storage-and-sorting.md](plans/storage-and-sorting.md) |
+| Nine building goals (grand architecture: mossy timber frames and oxidized copper towers; see [inspiration](plans/building-style.md#inspiration)): thatch cottage, copper storage hall, spawn town square, village glow-up, gatehouse and wall, farm district, Nether portal shrine, lighthouse/watchtower, mine entrance building | [plans/building-goals.md](plans/building-goals.md) |
+| A happy ghast: a flying mount for 4 and a stand-on sky platform for the grand builds (from a Nether dried ghast) | [plans/happy-ghast.md](plans/happy-ghast.md) |
+| A flying machine (end game) | [plans/flying-machine.md](plans/flying-machine.md) |
+| Move the server to the AI server (container, automated backups, snapshot analysis) | [plans/server-migration.md](plans/server-migration.md) |
+| Live API: tokenized connection from the server to Grok Bot | [plans/live-api.md](plans/live-api.md) |
+| In-game chat assistant: ask "where is the nearest pig" (or the nearest diamond or village) and the local LLM answers privately, using read-only game tools; every player has unrestricted access, coordinates included | [plans/chat-assistant.md](plans/chat-assistant.md) |
 
 ## Repo map
 
@@ -61,9 +41,7 @@ Long-term goals that span several phases.
 ## How to use this repo
 
 1. Work through the phases in order. Tick checkboxes in the phase file as you go.
-2. When a phase starts or finishes, update its row in [progress/tracker.md](progress/tracker.md) and the dashboard above.
+2. When a phase starts or finishes, or a checklist item or milestone is reached, update [progress/tracker.md](progress/tracker.md). That is the only status file; everything else links to it.
 3. After each play session, add an entry to [progress/session-log.md](progress/session-log.md).
 4. Write down every important location in [notes/coordinates.md](notes/coordinates.md) the moment you find it.
 5. Bigger builds get their own file from [templates/build-project.md](templates/build-project.md), or a GitHub issue.
-
-**Status key:** ⬜ Not started · 🟨 In progress · ✅ Done · ⏸️ On hold
