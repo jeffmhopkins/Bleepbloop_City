@@ -295,21 +295,26 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 
 ## Session 6: The Nether gateway
 
-**Goal:** place the enchanting table, build a boxed Nether portal, and make one short, careful trip for **nether quartz**. Quartz is needed for comparators (Stage 1 of the [item sorter](../plans/storage-layout.md#4-growth-stages)).
+**Goal:** place the enchanting table, build a boxed Nether portal, and make one short **quartz grab next to the portal**. Quartz is needed for comparators (Stage 1 of the [item sorter](../plans/storage-layout.md#4-growth-stages)).
 **Advances:** Phase 4 (enchanting), Phase 5 (Nether).
+**Not this session:** exploring the Nether, or a fortress run for blaze rods. The repo's rule is no Nether exploring in iron armor without fire resistance, and there won't be any fire resistance yet, so this trip stays inside the limited-scope rule under Safety. The fortress and brewing come later ([after Session 6](#after-session-6)).
 
 **Bring / have ready**
 - **10 obsidian.** A portal frame is at least 4×5, and the four corners are optional ([Nether Portal](https://minecraft.wiki/w/Nether_Portal)). You can also cast obsidian in place with a water bucket and lava, or complete a ruined portal.
 - **Flint and steel:** 1 iron + 1 flint (flint comes from gravel).
-- **At least one piece of golden armor,** so piglins stay neutral ([Piglin](https://minecraft.wiki/w/Piglin)). A golden helmet is 5 gold.
+- **At least one piece of golden armor, worn the whole trip.** Piglins attack players who aren't wearing any gold armor ([Piglin](https://minecraft.wiki/w/Piglin)). A golden helmet is 5 gold ingots, which is the cheapest piece.
+- **Spare gold ingots for bartering** (optional, from the Session 5 gold). Piglins trade **1 gold ingot per barter**: drop one near a piglin or use it on one, and after it looks at it (about 8 seconds on Bedrock) it throws back a random item ([Bartering](https://minecraft.wiki/w/Bartering)). Per ingot, the chances include about **2.1%** for a dried ghast, about **1.7%** for a potion of Fire Resistance and another 1.7% for a splash one, plus common junk like gravel, blackstone and nether bricks.
+- **A fire resistance potion,** if you have one (from a barter, say), to drink if you catch fire. You almost certainly won't yet. Either way, this trip stays next to the portal.
 - Full iron gear, a shield, food, a stack of cobble, a pick for quartz, and a few torches.
+- **The water bucket stays home.** Water vanishes the instant it's poured in the Nether ([Water](https://minecraft.wiki/w/Water)), so it can't put out fire or stop a fall there.
 - **No bed:** beds explode in the Nether. (A straw bed won't explode there; it just breaks and drops nothing.)
 - **(new, stretch)** Room in your inventory for a **dried ghast**, which breaks instantly by hand. For later: **10 snowballs** from the snow by spawn (a shovel on snow) and the **water bucket**, to start a [happy ghast](../plans/happy-ghast.md).
 
 **60-minute plan**
 - [ ] **0:00–0:10 Enchanting table.** Place it in the base (1 book + 2 diamonds + 4 obsidian) and do a first low-level enchant with lapis. Bookshelves come later; a level-30 table needs 15.
 - [ ] **0:10–0:25 Portal room.** The portal goes **in a room with a door, not in the open** (Phase 5), so nothing wanders through near the base. The room itself is Jeffrey's design, or the start of the [Nether portal shrine](../plans/building-goals.md#7-nether-portal-shrine). Build the frame and light it.
-- [ ] **0:25–0:50 Short Nether trip.** Step through. If the arrival spot is exposed, box it in with cobble. Mine **nether quartz** within sight of the portal; it's very common below Y=128. Head back by 0:50. Bring back 20+ quartz if you can.
+- [ ] **0:25–0:50 Quartz grab next to the portal.** Step through. If the arrival spot is exposed, box it in with cobble. Mine only the **nether quartz ore** you can reach while keeping the portal in sight. It generates from Y=10 to Y=117 in every Nether biome ([Nether Quartz Ore](https://minecraft.wiki/w/Nether_Quartz_Ore)), so there's usually some near the portal. Head back by 0:50. Bring back 20+ quartz if it's there; if not, come home with less.
+  - **Barter if a piglin comes to you** (optional): while wearing gold, give it 1 ingot at a time. Don't go after piglins, and don't open chests or break gold ore, nether gold ore or gilded blackstone near them, because that angers them even when you're wearing gold.
   - **(new, stretch) Dried ghast:** only if you've landed in or next to a **soul sand valley** and a **Nether fossil** (big bone-block skeleton) is within sight of the portal. About 1 fossil in 3 has a dried ghast next to it. Grab it and go back. Don't go looking for one on this trip.
 - [ ] **0:50–1:00 Log both sides.** Write the X Y Z of both portals in [coordinates](../notes/coordinates.md). Nether X and Z are the Overworld's divided by 8, and Y doesn't scale ([Nether Portal](https://minecraft.wiki/w/Nether_Portal)), so the numbers should roughly match that. Store the quartz.
 
@@ -326,7 +331,11 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [ ] Some nether quartz is in the chests.
 
 **Safety and night**
-- **Follow the repo's rule: don't explore the Nether in iron armor without fire resistance potions.** This trip is a short quartz grab near the portal, not exploration.
+- **Follow the repo's rule: don't explore the Nether in iron armor without fire resistance potions.** Without fire resistance, the trip follows this **limited-scope rule**:
+  - Always keep the portal in sight. If you can't see it, you've gone too far.
+  - Go straight back through the portal at the **first ghast**, the **first time you catch fire**, or if lava is between you and the portal.
+  - No digging down, no crossing lava, no bridging out, and no following anything away from the portal.
+  - Done by 0:50 whatever you have.
 - Ghast fireballs can be blocked with cobble. Don't dig down; lava seas sit low in the Nether. Don't hit piglins or zombified piglins (whole groups retaliate).
 - **(new)** Soul sand valleys have lots of skeletons and ghasts, and soul sand slows you down. That's why the dried ghast stays within sight of the portal.
 - If something goes wrong, go straight back through the portal. Before leaving, make sure the portal room's door is closed.
@@ -344,3 +353,14 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 ## After Session 6
 
 Phase 4 keeps going: the workshop, perimeter and spawn control, the sugar cane farm, and 15 bookshelves. Phase 5's trading hall follows, along with stockpiling iron and quartz for [storage Stage 1](../plans/storage-layout.md#4-growth-stages). **(new) Happy ghast:** if Session 6 found a dried ghast, finish it next: snowballs, a harness (3 leather + 2 glass + 1 wool), first flight. If not, look again on the next Nether trip; piglin barters can also give one. See [happy-ghast.md](../plans/happy-ghast.md). The next plan should be drawn up from whatever actually got done, using the carry-over rule above.
+
+### Future session: blaze rods and brewing (fire resistance)
+
+This is the step that lets the Nether rule relax. It's its own session (or two), not part of Session 6. In order:
+
+1. **Fire resistance for the fortress trip.** Finding a fortress means exploring, so by the repo's rule it needs fire resistance first. Before you can brew, the only way to get it is **bartering**: each gold ingot has about a 1.7% chance of a potion of Fire Resistance and 1.7% of a splash one, so roughly 1 in 29 ingots gives one or the other ([Bartering](https://minecraft.wiki/w/Bartering)). Bank gold from branch mining and barter near the portal, under the Session 6 limited-scope rule, until you have a couple. Each lasts 3 minutes ([Potion of Fire Resistance](https://minecraft.wiki/w/Potion_of_Fire_Resistance)).
+2. **Fortress run.** Nether fortresses are the only place blazes spawn ([Nether Fortress](https://minecraft.wiki/w/Nether_Fortress), [Blaze](https://minecraft.wiki/w/Blaze)). Bring back **blaze rods** and **nether wart** (it grows in fortress stairwell gardens). Plant the wart on soul sand at the base so you never need to go back for it.
+3. **Brewing stand:** 1 blaze rod + 3 cobblestone (any stone-tier block). It runs on **blaze powder**, and 1 powder fuels 20 brews ([Brewing Stand](https://minecraft.wiki/w/Brewing_Stand)).
+4. **Brew fire resistance:** a water bottle + nether wart makes an awkward potion. Add **magma cream** (blaze powder + slimeball, or dropped by magma cubes) to get Fire Resistance (3:00), and add redstone dust to extend it to 8:00 ([Magma Cream](https://minecraft.wiki/w/Magma_Cream), [Potion of Fire Resistance](https://minecraft.wiki/w/Potion_of_Fire_Resistance)).
+
+Once fire resistance is on tap, real Nether exploring (the hub, more fortresses, bastions) can go in the plan.

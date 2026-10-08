@@ -23,7 +23,9 @@
 - [ ] Nether portal in a boxed room with a door, not in the open
 - [ ] Small Nether hub
 - [ ] Mark portal and hub coordinates in [notes/coordinates.md](../notes/coordinates.md)
-- [ ] Do not explore the Nether in iron armor with no fire resistance potions
+- [ ] Do not explore the Nether in iron armor with no fire resistance potions. Until there's fire resistance, Nether trips follow the [Session 6 limited-scope rule](../progress/session-plan.md#session-6-the-nether-gateway): keep the portal in sight, and leave at the first ghast or fire
+- [ ] Fire resistance before the first fortress trip: barter gold with piglins (1 gold ingot per barter; about 1 in 29 ingots gives a fire resistance potion or splash potion)
+- [ ] Fortress run for blaze rods and nether wart, then a brewing stand, then brew fire resistance ([future session: blaze rods and brewing](../progress/session-plan.md#future-session-blaze-rods-and-brewing-fire-resistance))
 - [ ] Bring back a **dried ghast** for the [happy ghast](happy-ghast.md). Look by the Nether fossils in a soul sand valley (1 in 3 has one); a piglin barter can also give one
 
 ### 4. Roads
