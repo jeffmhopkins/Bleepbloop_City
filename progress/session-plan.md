@@ -179,7 +179,8 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Safety and night**
 - **Never dig straight down, and never mine the block you're standing on.** Lava pools get common deeper down.
 - The water bucket puts out fire and stops falls: carry it once you have it. Use the shield against skeletons and creepers.
-- **(new) Sulfur caves** (yellow sulfur and red cinnabar) spawn **cave spiders** naturally, and their bite poisons. The pools there give Nausea near the gas. Note it and go around.
+- **(new) Sulfur caves** (yellow sulfur and red cinnabar) spawn **cave spiders** naturally (on Bedrock since 26.30; the bug that blocked them, MCPE-238004, is fixed), and their bite poisons on Normal and Hard. The pools there give Nausea near the gas. Note it and go around ([Sulfur Caves](https://minecraft.wiki/w/Sulfur_Caves), [Cave Spider](https://minecraft.wiki/w/Cave_Spider)).
+- **(new) Sulfur cubes** are the most common spawn there on Bedrock (spawn weight 150, vs. 20 for cave spiders) and spawn **at any light level**, so torches won't keep them away. They're passive, but killing a big one splits it into **2 small ones** that grow back in 20 minutes. They pick up blocks dropped on the ground, and one holding **TNT** can be lit and explodes, so don't drop blocks or TNT near them ([Sulfur Cube](https://minecraft.wiki/w/Sulfur_Cube)).
 - Caves have the same monsters day or night. Light every junction, and keep torches on one wall (for example the right side going in) so the way out is obvious.
 - Come back up and sleep at dusk if the bed is near; otherwise wall yourself in and keep mining.
 
@@ -193,11 +194,22 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 
 ## Session 4: Plant the flag
 
-**Goal:** confirm and mark the real base site near spawn, give it a door, light and a chest, move the bed, and set up Stage 0 storage.
+**Goal:** confirm and mark the real base site near spawn, give it a door, light and a chest, move the bed, and start Stage 0 storage with chests for the groups you already have items in.
 **Advances:** Phase 3 (picks the site and finishes it), Phase 4 (storage wall, food wing), Phase 2 farm expansion.
 
 **Bring / have ready**
-- Logs: about **35 logs** become the planks for **17 chests**, which is Stage 0's 16 group chests plus 1 input chest ([storage growth stages](../plans/storage-layout.md#4-growth-stages)). The 12-tree farm makes this easy.
+- **About 30 logs** (120 planks), plus whatever the room itself is built from. Recipes checked on the wiki ([Chest](https://minecraft.wiki/w/Chest), [Sign](https://minecraft.wiki/w/Sign), [Wooden Door](https://minecraft.wiki/w/Wooden_Door), [Stick](https://minecraft.wiki/w/Stick), [Torch](https://minecraft.wiki/w/Torch), [Planks](https://minecraft.wiki/w/Planks)): 1 log = 4 planks, 2 planks = 4 sticks.
+
+| What | Recipe | Planks |
+| --- | --- | --- |
+| 10 chests (about 9 groups + 1 input) | 8 planks each | 80 |
+| 10 sign labels | 6 planks + 1 stick = 3 signs; 4 crafts make 12 | 24 |
+| Door | 6 planks = 3 doors | 6 |
+| Sticks: 4 for signs + 16 for a stack of torches | 2 planks = 4 sticks; 5 crafts | 10 |
+| **Total** | | **120 planks = 30 logs** |
+
+  - The room's walls and roof are extra and depend on Jeffrey's design. Cobble or other stone saves the wood.
+  - **Why not all 17 chests today:** the full Stage 0 (16 group chests + 1 input, 18 signs) comes to about **48 logs** before the room, and labeling and sorting 17 chests doesn't fit in 20 minutes. The other 7 groups (redstone, transport, brewing, potions, Nether, End, shulker boxes) mostly have nothing in them yet, so their chests wait until you have something for them.
 - **Labels:** item frames need leather (8 sticks + 1 leather each), so until the cows give leather, signs work as temporary labels.
 - Wool for a banner, a door, torches, and the bed (you pick it up and carry it).
 - Wheat, seeds, and any carrots or potatoes you've found.
@@ -207,7 +219,8 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [ ] **0:00–0:10 Pick and mark the site** near spawn, using the Phase 3 checklist (flat-ish ground, plus what's already confirmed: ocean, caves, cherry trees, a second biome). Banner or pillar it, and write its X Y Z in [coordinates](../notes/coordinates.md). Check the Phase 3 "avoid" list: not on a stronghold, not inside a mansion, not on the looted camp.
 - [ ] **0:10–0:30 A first functional room:** enclosed, lit, with a door. This can be the start of the [thatch-roof starter cottage](../plans/building-goals.md#1-thatch-roof-starter-cottage) or anything Jeffrey designs. All it needs today is walls, a door and light.
 - [ ] **0:30–0:35 Move the bed,** only after the door, light and a chest are in, as Phase 3 says. Sleep in it once to set spawn.
-- [ ] **0:35–0:55 Stage 0 storage:** one labeled chest per item group (16), plus an input chest or barrel by the door, then sort everything into it ([group list](../plans/storage-layout.md#2-item-grouping-for-the-chest-walls)). Each group chest becomes that group's manual home until its wing of the hall is built.
+- [ ] **0:35–0:55 Stage 0 storage, first part:** a labeled chest for each [item group](../plans/storage-layout.md#2-item-grouping-for-the-chest-walls) you already have items in, plus an input chest or barrel by the door, then sort everything into them. That's probably about 9 groups: stone, wood, farming & food, ores & metals, copper, decorative (wool, flowers), mob drops, tools & armor, and misc. Each group chest becomes that group's manual home until its wing of the hall is built.
+  - **The other 7 group chests** go in the first time you bring home something for that group (for example redstone in Session 5, Nether blocks in Session 6). Until then, odd items go in misc. That matches Stage 0's done-when: everything you own has a group chest.
 - [ ] **0:55–1:00 Compass.** If you have redstone from Session 3, craft one (4 iron + 1 redstone). A plain compass points to world spawn, which is home now. Otherwise this moves to Session 5. Before logging off, write the X Y Z of the new base, the bed and anything else new in [coordinates](../notes/coordinates.md).
 
 **If you have 90**
@@ -220,7 +233,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Done when**
 - [ ] The site is chosen, marked and logged.
 - [ ] The new site has a door, light and a chest, and the bed has moved there.
-- [ ] 16 group chests plus an input chest are labeled and filled.
+- [ ] Every group you have items in has a labeled chest (about 9), plus an input chest, and everything is sorted.
 
 **Safety and night**
 - Light the ground around the new room before night; mobs spawn on unlit ground right next to it.
@@ -230,7 +243,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Repo boxes this should tick (once reported)**
 - [Phase 3](../plans/phase-3-pick-the-site.md): the remaining site checklist items, *Mark the site…*, *Record the coordinates…*, *Give the new site a door / light / a chest*, *Move the bed*, and all three *Done when* boxes. Phase 3 row → ✅.
 - [Phase 4](../plans/phase-4-the-base.md) §1 storage wall: *Double chests in a row* (or the group chests), *Label them*, *One input chest by the door*. §3 food wing: *Composter* (90 block).
-- [Tracker](tracker.md) first-session checklist: *Site chosen* and *Storage started*. Tracker: move *Storage sorter Stage 0* from Planned milestones to Achieved (manual chests; the test hopper slice comes later). Phase 4 row → 🟨.
+- [Tracker](tracker.md) first-session checklist: *Site chosen* and *Storage started*. Tracker: move *Storage sorter Stage 0* from Planned milestones to Achieved once every group you own items in has a chest (the empty groups and the test hopper slice come later). Phase 4 row → 🟨.
 - [Phase 2](../plans/phase-2-starter-outpost.md): *Add carrots or potatoes*, *Add sheep*, *Add chickens* (90 block).
 - [Coordinates](../notes/coordinates.md): *Real base*.
 - [Phase 4](../plans/phase-4-the-base.md) §2 workshop: *Cartography table*; §7 local-area map: *First locator map of the base and spawn* (90 block).
@@ -241,6 +254,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 
 **Goal:** branch mine at diamond depth for diamonds, redstone and lapis, cast and mine obsidian, and (with 90) scout a village.
 **Advances:** Phase 4 (mine entrance, enchanting prep), prep for Phase 5 (trading).
+**Minimum haul: 5 diamonds and 4 obsidian.** That's 3 diamonds for the diamond pickaxe (3 diamonds + 2 sticks), which you need to mine obsidian at all, plus 2 diamonds and 4 obsidian for the enchanting table (1 book + 2 diamonds + 4 obsidian) ([Diamond Pickaxe](https://minecraft.wiki/w/Diamond_Pickaxe), [Obsidian](https://minecraft.wiki/w/Obsidian), [Enchanting Table](https://minecraft.wiki/w/Enchanting_Table)). Three diamonds gets the pick but not the table, so it's not a finished session.
 
 **Bring / have ready**
 - **Two iron picks** (Phase 4 says branch mine once you have iron picks to spare), a water bucket, a shield, iron armor, a stack of food, 2+ stacks of torches, cobble and a crafting table.
@@ -262,6 +276,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [ ] At least 5 diamonds: 3 for a pick and 2 for the enchanting table. A diamond pick is crafted.
 - [ ] At least 4 obsidian mined (14 if Session 6 will build a portal from mined blocks).
 - [ ] Redstone and lapis in the chests. A compass is crafted.
+- [ ] Gold for Session 6: at least 5 ingots for a golden helmet, plus any spares for piglin bartering.
 
 **Safety and night**
 - **Lava is the main danger this deep.** Never dig down or toward the unknown with an empty hand; keep the water bucket on your hotbar.
