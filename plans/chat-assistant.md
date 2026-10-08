@@ -251,7 +251,7 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
   ```
   - The 26.10 changelog example used `force_https`. 26.20 renamed it **`force_tls`**. Leave it off for a plain-HTTP container-network address, or turn it on if the service gets TLS.
   - **To test:** whether `allowed_uris` is a prefix match.
-- [ ] **Who can ask:** every player on the server (decided). The BDS allowlist already controls who can join; the pack only checks that the sender is a real player (not a command block or script).
+- [ ] **Who can ask:** every player on the server (decided; [assumes a trusted-friends server](#access-policy)). The BDS allowlist (`allow-list=true`) controls who can join; the pack only checks that the sender is a real player (not a command block or script).
 - [ ] **Rate limits:** a per-player cooldown in the pack (e.g. one question per 10 s, one in flight) and the same in the service. `max_concurrent_requests` caps the pack overall.
 - [ ] **Read-only tools only,** with a fixed list and validated arguments. No `runCommand`, and no free-form code from the LLM.
 - [ ] **Logging:** the service logs time, player, question, tool calls and answer, plus failed auth. Logs stay on the box and are **never committed**. Retention is an open decision.
@@ -268,6 +268,11 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 - Rate limits still apply to everyone (they protect the server and the LLM, not access).
 
 - **Anyone can look up any other player** (`where_is_player`, decided 2026-10-07): live position if they're online, last known position if they're offline. Still read-only.
+
+> **Assumes a trusted-friends server.** Open access (player lookup, ore search, coordinates) is safe only because everyone on the server is a friend Jeffrey trusts.
+> - **Enforced by the BDS allowlist:** set `allow-list=true` in `server.properties`, so only gamertags in `allowlist.json` can join. Add people with `allowlist add <Gamertag>` from the console. The allowlist needs `online-mode=true` (leave it on). Property and file names checked against [Microsoft's BDS server.properties docs](https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/server-properties) (2026-10-08). Set it explicitly rather than trusting the default, since the shipped default has changed between versions. `allowlist on`/`off` from the console only lasts until the next restart; the file setting is what sticks.
+> - **If a stranger is ever added,** revisit `where_is_player` and ore search before they join: either a per-player toggle in `assistantAccess`, or a config flag in the service that turns those two tools off for everyone not on a trusted list.
+> - **The seed is never sent to players or put in the LLM's replies.** Only answers go out (a position, a distance and direction). The LLM never sees the seed either; the service keeps it on the box and uses it internally.
 
 The pack and the service share one access setting in `variables.json`, e.g. `"assistantAccess": { "players": "all", "reply_mode": "coords", "tools": "all", "where_is_player": "all" }`. The service enforces the same setting, so a modified request can't change it.
 
