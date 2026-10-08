@@ -64,7 +64,7 @@ BDS (container)                          Linux box                          Grok
 | `death` | `entityDie` (filter to players) | Session log "Deaths" |
 | `block_placed` / `block_broken` | `playerPlaceBlock`, `playerBreakBlock` | Auto-check plan items (bed, chests, copper blocks…) |
 | `dimension_change` | `playerDimensionChange` | Nether trips, portal location |
-| `position` | `system.runInterval` sample | Coordinates (handy while coordinates are off in-game) |
+| `position` | `system.runInterval` sample | Coordinates |
 | `inventory` | inventory component, sampled + on `playerInventoryItemChange` | Phase checklists (iron tools, food stack…) |
 
 ### 3. Payloads (EXAMPLE SHAPES, not a fixed format)

@@ -13,7 +13,8 @@ Server settings and world-level config live here. For the files themselves (`ser
 ### Game version and new game rules
 
 - **Keep the server on the clients' version.** Bedrock **26.60** is scheduled for **October 27, 2026** ([wiki](https://minecraft.wiki/w/Bedrock_Edition_26.60)). When players' games update, plan to update the server to match the same day, or they may not be able to join.
-- **Locator bar:** friends show as colored markers on the HUD, which helps with coordinates off. The Bedrock game rule is `playerwaypoints` (since 26.30): `everyone` (default) or `off` ([Game rule](https://minecraft.wiki/w/Game_rule)). It shows every online player's position to everyone, so it's on the [chat assistant's rethink list](chat-assistant.md#access-policy) if a stranger ever joins. Players can hide their marker by sneaking or wearing a carved pumpkin.
+- **Coordinates are on:** `showcoordinates` is true (reported 2026-10-08), so everyone sees their X Y Z on screen. Changing it doesn't need cheats, so achievements stay on ([Game rule](https://minecraft.wiki/w/Game_rule)).
+- **Locator bar:** friends show as colored markers on the HUD. The Bedrock game rule is `playerwaypoints` (since 26.30): `everyone` (default) or `off` ([Game rule](https://minecraft.wiki/w/Game_rule)). It shows every online player's position to everyone, so it's on the [chat assistant's rethink list](chat-assistant.md#access-policy) if a stranger ever joins. Players can hide their marker by sneaking or wearing a carved pumpkin.
 - **Group travel:** a harnessed [happy ghast](happy-ghast.md) carries 4 players.
 
 ### Ticking area: iron farm and item sorter
@@ -28,7 +29,7 @@ Server settings and world-level config live here. For the files themselves (`ser
 - **Remove:** `tickingarea remove <name>`, `tickingarea remove <x y z>` (every area containing that point), or `tickingarea remove_all`.
 - **Preload:** `tickingarea preload <name|x y z> [true|false]`. Preloaded areas load before other chunks when the world starts. Without preload, an area loads after the world launches.
 - **Example from the wiki:** `/tickingarea add circle ~ ~ ~ 2 Homebase`, run while standing in the center chunk, makes a 5×5-chunk area.
-- **Coordinates:** coordinates are hidden on our server, so the easiest way is for an operator to run the circle form in-game with `~ ~ ~` while standing at the center. A console command needs real coordinates.
+- **Coordinates:** coordinates are on, so an operator can read the center's X Y Z off the screen and use it in a console command, or run the circle form in-game with `~ ~ ~` while standing at the center.
 
 **Limits** ([Commands/tickingarea](https://minecraft.wiki/w/Commands/tickingarea), [Ticking area](https://minecraft.wiki/w/Ticking_area))
 - Up to **10 ticking areas per world**. Adding an 11th fails.

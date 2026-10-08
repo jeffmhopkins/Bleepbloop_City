@@ -43,7 +43,7 @@ Long-term goals that span several phases. Their status is in the [tracker](progr
 1. Work through the phases in order. Tick checkboxes in the phase file as you go.
 2. When a phase starts or finishes, or a checklist item or milestone is reached, update [progress/tracker.md](progress/tracker.md). That is the only status file; everything else links to it.
 3. After each play session, add an entry to [progress/session-log.md](progress/session-log.md).
-4. Write down every important location in [notes/coordinates.md](notes/coordinates.md) the moment you find it.
+4. Write down the X Y Z of every important location in [notes/coordinates.md](notes/coordinates.md) the moment you find it (coordinates are on).
 5. Bigger builds get their own file from [templates/build-project.md](templates/build-project.md), or a GitHub issue.
 
 ## License

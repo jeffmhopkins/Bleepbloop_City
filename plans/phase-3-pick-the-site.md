@@ -38,7 +38,7 @@ Walk until you find most of these within a couple of minutes of each other.
 
 | Candidate | Coordinates | Has | Missing | Verdict |
 | --- | --- | --- | --- | --- |
-| World spawn area | Coordinates are off (it's at world spawn) | Big mountain in the distance sloping down to cherry trees, then a normal biome; big caves; ocean; ice nearby (cold biome) | Flat ground and a village not confirmed yet | Strong candidate ("pretty decent"); base planned here |
+| World spawn area | TBD (at world spawn; record it in [coordinates](../notes/coordinates.md)) | Big mountain in the distance sloping down to cherry trees, then a normal biome; big caves; ocean; ice nearby (cold biome) | Flat ground and a village not confirmed yet | Strong candidate ("pretty decent"); base planned here |
 
 ## Done when
 

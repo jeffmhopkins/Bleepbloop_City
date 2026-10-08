@@ -25,8 +25,8 @@ Everything here was checked on the [Minecraft Wiki](https://minecraft.wiki) drop
    - Zombies, husks and piglins can now spawn holding a **spear**, which has 4.5-block reach.
 6. **Copper golems sort items.** They carry items out of a copper chest into matching chests. This is the [storage gallery](../plans/storage-and-sorting.md) showpiece, and abandoned camps can hand you a free oxidized golem statue.
 7. **Abandoned camps and straw beds** (Wilderness Bound) matter in the first week. Camps give free early loot and explorer maps. Straw beds skip the night without moving your spawn.
-8. **Locator bar:** in multiplayer, friends show as colored markers on the HUD where the XP bar was. On Bedrock the game rule is `playerwaypoints` (`everyone` or `off`; the default is `everyone`). It's useful with coordinates off.
-9. **Lodestones are cheap now:** 8 chiseled stone bricks + **1 iron ingot** (it used to take netherite). A compass used on one points to it, even in the Nether. That's handy for marking the portal or the village while coordinates are off.
+8. **Locator bar:** in multiplayer, friends show as colored markers on the HUD where the XP bar was. On Bedrock the game rule is `playerwaypoints` (`everyone` or `off`; the default is `everyone`). It shows where friends are without swapping coordinates.
+9. **Lodestones are cheap now:** 8 chiseled stone bricks + **1 iron ingot** (it used to take netherite). A compass used on one points to it, even in the Nether. That's handy for marking the portal or the village.
 10. **Animals look different by climate.** Spawn is next to a cold biome, so expect **cold cows, pigs and chickens**, and mostly **black sheep** in cold biomes. Cold chickens lay **blue eggs**, which hatch into cold chicks.
 
 ## Just before the break (skip if you played these)
@@ -66,7 +66,7 @@ Everything here was checked on the [Minecraft Wiki](https://minecraft.wiki) drop
 | **Bush** | Biome-tinted shrub. | Garden filler. | Grassy biomes and river banks. Needs **shears** (or Silk Touch) to drop. |
 | **Cactus flower** | Grows on cacti. | Pink dye; decoration. | Deserts and badlands. |
 | **Short and tall dry grass** | Desert grass. | Fuel; decoration. | Deserts and badlands. |
-| **Lodestone recipe** | Now 8 chiseled stone bricks + **1 iron ingot**. Also found in ruined portals. | Cheap waypoint for compasses: see [coordinates: navigating](coordinates.md#navigating-without-coordinates). | Craft. |
+| **Lodestone recipe** | Now 8 chiseled stone bricks + **1 iron ingot**. Also found in ruined portals. | Cheap waypoint for compasses: see [coordinates: navigating](coordinates.md#navigating). | Craft. |
 | **Cartographer explorer maps** | Cartographers sell maps to each village type, jungle temples and swamp huts (Apprentice level). Trial chamber and ocean monument maps come at Journeyman; a woodland mansion map is guaranteed at Master. | Once there's a cartographer in the trading hall, these find more villages. | Trade. |
 | **Wandering trader** | Better prices and stock, and now sells logs of many types. | Easy source of odd woods. | Trade. |
 | **Camels** | Now spawn anywhere in deserts. | Two-seat land mount. | Deserts. |
@@ -79,7 +79,7 @@ Everything here was checked on the [Minecraft Wiki](https://minecraft.wiki) drop
 | **Ghastling** | The baby happy ghast. It follows players (and many passive mobs) within 16 blocks, and doesn't drown. Grows up in **20 minutes**. **(BE): 10 snowballs grow a new ghastling to adult** at once. (JE): each snowball cuts 10% of the remaining time. | Snow is right next to spawn, so this goes fast. | From a dried ghast. |
 | **Happy ghast** | 20-health passive flying mob. With a harness, **up to 4 players** ride it, and the first rider steers. You can **stand on top of it** like a block, and it holds still while you do. Lead-carries boats and big mobs (horses, camels, sniffers). Heals 1 health per second at cloud height (Y 187–196) or in rain or snow; otherwise 1 every 30 seconds. **Not fire-proof.** Can't be bred. Ignores the Speed effect. | Flying build platform and a group sightseeing mount. Full plan: [plans/happy-ghast.md](../plans/happy-ghast.md). | Grow a ghastling. |
 | **Harness** | Saddle for the happy ghast, in 16 colors. Can be re-dyed. Shears remove it, but only when nobody is riding. | Needed to ride. | 3 leather (top row) + glass, wool, glass (middle row). The wool sets the color. |
-| **Locator bar** | HUD markers for other players, replacing the XP bar. Sneaking, a carved pumpkin or mob head, or Invisibility hides you. | Find each other without coordinates. | Game rule `playerwaypoints` **(BE, since 26.30)**: `everyone` (default) or `off`. (JE: `locator_bar`.) |
+| **Locator bar** | HUD markers for other players, replacing the XP bar. Sneaking, a carved pumpkin or mob head, or Invisibility hides you. | Find each other at a glance. | Game rule `playerwaypoints` **(BE, since 26.30)**: `everyone` (default) or `off`. (JE: `locator_bar`.) |
 | **Leads** | Now 5 string (no slimeball). Mobs can be leashed to other mobs. Shears cut leads. | Moving animals; tying up the happy ghast. | Craft (5 string makes 2 leads). |
 | **Saddle** | Now craftable. No longer in dungeon, temple or stronghold chests; leather replaced it there. | Horses, pigs, striders, and later the nautilus. | 3 leather + 1 iron ingot. |
 | **Carrots for horses** | Carrots can tame, heal and grow horses, donkeys and mules. | Cheap horse food. | Farm. |

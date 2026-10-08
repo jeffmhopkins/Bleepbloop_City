@@ -211,16 +211,16 @@ A grand, boxed-in portal room with a matching hub on the Nether side.
 
 ## 8. Lighthouse or watchtower
 
-A tall, lit landmark you can see from far away. With coordinates off on the server, it doubles as a way to find home.
+A tall, lit landmark you can see from far away. It doubles as a way to spot home without checking coordinates.
 
 **Status:** ⬜ Not started
-**Suggested timing:** Phase 2–4 (the earlier the better while coordinates are off)
+**Suggested timing:** Phase 2–4
 **Location:** At or near the home base
 
 **Key materials and features**
 - Tall
 - Lit, so it's visible from afar
-- Navigation landmark (see [navigating without coordinates](../notes/coordinates.md#navigating-without-coordinates))
+- Navigation landmark (see [coordinates: navigating](../notes/coordinates.md#navigating))
 
 **Tasks**
 - [ ] Pick lighthouse or watchtower

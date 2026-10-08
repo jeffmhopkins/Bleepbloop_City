@@ -37,7 +37,7 @@ One entry per play session, newest at the top. Copy the template below (also in 
 - Built an animal pen, but no cows in it yet: the wheat hasn't matured, so there's nothing to lead them with
 - Still on stone tools; hasn't gone looking for iron yet
 - Not reported (unconfirmed): a second chest, a door, whether the house and wheat field are lit or fenced, and the "if you have 90" site walk
-- Asked how to turn on coordinates (`gamerule showcoordinates true` from the BDS console); not reported as turned on, so coordinates are still treated as off
+- Asked how to turn on coordinates (`gamerule showcoordinates true` from the BDS console). Reported turned on afterward (2026-10-08)
 
 ### Deaths
 - 
@@ -87,4 +87,4 @@ One entry per play session, newest at the top. Copy the template below (also in 
 - [ ] Animal pen with 2+ cows
 - [ ] Second chest
 - [ ] Staircase mine toward Y=16 for iron and coal
-- [ ] Record spawn / first bed location in [notes/coordinates.md](../notes/coordinates.md) (coordinates are off on the server, so use landmarks for now)
+- [ ] Record spawn / first bed location in [notes/coordinates.md](../notes/coordinates.md) (coordinates are on since 2026-10-08, so write the X Y Z)

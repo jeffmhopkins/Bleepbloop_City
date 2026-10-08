@@ -2,7 +2,8 @@
 
 **Status:** 📋 Plan only. Nothing here is checked off until Jeffrey reports it in the [session log](session-log.md). Session 2 was played 2026-10-07 and is marked below (✅ done, ⏳ partial or not reported); its carry-over is at the top of Session 3.
 **Based on:** [Session 1 (2026-10-06)](session-log.md), the [tracker](tracker.md), and the phase files ([1](../plans/phase-1-first-night.md), [2](../plans/phase-2-starter-outpost.md), [3](../plans/phase-3-pick-the-site.md), [4](../plans/phase-4-the-base.md), [5](../plans/phase-5-infrastructure.md)).
-**Server:** Bedrock 26.50 (Wilderness Bound). Mechanics below were checked on the [Minecraft Wiki](https://minecraft.wiki) (2026-10-07).
+**Server:** Bedrock 26.50 (Wilderness Bound). Mechanics below were checked on the [Minecraft Wiki](https://minecraft.wiki) (2026-10-07, rechecked 2026-10-08).
+**Coordinates are on** (reported 2026-10-08), so depths below are plain Y values read off the screen, and every new place gets its X Y Z written in [coordinates](../notes/coordinates.md).
 **Time box:** each session is planned for **60 minutes**, plus an optional **"if you have 90"** block.
 
 Building shapes, sizes and looks are Jeffrey's design. This plan only says what each build needs to *do*.
@@ -10,13 +11,13 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 ## Where Session 1 left off
 
 - **Have:** bed (spawn set), crafting table, furnace, one chest, stone tools, logs and cobble, 12 replanted trees, extra wool, a little food.
-- **Missing:** lighting, a food stack, a farm, an animal pen, a second chest, iron, a confirmed base site, and recorded locations (coordinates are off).
+- **Missing:** lighting, a food stack, a farm, an animal pen, a second chest, iron, a confirmed base site, and recorded locations (coordinates were off then; they're on now).
 
 ## How a session fits in real time
 
 - **A Minecraft day is 20 minutes:** 10 minutes of daytime, then sunset, night and sunrise ([Daylight cycle](https://minecraft.wiki/w/Daylight_cycle)). If you sleep at every dusk, a 60-minute session gets about four or five daytimes.
 - **Sleep at dusk.** In multiplayer, everyone in the Overworld has to be in bed at once, unless the server's `playerssleepingpercentage` game rule is lowered ([Bed](https://minecraft.wiki/w/Bed)). Skipping sleep for several nights brings phantoms.
-- **Spend the first 2–3 minutes** of each session finishing the last session's carry-over items. Spend the last 5 minutes putting things in chests, logging new landmarks in [coordinates](../notes/coordinates.md), and noting what got done for the session log.
+- **Spend the first 2–3 minutes** of each session finishing the last session's carry-over items. Spend the last 5 minutes putting things in chests, writing the **X Y Z of every new place** in [coordinates](../notes/coordinates.md), and noting what got done for the session log.
 
 ## Carry-over rule
 
@@ -84,10 +85,10 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
   - Only **locator** maps show players. In multiplayer they show every player, colored by join order, with a skin face when they're 10–80 blocks away. When you're off the map, your marker sits on the edge and, since 26.50, still shows which way you're facing.
   - A framed locator map shows a **green marker** for the frame on its clones.
   - **Banner markers are Java-only:** using a map on a banner does nothing on Bedrock.
-  - Maps don't mark lodestones, and an Overworld map doesn't mark world spawn. So **landmarks have to be written down**, and that's what [coordinates](../notes/coordinates.md) is for.
+  - Maps don't mark lodestones, and an Overworld map doesn't mark world spawn. So exact spots go in [coordinates](../notes/coordinates.md) as X Y Z.
 - **Nether:** maps made there only show a red-and-gray pattern, so the Nether hub gets logged in coordinates, not mapped. On Bedrock, though, an **Overworld locator map carried into the Nether** shows where you are relative to the Overworld map. That helps line up the two portals.
 
-**Feeds the landmark log.** With coordinates off, the map is the best way to place landmarks. Each time a map fills in, note in [coordinates](../notes/coordinates.md) which map shows each landmark and roughly where on it, for example "base map, NE quarter". At level 0, 1 pixel is 1 block, so distances can be counted.
+**Works with the coordinates log.** The map shows the area at a glance; the exact X Y Z of each place goes in [coordinates](../notes/coordinates.md). When a map shows something new (a village, a cave mouth), go there and write down its coordinates. At level 0, 1 pixel is 1 block, so distances can be counted.
 
 ---
 
@@ -146,7 +147,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Bring / have ready**
 - 2–3 stone picks, a stone sword, a full stack of food, and 1–2 stacks of torches.
 - Cobble for blocking lava and water, plus a crafting table and furnace (or come back up to smelt).
-- **Depth without coordinates:** iron is most common around **Y=14–16**. Stone turns into **deepslate between Y=8 and Y=0** ([Deepslate](https://minecraft.wiki/w/Deepslate)). When deepslate starts appearing, you're just below the iron sweet spot, so mine along there. Alternatively, an operator can turn coordinates on (see the [coordinates note](../notes/coordinates.md)).
+- **Target depth: Y=16.** Watch the Y in the coordinates box. That's where iron is most common below ground (it generates from Y=−24 to Y=56, peaking around Y=16) ([Iron Ore](https://minecraft.wiki/w/Iron_Ore)). Redstone starts at Y=15 and below ([Redstone Ore](https://minecraft.wiki/w/Redstone_Ore)). Stone turns into deepslate between Y=8 and Y=0 ([Deepslate](https://minecraft.wiki/w/Deepslate)), so if you see deepslate you've gone below the target.
 
 **Carry-over from Session 2 (do these first)**
 - [ ] **Cows into the pen** once the wheat is ready: hold wheat and the cows follow you. At least 2.
@@ -156,19 +157,19 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 
 **60-minute plan**
 - [ ] **0:00–0:05 Prep.** Eat, top up torches (craft more from coal as you find it), and set out at the start of a day.
-- [ ] **0:05–0:35 Staircase down.** Dig a staircase (never straight down) toward the deepslate line, lighting as you go. Mine every coal and iron ore you see, and **(new)** copper ore too. The big caves at spawn are faster but more dangerous; stay in lit sections. Coal ore needs any pickaxe; iron needs stone or better.
+- [ ] **0:05–0:35 Staircase down.** Dig a staircase (never straight down) to about **Y=16**, lighting as you go. Mine every coal and iron ore you see, and **(new)** copper ore too. The big caves at spawn are faster but more dangerous; stay in lit sections. Coal ore needs any pickaxe; iron needs stone or better.
 - [ ] **0:35–0:45 Smelt and craft, in this order:**
   - Iron pick (3 iron).
   - Bucket (3 iron), then fill it with water.
   - Shield (1 iron + 6 planks).
 - [ ] **0:45–0:55 More iron.** Keep mining for an iron sword (2) and axe (3). That's 12 iron total with the items above.
-- [ ] **0:55–1:00 Back up and store.** Put the iron and coal in the chests. Note the mine entrance landmark.
+- [ ] **0:55–1:00 Back up and store.** Put the iron and coal in the chests. Write the X Y Z of the mine entrance, and of any other new place (cave mouths, camps, a good ore spot), in [coordinates](../notes/coordinates.md).
 
 **If you have 90**
 - [ ] **Iron armor**, in priority order: chestplate (8), leggings (7), helmet (5), boots (4). The full set is 24 iron.
 - [ ] **Smoker** (furnace + 4 logs) to halve cooking time. **Blast furnace** (furnace + 5 iron + 3 smooth stone) to halve ore smelting; smooth stone is stone smelted again.
 - [ ] **(new) Copper as a stopgap:** smelt the copper ore. **Copper armor** (24 ingots, 10 armor points vs. iron's 15) can cover you while iron goes to the pick, bucket and shield. Copper tools mine like stone (no diamonds or redstone) but faster and longer. Skip it if iron armor is already happening.
-- [ ] **Bank toward a compass:** 4 iron + 1 redstone dust. Redstone ore only appears at Y=15 and below, so pick some up if you see it near the deepslate line.
+- [ ] **Bank toward a compass:** 4 iron + 1 redstone dust. Redstone ore only appears at Y=15 and below, so pick some up if you see it around Y=16 and lower.
 
 **Done when**
 - [ ] An iron pick, a shield and a water bucket.
@@ -185,7 +186,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 **Repo boxes this should tick (once reported)**
 - [Phase 2](../plans/phase-2-starter-outpost.md): *Mine a staircase down to around Y=16*, *Iron pick*, *Iron tools*. Also *Iron armor*, *Smoker* and *Blast furnace* if the 90 block happened.
 - [Tracker](tracker.md) first-session checklist: *Iron tools*.
-- [Resources and farms](../notes/resources-and-farms.md): a row in the Mining table for the staircase mine. Its entrance landmark goes in [coordinates](../notes/coordinates.md).
+- [Resources and farms](../notes/resources-and-farms.md): a row in the Mining table for the staircase mine. Its entrance X Y Z goes in [coordinates](../notes/coordinates.md).
 - If iron armor is done and the farm is self-refilling, Phase 2's *Done when* boxes can close.
 
 ---
@@ -203,18 +204,18 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - For the 90-minute map step: the compass (or redstone to craft it) and about 3 paper (harvest the Session 2 sugar cane).
 
 **60-minute plan**
-- [ ] **0:00–0:10 Pick and mark the site** near spawn, using the Phase 3 checklist (flat-ish ground, plus what's already confirmed: ocean, caves, cherry trees, a second biome). Banner or pillar it, and log it in [coordinates](../notes/coordinates.md). Check the Phase 3 "avoid" list: not on a stronghold, not inside a mansion, not on the looted camp.
+- [ ] **0:00–0:10 Pick and mark the site** near spawn, using the Phase 3 checklist (flat-ish ground, plus what's already confirmed: ocean, caves, cherry trees, a second biome). Banner or pillar it, and write its X Y Z in [coordinates](../notes/coordinates.md). Check the Phase 3 "avoid" list: not on a stronghold, not inside a mansion, not on the looted camp.
 - [ ] **0:10–0:30 A first functional room:** enclosed, lit, with a door. This can be the start of the [thatch-roof starter cottage](../plans/building-goals.md#1-thatch-roof-starter-cottage) or anything Jeffrey designs. All it needs today is walls, a door and light.
 - [ ] **0:30–0:35 Move the bed,** only after the door, light and a chest are in, as Phase 3 says. Sleep in it once to set spawn.
 - [ ] **0:35–0:55 Stage 0 storage:** one labeled chest per item group (16), plus an input chest or barrel by the door, then sort everything into it ([group list](../plans/storage-layout.md#2-item-grouping-for-the-chest-walls)). Each group chest becomes that group's manual home until its wing of the hall is built.
-- [ ] **0:55–1:00 Compass.** If you have redstone from Session 3, craft one (4 iron + 1 redstone). A plain compass points to world spawn, which is home now. Otherwise this moves to Session 5.
+- [ ] **0:55–1:00 Compass.** If you have redstone from Session 3, craft one (4 iron + 1 redstone). A plain compass points to world spawn, which is home now. Otherwise this moves to Session 5. Before logging off, write the X Y Z of the new base, the bed and anything else new in [coordinates](../notes/coordinates.md).
 
 **If you have 90**
 - [ ] **Farm expansion near the new site:** a second wheat area and carrots or potatoes (from villages, zombies or shipwreck chests). Plant **sugar cane** on dirt or sand next to water, for paper and books later.
 - [ ] **Animals:** breed the cows with wheat for leather (books and item frames), and lure chickens with seeds.
 - [ ] **Food wing basics** (Phase 4): a composter, and a smoker if Session 3 didn't make one.
 - [ ] Bring the starter crops and animals over if the old spot is far, or keep both and log both.
-- [ ] **First map: base and spawn.** Needs the compass plus about 3 paper (sugar cane from Session 2). Craft a **cartography table** (2 paper + 4 planks), then make an **empty locator map** in it from 1 paper + the compass. That's much cheaper than the 8 paper + compass crafting recipe. Use the map, then walk around the new base and spawn while holding it until the area fills in. Log what it shows in [coordinates](../notes/coordinates.md). See the [map thread](#map-thread-a-local-area-map).
+- [ ] **First map: base and spawn.** Needs the compass plus about 3 paper (sugar cane from Session 2). Craft a **cartography table** (2 paper + 4 planks), then make an **empty locator map** in it from 1 paper + the compass. That's much cheaper than the 8 paper + compass crafting recipe. Use the map, then walk around the new base and spawn while holding it until the area fills in. Anything new it shows gets its X Y Z in [coordinates](../notes/coordinates.md). See the [map thread](#map-thread-a-local-area-map).
 
 **Done when**
 - [ ] The site is chosen, marked and logged.
@@ -243,13 +244,14 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 
 **Bring / have ready**
 - **Two iron picks** (Phase 4 says branch mine once you have iron picks to spare), a water bucket, a shield, iron armor, a stack of food, 2+ stacks of torches, cobble and a crafting table.
-- **Depth without coordinates:** diamonds and redstone are most common around **Y=−59**, just above the bedrock floor. Bedrock starts mixing in from Y=−60 down to Y=−64 ([Ore](https://minecraft.wiki/w/Ore)). Go down until bedrock shows in the floor, then come up a few blocks and branch there. Lapis peaks higher, around Y=0, so grab it on the way down.
+- **Target depth: Y=−59.** Watch the Y in the coordinates box. Deepslate diamond ore is most common at **Y=−58 and Y=−59** ([Diamond Ore](https://minecraft.wiki/w/Diamond_Ore)), and redstone gets more common the lower you go ([Redstone Ore](https://minecraft.wiki/w/Redstone_Ore)). Lapis peaks higher, around Y=0, so grab it on the way down ([Lapis Lazuli Ore](https://minecraft.wiki/w/Lapis_Lazuli_Ore)). Gold has an extra batch spread evenly from Y=−64 to Y=−48 ([Gold Ore](https://minecraft.wiki/w/Gold_Ore)), so pick up every bit for Session 6.
+- **Don't use bedrock as a depth marker.** It fills Y=−64 to Y=−60 in a rough, random pattern ([Bedrock](https://minecraft.wiki/w/Bedrock)), so the first bedrock you see could be anywhere in that band. Go by the Y readout instead.
 
 **60-minute plan**
 - [ ] **0:00–0:10 Head down** from the new base's mine entrance; Phase 3 says mine from the real site, not the starter shack. Extend the Session 3 staircase or start a new lit one.
-- [ ] **0:10–0:45 Branch mine** just above the bedrock line. Mine every diamond (iron pick or better), redstone, lapis and gold you see. Wall off lava with cobble.
+- [ ] **0:10–0:45 Branch mine** at **Y=−59** (by the coordinates box). Mine every diamond (iron pick or better), redstone, lapis and gold you see. Wall off lava with cobble.
 - [ ] **0:45–0:55 Obsidian.** Pour water over a **lava source** to make obsidian ([Obsidian](https://minecraft.wiki/w/Obsidian)). It can only be mined with a **diamond pickaxe**, so craft one first (3 diamonds + 2 sticks). The enchanting table needs **4 obsidian**, and a Nether portal needs **10** (Session 6).
-- [ ] **0:55–1:00 Back up and store.** Diamonds and valuables go in the group chests. Craft the compass now if Session 4 didn't.
+- [ ] **0:55–1:00 Back up and store.** Diamonds and valuables go in the group chests. Craft the compass now if Session 4 didn't. Write the X Y Z of the branch mine, the obsidian spot, and any village or other new place in [coordinates](../notes/coordinates.md).
 
 **If you have 90**
 - [ ] **Village scouting (daylight).** Follow the coast or a river from spawn. Log any village, and note librarians, fletchers and toolsmiths in [resources and farms](../notes/resources-and-farms.md) (Phase 5 trading hall). The village decides the remaining Phase 3 site item. **(new)** Village chests can hold bundles. A cartographer (once in the trading hall) sells maps to other villages.
@@ -269,10 +271,10 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - Deepslate mines slower than stone, so pace yourself and keep track of time.
 
 **Repo boxes this should tick (once reported)**
-- [Phase 4](../plans/phase-4-the-base.md) §4 mine entrance: *A lit staircase…*, *Branch at Y=−54 or around diamond level…*, *Keep a safe path back up*.
+- [Phase 4](../plans/phase-4-the-base.md) §4 mine entrance: *A lit staircase…*, *Branch around Y=−59 (diamond level)…*, *Keep a safe path back up*.
 - [Phase 3](../plans/phase-3-pick-the-site.md): *A village…*, if one turned up near the site.
 - [Resources and farms](../notes/resources-and-farms.md): a branch mine row, and the village or villager rows. [Coordinates](../notes/coordinates.md): *Branch mine*, *Village*.
-- [Phase 4](../plans/phase-4-the-base.md) §7 local-area map: *Zoomed-out local-area map* (90 block). The landmarks it shows go in [coordinates](../notes/coordinates.md).
+- [Phase 4](../plans/phase-4-the-base.md) §7 local-area map: *Zoomed-out local-area map* (90 block). New places it shows get their X Y Z in [coordinates](../notes/coordinates.md).
 
 ---
 
@@ -294,7 +296,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - [ ] **0:10–0:25 Portal room.** The portal goes **in a room with a door, not in the open** (Phase 5), so nothing wanders through near the base. The room itself is Jeffrey's design, or the start of the [Nether portal shrine](../plans/building-goals.md#7-nether-portal-shrine). Build the frame and light it.
 - [ ] **0:25–0:50 Short Nether trip.** Step through. If the arrival spot is exposed, box it in with cobble. Mine **nether quartz** within sight of the portal; it's very common below Y=128. Head back by 0:50. Bring back 20+ quartz if you can.
   - **(new, stretch) Dried ghast:** only if you've landed in or next to a **soul sand valley** and a **Nether fossil** (big bone-block skeleton) is within sight of the portal. About 1 fossil in 3 has a dried ghast next to it. Grab it and go back. Don't go looking for one on this trip.
-- [ ] **0:50–1:00 Log both sides.** Write down the Overworld and Nether portal landmarks (1 block in the Nether = 8 in the Overworld). Store the quartz.
+- [ ] **0:50–1:00 Log both sides.** Write the X Y Z of both portals in [coordinates](../notes/coordinates.md). Nether X and Z are the Overworld's divided by 8, and Y doesn't scale ([Nether Portal](https://minecraft.wiki/w/Nether_Portal)), so the numbers should roughly match that. Store the quartz.
 
 **If you have 90**
 - [ ] **Leather and books:** breed the cows and harvest the sugar cane toward books (enchanting) and item frames (proper Stage 0 labels).

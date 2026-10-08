@@ -91,7 +91,7 @@ These are the real limits dressed as lore. The satellite knows the world in thre
 
 ### Coordinates: the Grid
 
-The server keeps coordinates off, but **every player's** answers include exact coordinates from day one (decided: everyone gets full access). In-world, that's the satellite's old **grid**, its GPS, open to anyone who asks.
+Coordinates are on in-game, and **every player's** answers include exact coordinates from day one (decided: everyone gets full access). In-world, that's the satellite's old **grid**, its GPS, open to anyone who asks. The Grid is pure flavor: nothing is switched on by it, since coordinates are already on for everyone.
 
 - The story can say the grid was *never* sealed: the Builders built it for everyone, and the satellite has simply been waiting for someone to ask.
 - If you want a story moment anyway, mark it with an in-world event (e.g. the first echo shard brought back from an ancient city, or the finished [local-area map](../plans/phase-4-the-base.md#7-local-area-map)). It's narrative only and switches nothing on.
