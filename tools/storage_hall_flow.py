@@ -4,15 +4,36 @@ Schematic of Jeffrey's hall layout (plans/storage-layout.md): shulker unloader a
 the center of Machinery feeding the router below it, dump barrels to the right,
 smelter loop on the left, U-shaped under-floor item stream, potion line to the
 golem gallery. Each wing is a hallway with a chest wall on both sides,
-each backed by its own service gap. Not to scale. Needs Pillow and the DejaVu fonts.
-Run: python3 tools/storage_hall_flow.py
+each backed by its own service gap. Not to scale.
+
+Regenerate (from the repo root): pip install -r tools/requirements.txt && python3 tools/storage_hall_flow.py
+
+Fonts: uses DejaVu Sans if it's installed (that's what the committed PNG was
+drawn with), then Arial/Helvetica on macOS or Arial/Segoe UI on Windows, then
+Pillow's built-in default font. Other fonts work but shift the text slightly.
 """
 from PIL import Image, ImageDraw, ImageFont
 import math, os
 OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','assets','storage-hall-flow.png')
 S=2; W,H=1600,1180
 im=Image.new('RGB',(W*S,H*S),(250,250,247)); d=ImageDraw.Draw(im)
-def f(sz,b=True): return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf' if b else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',int(sz*S))
+# Font candidates per weight, in order: Linux (DejaVu), macOS, Windows.
+FONTS={True:['/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf','DejaVuSans-Bold.ttf',
+             '/System/Library/Fonts/Supplemental/Arial Bold.ttf','/Library/Fonts/Arial Bold.ttf','/System/Library/Fonts/Helvetica.ttc',
+             'C:/Windows/Fonts/arialbd.ttf','C:/Windows/Fonts/segoeuib.ttf'],
+       False:['/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf','DejaVuSans.ttf',
+              '/System/Library/Fonts/Supplemental/Arial.ttf','/Library/Fonts/Arial.ttf','/System/Library/Fonts/Helvetica.ttc',
+              'C:/Windows/Fonts/arial.ttf','C:/Windows/Fonts/segoeui.ttf']}
+_fonts={}
+def f(sz,b=True):
+    key=(int(sz*S),b)
+    if key not in _fonts:
+        for path in FONTS[b]:
+            try: _fonts[key]=ImageFont.truetype(path,key[0]); break
+            except OSError: continue
+        else:
+            _fonts[key]=ImageFont.load_default(size=key[0])  # Pillow 10.1+: scalable built-in font
+    return _fonts[key]
 def rect(x0,y0,x1,y1,fill,ol=(30,30,30),w=2): d.rectangle([x0*S,y0*S,x1*S,y1*S],fill=fill,outline=ol,width=int(w*S))
 def text(x,y,t,sz=16,b=True,c=(20,20,20)): d.text((x*S,y*S),t,font=f(sz,b),fill=c,anchor='mm')
 def line(pts,c,w=4,dash=None):
@@ -93,7 +114,6 @@ for y in (640,440,300): head(900,y+20,900,y,ORANGE,13)
 arrow([(1400,155),(1420,155)],GREY,3)
 # golem line
 arrow([(830,228),(830,250),(830,712)],GREEN,3,dash=8)
-text(842,690,'',1)
 # dome
 cx,cy,r=800,860,150
 d.ellipse([(cx-r)*S,(cy-r)*S,(cx+r)*S,(cy+r)*S],fill=(205,225,240),outline=(30,30,30),width=3*S)
@@ -104,11 +124,7 @@ arrow([(830,712),(830,742),(812,742)],GREEN,3,dash=6)
 
 # copper input chest + display chests ring
 rect(786,728,812,754,(200,120,70),(90,50,20),1.5); text(760,741,'copper chest',10,False)
-for k in range(9):
-    a=math.radians(200+k*(140/8)); x=cx+105*math.cos(a); y=cy+105*math.sin(a)*-1
-for k in range(9):
-    a=math.radians(160-k*(140/8)); x=cx+108*math.cos(a); y=cy-108*math.sin(a)*-1
-for k in range(9):
+for k in range(9):  # one arc of 9 display chests in the front half of the dome
     a=math.radians(30+k*(120/8)); x=cx+112*math.cos(a); y=cy+112*math.sin(a)
     rect(x-11,y-11,x+11,y+11,(170,110,50),(80,50,20),1.2)
 text(cx,cy+30,'display chests (sealed with glass)',11,False,(20,40,70))
@@ -117,7 +133,7 @@ text(W/2,1035,'FRONT / ENTRANCE',16,c=GREY)
 # legend
 ly=1080
 def leg(x,c,t,dash=None):
-    arrow([(x,ly),(x+50,ly)],c,4,dash); text(x+60,ly,'',1); d.text(((x+60)*S,ly*S),t,font=f(13,False),fill=(30,30,30),anchor='lm')
+    arrow([(x,ly),(x+50,ly)],c,4,dash); d.text(((x+60)*S,ly*S),t,font=f(13,False),fill=(30,30,30),anchor='lm')
 leg(90,ORANGE,'Main item stream (under floor; dashed = crosses under dome)')
 leg(640,RED,'Smelter loop')
 leg(830,GREEN,'Potion line to golem gallery',dash=8)
