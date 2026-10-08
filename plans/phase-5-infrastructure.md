@@ -14,9 +14,11 @@
 - [ ] Priority: librarians for Mending
 - [ ] Priority: librarians for Unbreaking
 
+> **Bed trap:** if you breed villagers for the hall, use **real beds**. Villagers breed only when there are unclaimed beds, and straw beds don't count: villagers don't claim or sleep in them, and they're ignored for breeding ([Straw Bed](https://minecraft.wiki/w/Straw_Bed), [Villager](https://minecraft.wiki/w/Villager)).
+
 ### 2. Automatic or semi-auto farms
 - [ ] Sugar cane farm
-- [ ] Iron farm (near the sorter, in the [ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter); golems still need a player nearby)
+- [ ] Iron farm (near the sorter, in the [ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter); golems still need a player nearby). On Bedrock golems need a village with at least **20 beds and 10 villagers**, every villager linked to a bed ([Iron Golem](https://minecraft.wiki/w/Iron_Golem)). These must be **real beds**; straw beds don't count for villagers.
 - [ ] A simple mob grinder, or a spawner farm if you found a spawner
 
 ### 3. Nether

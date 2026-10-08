@@ -31,7 +31,12 @@ Do this before you decorate anything.
 
 ## Tips
 
-- **Straw beds:** three hay bales craft four straw beds. One use each, they skip the night, and they do not move your spawn.
+- **Straw beds** ([Straw Bed](https://minecraft.wiki/w/Straw_Bed), checked 2026-10-08):
+  - **Recipe:** 3 hay bales in a row make **4 straw beds**. A hay bale is 9 wheat, so that's 27 wheat for 4 beds ([Hay Bale](https://minecraft.wiki/w/Hay_Bale)). They stack to 16.
+  - **Single use:** it skips the night (clears the weather and resets the phantom timer like a bed), then breaks and drops nothing when you get up, at morning or if you leave early.
+  - **Doesn't set your spawn.** You still respawn at your real bed.
+  - Doesn't explode in the Nether or the End; it just breaks and drops nothing.
+  - **Villagers ignore them:** they don't claim or sleep in straw beds, and straw beds don't count for villager breeding. Use real beds for anything villager-related (trading hall, iron farm).
 - **Abandoned camps** (18 biomes, including meadows and cherry groves) are free early loot: copper gear, buckets, compasses, and sometimes iron, diamonds, or explorer maps. Raid one if it's close, then leave. Log its location in [coordinates](../notes/coordinates.md).
 
 ## Done when
