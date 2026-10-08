@@ -45,3 +45,7 @@ Long-term goals that span several phases. Their status is in the [tracker](progr
 3. After each play session, add an entry to [progress/session-log.md](progress/session-log.md).
 4. Write down every important location in [notes/coordinates.md](notes/coordinates.md) the moment you find it.
 5. Bigger builds get their own file from [templates/build-project.md](templates/build-project.md), or a GitHub issue.
+
+## License
+
+[MIT](LICENSE), except the two third-party images in [`assets/inspiration/`](assets/inspiration/), which belong to their creators and are not covered by the MIT license (see [CREDITS.md](CREDITS.md)).
