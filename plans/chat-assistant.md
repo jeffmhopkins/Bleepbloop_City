@@ -1,7 +1,7 @@
 # Big goal: In-game LLM chat assistant ("where is the nearest pig?")
 
 **Goal:** Jeffrey asks a question in plain English inside the game, for example "where is the nearest pig". A behavior pack on the Bedrock Dedicated Server sends the question to a small service on the Linux AI server. That service runs the local LLM with a few **read-only** game tools. The pack runs the tools in the world and privately tells the asker the answer.
-**Status:** ⬜ Not started. **This is a plan.** Nothing here is built or tested yet.
+**Status:** see the [tracker](../progress/tracker.md). **This is a plan.** Nothing in this repo's design is built yet; jbrain2 plans the same feature (below).
 **Depends on:** [Server migration](server-migration.md) Stage 0 (the server must be BDS in the container on the AI server). It shares a pack, a service and the Beta APIs decision with the [Live API](live-api.md).
 **Verdict:** **Feasible** on our setup (self-hosted BDS 26.50 + local LLM). It is not possible on Realms or in a normal client world, because the HTTP module is BDS-only.
 **Lore:** in-world, the assistant is the satellite left in orbit by an ancient civilization (brainstorm, not canon): see [notes/lore.md](../notes/lore.md).
@@ -25,6 +25,15 @@
 > LevelDB readers: [Mojang/leveldb](https://github.com/Mojang/leveldb) (Mojang's fork with zlib), [Amulet-Core](https://github.com/Amulet-Team/Amulet-Core) (Python, 1.9.49 released 2026-09-24), [amulet-leveldb](https://pypi.org/project/amulet-leveldb/) (Cython wrapper for Mojang's LevelDB), [mcbe-leveldb](https://www.npmjs.com/package/mcbe-leveldb) (TypeScript, 1.23.0, 2026-09-13), [leveldb-mcpe-java](https://github.com/HiveGamesOSS/leveldb-mcpe-java), [rbedrock](https://github.com/reedacartwright/rbedrock) (R) ·
 > Seed prediction: [Chunkbase seed map accuracy notes](https://www.chunkbase.com/apps/seed-map), [MC Seed View accuracy postmortem (2026-07-15, checked against BDS 1.26.33 `/locate`)](https://mcseedview.com/blog/accuracy-report-july-2026), [SeedFinder](https://github.com/zebedelu/SeedFinder) (C engine + REST API for Bedrock; GitHub lists the license as Zlib, the README badge says Apache-2.0), [cubiomes-bedrock](https://github.com/FragrantResult186/cubiomes-bedrock) (MIT), [cubiomes](https://github.com/Cubitect/cubiomes) (Java-only original) ·
 > Live structure check: [`Dimension.getGeneratedStructures` (beta)](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/dimension?view=minecraft-bedrock-experimental#getgeneratedstructures)
+
+> **jbrain2 findings (merged PRs #1595–#1596, on the AI box's fresh test world, 2026-10-10).** [jbrain2](https://github.com/jeffmhopkins/jbrain2/blob/main/docs/plans/MINECRAFT_BEDROCK_PLAN.md) tested a script bridge that needs **no Beta APIs**:
+> - A behavior pack on stable `@minecraft/server` 2.0.0 loaded with **no experiments** on.
+> - `scriptevent jb:… <json>` typed into the BDS console reached the script's `scriptEventReceive` in about 1 ms with the JSON intact, and the script's `console.log` came back on the console (`content-log-console-output-enabled=true`). Together that's a two-way channel without `@minecraft/server-net`.
+> - A `jb:dave` custom command registered for all players. `world.afterEvents.chatSend` is **not** on stable.
+> - `execute positioned X Y Z run locate structure <id>` and `locate biome minecraft:<id>` printed their answers on the console with no player online. Biome ids need the `minecraft:` namespace; structure ids don't.
+> - jbrain2 also records join/leave events and per-player play time (`app.mc_player_sessions`).
+>
+> jbrain2's own companion, "Dave" (its waves M5–M6, not built), is the same feature: players type `/jb:dave <question>`, it uses read-only `mc_*` tools and replies privately with `tellraw`. It's planned on that console bridge and refuses the Beta APIs experiment. If this repo's pack is built on the same bridge, the Beta APIs step below may not be needed. That's Jeffrey's call; nothing here has been changed on the world.
 
 ## What it does
 
@@ -143,7 +152,7 @@ The Script API alone can't do this. It has no "locate structure" call, `runComma
 
 For unreliable types, the answer comes from the saved world only (confirmed structures), or the bot says it can't predict them. For strongholds, the in-game answer stays the eye of ender.
 
-**3. Optional ground truth: the game's own `/locate`.** BDS can run `/locate structure <type>` from the console (the itzg image's `send-command`, output in the container logs). It's the game's own answer, so it's exact, including strongholds. **To test:** `/locate` is a **cheat-only** command on Bedrock, so check whether it works from the console with cheats off, and how to run it from the asker's position (e.g. `execute`). This would be the service sending a console command, so it stays service-side, limited to `locate`, and is never an LLM tool that runs arbitrary commands.
+**3. Optional ground truth: the game's own `/locate`.** BDS can run `/locate structure <type>` from the console (the itzg image's `send-command`, output in the container logs). It's the game's own answer, so it's exact, including strongholds. **To test:** `/locate` is a **cheat-only** command on Bedrock. jbrain2 found that `execute positioned X Y Z run locate structure|biome …` from the console prints its answer with no player online, on its fresh test world; check it again on the real world. This would be the service sending a console command, so it stays service-side, limited to `locate`, and is never an LLM tool that runs arbitrary commands.
 
 ## LLM service contract (tool loop)
 

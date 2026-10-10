@@ -1,7 +1,7 @@
 # Big goal: Live API (tokenized connection to the server)
 
 **Goal:** A behavior pack on the Bedrock Dedicated Server sends live game events (joins, deaths, block placements, positions, inventories) to a small web service on Jeffrey's Linux box. Grok Bot reads that service through a **read-only, token-protected** API to keep Bleepbloop City's plans and logs current.
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Depends on:** [Server migration](server-migration.md) Stage 0 (the server must be BDS on the Linux box)
 **See also:** [Companion bot references](#companion-bot-references-researched-2026-10-07) for an LLM-directed bot that follows and fights, and the [chat assistant](chat-assistant.md) (in-game `/ask` → local LLM with read-only tools), which shares this pack, service and Beta APIs decision.
 
@@ -16,6 +16,15 @@
 > [Bedrock Wiki: Script Requests API](https://wiki.bedrock.dev/scripting/script-net) ·
 > [Cloudflare Access service tokens](https://developers.cloudflare.com/cloudflare-one/access-controls/service-credentials/service-tokens/) ·
 > [Tailscale Serve](https://tailscale.com/docs/features/tailscale-serve) · [Tailscale Funnel](https://tailscale.com/docs/features/tailscale-funnel)
+
+> **jbrain2 findings (merged PRs #1595–#1596, on the AI box's fresh test world, 2026-10-10).** [jbrain2](https://github.com/jeffmhopkins/jbrain2/blob/main/docs/plans/MINECRAFT_BEDROCK_PLAN.md) tested a script bridge that needs **no Beta APIs**:
+> - A behavior pack on stable `@minecraft/server` 2.0.0 loaded with **no experiments** on.
+> - `scriptevent jb:… <json>` typed into the BDS console reached the script's `scriptEventReceive` in about 1 ms with the JSON intact, and the script's `console.log` came back on the console (`content-log-console-output-enabled=true`). Together that's a two-way channel without `@minecraft/server-net`.
+> - A `jb:dave` custom command registered for all players. `world.afterEvents.chatSend` is **not** on stable.
+> - `execute positioned X Y Z run locate structure <id>` and `locate biome minecraft:<id>` printed their answers on the console with no player online. Biome ids need the `minecraft:` namespace; structure ids don't.
+> - jbrain2 also records join/leave events and per-player play time (`app.mc_player_sessions`).
+>
+> jbrain2's own companion ("Dave", waves M5–M6, not built) is planned on that console bridge and refuses the Beta APIs experiment. If this repo's pack is built on the same bridge, the Beta APIs step below may not be needed. That's Jeffrey's call; nothing here has been changed on the world.
 
 ## Verified facts about the Bedrock side
 

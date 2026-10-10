@@ -29,9 +29,20 @@
 | [Automated item sorter (hopper chest hall + golem gallery)](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
 | [Happy ghast](../plans/happy-ghast.md) | ⬜ Not started | | | Phase 5; dried ghast is a Session 6 stretch |
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
-| [Server migration to the AI server](../plans/server-migration.md) | 🟨 In progress | 2026-10-10 | | Container + backups + snapshots. 2026-10-10: Jeffrey is building the server on the AI box now and plans to import the world this weekend. Stage 0 not done yet |
-| [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first |
-| [In-game chat assistant](../plans/chat-assistant.md) | ⬜ Not started | | | Needs migration first; shares the Live API pack |
+| [Server migration to the AI server](../plans/server-migration.md) | 🟨 In progress | 2026-10-10 | | Built in jbrain2 (Jeffrey's AI box project). Stage progress in [Server migration stages](#server-migration-stages) below |
+| [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first. jbrain2 already records join/leave events and play time, and has proved a stable-API script bridge (no Beta APIs) |
+| [In-game chat assistant](../plans/chat-assistant.md) | ⬜ Not started | | | Needs migration first. jbrain2 plans the same feature as "Dave" (`/jb:dave`, its waves M5–M6, not built) |
+
+### Server migration stages
+
+From jbrain2's merged Minecraft PRs #1593–#1596 and #1598 (read 2026-10-10). Details and the step-by-step mapping are in [server migration: already built in jbrain2](../plans/server-migration.md#already-built-in-jbrain2-read-2026-10-10).
+
+| Stage | Status | Notes |
+| --- | --- | --- |
+| 0 — Migrate | 🟨 In progress | BDS 1.26.52.3 runs in jbrain2's `minecraft` container on the AI box, on the LAN only, with a **fresh test world**. World import, world slots, game rules and the allowlist are built in the PWA. The real Bleepbloop City world isn't imported yet, the allowlist defaults to off, and joining from Windows and the Xbox is still to be tested |
+| 1 — Automated backups | 🟨 In progress | On-demand backups, automatic ones before update/load/import/reset/restore, 20 kept per world, pin, restore and download are built. **No schedule and no off-box copy**: backups stay in the same volume, which is left out of the box backups. No test restore of the real world yet |
+| 2 — Snapshot analysis | ⬜ Not started | jbrain2's world index (M4) and maps (M8) are planned, not built |
+| 3 — Live API | ⬜ Not started | See the Live API row above |
 
 ## Building goals
 

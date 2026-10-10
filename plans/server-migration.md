@@ -6,6 +6,24 @@
 
 This is written as a spec that Jeffrey, or his AI server, can build from. Anything marked **verify** or **unsure** needs checking on the real box before relying on it.
 
+## Already built in jbrain2 (read 2026-10-10)
+
+Jeffrey's AI box project, [jeffmhopkins/jbrain2](https://github.com/jeffmhopkins/jbrain2), now builds most of the server side of this plan. Its spec is [`docs/plans/MINECRAFT_BEDROCK_PLAN.md`](https://github.com/jeffmhopkins/jbrain2/blob/main/docs/plans/MINECRAFT_BEDROCK_PLAN.md) and the code is in [`deploy/minecraft/`](https://github.com/jeffmhopkins/jbrain2/tree/main/deploy/minecraft) (merged PRs #1593, #1594, #1595, #1596 and #1598). **Where a step below says "jbrain2:", follow jbrain2 and don't build a second copy here.** This repo only records how that maps onto Bleepbloop City. Stage progress is in the [tracker](../progress/tracker.md).
+
+| Our step | What jbrain2 has (as merged) |
+| --- | --- |
+| Container, image, limits, restart | A `minecraft` service in the stock jbrain stack: `debian:trixie-slim` plus a stdlib Python wrapper that downloads Mojang's BDS into the `jbrain_minecraft` volume. 2 GB `mem_limit`, 60 s stop grace. Not the itzg image. BDS 1.26.52.3 runs on the box. |
+| Network and ports | **Host network** (NetherNet needs the box's real address and LAN broadcast). The game is on the LAN only; nothing is forwarded from the router yet (internet play is jbrain2's R1, not built). The wrapper's control port (19180) is on the LAN too, behind a bearer token. |
+| Version pinning | The first install follows `MC_BDS_VERSION` (default `latest`). After that a start **keeps the installed version** unless auto-update is turned on (off by default). The Minecraft screen shows running vs latest version with Mojang's release notes. |
+| Updating BDS | **Update** takes a backup first, and a failed backup installs nothing. If the new version doesn't log "Server started." within 2 minutes, the old version is reinstalled and the world restored from that backup. |
+| Getting the world in | **Import a `.mcworld`** into one of 5 world slots from the PWA. The sidecar checks for `level.dat` and unsafe paths, refuses over 1 GB, backs up an occupied slot first, and sets `level-name` itself. Over 100 MB only uploads on the LAN. The world brings its own seed, game mode, difficulty and cheats setting from `level.dat`. |
+| Server settings | Difficulty applies live; game mode and cheats apply at the next restart. All 39 game rules (for example `playersSleepingPercentage`, `showCoordinates`, `playerWaypoints`) can be set per world, live on the loaded world and re-applied on every start. `online-mode=true` is forced. |
+| Allowlist | Add or remove gamertags from the PWA (live when the server runs). `allow-list` is still **`false` by default** (`MC_ALLOW_LIST`), and switching it on applies at the next restart. |
+| Backups (Stage 1) | Hot `.mcworld` snapshots via `save hold`/`query`/`resume`, on demand, plus automatic ones before an update, load, import, reset or restore. 20 unpinned backups kept per world (automatic ones go first, then the owner's); pinned ones are kept forever. Restore into any slot, and download. **Not scheduled** (that's jbrain2's M7), and **not off the box**: they live in the same `jbrain_minecraft` volume, which is left out of the box backups. A download from the PWA is the only off-box copy, and the screen shows when the last one happened. |
+| Snapshot analysis (Stage 2) | Not built. jbrain2's M4 (world index) and M8 (maps) are planned. Its debug API deliberately has no world download, so snapshots won't reach Grok Bot from jbrain2 by themselves. |
+
+**Not covered by jbrain2:** the Windows rollback copy, carrying over `permissions.json` (operator levels: no route manages it), carrying over the Windows `server.properties` (the wrapper writes its own), an off-box copy, scheduled backups, and a test restore on the real world.
+
 > **Sources (checked 2026-10-07):**
 > [Getting Started with BDS (Microsoft Learn)](https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/getting-started?view=minecraft-bedrock-stable) ·
 > [/save command (Minecraft Wiki)](https://minecraft.wiki/w/Commands/save) ·
@@ -52,6 +70,7 @@ Linux "AI server" (home)
 └── (Stage 3) live API web service, see live-api.md
 ```
 
+- **jbrain2:** the box already runs its own image instead (see [Already built in jbrain2](#already-built-in-jbrain2-read-2026-10-10)). The notes below are kept for reference.
 - **Container image:** the community **itzg/minecraft-bedrock-server** image is one option. ([README](https://github.com/itzg/docker-minecraft-bedrock-server))
   - It needs `EULA=TRUE` and keeps everything under `/data`.
   - `VERSION=LATEST` auto-upgrades on restart. **Pin a version instead** so the server never jumps ahead of players' clients.
@@ -70,8 +89,8 @@ Linux "AI server" (home)
 
 ### Prepare
 - [ ] Record the current BDS version on Windows and the world name (`level-name`)
-- [ ] Install Docker (or chosen tooling) on the Linux box
-- [ ] Decide image: itzg community image vs. own Ubuntu image (open question)
+- [x] Install Docker (or chosen tooling) on the Linux box. **jbrain2:** done, the `minecraft` service runs in its Docker Compose stack
+- [x] Decide image: itzg community image vs. own Ubuntu image. **jbrain2:** its own `debian:trixie-slim` image with a Python wrapper
 - [ ] Read `bedrock_server_how_to.html` for this version (transport, ports, backup notes)
 
 ### Back up on Windows
@@ -83,12 +102,13 @@ Linux "AI server" (home)
 - [ ] Zip it all, label it with the date, and keep it as the **rollback copy**
 
 ### Set up the container
-- [ ] Create the container with the same BDS version as Windows (pinned)
-- [ ] Start it once so it creates its folders, then stop it
-- [ ] Copy the world into `worlds/<level-name>/` and the config files into place
-- [ ] Check `level-name` matches the folder exactly
-- [ ] Set resource limits and restart policy
-- [ ] Open the firewall only for the game ports (TCP 19132 + the fixed UDP range for NetherNet; **verify** for your version)
+- [ ] Create the container with the same BDS version as Windows (pinned). **jbrain2:** the container exists and runs BDS 1.26.52.3, and it keeps that version until **Update** is pressed. Check that the Windows client version matches it
+- [x] Start it once so it creates its folders, then stop it. **jbrain2:** done; a fresh test world is in slot 1
+- [ ] Copy the world in. **jbrain2:** use **Minecraft → Worlds → Import** with a `.mcworld` instead of copying folders. A `.mcworld` is a zip of the world folder's contents (`level.dat`, `levelname.txt`, `db/`…). From a Windows client world, use Play → pencil (Edit) → Export World. Not done yet
+- [x] Check `level-name` matches the folder exactly. **jbrain2:** set by the sidecar when a slot is loaded
+- [ ] Re-enter the allowlist and operators. **jbrain2:** add gamertags on the Minecraft screen's allowlist and turn `allow-list` on (applies at the next restart). Operators (`permissions.json`) have no PWA control yet
+- [x] Set resource limits and restart policy. **jbrain2:** 2 GB `mem_limit` and a 60 s stop grace in its compose file
+- [ ] Open the firewall only for the game ports. **jbrain2:** the container uses the host network; the game and the token-guarded control port (19180) are reachable on the LAN, and nothing is forwarded from the router
 
 ### Test and cut over
 - [ ] From another device on the LAN: `curl http://<linux-box-ip>:19132/v1/join` should return name, version, and player count (NetherNet; per the itzg README)
@@ -100,6 +120,8 @@ Linux "AI server" (home)
 **Rollback:** stop the container, start Windows BDS with the rollback copy. Anything built after cutover would need the latest Linux backup copied back.
 
 ## Automated backups (Stage 1)
+
+**jbrain2** has on-demand backups, safety backups before risky actions, retention, restore and download (see [the table above](#already-built-in-jbrain2-read-2026-10-10)). Still missing for this stage: a **schedule**, an **off-box copy**, and a **test restore** of the real world. Until those exist, download a backup from the Minecraft screen after each session and keep it off the box (for example on Drive).
 
 - [ ] Backup script on the host:
   1. `send-command save hold` (or write to the console)
@@ -113,6 +135,8 @@ Linux "AI server" (home)
 - [ ] **Test a restore** into a scratch container once a month
 
 ## Snapshot pipeline (Stage 2)
+
+**jbrain2:** not built. Its world index (M4) and maps (M8) are planned, and a world copy can only leave the box as a download from the PWA. So for now a snapshot reaches Grok Bot only if Jeffrey downloads one and puts it where Grok Bot can read it.
 
 After each backup (or once a day), deliver the latest zip somewhere Grok Bot can already reach:
 
@@ -160,8 +184,8 @@ After each backup (or once a day), deliver the latest zip somewhere Grok Bot can
 
 ## Open questions for Jeffrey
 
-- [ ] Container tooling: Docker + Compose, Podman, or a systemd service? itzg community image or own Ubuntu image?
-- [ ] World name (`level-name`) and current BDS version on Windows?
+- [x] Container tooling: answered by jbrain2 (Docker Compose, its own `debian:trixie-slim` image)
+- [ ] World name and current BDS/client version on Windows? (The box runs BDS 1.26.52.3; jbrain2 sets `level-name` itself)
 - [ ] Where should snapshots and maps go: private repo, Google Drive, or (parts of) this public repo?
 - [ ] Do players join from outside your home network? (Affects port forwarding after cutover.)
 - [ ] How much RAM/CPU can the AI server spare while LLMs run?
