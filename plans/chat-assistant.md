@@ -34,6 +34,8 @@
 > - jbrain2 also records join/leave events and per-player play time (`app.mc_player_sessions`).
 >
 > jbrain2's own companion, "Dave" (its waves M5–M6, not built), is the same feature: players type `/jb:dave <question>`, it uses read-only `mc_*` tools and replies privately with `tellraw`. It's planned on that console bridge and refuses the Beta APIs experiment. If this repo's pack is built on the same bridge, the Beta APIs step below may not be needed. That's Jeffrey's call; nothing here has been changed on the world.
+>
+> **Update (jbrain2 PR #1603, merged 2026-10-10):** jbrain2's plan wave P1 shipped **Minecraft_Dave**, a persona in jbrain2's own app (PWA), not in-game. It keeps per-player goals, a progress log and line-level memory, binds each chat to one player by xuid, and has `mc_locate`, which sends one fixed, input-checked console `locate` command. That matches this plan's rule that `/locate` stays service-side. Player-authored text is fenced as untrusted, and it has no access to Jeffrey's notes. The in-game `/jb:dave` (M5–M6) is still not built.
 
 ## What it does
 

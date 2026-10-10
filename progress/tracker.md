@@ -31,7 +31,7 @@
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
 | [Server migration to the AI server](../plans/server-migration.md) | 🟨 In progress | 2026-10-10 | | Built in jbrain2 (Jeffrey's AI box project). Stage progress in [Server migration stages](#server-migration-stages) below |
 | [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first. jbrain2 already records join/leave events and play time, and has proved a stable-API script bridge (no Beta APIs) |
-| [In-game chat assistant](../plans/chat-assistant.md) | ⬜ Not started | | | Needs migration first. jbrain2 plans the same feature as "Dave" (`/jb:dave`, its waves M5–M6, not built) |
+| [In-game chat assistant](../plans/chat-assistant.md) | ⬜ Not started | | | Needs migration first. jbrain2 plans the same feature as "Dave" (`/jb:dave`, its waves M5–M6, not built). Its owner-side PWA persona Minecraft_Dave (per-player goals, progress log, line-level memory, console `/locate`) merged in PR #1603 (2026-10-10); that is not the in-game assistant |
 
 ### Server migration stages
 
