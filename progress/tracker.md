@@ -2,14 +2,14 @@
 
 **This is the one status file for the repo.** Phase status, the first-session checklist, big-goal and building-goal status, and milestones live here only; the README, the master plan, and the phase files link here instead of copying it. Update it when a phase starts or finishes or a checklist item is reached.
 
-**Next sessions:** [session plan for Sessions 2–6](session-plan.md) (Session 2 played 2026-10-07; Session 3 is next). It's a plan only: boxes here get ticked when Jeffrey reports them, not from the plan.
+**Next sessions:** [session plan for Sessions 2–6](session-plan.md) (Session 2 played 2026-10-07; Session 3 reported 2026-10-10; Session 4 is next). It's a plan only: boxes here get ticked when Jeffrey reports them, not from the plan.
 
 **Status key:** ⬜ Not started · 🟨 In progress · ✅ Done · ⏸️ On hold
 
 | Phase | Status | Started | Finished | Notes |
 | --- | --- | --- | --- | --- |
 | [1 — First night](../plans/phase-1-first-night.md) | ✅ Done | 2026-10-06 | 2026-10-07 | Bed, chest, stone tools (Session 1); torches and a full food stack (Session 2) |
-| [2 — Starter outpost](../plans/phase-2-starter-outpost.md) | 🟨 In progress | 2026-10-06 | | Crafting table, furnace, ~15 wheat by water, pen built (no cows yet). Second chest and door unconfirmed; no iron yet |
+| [2 — Starter outpost](../plans/phase-2-starter-outpost.md) | 🟨 In progress | 2026-10-06 | | Initial hut done: crafting table, furnace, smoker, two double chests (reported 2026-10-10). ~15 wheat by water, still not mature; pen built, no cows yet. Some iron from caves: bucket (filled with water) and shield made; full copper armor; coal and copper stocked (Session 3). Iron pickaxe, iron tools and iron armor not reported; door, farm light and fence unconfirmed |
 | [3 — Pick the real site](../plans/phase-3-pick-the-site.md) | ⬜ Not started | | | |
 | [4 — The base that lasts](../plans/phase-4-the-base.md) | ⬜ Not started | | | |
 | [5 — Infrastructure](../plans/phase-5-infrastructure.md) | ⬜ Not started | | | |
@@ -20,7 +20,7 @@
 - [x] Food farm planted (2026-10-07: ~15 starter wheat by water)
 - [ ] Iron tools
 - [ ] Site chosen
-- [ ] Storage started (one chest so far)
+- [ ] Storage started (two double chests in the hut, reported 2026-10-10; group chests not yet)
 
 ## Big goals
 
@@ -29,7 +29,7 @@
 | [Automated item sorter (hopper chest hall + golem gallery)](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
 | [Happy ghast](../plans/happy-ghast.md) | ⬜ Not started | | | Phase 5; dried ghast is a Session 6 stretch |
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
-| [Server migration to the AI server](../plans/server-migration.md) | ⬜ Not started | | | Container + backups + snapshots |
+| [Server migration to the AI server](../plans/server-migration.md) | 🟨 In progress | 2026-10-10 | | Container + backups + snapshots. 2026-10-10: Jeffrey is building the server on the AI box now and plans to import the world this weekend. Stage 0 not done yet |
 | [Live API (tokenized connection)](../plans/live-api.md) | ⬜ Not started | | | Needs migration first |
 | [In-game chat assistant](../plans/chat-assistant.md) | ⬜ Not started | | | Needs migration first; shares the Live API pack |
 
@@ -57,6 +57,7 @@ Only things that actually happened, with the date Jeffrey reported them. Add a r
 | --- | --- |
 | 2026-10-06 | Server started; first bed made, spawn set (Session 1) |
 | 2026-10-07 | Phase 1 done: torches and a full food stack; first wheat planted and animal pen built (Session 2) |
+| 2026-10-10 | First iron from the caves: bucket and shield; full copper armor; initial hut done with a smoker and two double chests (Session 3, reported 2026-10-10) |
 
 ## Planned milestones
 

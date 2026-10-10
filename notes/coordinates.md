@@ -4,13 +4,13 @@ Write locations down the moment you find them. Dimension is Overworld, Nether, o
 
 > **Coordinates are on** (`showcoordinates` set to true, reported 2026-10-08). Bedrock shows your **block position** (X Y Z) in a box at the top left of the screen ([Coordinates](https://minecraft.wiki/w/Coordinates)). The Y shown is your feet. Changing `showcoordinates` doesn't need cheats, so it doesn't turn off achievements ([Game rule](https://minecraft.wiki/w/Game_rule)).
 
-> **To do:** fill in X Y Z for every row below the next time you're there. Spawn, the first bed (made 2026-10-06), the tree farms and the lava pool were all found before coordinates were on, so they only have landmark notes for now.
+> **To do:** fill in X Y Z for every row below the next time you're there. Spawn, the first bed (made 2026-10-06), the tree farms and the lava pool were all found before coordinates were on, so they only have landmark notes for now. The hut, wheat farm, pen and cave entrance from Session 3 haven't been given yet either (they're in the Session 4 carry-over).
 
 | Name | Dimension | X | Y | Z | Notes |
 | --- | --- | --- | --- | --- | --- |
 | World spawn | Overworld | TBD | TBD | TBD | Big mountain in the distance comes down to cherry trees, then a normal biome; big caves, ocean, and ice (cold biome) nearby. Home base planned here. |
 | First bed | Overworld | TBD | TBD | TBD | Made 2026-10-06, near spawn |
-| Starter outpost | Overworld | | | | |
+| Starter outpost (initial hut) | Overworld | TBD | TBD | TBD | Hut done (reported 2026-10-10): crafting table, furnace, smoker, two double chests. Whether it's the first cherry-wood house wasn't said |
 | Real base | Overworld | | | | Planned near world spawn |
 | Village | Overworld | | | | |
 | Nether portal (Overworld side) | Overworld | | | | |
@@ -18,12 +18,12 @@ Write locations down the moment you find them. Dimension is Overworld, Nether, o
 | Nether hub | Nether | | | | |
 | Abandoned camp #1 | Overworld | | | | Looted? |
 | Abandoned camp #2 | Overworld | | | | Looted? |
-| Cave entrance / ravine | Overworld | | | | |
+| Cave entrance / ravine | Overworld | TBD | TBD | TBD | Caves mined for iron, coal and copper in Session 3 (reported 2026-10-10); entrance not logged yet |
 | Branch mine | Overworld | | | | |
 | Tree farm (12 trees) | Overworld | TBD | TBD | TBD | Replanted near base, Session 1 (2026-10-06) |
 | Cherry and oak saplings | Overworld | TBD | TBD | TBD | Cherry trees replanted and 9 oak trees growing, Session 2 (2026-10-07) |
 | Starter wheat and animal pen | Overworld | TBD | TBD | TBD | About 15 wheat beside water, plus the pen (Session 2) |
-| Staircase mine entrance | Overworld | | | | Session 3 |
+| Staircase mine entrance | Overworld | | | | Planned for Session 3, but Session 3 used the caves instead |
 
 ## Other points of interest
 

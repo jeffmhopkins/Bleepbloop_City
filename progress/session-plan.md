@@ -1,6 +1,6 @@
 # Session plan: Sessions 2–6
 
-**Status:** 📋 Plan only. Nothing here is checked off until Jeffrey reports it in the [session log](session-log.md). Session 2 was played 2026-10-07 and is marked below (✅ done, ⏳ partial or not reported); its carry-over is at the top of Session 3.
+**Status:** 📋 Plan only. Nothing here is checked off until Jeffrey reports it in the [session log](session-log.md). Sessions 2 (played 2026-10-07) and 3 (reported 2026-10-10) are marked below (✅ done, ⏳ partial or not reported); Session 3's carry-over is at the top of Session 4.
 **Based on:** [Session 1 (2026-10-06)](session-log.md), the [tracker](tracker.md), and the phase files ([1](../plans/phase-1-first-night.md), [2](../plans/phase-2-starter-outpost.md), [3](../plans/phase-3-pick-the-site.md), [4](../plans/phase-4-the-base.md), [5](../plans/phase-5-infrastructure.md)).
 **Server:** Bedrock 26.50 (Wilderness Bound). Mechanics below were checked on the [Minecraft Wiki](https://minecraft.wiki) (2026-10-07, rechecked 2026-10-08).
 **Coordinates are on** (reported 2026-10-08), so depths below are plain Y values read off the screen, and every new place gets its X Y Z written in [coordinates](../notes/coordinates.md).
@@ -18,6 +18,16 @@ Building shapes, sizes and looks are Jeffrey's design. This plan only says what 
 - **A Minecraft day is 20 minutes:** 10 minutes of daytime, then sunset, night and sunrise ([Daylight cycle](https://minecraft.wiki/w/Daylight_cycle)). If you sleep at every dusk, a 60-minute session gets about four or five daytimes.
 - **Sleep at dusk.** In multiplayer, everyone in the Overworld has to be in bed at once, unless the server's `playerssleepingpercentage` game rule is lowered ([Bed](https://minecraft.wiki/w/Bed)). Its value is still an [open server setting](../plans/multiplayer-server.md#open-server-settings-jeffrey-to-decide). Skipping sleep for several nights brings phantoms.
 - **Spend the first 2–3 minutes** of each session finishing the last session's carry-over items. Spend the last 5 minutes putting things in chests, writing the **X Y Z of every new place** in [coordinates](../notes/coordinates.md), and noting what got done for the session log.
+
+## Why the wheat is slow
+
+The Session 2 wheat still wasn't ready after Session 3. That fits how crop growth works on this server (checked on the wiki 2026-10-10: [Wheat Seeds](https://minecraft.wiki/w/Wheat_Seeds), [Tutorial: Crop farming](https://minecraft.wiki/w/Tutorial:Crop_farming), [Tick](https://minecraft.wiki/w/Tick), [Simulation distance](https://minecraft.wiki/w/Simulation_distance), [Bed](https://minecraft.wiki/w/Bed)):
+
+- **Crops only grow while their chunk is ticking.** On Bedrock that means the chunk is within the simulation distance of a player (on a server, `tick-distance`; the multiplayer default is 4 chunks, about 64 blocks) or inside a [ticking area](../plans/multiplayer-server.md#ticking-area-iron-farm-and-item-sorter). When nobody is online, or you're off in the caves more than a few chunks away, the wheat doesn't grow at all. With about an hour of play per session and much of it spent caving, the field has had very little growing time.
+- **Light 9 or more at the crop.** On Bedrock wheat can be planted in any light but needs light 9 to grow. Daylight covers the day; at night an unlit field stops, so torches around and in it keep it growing.
+- **Sleeping doesn't grow crops.** Skipping the night jumps the clock to morning, but crops don't get the skipped time.
+- **How long it takes:** wheat has 8 stages, and each step averages about 5 minutes in ideal conditions (hydrated farmland, planted in rows, lit) up to about 35 minutes in poor ones. So a field needs somewhere between about half an hour and a few hours of time *with you nearby*.
+- **What helps:** do base jobs near the farm, light it, keep every block within 4 of water, and use **bone meal** (from skeleton bones), which pushes a crop 2 to 5 stages at once.
 
 ## Carry-over rule
 
@@ -142,6 +152,7 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 ## Session 3: Iron age
 
 **Goal:** mine down for iron and coal, and come back with an iron pick, a shield and a bucket.
+**Result (reported 2026-10-10):** ✅ Caves instead of a staircase: a little iron, a bucket (filled), a shield, lots of coal and copper, full copper armor. ✅ Initial hut done with a smoker and two double chests. ⏳ Iron pick, iron sword and axe, cows, sugar cane, farm light and fence, and X Y Z still open ([session log](session-log.md)).
 **Advances:** Phase 2 (mining and iron upgrades).
 
 **Bring / have ready**
@@ -150,31 +161,31 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - **Target depth: Y=16.** Watch the Y in the coordinates box. That's where iron is most common below ground (it generates from Y=−24 to Y=56, peaking around Y=16) ([Iron Ore](https://minecraft.wiki/w/Iron_Ore)). Redstone starts at Y=15 and below ([Redstone Ore](https://minecraft.wiki/w/Redstone_Ore)). Stone turns into deepslate between Y=8 and Y=0 ([Deepslate](https://minecraft.wiki/w/Deepslate)), so if you see deepslate you've gone below the target.
 
 **Carry-over from Session 2 (do these first)**
-- [ ] **Cows into the pen** once the wheat is ready: hold wheat and the cows follow you. At least 2.
-- [ ] **Second chest** if there isn't one yet (8 planks).
-- [ ] **Check the wheat field is fenced and lit** (light 9 on Bedrock), and add a door to the house if it doesn't have one.
-- [ ] **Sugar cane:** plant the stalks on dirt or sand right next to the water if they aren't in yet, and spread new stalks along the bank.
+- [ ] ⏳ **Cows into the pen** once the wheat is ready: hold wheat and the cows follow you. At least 2. *(Wheat still not mature.)*
+- [x] ✅ **Second chest** if there isn't one yet (8 planks). *(Two double chests in the hut.)*
+- [ ] ⏳ **Check the wheat field is fenced and lit** (light 9 on Bedrock), and add a door to the house if it doesn't have one. *(Not reported. Hut done; door not mentioned.)*
+- [ ] ⏳ **Sugar cane:** *(Not reported.)* plant the stalks on dirt or sand right next to the water if they aren't in yet, and spread new stalks along the bank.
 
 **60-minute plan**
-- [ ] **0:00–0:05 Prep.** Eat, top up torches (craft more from coal as you find it), and set out at the start of a day.
-- [ ] **0:05–0:35 Staircase down.** Dig a staircase (never straight down) to about **Y=16**, lighting as you go. Mine every coal and iron ore you see, and **(new)** copper ore too. The big caves at spawn are faster but more dangerous; stay in lit sections. Coal ore needs any pickaxe; iron needs stone or better.
-- [ ] **0:35–0:45 Smelt and craft, in this order:**
+- [ ] ⏳ **0:00–0:05 Prep.** *(Not reported.)* Eat, top up torches (craft more from coal as you find it), and set out at the start of a day.
+- [ ] ⏳ **0:05–0:35 Staircase down.** *(Went into the caves instead: some iron, a bunch of coal and copper. No staircase or depth reported.)* Dig a staircase (never straight down) to about **Y=16**, lighting as you go. Mine every coal and iron ore you see, and **(new)** copper ore too. The big caves at spawn are faster but more dangerous; stay in lit sections. Coal ore needs any pickaxe; iron needs stone or better.
+- [ ] ⏳ **0:35–0:45 Smelt and craft, in this order:** *(Bucket filled with water and shield made; iron pick not reported.)*
   - Iron pick (3 iron).
   - Bucket (3 iron), then fill it with water.
   - Shield (1 iron + 6 planks).
-- [ ] **0:45–0:55 More iron.** Keep mining for an iron sword (2) and axe (3). That's 12 iron total with the items above.
-- [ ] **0:55–1:00 Back up and store.** Put the iron and coal in the chests. Write the X Y Z of the mine entrance, and of any other new place (cave mouths, camps, a good ore spot), in [coordinates](../notes/coordinates.md).
+- [ ] ⏳ **0:45–0:55 More iron.** *(Not reported: only a little iron found.)* Keep mining for an iron sword (2) and axe (3). That's 12 iron total with the items above.
+- [ ] ⏳ **0:55–1:00 Back up and store.** *(Two double chests in the hut; no X Y Z reported.)* Put the iron and coal in the chests. Write the X Y Z of the mine entrance, and of any other new place (cave mouths, camps, a good ore spot), in [coordinates](../notes/coordinates.md).
 
 **If you have 90**
-- [ ] **Iron armor**, in priority order: chestplate (8), leggings (7), helmet (5), boots (4). The full set is 24 iron.
-- [ ] **Smoker** (furnace + 4 logs) to halve cooking time. **Blast furnace** (furnace + 5 iron + 3 smooth stone) to halve ore smelting; smooth stone is stone smelted again.
-- [ ] **(new) Copper as a stopgap:** smelt the copper ore. **Copper armor** (24 ingots, 10 armor points vs. iron's 15) can cover you while iron goes to the pick, bucket and shield. Copper tools mine like stone (no diamonds or redstone) but faster and longer. Skip it if iron armor is already happening.
-- [ ] **Bank toward a compass:** 4 iron + 1 redstone dust. Redstone ore only appears at Y=15 and below, so pick some up if you see it around Y=16 and lower.
+- [ ] ⏳ **Iron armor** *(Not reported.)*, in priority order: chestplate (8), leggings (7), helmet (5), boots (4). The full set is 24 iron.
+- [ ] ⏳ **Smoker** *(✅ in the hut; blast furnace not reported.)* (furnace + 4 logs) to halve cooking time. **Blast furnace** (furnace + 5 iron + 3 smooth stone) to halve ore smelting; smooth stone is stone smelted again.
+- [x] ✅ **(new) Copper as a stopgap:** *(Full set of copper armor.)* smelt the copper ore. **Copper armor** (24 ingots, 10 armor points vs. iron's 15) can cover you while iron goes to the pick, bucket and shield. Copper tools mine like stone (no diamonds or redstone) but faster and longer. Skip it if iron armor is already happening.
+- [ ] ⏳ **Bank toward a compass:** *(No redstone reported.)* 4 iron + 1 redstone dust. Redstone ore only appears at Y=15 and below, so pick some up if you see it around Y=16 and lower.
 
 **Done when**
-- [ ] An iron pick, a shield and a water bucket.
-- [ ] An iron sword and axe, or 5+ spare iron toward them.
-- [ ] A stack of coal or charcoal for torches and smelting.
+- [ ] ⏳ An iron pick, a shield and a water bucket. *(Shield and water bucket ✅; iron pick not reported.)*
+- [ ] ⏳ An iron sword and axe, or 5+ spare iron toward them. *(Not reported.)*
+- [ ] ⏳ A stack of coal or charcoal for torches and smelting. *("A bunch of coal"; amount not given.)*
 
 **Safety and night**
 - **Never dig straight down, and never mine the block you're standing on.** Lava pools get common deeper down.
@@ -214,6 +225,12 @@ Jeffrey wants a map of the local area. The steps are spread across Sessions 2–
 - Wool for a banner, a door, torches, and the bed (you pick it up and carry it).
 - Wheat, seeds, and any carrots or potatoes you've found.
 - For the 90-minute map step: the compass (or redstone to craft it) and about 3 paper (harvest the Session 2 sugar cane).
+
+**Carry-over from Session 3 (do these first)**
+- [ ] **Cows into the pen** once the wheat is ready (hold wheat; at least 2). If it still isn't ready, see [why the wheat is slow](#why-the-wheat-is-slow): light the field and spend time near it.
+- [ ] **Iron pickaxe** if it isn't made yet: needs 3 more iron (the bucket and shield used 4). Grab it on any cave trip; the Session 5 branch mine needs iron picks.
+- [ ] **Sugar cane:** plant it on dirt or sand right next to water if it isn't in yet, and spread it. It gates paper for the map and books.
+- [ ] **Log X Y Z** of the hut, the wheat farm, the pen and the cave entrance in [coordinates](../notes/coordinates.md).
 
 **60-minute plan**
 - [ ] **0:00–0:10 Pick and mark the site** near spawn, using the Phase 3 checklist (flat-ish ground, plus what's already confirmed: ocean, caves, cherry trees, a second biome). Banner or pillar it, and write its X Y Z in [coordinates](../notes/coordinates.md). Check the Phase 3 "avoid" list: not on a stronghold, not inside a mansion, not on the looted camp.

@@ -1,7 +1,7 @@
 # Big goal: Move the server to the AI server (migration, backups, snapshots)
 
 **Goal:** Move Bleepbloop City's Bedrock Dedicated Server (BDS) off Jeffrey's Windows machine and into a container on his home Linux box (the "AI server", which mainly runs LLMs). Add automated backups, and deliver world snapshots somewhere Grok Bot can read them to keep this repo up to date.
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Companion spec:** [Live API (tokenized connection)](live-api.md) covers the real-time behavior pack, web service, and token auth.
 
 This is written as a spec that Jeffrey, or his AI server, can build from. Anything marked **verify** or **unsure** needs checking on the real box before relying on it.
