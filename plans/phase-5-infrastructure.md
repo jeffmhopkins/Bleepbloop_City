@@ -20,14 +20,15 @@
 - [ ] Sugar cane farm
 - [ ] Iron farm (near the sorter, in the [ticking area](multiplayer-server.md#ticking-area-iron-farm-and-item-sorter); golems still need a player nearby). On Bedrock golems need a village with at least **20 beds and 10 villagers**, every villager linked to a bed ([Iron Golem](https://minecraft.wiki/w/Iron_Golem)). These must be **real beds**; straw beds don't count for villagers.
 - [ ] A simple mob grinder, or a spawner farm if you found a spawner
+- [ ] Gold farm: a **zombified piglin farm**, the steady gold source for golden armor and bartering. On Bedrock the usual approach uses Overworld Nether portals, because every portal block spawns them and Bedrock ticks every portal block when a portal is lit. Mechanic notes in [resources and farms](../notes/resources-and-farms.md#gold-farm-zombified-piglins-bedrock)
 
 ### 3. Nether
 - [ ] Nether portal in a boxed room with a door, not in the open
 - [ ] Small Nether hub
 - [ ] Mark portal and hub coordinates in [notes/coordinates.md](../notes/coordinates.md)
 - [ ] Do not explore the Nether in iron armor with no fire resistance potions. Until there's fire resistance, Nether trips follow the [Session 6 limited-scope rule](../progress/session-plan.md#session-6-the-nether-gateway): keep the portal in sight, and leave at the first ghast or fire
-- [ ] Fire resistance before the first fortress trip: barter gold with piglins (1 gold ingot per barter; about 1 in 29 ingots gives a fire resistance potion or splash potion)
-- [ ] Fortress run for blaze rods and nether wart, then a brewing stand, then brew fire resistance ([future session: blaze rods and brewing](../progress/session-plan.md#future-session-blaze-rods-and-brewing-fire-resistance))
+- [ ] First fortress trip as a prepped run without fire resistance (best armor, golden boots, shield, cobble, food, a return trigger); drink a bartered potion if one turned up. Bartering isn't the route: 1 gold ingot per barter, about 1.7% (8 in 469) per fire resistance potion, so about 59 ingots for one specific potion or 29 for either kind
+- [ ] Bring back blaze rods and nether wart, then a brewing stand, then brew fire resistance ([future session: blaze rods and brewing](../progress/session-plan.md#future-session-blaze-rods-and-brewing-fire-resistance))
 - [ ] Bring back a **dried ghast** for the [happy ghast](happy-ghast.md). Look by the Nether fossils in a soul sand valley (1 in 3 has one); a piglin barter can also give one
 
 ### 4. Roads
@@ -55,7 +56,6 @@ Build these away from the pretty part of the base so lag and wither blasts stay 
 - [ ] Flying machine (see [flying-machine.md](flying-machine.md))
 - [ ] Mob switch or shard farm
 - [ ] Wither skeleton farm
-- [ ] Gold farm
 - [ ] A proper storage system with item sorters (see the [storage and sorting plan](storage-and-sorting.md): hopper chest hall plus a copper golem gallery showpiece; [grouping](storage-layout.md))
 
 ## Done when

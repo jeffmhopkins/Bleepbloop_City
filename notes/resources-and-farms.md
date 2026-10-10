@@ -16,7 +16,19 @@
 | Mob grinder or spawner farm | Auto | | ⬜ Not started | Phase 5 |
 | Mob switch or shard farm | End-game | | ⬜ Not started | After elytra |
 | Wither skeleton farm | End-game | | ⬜ Not started | After elytra |
-| Gold farm | End-game | | ⬜ Not started | After elytra |
+| Gold farm (zombified piglins) | Auto / semi-auto | | ⬜ Not started | Phase 5, after the first portal. Steady gold for golden armor and bartering. See [below](#gold-farm-zombified-piglins-bedrock) |
+
+### Gold farm: zombified piglins (Bedrock)
+
+Gold is an ongoing side task until this exists ([why](../progress/session-plan.md#future-session-blaze-rods-and-brewing-fire-resistance)). The build design is Jeffrey's call; these are the Bedrock mechanics it relies on, checked on the wiki 2026-10-10 ([Zombified Piglin](https://minecraft.wiki/w/Zombified_Piglin), [Tutorial: Zombified piglin farming](https://minecraft.wiki/w/Tutorial:Zombified_piglin_farming)):
+
+- **Portal spawning:** each Nether portal block in the **Overworld** has a chance to spawn a zombified piglin when it gets a random tick: 0.05% on Easy, 0.1% on Normal, 0.15% on Hard, none on Peaceful. So the open [difficulty setting](../plans/multiplayer-server.md#open-server-settings-jeffrey-to-decide) changes the rate. Portal spawns don't count toward the mob cap.
+- **Bedrock-only boost:** every portal block is ticked the moment a portal is lit, so a big portal (up to 23×23) that's repeatedly lit and put out spawns them quickly. That on/off cycling is what Bedrock gold farms are built around; Java farms need many more portals instead.
+- **Where they appear on Bedrock:** one block east or south of the portal, depending on which way it faces. Slabs and light don't stop it. **Portals below Y=0 never spawn them.**
+- **Other source:** they also spawn naturally in nether wastes and crimson forests (and fortresses), which is what Nether spawning-platform farms use.
+- **Drops:** 0–1 gold nugget each (9 nuggets = 1 ingot), plus a 2.5% chance of a gold ingot when a player kills it, and the golden sword 25% of the time on Bedrock. A Looting sword raises all of these.
+- **Shared anger:** hitting one makes every zombified piglin nearby hostile, so keep the kill spot enclosed and away from any portal they could walk back through.
+- **Needs a player nearby,** like the iron farm: nothing spawns or ticks outside simulation distance.
 
 ## Mining
 
