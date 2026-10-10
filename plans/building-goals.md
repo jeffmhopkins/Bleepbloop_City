@@ -201,7 +201,7 @@ A grand, boxed-in portal room with a matching hub on the Nether side.
 
 **Tasks**
 - [ ] Build the boxed-in portal room in the Overworld
-- [ ] Build the matching hub on the Nether side
+- [ ] Build the matching hub on the Nether side, by hand at the shrine portal's X ÷ 8, Z ÷ 8 (similar Y), so it doesn't link to a different portal within Bedrock's 128-block search ([linking trap](../progress/session-plan.md#session-6-the-nether-gateway))
 - [ ] Record both sides in [coordinates](../notes/coordinates.md)
 
 **Done when**

@@ -24,7 +24,7 @@
 
 ### 3. Nether
 - [ ] Nether portal in a boxed room with a door, not in the open
-- [ ] Small Nether hub
+- [ ] Small Nether hub. For every new portal, build its Nether side by hand at Overworld X ÷ 8, Z ÷ 8: on Bedrock a portal links to any lit portal within 128 blocks of the converted spot in either dimension, so new Overworld portals otherwise come out at an old one ([linking trap](../progress/session-plan.md#session-6-the-nether-gateway))
 - [ ] Mark portal and hub coordinates in [notes/coordinates.md](../notes/coordinates.md)
 - [ ] Do not explore the Nether in iron armor with no fire resistance potions. Until there's fire resistance, Nether trips follow the [Session 6 limited-scope rule](../progress/session-plan.md#session-6-the-nether-gateway): keep the portal in sight, and leave at the first ghast or fire
 - [ ] First fortress trip as a prepped run without fire resistance (best armor, golden boots, shield, cobble, food, a return trigger); drink a bartered potion if one turned up. Bartering isn't the route: 1 gold ingot per barter, about 1.7% (8 in 469) per fire resistance potion, so about 59 ingots for one specific potion or 29 for either kind
