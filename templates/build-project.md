@@ -6,7 +6,7 @@ Copy this into a new file (for example `notes/builds/storage-wall.md`) or into a
 # Build: <name>
 
 **Phase:** 
-**Status:** ⬜ Not started
+**Status:** see `progress/tracker.md` (add a row there; don't track status in this file)
 **Location:** Dimension, X / Y / Z
 **Palette:** 
 

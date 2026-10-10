@@ -2,7 +2,7 @@
 
 **When:** End game (after the core farms and storage are running)
 **Goal:** Build a working flying machine.
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 
 ## What it is
 

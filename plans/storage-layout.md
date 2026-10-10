@@ -1,7 +1,7 @@
 # Storage: how to group things
 
 **Part of:** [Storage and sorting](storage-and-sorting.md)
-**Status:** ⬜ Draft recommendation, not built
+**Status:** see the [tracker](../progress/tracker.md). This file is a draft recommendation.
 **Server:** Bedrock 26.50. Every redstone build must be a Bedrock-tested design.
 
 The storage hall will be a grand custom build that Jeffrey designs (see [building style: inspiration](building-style.md#inspiration)). This file doesn't set a shape, size, or palette; the only layout is [Jeffrey's own sketch](#hall-layout-jeffreys-sketch). It covers four things:

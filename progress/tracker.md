@@ -26,7 +26,7 @@
 
 | Goal | Status | Started | Finished | Notes |
 | --- | --- | --- | --- | --- |
-| [Automated item sorter (hopper chest hall + golem gallery)](../plans/storage-and-sorting.md) | ⬜ Not started | | | |
+| [Automated item sorter (hopper chest hall + golem gallery)](../plans/storage-and-sorting.md) | ⬜ Not started | | | Layout ([storage-layout.md](../plans/storage-layout.md)) is a draft recommendation, not built |
 | [Happy ghast](../plans/happy-ghast.md) | ⬜ Not started | | | Phase 5; dried ghast is a Session 6 stretch |
 | [Flying machine](../plans/flying-machine.md) | ⬜ Not started | | | End game |
 | [Server migration to the AI server](../plans/server-migration.md) | 🟨 In progress | 2026-10-10 | | Built in jbrain2 (Jeffrey's AI box project). Stage progress in [Server migration stages](#server-migration-stages) below |

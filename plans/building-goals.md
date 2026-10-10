@@ -28,7 +28,7 @@ Track status and dates in [progress/tracker.md](../progress/tracker.md#building-
 
 A small spruce and cobble cottage with a thatch roof made from straw beds. It's the cozy version of the starter shack.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 2 ([starter outpost](phase-2-starter-outpost.md))
 **Location:** _not recorded yet_
 
@@ -51,7 +51,7 @@ A small spruce and cobble cottage with a thatch roof made from straw beds. It's 
 
 The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest hall does the sorting out of sight, and a **glass-fronted golem gallery** near the entrance is the part you watch. The architecture is a grand custom build of Jeffrey's design. The functional grouping and technical constraints it has to fit are in [storage-layout.md](storage-layout.md).
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 4–5, alongside the storage [growth stages](storage-layout.md#4-growth-stages) 1–5 (gallery in the Dome = Stage 4)
 **Layout:** [Jeffrey's hall sketch](storage-layout.md#hall-layout-jeffreys-sketch): Machinery across the back, a central aisle, the front-left (Stage 1) and front-right (Stage 2) wings, the mid wings (Stage 3), the back wings (Stage 5), and the Dome (golem gallery, Stage 4) at the entrance. Stage numbers are the build order; what goes in each wing is planned for the [finished hall](storage-layout.md#final-layout-finished-hall). Each wing is a hallway with chest walls on both sides. [Item flow](storage-layout.md#item-flow): the shulker unloader at the center of Machinery feeds the router below it, with dump barrels to its right; a U-shaped stream runs from the router, under the Dome, and back to the overflow and lava on the right. Per-stage contents: [storage-stages.md](storage-stages.md).
 **Location:** _not recorded yet_ (near the home base at spawn)
@@ -85,7 +85,7 @@ The showpiece home for the [item sorter](storage-and-sorting.md). A hopper chest
 
 The base is near world spawn, so spawn becomes the town center: a public plaza everyone passes through.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 4–5
 **Location:** World spawn (_coordinates not recorded yet_)
 
@@ -114,7 +114,7 @@ Ties in with the [public hub at spawn](multiplayer-server.md#public-hub-at-spawn
 
 Turn the nearest village into part of Bleepbloop City.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 5, with the [villager trading hall](phase-5-infrastructure.md#1-villager-trading-hall)
 **Location:** Nearest village (_not recorded yet_)
 
@@ -138,7 +138,7 @@ Turn the nearest village into part of Bleepbloop City.
 
 A real perimeter for the base that also keeps mobs out.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 4 ([perimeter](phase-4-the-base.md#5-perimeter))
 **Location:** Around the home base
 
@@ -164,7 +164,7 @@ A real perimeter for the base that also keeps mobs out.
 
 Barns, a windmill, and a granary built over real, working farms.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 4–5 (Phase 4 food wing, Phase 5 farms)
 **Location:** _not recorded yet_
 
@@ -191,7 +191,7 @@ Barns, a windmill, and a granary built over real, working farms.
 
 A grand, boxed-in portal room with a matching hub on the Nether side.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 5 ([Nether](phase-5-infrastructure.md#3-nether))
 **Location:** _not recorded yet_
 
@@ -213,7 +213,7 @@ A grand, boxed-in portal room with a matching hub on the Nether side.
 
 A tall, lit landmark you can see from far away. It doubles as a way to spot home without checking coordinates.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 2–4
 **Location:** At or near the home base
 
@@ -237,7 +237,7 @@ A tall, lit landmark you can see from far away. It doubles as a way to spot home
 
 A timber-framed headframe over the way down to the branch mine.
 
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Suggested timing:** Phase 4 ([mine entrance](phase-4-the-base.md#4-mine-entrance))
 **Location:** _not recorded yet_
 

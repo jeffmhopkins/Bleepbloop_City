@@ -2,7 +2,7 @@
 
 **Goal:** A highly automated item sorter for the real base. **Hopper filters fed by a water/ice item stream (a Bedrock chest hall) do the primary sorting**, and **copper golems are the showpiece**: a glass-fronted golem gallery at the front of the hall where a few waxed golems sort a small set of everyday items (potions and tipped arrows) into display chests you can watch.
 **Role change (2026-10-07):** Jeffrey asked to make the golems "a visual thing in the front of the hall, not necessarily the primary sorting mechanism". The golem research below is still valid; it now applies to the gallery.
-**Status:** ⬜ Not started
+**Status:** see the [tracker](../progress/tracker.md).
 **Hall layout:** [Jeffrey's sketch](storage-layout.md#hall-layout-jeffreys-sketch) and [item flow](storage-layout.md#item-flow): shulker unloader at the center of Machinery feeding the router below it, dump barrels to the right, smelter on the left, intake/overflow/lava on the right; a U-shaped under-floor stream down one side of the central aisle, under the Dome (golem gallery) at the entrance, and back up the other side; each wing a hallway with chest walls on both sides.
 **Stages:** [one table per stage](storage-stages.md).
 **Grouping:** see [storage-layout.md](storage-layout.md) for functional adjacency rules, the hard technical constraints, and the item groups for the chest walls. The building itself is a custom build Jeffrey designs; no shape or size is prescribed.

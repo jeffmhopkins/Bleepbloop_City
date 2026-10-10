@@ -2,7 +2,7 @@
 
 **When:** Phase 5. A stretch goal on the first Nether trip ([Session 6](../progress/session-plan.md#session-6-the-nether-gateway)), and a real goal once the Nether is routine.
 **Goal:** Raise a happy ghast at the base, harness it, and use it as a flying platform for the [grand builds](building-goals.md) and as a 4-seat sightseeing mount.
-**Status:** ⬜ Not started. Plan only.
+**Status:** see the [tracker](../progress/tracker.md). This file is a plan.
 
 The facts below were checked on the Minecraft Wiki ([Happy Ghast](https://minecraft.wiki/w/Happy_Ghast), [Dried Ghast](https://minecraft.wiki/w/Dried_Ghast), [Harness](https://minecraft.wiki/w/Harness), [Nether Fossil](https://minecraft.wiki/w/Nether_Fossil), [Bartering](https://minecraft.wiki/w/Bartering), [Transportation](https://minecraft.wiki/w/Transportation), 2026-10-07) and the official [Bedrock 1.21.90 changelog](https://www.minecraft.net/en-us/article/minecraft-1-21-90-bedrock-changelog). Background on the rest of the new content is in [what's new](../notes/whats-new.md).
 
