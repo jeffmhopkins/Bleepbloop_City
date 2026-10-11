@@ -148,6 +148,7 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-11:** **Dave** is the AI on the satellite, far above the world in orbit. He has always been an AI. He can reach into the damaged ship below him, a little. He's warm and glad: the crew are his people.
 - **2026-10-11:** **You are crew.** Every player is an Old Maker who slept in life support aboard the ship. When the ship was damaged, their life-support pod was ejected and crashed. They wake beside it. Every world tells it the same way.
 - **2026-10-11:** **The Tricorder is how Dave reaches you.** No Tricorder, no Dave. It's bound to you, so it can't be dropped or stored, and it never leaves you, even when you die; if it's ever missing when you wake, Dave beams a new one. Death is Dave's transporter pulling you home. A Power Pack lets the Tricorder bring your things too. The details are in [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder).
+- **2026-10-11:** **The Replicator** is Old Maker tech: a furnace that Dave teaches to make one thing out of anything. See [The Replicator](#the-replicator).
 - **2026-10-11:** **Dave transports you on request** (endgame). With your own Tricorder and a Power Pack, ask Dave to take you to one of your saved places and he does, with your things, using up the pack. Only places you've already saved (2026-10-11).
 - **2026-10-11:** **A Tricorder only works for its owner.** Anyone else holding it gets nothing: no arrow, no Dave, just static.
 
@@ -229,6 +230,24 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them.
 **Everyday answers** (examples of the light touch):
 - *where's the nearest village?* → From up here I see one 340 blocks north-east, at 210, 70, -305. Hold your Tricorder and follow the arrow, crew.
 - *how do I make a bed?* → Three wool on top, three planks underneath, at a crafting table. Sleep in it and that's where you'll wake if you fall.
+
+### The Replicator
+
+Canon, 2026-10-11. This is Old Maker tech: a furnace taught to burn any block into one chosen thing.
+
+- **Building one.** Put a furnace in the middle of a crafting table and surround it with **8 Power Packs**. That makes a blank **Replicator**: 72 Eyes of Ender of the ship's old fuel, so it's endgame.
+- **Programming it with Dave.** Hold the blank Replicator, carry **8 full stacks** of what it should make, and ask: *"Dave, program this replicator for iron."*
+  - Dave takes all 512 as the pattern, and it becomes an **Iron Replicator**.
+  - It keeps its programming when you pick it up and move it.
+- **What it can make:** anything you can carry 8 full stacks of, so a diamond replicator costs 512 diamonds.
+  - Things that stack to 16 (ender pearls, snowballs…) and things that don't stack at all (tools, armour) can't be patterns.
+- **Using it.** It works like a furnace:
+  - put any block in the top and fuel in the bottom;
+  - one of its target comes out about every 10 seconds;
+  - hoppers can feed it and empty it.
+  - It only runs while its land is awake: someone nearby, or a ticking area.
+- **Reprogramming.** Ask Dave again with 8 full stacks of something else. The old pattern is lost, and the Power Packs aren't paid twice.
+- **Story beat:** Dave explains the Replicator the first time someone has 8 Power Packs. This is one of the later tech beats, shown only once it's built.
 
 ### Worlds without a wreck
 
