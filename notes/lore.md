@@ -292,7 +292,8 @@ Canon, 2026-10-11. Old Maker doors that fold the way between two places, opened 
 - **One way only.** Step in and you come out at the saved place, but nothing comes back through. To get home the same way, build a second gate there. That's the cost: every round trip is two seeds and two diamond rings.
 - **Re-aiming.** Within 4 blocks of your gate, ask Dave to point it at another of your saved places. Each re-aim burns one **Power Pack**.
 - **Story beat:** Dave explains wormholes the first time someone plants a seed, once gates are built.
-- *Still open (Jeffrey):* who may step through, and whether mining the gate gives the seed back.
+- **Anyone can step through** (canon, 2026-10-11). Only the one who planted it can open or re-aim it.
+- *Still open (Jeffrey):* whether mining the gate gives the seed back.
 
 ### The No-Spawn Beacon
 
@@ -302,7 +303,8 @@ Canon, 2026-10-11. Old Maker tech for a safe home, even one built out in the sky
 - **What it does.** Placed, it works at once; no need to ask Dave. It covers the **3×3 of chunks** around it (48 × 48 blocks), from bedrock to the sky. Any hostile or neutral mob there, and any wild animal nobody has looked after, is **beamed away by Dave**: it vanishes in a puff, with nothing left behind. Endermen that teleport in go the same way.
 - **What it leaves alone:** players, pets, anything with a name tag or on a lead, animals you've fed or bred, villagers you've traded with, golems (the copper golems are Old Maker helpers), and the great bosses.
 - **Breaking it** switches it off.
-- *Still open (Jeffrey):* who may break it, and whether the Warden is beamed away.
+- **Anyone can break it, like any other block** (canon, 2026-10-11), and it drops itself.
+- *Still open (Jeffrey):* whether the Warden is beamed away.
 
 ### Worlds without a wreck
 
