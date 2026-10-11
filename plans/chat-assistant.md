@@ -39,6 +39,8 @@
 
 > **Update (jbrain2 PR #1613, merged 2026-10-10):** Minecraft_Dave (still the PWA persona, not in-game) now has the full set of raw server tools. Reads run at once: console log tail, world slots, backups, server config/allowlist, and look-only console commands (`list`, `locate`, `querytarget`, queries; `execute` is never a read). Every change, including any other console command and start/stop/backup/restore/allowlist/properties/update actions, is staged as a proposal that only Jeffrey can approve. This differs from this plan's **Never** list below (no command-running tool): jbrain2 allows commands behind owner approval. The player-facing in-game assistant here stays read-only.
 
+> **Update (jbrain2 PR #1615, merged 2026-10-10):** Minecraft_Dave (still the PWA persona) gained `mc_find_block`, which reads the saved world files directly (works with the server stopped, about 0.05 s per search) and returns the nearest blocks of any type with exact x, y, z, explored ground only, deepslate ore twins included. On jbrain2's 1.26 test world the game's own `testforblock` confirmed every find it checked (two deepslate diamond ores, a spawner, a chest). That proves the approach behind Steps 6–7 here, though it searches the files on demand rather than through a SQLite index, and answers don't carry a snapshot time. It also added `mc_set_waypoint`, which points one player's held tricorder (from jbrain2's home-test script pack) at a destination, saved per gamertag in the world; it runs without owner approval since it only changes where that player's tricorder points. Neither is in our world yet.
+
 ## What it does
 
 - Any player on the server types `/ask "where is the nearest pig"`, or just `/ask` to get a text box.
