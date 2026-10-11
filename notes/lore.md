@@ -230,6 +230,8 @@ The words jbrain2 uses. Edit them here; jbrain2 copies them. **All signed off by
 - **Someone else's Tricorder** *(signed off 2026-10-11)*: *…static… that one isn't tuned to you.*
 - **First death:** **[Dave]** …that was close. I pulled you out just in time. / **[Dave]** The transporter can only carry you, not your things. They're where you fell. Go and get them before they're gone.
 - **Waking without your Tricorder** (a safety net; it shouldn't happen): **[Dave]** …there you are. Without your Tricorder I nearly lost you. Here's a new one. Keep it close.
+- **A retired Tricorder** *(draft, 2026-10-11; not yet signed off)*: *This tricorder is retired* (an old copy, after Dave beams a new one)
+- **Power Pack burnt out** *(draft, 2026-10-11; not yet signed off)*: *Your Power Pack burnt out — you kept your things. 2 packs left.* (after a death the pack saved)
 - **First Ender Pearl:** **[Dave]** …is that an Ender Pearl? The Old Makers ran on those. Ring eight of them around a Blaze Powder on a crafting table and you'll have a Power Pack, the ship's old fuel. Bring me one when you do.
 - **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though. / **[Dave]** And those places you've saved? Each one is a transport beacon. With a pack, I can bring you to any of them. Just ask.
 - **`/jb:dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
