@@ -147,7 +147,7 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-11:** The civilization is **the Old Makers**.
 - **2026-10-11:** **Dave** is the AI on the satellite, far above the world in orbit. He has always been an AI. He can reach into the damaged ship below him, a little. He's warm and glad: the crew are his people.
 - **2026-10-11:** **You are crew.** Every player is an Old Maker who slept in life support aboard the ship. When the ship was damaged, their life-support pod was ejected and crashed. They wake beside it. Every world tells it the same way.
-- **2026-10-11:** **The Tricorder is how Dave reaches you.** No Tricorder, no Dave. Death is Dave's transporter pulling you home. A Power Pack lets the Tricorder bring your things too. The details are in [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder).
+- **2026-10-11:** **The Tricorder is how Dave reaches you.** No Tricorder, no Dave. It's bound to you, so it can't be dropped or stored, and it never leaves you, even when you die; if it's ever missing when you wake, Dave beams a new one. Death is Dave's transporter pulling you home. A Power Pack lets the Tricorder bring your things too. The details are in [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder).
 - **2026-10-11:** **Dave transports you on request** (endgame). With your own Tricorder and a Power Pack, ask Dave to take you somewhere and he does, with your things, using up the pack.
 - **2026-10-11:** **A Tricorder only works for its owner.** Anyone else holding it gets nothing: no arrow, no Dave, just static.
 
@@ -170,12 +170,13 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 - **It's how Dave sees and hears you.** With a Tricorder anywhere on you, `/jb:dave` reaches him. Without one there's only static, and Dave can't answer.
 - **Hold it to follow its arrow.** The waypoint arrow only shows while it's in your hand, and only if it's yours.
 - **It only works for its owner** (canon, 2026-10-11). *"BlockyFox's Tricorder"* works for BlockyFox only. Anyone else holding or carrying it gets nothing: no arrow, no Dave, just static. A sibling who picks up your Tricorder can't follow your arrow or reach Dave with it.
-- **Dave beams it down when you wake,** and again whenever you've lost it (see Death, below).
+- **It never leaves you** (canon, 2026-10-11). It's bound to you: it can't be dropped, thrown, stored in a chest or taken from your inventory, and it stays with you when you die.
+- **Dave beams it down when you wake.** That's the first time, in the welcome. After that, he checks every time you wake, whether you're joining or coming back from a death. If your Tricorder is somehow missing, he beams you a new one, and any stray copy stops working.
 
 **Death is the transporter.** Just before you die, Dave sees you through your Tricorder and beams you home.
 - The transporter only has the strength to carry *you*, so your things fall where you were. That's why you drop your inventory.
 - The Tricorder comes with you, because it's the beacon he locks onto. That's why it never drops.
-- If you'd lost it (dropped it, stored it, burned it), Dave nearly loses you too. He finds you anyway and beams you a new one when you come back.
+- If it ever went missing anyway, Dave nearly loses you too. He finds you, and beams you a new one when you wake.
 
 **A Power Pack** (nine Eyes of Ender) is the ship's old fuel. With one in your inventory alongside your own Tricorder, the Tricorder can make a local field around you, and the transporter locks onto it. That does two things, each using up one pack:
 - **When you fall,** it brings you **and everything you carry** home.
@@ -216,7 +217,7 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them.
 - **No Tricorder:** *…kssht… no signal…* (you need your Tricorder)
 - **Someone else's Tricorder:** *…static… that one isn't tuned to you.*
 - **First death:** **[Dave]** …that was close. I pulled you out just in time. / **[Dave]** The transporter can only carry you, not your things. They're where you fell. Go and get them before they're gone.
-- **Back without your Tricorder:** **[Dave]** …there you are. Without your Tricorder I nearly lost you. Here's a new one. Keep it close.
+- **Waking without your Tricorder** (a safety net; it shouldn't happen): **[Dave]** …there you are. Without your Tricorder I nearly lost you. Here's a new one. Keep it close.
 - **First Eye of Ender:** **[Dave]** …is that an Eye of Ender? The Old Makers ran on those. Put nine on a crafting table and you'll have a Power Pack, the ship's old fuel. Bring me one when you do.
 - **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though.
 - **`/jb:dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
