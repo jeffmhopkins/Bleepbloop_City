@@ -61,7 +61,7 @@ Every one of these is a real Bedrock structure you'll run into anyway. The lore 
 - While the LLM works, the plan sends a private "Thinking…" line. That could be flavored as something like *"The sky is listening…"* (proposal; the text is a pack setting).
 - **`/bb:find`**, the no-LLM fallback, is the bare signal: when the satellite's voice is quiet (the AI server is down), its raw beacon still answers simple questions.
 
-**The deep scan** (canon, 2026-10-11). Finding something new, like the nearest village or the nearest diamond, takes the satellite's deep scan, and it has to recharge. In game, each crew member gets **two deep scans a day**: a new day (sleeping through the night counts) brings two more. Asking again for something Dave already found you today is free, and so is everything that isn't a search: what's at a spot, your saved places, where the others are. Out of scans, Dave says so (draft): *"…the deep scan needs to recharge, crew. Ask me again tomorrow."* Jeffrey's own chats with Dave outside the game have no limit.
+**The deep scan** (canon, 2026-10-11). Finding something new, like the nearest village or the nearest diamond, takes the satellite's deep scan, and it has to recharge. In game, each crew member gets **two deep scans a day**: a new day (sleeping through the night counts) brings two more. Asking again for something Dave already found you today is free, and so is everything that isn't a search: what's at a spot, your saved places, where the others are. Out of scans, Dave says so: *"…the deep scan needs to recharge, crew. Ask me again tomorrow."* Jeffrey's own chats with Dave outside the game have no limit.
 
 ### Three ways it knows the world
 
@@ -205,9 +205,9 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 
 **How Dave talks:** warm, a little damaged, short enough for kids. Useful answers and coordinates come first, with at most a small in-character touch ("from up here…", "crew"). He tells only the canon on this page, and never invents more.
 
-#### Dave's lines (draft, waiting for Jeffrey's sign-off)
+#### Dave's lines (signed off, 2026-10-11)
 
-The words jbrain2 will use. Edit them here; jbrain2 copies them. **Signed off** (2026-10-11): the two static lines, *No Tricorder* and *Someone else's Tricorder*. Everything else here is still a draft.
+The words jbrain2 uses. Edit them here; jbrain2 copies them. **All signed off by Jeffrey** (2026-10-11): the welcome, the other lines, the quick answers and the everyday examples.
 
 **The welcome** (about 25 s, private to the player):
 
@@ -234,7 +234,7 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them. **Signed off** 
 - **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though. / **[Dave]** And those places you've saved? Each one is a transport beacon. With a pack, I can bring you to any of them. Just ask.
 - **`/jb:dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
 
-**Quick answers** (draft, 2026-10-11). Simple asks Dave answers at once, the same way every time. Gaps in *italics* are filled in:
+**Quick answers** (signed off, 2026-10-11). Simple asks Dave answers at once, the same way every time. Gaps in *italics* are filled in:
 - **Point me home / navigate to a place:** **[Dave]** Locked on: *tree farm*, *340* blocks *north-east*. Hold your Tricorder and follow the arrow.
 - **No such place:** **[Dave]** I don't have a place called *tree farm* for you. Stand there and say "save this place as tree farm".
 - **Clear my waypoint:** **[Dave]** Arrow cleared. Ask me when you need a heading.
