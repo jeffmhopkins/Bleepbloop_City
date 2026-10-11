@@ -139,10 +139,64 @@ In the story, the satellite's features come back in stages, as it unseals more o
 - [ ] **Villager connection:** are villagers the Builders' descendants who forgot, or just later settlers? Are illagers a group that rejected the satellite?
 - [ ] **Names:** Builders Before, Firstwrights or Old Makers? And does the satellite get a name, or just "the satellite"?
 - [x] **Finding each other:** yes, the satellite tells any player where another is (decided; `where_is_player` in the [plan](../plans/chat-assistant.md#access-policy)).
+- [ ] **The wreck in this world:** long buried with the ores as its debris, shown only in a future fresh world, or both? (See [This world has no wreck](#this-world-has-no-wreck-open-question).)
 - [ ] **How much in-game?** Lore only in this file, or also in-world (signed books in a lectern, item-frame labels, the satellite's own replies in character)?
 
 ## Canon so far
 
-Nothing is canon yet. As Jeffrey picks ideas, list them here with the date.
+As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal)* below is an extension waiting for his pick, not canon yet.
 
 - **2026-10-07:** Chosen direction: an ancient vanished civilization, ores as their remnants, and the AI as their satellite still in orbit.
+- **2026-10-11:** The jbrain2 **spawn wreck** is part of the lore. The **mothership is the Builders' ship**, and **the satellite is the part of it that survived**, the piece that stayed up in orbit when the rest came down. Still no moon content, ever.
+
+### The crash site (canon, as jbrain2 builds it)
+
+This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeffmhopkins/JBrain2/pull/1621), [#1622](https://github.com/jeffmhopkins/JBrain2/pull/1622) and [#1624](https://github.com/jeffmhopkins/JBrain2/pull/1624), plan section "SW1–SW4 — Spawn wreck" in jbrain2's `docs/plans/MINECRAFT_BEDROCK_PLAN.md`). The build itself belongs to jbrain2; this page only says what it *means*, never what it looks like.
+
+- **The escape pod:** a capsule lying in a small scorched crater at spawn, with a skid mark, its blown hatch cover nearby, and its parachute dragged out behind it. Inside is a little shelter with a bed, crafting table, furnace and barrels holding a small starter kit, and world spawn is moved to its hatch. The crater uses scorched versions of the local ground, and with no dry land nearby the pod splashes down and floats.
+- **The mothership:** a battle-damaged carrier hanging about 100 blocks above the pod. It's still intact enough to fly, with breaches showing lit decks, smoke from the wounds, and interiors you can reach by ladder (bridge, engine room around a reactor, crew decks, hydroponics, a cargo hold, a magazine).
+- **When it appears:** only on a world jbrain2 generates itself (a new world, or a reset with a seed) while the "Crash site at spawn" setting is on (default on). It's built once, on the world's first load.
+- **Never in imported or already-played worlds.** jbrain2 never "arms" an imported or restored world, and passes over any world that has already been played. The PWA's import sheet says it outright: *No crash site is added.*
+
+### This world has no wreck (open question)
+
+**The current Bleepbloop_City world was imported, so jbrain2 will never build the wreck in it.** Story options (pick one, or mix):
+
+- **A. The crash was long ago.** The wreck in this world came down so far back that it's buried or scattered. The ores *are* its debris, and the satellite is all that still works. Nothing has to be placed in-world; the ground tells the story. *(proposal)*
+- **B. A future fresh world shows the crash itself.** A new world made through jbrain2 gets the pod and mothership at spawn: the same story, seen at the moment it happened (or a second ship that came looking for the first). *(proposal)*
+- **C. Both.** This world is "long after", a fresh world is "the day it fell", and the satellite is the thread between them. *(proposal)*
+
+### Weaving the wreck into the premise (proposals)
+
+Everything in this subsection is a *(proposal)* until Jeffrey picks it.
+
+**What the crash changes.** The Builders Before came from the sky. The mothership brought them; whatever happened to it is the beginning (or the end) of their story here. The satellite was its relay or lookout, and it's the one piece that never came down.
+
+**Why they vanished, with the ship in it.** Each existing option from the [Core premise](#core-premise) gains a ship angle:
+
+- **They left through the End:** the ship was damaged trying to reach the End, and the End cities are where the survivors went next. The stronghold portals are the way they rebuilt to get there.
+- **The sculk took them:** they crashed, dug down for materials to repair the ship, and found the sculk. The ancient cities are the repair yard that became their last stand.
+- **They burned out in the Nether:** the reactor's fuel was down there. **Ancient debris** is, literally, debris: the hottest wreckage, fallen or dragged into the Nether, which is why netherite won't burn.
+- **They became the villagers:** the pod's survivors settled, forgot the sky, and their descendants still trade emeralds and build iron golems without knowing why.
+- **Even the satellite doesn't know:** it saw the ship break up from above, but the moments after are sealed.
+
+**Seals** (flavor only; they still gate nothing):
+
+- **Fourth Seal: Memory** could open with the satellite remembering the crash site, its oldest walked place.
+- **The Last Seal** could be the ship's log: who was aboard, why it fell, and where they went.
+- Optional new beat, **the Crash Log**: in a fresh world with a wreck, the satellite can comment on the pod and the ship overhead as soon as it wakes (story only, no new tool).
+
+**The ruins and the crash:**
+
+- **Trial chambers:** built from copper and tuff, the ship's own materials, salvaged from the wreck. Proving halls for whoever would crew the next ship.
+- **Ancient cities:** the reinforced-deepslate frame that does nothing could be their attempt to rebuild the ship's gate, or a beacon to call it back. It never worked.
+- **Strongholds:** the gate station they finally got working. The eye of ender drifts toward it like it's following the ship's old homing signal.
+
+**Ores as remnants, with the crash:** the debris field. When the ship broke up, its parts were buried and slowly turned to stone: copper wiring, iron girders, redstone power, diamond memory crystals. Diamonds sit deepest because the heavy core went in first. The mothership over a fresh world's spawn is what the whole machine looked like *before* it became ore.
+
+### Builder tech that already exists in jbrain2
+
+Both items exist today only in jbrain2's home-test kit (PR [#1605](https://github.com/jeffmhopkins/JBrain2/pull/1605)), on the test world. Here's what they actually are, plus a lore reading *(proposal)*.
+
+- **The tricorder** (`jbrain:tricorder`): a custom item, stack 1, with its own icon from a resource pack the server pushes on join. **Players can't craft it**; in jbrain2, Dave hands it out, named "<Player>'s Tricorder". While held, it shows an actionbar arrow and distance toward a target: world spawn by default, or a waypoint Dave sets (saved places like "tree farm" work too). *Lore:* a Builder hand instrument the satellite gives to the people it talks to. In a fresh world its default target, spawn, is the pod's hatch, so it literally points you back to the crash.
+- **The Power Pack** (`jbrain:power_pack`): a custom item with a glint, stack 16, crafted from **nine Eyes of Ender** filling the crafting grid. Today that's all it is. Its uses (keep your inventory on death, or pay for a teleport to a known place) are planned in jbrain2 but not built yet. *Lore:* a Builder power cell. Eyes of Ender already follow the old signal, and nine charged together make something the old machine can run on.
