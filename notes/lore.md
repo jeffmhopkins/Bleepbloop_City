@@ -181,7 +181,10 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 **A Power Pack** (nine Eyes of Ender) is the ship's old fuel. With one in your inventory alongside your own Tricorder, the Tricorder can make a local field around you, and the transporter locks onto it. That does two things, each using up one pack:
 - **When you fall,** it brings you **and everything you carry** home.
 - **Transport on request** (endgame, canon 2026-10-11): ask Dave to take you to **one of your saved places** ("home", "tree farm"…), and he transports you there with your things, as long as you have your Tricorder and a Power Pack. Only places you've already saved; he can't send you somewhere you've never marked (2026-10-11). **Saving a place always marks where you're standing right now**: you can't save a spot by its coordinates, so you can only ever transport to somewhere you've been.
-  - **Saved places are transport beacons** (canon, 2026-10-11). When you save a place, Dave plants a beacon on your Tricorder's signal right where you stand, and that beacon is what his transporter locks onto. Either way of asking works: *"Dave, place a transport beacon here named mine entrance"* or *"Dave, save this place as mine entrance"*. Your beacons also guide your Tricorder's arrow ("take me to mine entrance").
+  - **Saved places turn out to be transport beacons** (canon, 2026-10-11). Each time you save a place, Dave plants a beacon on your Tricorder's signal right where you stand, and later his transporter can lock onto it.
+    - **The name waits for the story.** Until a player has learned about Power Packs and transport (the first-Power-Pack beat), Dave just calls them **saved places**, as in *"Dave, save this place as mine entrance."* He never says "transport beacon" before then.
+    - **The first-Power-Pack beat reveals it.** Every place you've saved was a beacon all along. After that, either way of asking works, including *"Dave, place a transport beacon here named mine entrance."*
+    - Either way, your saved places guide your Tricorder's arrow ("take me to mine entrance").
 
 *(Shown in game once jbrain2 builds the Power Pack's uses.)*
 
@@ -220,7 +223,7 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them.
 - **First death:** **[Dave]** …that was close. I pulled you out just in time. / **[Dave]** The transporter can only carry you, not your things. They're where you fell. Go and get them before they're gone.
 - **Waking without your Tricorder** (a safety net; it shouldn't happen): **[Dave]** …there you are. Without your Tricorder I nearly lost you. Here's a new one. Keep it close.
 - **First Eye of Ender:** **[Dave]** …is that an Eye of Ender? The Old Makers ran on those. Put nine on a crafting table and you'll have a Power Pack, the ship's old fuel. Bring me one when you do.
-- **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though.
+- **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though. / **[Dave]** And those places you've saved? Each one is a transport beacon. With a pack, I can bring you to any of them. Just ask.
 - **`/jb:dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
 
 **Everyday answers** (examples of the light touch):
