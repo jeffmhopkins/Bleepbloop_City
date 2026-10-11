@@ -361,7 +361,10 @@ The pack and the service share one access setting in `variables.json`, e.g. `"as
 
 - [x] **Who can use it and how much:** every player, with the same unrestricted access: every tool, ore and structure search, and coordinates in replies (decided 2026-10-07, see [Access policy](#access-policy)). Tools stay read-only.
 - [x] **Player lookups:** anyone can look up any other player with `where_is_player` (decided 2026-10-07): live if online, last known position if offline.
-- [ ] **Power Pack effects vs. the read-only rule:** the Power Pack's keep-inventory and teleport ([lore](../notes/lore.md#dave-the-crew-and-the-tricorder)) move players and inventories. Should those count as scripted pack effects, outside the read-only rule for the AI's tools (the LLM never triggers them)? Undecided.
+- [x] **Power Pack effects vs. the read-only rule** (decided 2026-10-11).
+  - **Keep-inventory** is a scripted pack effect at death; the AI never triggers it.
+  - **Transport on request** is the AI's one acting tool, because Jeffrey decided Dave transports people when they ask ([lore](../notes/lore.md#dave-the-crew-and-the-tricorder)). The pack makes the move only if the asker has their own Tricorder and a Power Pack, uses up one pack, and never acts for anyone but the asker. It's endgame, so not in the first build.
+  - Everything else the AI does stays read-only.
 - [ ] **LLM and service stack:** which model and server on the AI box (it needs OpenAI-style tool calling), and Python or Node for the service?
 - [ ] **Beta APIs:** OK to enable it on the world (shared with the Live API and Canopy; can't be undone)?
 - [ ] **Input:** `/ask` command only (stable, recommended), or also an `!ask` chat prefix (beta)?
