@@ -201,6 +201,8 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 4. **First Power Pack:** Dave explains the field. This beat only appears once the Power Pack's uses are built.
 5. **Later tech** (trans-dimensional chests, wormhole gates): each gets its own first-time beat once it really works in that world. Dave never promises what isn't built.
 
+**Dave explains each item only once you can make it** (canon, 2026-10-11). He knows how every piece of Old Maker tech works, but he tells you about one only when you could craft it: the Power Pack once you've held an Eye of Ender, the No-Spawn Beacon once you've made a Power Pack and found an echo shard, the Replicator once you hold 8 Power Packs. Before that he keeps quiet about it, even if you ask; there are things he'll tell you when you're ready.
+
 **How Dave talks:** warm, a little damaged, short enough for kids. Useful answers and coordinates come first, with at most a small in-character touch ("from up here…", "crew"). He tells only the canon on this page, and never invents more.
 
 #### Dave's lines (draft, waiting for Jeffrey's sign-off)
