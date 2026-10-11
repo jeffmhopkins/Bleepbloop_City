@@ -37,6 +37,8 @@
 >
 > **Update (jbrain2 PR #1603, merged 2026-10-10):** jbrain2's plan wave P1 shipped **Minecraft_Dave**, a persona in jbrain2's own app (PWA), not in-game. It keeps per-player goals, a progress log and line-level memory, binds each chat to one player by xuid, and has `mc_locate`, which sends one fixed, input-checked console `locate` command. That matches this plan's rule that `/locate` stays service-side. Player-authored text is fenced as untrusted, and it has no access to Jeffrey's notes. The in-game `/jb:dave` (M5–M6) is still not built.
 
+> **Update (jbrain2 PR #1613, merged 2026-10-10):** Minecraft_Dave (still the PWA persona, not in-game) now has the full set of raw server tools. Reads run at once: console log tail, world slots, backups, server config/allowlist, and look-only console commands (`list`, `locate`, `querytarget`, queries; `execute` is never a read). Every change, including any other console command and start/stop/backup/restore/allowlist/properties/update actions, is staged as a proposal that only Jeffrey can approve. This differs from this plan's **Never** list below (no command-running tool): jbrain2 allows commands behind owner approval. The player-facing in-game assistant here stays read-only.
+
 ## What it does
 
 - Any player on the server types `/ask "where is the nearest pig"`, or just `/ask` to get a text box.
