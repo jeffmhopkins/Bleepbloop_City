@@ -61,6 +61,8 @@ Every one of these is a real Bedrock structure you'll run into anyway. The lore 
 - While the LLM works, the plan sends a private "Thinking…" line. That could be flavored as something like *"The sky is listening…"* (proposal; the text is a pack setting).
 - **`/bb:find`**, the no-LLM fallback, is the bare signal: when the satellite's voice is quiet (the AI server is down), its raw beacon still answers simple questions.
 
+**The deep scan** (canon, 2026-10-11). Finding something new, like the nearest village or the nearest diamond, takes the satellite's deep scan, and it has to recharge. In game, each crew member gets **two deep scans a day**: a new day (sleeping through the night counts) brings two more. Asking again for something Dave already found you today is free, and so is everything that isn't a search: what's at a spot, your saved places, where the others are. Out of scans, Dave says so (draft): *"…the deep scan needs to recharge, crew. Ask me again tomorrow."* Jeffrey's own chats with Dave outside the game have no limit.
+
 ### Three ways it knows the world
 
 These are the real limits dressed as lore. The satellite knows the world in three different ways, and each one matches how the tools actually work.
@@ -153,6 +155,7 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-11:** **A Tricorder only works for its owner.** Anyone else holding it gets nothing: no arrow, no Dave, just static.
 - **2026-10-11:** **Wormholes are one-way doors Dave opens.** Plant a crafted Wormhole Seed in a ring of diamond blocks and ask Dave to open it to one of your saved places. It only goes one way; Dave can re-aim it for a Power Pack. See [Wormhole gates](#wormhole-gates).
 - **2026-10-11:** **The No-Spawn Beacon** keeps a 3×3 of chunks clear: Dave beams away any mob that turns up there. See [The No-Spawn Beacon](#the-no-spawn-beacon).
+- **2026-10-11:** **Dave's deep scan recharges.** In game, each crew member gets two deep scans a day (finding the nearest structure, or the nearest ore). Sleeping through the night brings a new day; asking again for something he already found you today is free. See [Talking to it](#talking-to-it).
 
 ### The crash site (canon, as jbrain2 builds it)
 
