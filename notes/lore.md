@@ -184,7 +184,7 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 - The Tricorder comes with you, because it's the beacon he locks onto. That's why it never drops.
 - If it ever went missing anyway, Dave nearly loses you too. He finds you, and beams you a new one when you wake.
 
-**A Power Pack** (nine Eyes of Ender) is the ship's old fuel. With one in your inventory alongside your own Tricorder, the Tricorder can make a local field around you, and the transporter locks onto it. That does two things, each using up one pack:
+**A Power Pack** (nine Ender Pearls) is the ship's old fuel. With one in your inventory alongside your own Tricorder, the Tricorder can make a local field around you, and the transporter locks onto it. That does two things, each using up one pack:
 - **When you fall,** it brings you **and everything you carry** home.
 - **Transport on request** (endgame, canon 2026-10-11): ask Dave to take you to **one of your saved places** ("home", "tree farm"…), and he transports you there with your things, as long as you have your Tricorder and a Power Pack. Only places you've already saved; he can't send you somewhere you've never marked (2026-10-11). **Saving a place always marks where you're standing right now**: you can't save a spot by its coordinates, so you can only ever transport to somewhere you've been.
   - **Saved places turn out to be transport beacons** (canon, 2026-10-11). Each time you save a place, Dave plants a beacon on your Tricorder's signal right where you stand, and later his transporter can lock onto it.
@@ -197,11 +197,11 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 **First-time beats.** Each happens once per player per world:
 1. **Waking** (first join): the welcome. You wake beside the pod, and a light falls from the sky. *What's this?* It's your Tricorder, and Dave's voice comes through it.
 2. **First death:** Dave explains the transporter, and why your things are back where you fell.
-3. **First Eye of Ender:** Dave explains that nine make a Power Pack, the ship's old fuel.
+3. **First Ender Pearl:** Dave explains that nine make a Power Pack, the ship's old fuel.
 4. **First Power Pack:** Dave explains the field. This beat only appears once the Power Pack's uses are built.
 5. **Later tech** (trans-dimensional chests, wormhole gates): each gets its own first-time beat once it really works in that world. Dave never promises what isn't built.
 
-**Dave explains each item only once you can make it** (canon, 2026-10-11). He knows how every piece of Old Maker tech works, but he tells you about one only when you could craft it: the Power Pack once you've held an Eye of Ender, the No-Spawn Beacon once you've made a Power Pack and found an echo shard, the Replicator once you hold 8 Power Packs. Before that he keeps quiet about it, even if you ask; there are things he'll tell you when you're ready.
+**Dave explains each item only once you can make it** (canon, 2026-10-11). He knows how every piece of Old Maker tech works, but he tells you about one only when you could craft it: the Power Pack once you've held an Ender Pearl, the No-Spawn Beacon once you've made a Power Pack and found an echo shard, the Replicator once you hold 8 Power Packs. Before that he keeps quiet about it, even if you ask; there are things he'll tell you when you're ready.
 
 **How Dave talks:** warm, a little damaged, short enough for kids. Useful answers and coordinates come first, with at most a small in-character touch ("from up here…", "crew"). He tells only the canon on this page, and never invents more.
 
@@ -230,7 +230,7 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them. **Signed off** 
 - **Someone else's Tricorder** *(signed off 2026-10-11)*: *…static… that one isn't tuned to you.*
 - **First death:** **[Dave]** …that was close. I pulled you out just in time. / **[Dave]** The transporter can only carry you, not your things. They're where you fell. Go and get them before they're gone.
 - **Waking without your Tricorder** (a safety net; it shouldn't happen): **[Dave]** …there you are. Without your Tricorder I nearly lost you. Here's a new one. Keep it close.
-- **First Eye of Ender:** **[Dave]** …is that an Eye of Ender? The Old Makers ran on those. Put nine on a crafting table and you'll have a Power Pack, the ship's old fuel. Bring me one when you do.
+- **First Ender Pearl:** **[Dave]** …is that an Ender Pearl? The Old Makers ran on those. Put nine on a crafting table and you'll have a Power Pack, the ship's old fuel. Bring me one when you do.
 - **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though. / **[Dave]** And those places you've saved? Each one is a transport beacon. With a pack, I can bring you to any of them. Just ask.
 - **`/jb:dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
 
@@ -253,7 +253,7 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them. **Signed off** 
 
 Canon, 2026-10-11. This is Old Maker tech: a furnace taught to burn any block into one chosen thing.
 
-- **Building one.** Put a furnace in the middle of a crafting table and surround it with **8 Power Packs**. That makes a blank **Replicator**: 72 Eyes of Ender of the ship's old fuel, so it's endgame.
+- **Building one.** Put a furnace in the middle of a crafting table and surround it with **8 Power Packs**. That makes a blank **Replicator**: 72 Ender Pearls of the ship's old fuel, so it's endgame.
 - **Programming it with Dave.** Hold the blank Replicator, carry **8 full stacks** of what it should make, and ask: *"Dave, program this replicator for iron."*
   - Dave takes all 512 as the pattern, and it becomes an **Iron Replicator**.
   - It keeps its programming when you pick it up and move it.
@@ -271,12 +271,12 @@ Canon, 2026-10-11. This is Old Maker tech: a furnace taught to burn any block in
 
 Canon, 2026-10-11. Old Maker doors that fold the way between two places, opened by Dave.
 
-- **Building one.** Craft a **Wormhole Seed**, build a Nether-portal-shaped ring of **blocks of diamond**, and plant the seed in it. The gate wakes but stays dark.
+- **Building one.** Craft a **Wormhole Seed** (a Power Pack in the middle, 4 popped chorus fruit and 4 Ender Pearls around it, canon 2026-10-11: the fruit that throws you about, tamed), build a Nether-portal-shaped ring of **blocks of diamond**, and plant the seed in it. The gate wakes but stays dark.
 - **Opening it.** Standing at your gate, ask Dave: *"Dave, open the wormhole to tree farm."* He opens it to **one of your saved places**, the same places he can transport you to, and only ones you've marked yourself.
 - **One way only.** Step in and you come out at the saved place, but nothing comes back through. To get home the same way, build a second gate there. That's the cost: every round trip is two seeds and two diamond rings.
 - **Re-aiming.** Within 4 blocks of your gate, ask Dave to point it at another of your saved places. Each re-aim burns one **Power Pack**.
 - **Story beat:** Dave explains wormholes the first time someone plants a seed, once gates are built.
-- *Still open (Jeffrey):* the seed's recipe, who may step through, and whether mining the gate gives the seed back.
+- *Still open (Jeffrey):* who may step through, and whether mining the gate gives the seed back.
 
 ### The No-Spawn Beacon
 
@@ -330,4 +330,4 @@ Everything in this subsection is a *(proposal)* until Jeffrey picks it.
 Both items exist today only in jbrain2's home-test kit (PR [#1605](https://github.com/jeffmhopkins/JBrain2/pull/1605)), on the test world. Here's what they actually are. The Tricorder's and Power Pack's story is now canon in [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder). jbrain2 has yet to build that canon: the welcome, ownership, never dropping, and needing one to reach Dave.
 
 - **The tricorder** (`jbrain:tricorder`): a custom item, stack 1, with its own icon from a resource pack the server pushes on join. **Players can't craft it**; in jbrain2, Dave hands it out, named "<Player>'s Tricorder". While held, it shows an actionbar arrow and distance toward a target: world spawn by default, or a waypoint Dave sets (saved places like "tree farm" work too). *Lore (canon):* how Dave sees and reaches his crew, beamed down when they wake. In a fresh world its default target, spawn, is the pod's hatch, so it literally points you back to the crash.
-- **The Power Pack** (`jbrain:power_pack`): a custom item with a glint, stack 16, crafted from **nine Eyes of Ender** filling the crafting grid. Today that's all it is. Its uses (keep your inventory on death, or pay for a teleport to a known place) are planned in jbrain2 but not built yet. *Lore (canon):* the ship's old fuel. Eyes of Ender already follow the old signal, and nine charged together make something the old machine can run on. With your Tricorder, it powers the field that brings your things home with you.
+- **The Power Pack** (`jbrain:power_pack`): a custom item with a glint, stack 16, crafted from **nine Ender Pearls** filling the crafting grid. Today that's all it is. Its uses (keep your inventory on death, or pay for a teleport to a known place) are planned in jbrain2 but not built yet. *Lore (canon):* the ship's old fuel. Eyes of Ender already follow the old signal, and nine charged together make something the old machine can run on. With your Tricorder, it powers the field that brings your things home with you.
