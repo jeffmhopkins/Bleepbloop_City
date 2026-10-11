@@ -232,6 +232,17 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them. **Signed off** 
 - **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though. / **[Dave]** And those places you've saved? Each one is a transport beacon. With a pack, I can bring you to any of them. Just ask.
 - **`/jb:dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
 
+**Quick answers** (draft, 2026-10-11). Simple asks Dave answers at once, the same way every time. Gaps in *italics* are filled in:
+- **Point me home / navigate to a place:** **[Dave]** Locked on: *tree farm*, *340* blocks *north-east*. Hold your Tricorder and follow the arrow.
+- **No such place:** **[Dave]** I don't have a place called *tree farm* for you. Stand there and say "save this place as tree farm".
+- **Clear my waypoint:** **[Dave]** Arrow cleared. Ask me when you need a heading.
+- **Save this place:** **[Dave]** Marked: *tree farm*, right where you're standing.
+- **Forget a place:** **[Dave]** *Tree farm* is gone from my list.
+- **List my places:** **[Dave]** Your places: *home* (*120* blocks *south*), *tree farm* (*340* blocks *north-east*).
+- **Where am I:** **[Dave]** From up here: *210, 70, -305*, in a *birch forest*, in the *Overworld*.
+- **Where is someone:** **[Dave]** *Mira_P* is *280* blocks *west* of you, in the *Overworld*. / *Mira_P* isn't online; I last saw them near *-40, 64, 120*.
+- **Scans left:** **[Dave]** You've got *1* deep scan left today. Sleep through the night and I'll have two again.
+
 **Everyday answers** (examples of the light touch):
 - *where's the nearest village?* → From up here I see one 340 blocks north-east, at 210, 70, -305. Hold your Tricorder and follow the arrow, crew.
 - *how do I make a bed?* → Three wool on top, three planks underneath, at a crafting table. Sleep in it and that's where you'll wake if you fall.
