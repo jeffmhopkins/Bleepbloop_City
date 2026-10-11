@@ -281,7 +281,7 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 **Decided 2026-10-07.** Jeffrey: "I should be able to ask, no restrictions," then "Each player should have access."
 - **Every player on the server gets the same unrestricted access** to all tools: live entity and block search, structure search, ore search, and **coordinates in replies** (`coords` mode). There are no roles or tiers.
 - Unrestricted means *what players can ask*, not what the tools can do. **Every LLM game tool stays read-only.** No tool runs commands, edits blocks, moves players or writes to the world files.
-- **The one lore-based exception: no Tricorder, no Dave** (accepted by Jeffrey 2026-10-11). You reach Dave only through your own Tricorder ([lore](../notes/lore.md#dave-the-crew-and-the-tricorder)). A lost Tricorder comes back at your next respawn, and a Tricorder held by someone else does nothing (no arrow, no Dave, static). With your own Tricorder on you, access is the same unrestricted access as everyone else.
+- **The one lore-based exception: no Tricorder, no Dave** (accepted by Jeffrey 2026-10-11). You reach Dave only through your own Tricorder ([lore](../notes/lore.md#dave-the-crew-and-the-tricorder)). It's locked to your inventory, and if it's ever missing when you join or respawn, Dave beams a new one, and a Tricorder held by someone else does nothing (no arrow, no Dave, static). With your own Tricorder on you, access is the same unrestricted access as everyone else.
 - Other lore "seals" in [notes/lore.md](../notes/lore.md) are story flavor only. Apart from the Tricorder, story elements never gate what anyone can ask.
 - Rate limits still apply to everyone (they protect the server and the LLM, not access).
 
