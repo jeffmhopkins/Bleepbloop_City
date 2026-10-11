@@ -41,7 +41,7 @@ From jbrain2's merged Minecraft PRs #1593–#1596 and #1598 (read 2026-10-10). D
 | --- | --- | --- |
 | 0 — Migrate | 🟨 In progress | BDS 1.26.52.3 runs in jbrain2's `minecraft` container on the AI box, on the LAN only, with a **fresh test world**. World import, world slots, game rules and the allowlist are built in the PWA. The real Bleepbloop City world isn't imported yet, the allowlist defaults to off, and joining from Windows and the Xbox is still to be tested |
 | 1 — Automated backups | 🟨 In progress | On-demand backups, automatic ones before update/load/import/reset/restore, 20 kept per world, pin, restore and download are built. **No schedule and no off-box copy**: backups stay in the same volume, which is left out of the box backups. No test restore of the real world yet |
-| 2 — Snapshot analysis | ⬜ Not started | jbrain2's world index (M4) and maps (M8) are planned, not built |
+| 2 — Snapshot analysis | ⬜ Not started | jbrain2's world index (M4) is planned, not built. Its map viewer (M8) wave 1 merged in PR #1623 (2026-10-11) on its test setup: a live web map (all three dimensions, tap for biome and X Z, pins, player and structure overlays) plus a saved structure sweep that runs the server's own `locate structure` on a 512-block grid and stores results outside the world folder. Timeline/replay (wave 2) and chat card (wave 3) not built; not yet run on our world |
 | 3 — Live API | ⬜ Not started | See the Live API row above |
 
 ## Building goals
