@@ -135,6 +135,7 @@ In the story, the satellite's features come back in stages, as it unseals more o
 - [x] **Names:** the **Old Makers**; the satellite's AI is **Dave** (2026-10-11).
 - [x] **Finding each other:** yes, the satellite tells any player where another is (decided; `where_is_player` in the [plan](../plans/chat-assistant.md#access-policy)).
 - [x] **The wreck in this world:** every world tells the same story, including this one (2026-10-11). See [Worlds without a wreck](#worlds-without-a-wreck).
+- [x] **Someone else's Tricorder:** does a sibling holding another player's Tricorder still see its owner's arrow? No (2026-10-11). A Tricorder only works for its owner; anyone else gets static, with no arrow and no Dave. See [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder).
 - [x] **How much in-game?** Dave welcomes each player in character, gives first-time story beats, and answers everyday questions with a light in-character touch (2026-10-11). See [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder).
 
 ## Canon so far
@@ -147,6 +148,7 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-11:** **Dave** is the AI on the satellite, far above the world in orbit. He has always been an AI. He can reach into the damaged ship below him, a little. He's warm and glad: the crew are his people.
 - **2026-10-11:** **You are crew.** Every player is an Old Maker who slept in life support aboard the ship. When the ship was damaged, their life-support pod was ejected and crashed. They wake beside it. Every world tells it the same way.
 - **2026-10-11:** **The Tricorder is how Dave reaches you.** No Tricorder, no Dave. Death is Dave's transporter pulling you home. A Power Pack lets the Tricorder bring your things too. The details are in [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder).
+- **2026-10-11:** **A Tricorder only works for its owner.** Anyone else holding it gets nothing: no arrow, no Dave, just static.
 
 ### The crash site (canon, as jbrain2 builds it)
 
@@ -165,8 +167,8 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 
 **The Tricorder:**
 - **It's how Dave sees and hears you.** With a Tricorder anywhere on you, `/jb:dave` reaches him. Without one there's only static, and Dave can't answer.
-- **Hold it to follow its arrow.** The waypoint arrow only shows while it's in your hand.
-- **Each one is tuned to its owner.** *"BlockyFox's Tricorder"* connects BlockyFox only; anyone else who carries it hears static.
+- **Hold it to follow its arrow.** The waypoint arrow only shows while it's in your hand, and only if it's yours.
+- **It only works for its owner** (canon, 2026-10-11). *"BlockyFox's Tricorder"* works for BlockyFox only. Anyone else holding or carrying it gets nothing: no arrow, no Dave, just static. A sibling who picks up your Tricorder can't follow your arrow or reach Dave with it.
 - **Dave beams it down when you wake,** and again whenever you've lost it (see Death, below).
 
 **Death is the transporter.** Just before you die, Dave sees you through your Tricorder and beams you home.
