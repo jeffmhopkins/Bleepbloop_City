@@ -282,7 +282,8 @@ If no pig is in loaded range: *"I can't see any pigs within the loaded area arou
 - **Every player on the server gets the same unrestricted access** to all tools: live entity and block search, structure search, ore search, and **coordinates in replies** (`coords` mode). There are no roles or tiers.
 - Unrestricted means *what players can ask*, not what the tools can do. **Every LLM game tool stays read-only.** No tool runs commands, edits blocks, moves players or writes to the world files.
 - **The one lore-based exception: no Tricorder, no Dave** (accepted by Jeffrey 2026-10-11). You reach Dave only through your own Tricorder ([lore](../notes/lore.md#dave-the-crew-and-the-tricorder)). It's locked to your inventory, and if it's ever missing when you join or respawn, Dave beams a new one, and a Tricorder held by someone else does nothing (no arrow, no Dave, static). With your own Tricorder on you, access is the same unrestricted access as everyone else.
-- Other lore "seals" in [notes/lore.md](../notes/lore.md) are story flavor only. Apart from the Tricorder, story elements never gate what anyone can ask.
+- **Second exception: the deep-scan limit** (decided by Jeffrey 2026-10-11, planned as jbrain2 wave M17, not built yet). In game, each player gets **two deep scans per Minecraft day** (finding the nearest structure or the nearest block or ore). Sleeping through the night starts a new day; repeating a search Dave already did for that player today is free; the limit is per player; Jeffrey's chats outside the game and the map's Structures overlay are unlimited. Non-search questions (what's at a spot, saved places, where other players are) never count. See [lore](../notes/lore.md#talking-to-it).
+- Other lore "seals" in [notes/lore.md](../notes/lore.md) are story flavor only. Apart from the Tricorder and the deep-scan limit, story elements never gate what anyone can ask.
 - Rate limits still apply to everyone (they protect the server and the LLM, not access).
 
 - **Anyone can look up any other player** (`where_is_player`, decided 2026-10-07): live position if they're online, last known position if they're offline. Still read-only.
@@ -359,7 +360,7 @@ The pack and the service share one access setting in `variables.json`, e.g. `"as
 
 ## Open decisions for Jeffrey
 
-- [x] **Who can use it and how much:** every player, with the same unrestricted access: every tool, ore and structure search, and coordinates in replies (decided 2026-10-07, see [Access policy](#access-policy)). Tools stay read-only.
+- [x] **Who can use it and how much:** every player, with the same unrestricted access: every tool, ore and structure search, and coordinates in replies (decided 2026-10-07, see [Access policy](#access-policy)); since 2026-10-11, in-game deep scans are limited to two per player per Minecraft day. Tools stay read-only.
 - [x] **Player lookups:** anyone can look up any other player with `where_is_player` (decided 2026-10-07): live if online, last known position if offline.
 - [x] **Power Pack effects vs. the read-only rule** (decided 2026-10-11).
   - **Keep-inventory** is a scripted pack effect at death; the AI never triggers it.
