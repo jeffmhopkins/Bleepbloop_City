@@ -13,7 +13,7 @@ Jeffrey's AI box project, [jeffmhopkins/jbrain2](https://github.com/jeffmhopkins
 | Our step | What jbrain2 has (as merged) |
 | --- | --- |
 | Container, image, limits, restart | A `minecraft` service in the stock jbrain stack: `debian:trixie-slim` plus a stdlib Python wrapper that downloads Mojang's BDS into the `jbrain_minecraft` volume. 2 GB `mem_limit`, 60 s stop grace. Not the itzg image. BDS 1.26.52.3 runs on the box. |
-| Network and ports | **Host network** (NetherNet needs the box's real address and LAN broadcast). The game is on the LAN only; nothing is forwarded from the router yet (internet play is jbrain2's R1, not built). The wrapper's control port (19180) is on the LAN too, behind a bearer token. |
+| Network and ports | **Host network** (NetherNet needs the box's real address and LAN broadcast). Internet play was set up by hand on 2026-10-11 (jbrain2 PR #1652): the router forwards TCP+UDP 19132 and UDP 19140–19144, and `server-udp-ports` announces the public IP. A DNS updater and UPnP are still open, so the announced IP must be fixed by hand if the home IP changes. The wrapper's control port (19180) is on the LAN too, behind a bearer token. |
 | Version pinning | The first install follows `MC_BDS_VERSION` (default `latest`). After that a start **keeps the installed version** unless auto-update is turned on (off by default). The Minecraft screen shows running vs latest version with Mojang's release notes. |
 | Updating BDS | **Update** takes a backup first, and a failed backup installs nothing. If the new version doesn't log "Server started." within 2 minutes, the old version is reinstalled and the world restored from that backup. |
 | Getting the world in | **Import a `.mcworld`** into one of 5 world slots from the PWA. The sidecar checks for `level.dat` and unsafe paths, refuses over 1 GB, backs up an occupied slot first, and sets `level-name` itself. Over 100 MB only uploads on the LAN. The world brings its own seed, game mode, difficulty and cheats setting from `level.dat`. |
@@ -108,7 +108,7 @@ Linux "AI server" (home)
 - [x] Check `level-name` matches the folder exactly. **jbrain2:** set by the sidecar when a slot is loaded
 - [ ] Re-enter the allowlist and operators. **jbrain2:** add gamertags on the Minecraft screen's allowlist and turn `allow-list` on (applies at the next restart). Operators (`permissions.json`) have no PWA control yet
 - [x] Set resource limits and restart policy. **jbrain2:** 2 GB `mem_limit` and a 60 s stop grace in its compose file
-- [ ] Open the firewall only for the game ports. **jbrain2:** the container uses the host network; the game and the token-guarded control port (19180) are reachable on the LAN, and nothing is forwarded from the router
+- [ ] Open the firewall only for the game ports. **jbrain2:** the container uses the host network; the game and the token-guarded control port (19180) are reachable on the LAN; only the game ports (19132, 19140–19144) are forwarded from the router (2026-10-11), not 19180
 
 ### Test and cut over
 - [ ] From another device on the LAN: `curl http://<linux-box-ip>:19132/v1/join` should return name, version, and player count (NetherNet; per the itzg README)
