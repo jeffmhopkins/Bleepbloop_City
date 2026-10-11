@@ -151,6 +151,8 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-11:** **The Replicator** is Old Maker tech: a furnace that Dave teaches to make one thing out of anything. See [The Replicator](#the-replicator).
 - **2026-10-11:** **Dave transports you on request** (endgame). With your own Tricorder and a Power Pack, ask Dave to take you to one of your saved places and he does, with your things, using up the pack. Only places you've already saved (2026-10-11).
 - **2026-10-11:** **A Tricorder only works for its owner.** Anyone else holding it gets nothing: no arrow, no Dave, just static.
+- **2026-10-11:** **Wormholes are one-way doors Dave opens.** Plant a crafted Wormhole Seed in a ring of diamond blocks and ask Dave to open it to one of your saved places. It only goes one way; Dave can re-aim it for a Power Pack. See [Wormhole gates](#wormhole-gates).
+- **2026-10-11:** **The No-Spawn Beacon** keeps a 3×3 of chunks clear: Dave beams away any mob that turns up there. See [The No-Spawn Beacon](#the-no-spawn-beacon).
 
 ### The crash site (canon, as jbrain2 builds it)
 
@@ -200,7 +202,7 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 
 #### Dave's lines (draft, waiting for Jeffrey's sign-off)
 
-The words jbrain2 will use. Edit them here; jbrain2 copies them.
+The words jbrain2 will use. Edit them here; jbrain2 copies them. **Signed off** (2026-10-11): the two static lines, *No Tricorder* and *Someone else's Tricorder*. Everything else here is still a draft.
 
 **The welcome** (about 25 s, private to the player):
 
@@ -219,8 +221,8 @@ The words jbrain2 will use. Edit them here; jbrain2 copies them.
 | 23 s | **[Dave]** Need me? Type /jb:dave and ask. Try: /jb:dave where is the nearest village |
 
 **Other lines:**
-- **No Tricorder:** *…kssht… no signal…* (you need your Tricorder)
-- **Someone else's Tricorder:** *…static… that one isn't tuned to you.*
+- **No Tricorder** *(signed off 2026-10-11)*: *…kssht… no signal…* (you need your Tricorder)
+- **Someone else's Tricorder** *(signed off 2026-10-11)*: *…static… that one isn't tuned to you.*
 - **First death:** **[Dave]** …that was close. I pulled you out just in time. / **[Dave]** The transporter can only carry you, not your things. They're where you fell. Go and get them before they're gone.
 - **Waking without your Tricorder** (a safety net; it shouldn't happen): **[Dave]** …there you are. Without your Tricorder I nearly lost you. Here's a new one. Keep it close.
 - **First Eye of Ender:** **[Dave]** …is that an Eye of Ender? The Old Makers ran on those. Put nine on a crafting table and you'll have a Power Pack, the ship's old fuel. Bring me one when you do.
@@ -248,6 +250,27 @@ Canon, 2026-10-11. This is Old Maker tech: a furnace taught to burn any block in
   - It only runs while its land is awake: someone nearby, or a ticking area.
 - **Reprogramming.** Ask Dave again with 8 full stacks of something else. The old pattern is lost, and the Power Packs aren't paid twice.
 - **Story beat:** Dave explains the Replicator the first time someone has 8 Power Packs. This is one of the later tech beats, shown only once it's built.
+
+### Wormhole gates
+
+Canon, 2026-10-11. Old Maker doors that fold the way between two places, opened by Dave.
+
+- **Building one.** Craft a **Wormhole Seed**, build a Nether-portal-shaped ring of **blocks of diamond**, and plant the seed in it. The gate wakes but stays dark.
+- **Opening it.** Standing at your gate, ask Dave: *"Dave, open the wormhole to tree farm."* He opens it to **one of your saved places**, the same places he can transport you to, and only ones you've marked yourself.
+- **One way only.** Step in and you come out at the saved place, but nothing comes back through. To get home the same way, build a second gate there. That's the cost: every round trip is two seeds and two diamond rings.
+- **Re-aiming.** Within 4 blocks of your gate, ask Dave to point it at another of your saved places. Each re-aim burns one **Power Pack**.
+- **Story beat:** Dave explains wormholes the first time someone plants a seed, once gates are built.
+- *Still open (Jeffrey):* the seed's recipe, who may step through, and whether mining the gate gives the seed back.
+
+### The No-Spawn Beacon
+
+Canon, 2026-10-11. Old Maker tech for a safe home, even one built out in the sky, where endermen would otherwise come.
+
+- **Crafting it.** A **Power Pack** in the middle of a crafting table, surrounded by **8 echo shards**. The shards come from an ancient city, so a quiet base is earned.
+- **What it does.** Placed, it works at once; no need to ask Dave. It covers the **3×3 of chunks** around it (48 × 48 blocks), from bedrock to the sky. Any hostile or neutral mob there, and any wild animal nobody has looked after, is **beamed away by Dave**: it vanishes in a puff, with nothing left behind. Endermen that teleport in go the same way.
+- **What it leaves alone:** players, pets, anything with a name tag or on a lead, animals you've fed or bred, villagers you've traded with, golems (the copper golems are Old Maker helpers), and the great bosses.
+- **Breaking it** switches it off.
+- *Still open (Jeffrey):* who may break it, and whether the Warden is beamed away.
 
 ### Worlds without a wreck
 
