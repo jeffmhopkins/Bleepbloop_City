@@ -148,6 +148,7 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-11:** **Dave** is the AI on the satellite, far above the world in orbit. He has always been an AI. He can reach into the damaged ship below him, a little. He's warm and glad: the crew are his people.
 - **2026-10-11:** **You are crew.** Every player is an Old Maker who slept in life support aboard the ship. When the ship was damaged, their life-support pod was ejected and crashed. They wake beside it. Every world tells it the same way.
 - **2026-10-11:** **The Tricorder is how Dave reaches you.** No Tricorder, no Dave. Death is Dave's transporter pulling you home. A Power Pack lets the Tricorder bring your things too. The details are in [Dave, the crew and the Tricorder](#dave-the-crew-and-the-tricorder).
+- **2026-10-11:** **Dave transports you on request** (endgame). With your own Tricorder and a Power Pack, ask Dave to take you somewhere and he does, with your things, using up the pack.
 - **2026-10-11:** **A Tricorder only works for its owner.** Anyone else holding it gets nothing: no arrow, no Dave, just static.
 
 ### The crash site (canon, as jbrain2 builds it)
@@ -176,7 +177,11 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 - The Tricorder comes with you, because it's the beacon he locks onto. That's why it never drops.
 - If you'd lost it (dropped it, stored it, burned it), Dave nearly loses you too. He finds you anyway and beams you a new one when you come back.
 
-**A Power Pack** (nine Eyes of Ender) is the ship's old fuel. With one in your inventory alongside your Tricorder, the Tricorder can make a local field around you. The transporter locks onto the field, so it brings you **and everything you carry** home, and the pack is used up. The same field is what lets the transporter take you to a known place. Both need a Tricorder anywhere on you. *(This is shown in game once jbrain2 builds the Power Pack's uses.)*
+**A Power Pack** (nine Eyes of Ender) is the ship's old fuel. With one in your inventory alongside your own Tricorder, the Tricorder can make a local field around you, and the transporter locks onto it. That does two things, each using up one pack:
+- **When you fall,** it brings you **and everything you carry** home.
+- **Transport on request** (endgame, canon 2026-10-11): ask Dave to take you somewhere, and he transports you there with your things, as long as you have your Tricorder and a Power Pack.
+
+*(Shown in game once jbrain2 builds the Power Pack's uses.)*
 
 **First-time beats.** Each happens once per player per world:
 1. **Waking** (first join): the welcome. You wake beside the pod, and a light falls from the sky. *What's this?* It's your Tricorder, and Dave's voice comes through it.
