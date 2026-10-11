@@ -364,7 +364,7 @@ The pack and the service share one access setting in `variables.json`, e.g. `"as
 - [x] **Player lookups:** anyone can look up any other player with `where_is_player` (decided 2026-10-07): live if online, last known position if offline.
 - [x] **Power Pack effects vs. the read-only rule** (decided 2026-10-11).
   - **Keep-inventory** is a scripted pack effect at death; the AI never triggers it.
-  - **Transport on request** is the AI's one acting tool, because Jeffrey decided Dave transports people when they ask, to one of their own saved places only ([lore](../notes/lore.md#dave-the-crew-and-the-tricorder)). The pack makes the move only if the asker has their own Tricorder and a Power Pack, uses up one pack, and never acts for anyone but the asker. It's endgame, so not in the first build.
+  - **Transport on request** is the AI's one acting tool, because Jeffrey decided Dave transports people when they ask, to one of their own saved places only ([lore](../notes/lore.md#dave-the-crew-and-the-tricorder)). The pack makes the move only if the asker has their own Tricorder and a Power Pack, uses up one pack, and never acts for anyone but the asker. It's endgame, so not in the first build. Built in jbrain2 PR #1662 (2026-10-11); status in the [tracker](../progress/tracker.md).
   - Everything else the AI does stays read-only.
 - [ ] **LLM and service stack:** which model and server on the AI box (it needs OpenAI-style tool calling), and Python or Node for the service?
 - [ ] **Beta APIs:** OK to enable it on the world (shared with the Live API and Canopy; can't be undone)?
