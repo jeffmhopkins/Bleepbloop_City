@@ -13,4 +13,17 @@ They belong to their creators and are **not covered by this repo's [MIT license]
 
 The links go to each creator's page. The exact original posts weren't recorded when the screenshots were shared; if you know them, swap them in here.
 
-Everything else in `assets/` (the storage hall sketch and the flow diagram) is Jeffrey's own or made for this repo.
+## Crash site screenshots (Jeffrey's own)
+
+The four images in [`assets/crash-site/`](assets/crash-site/) are cropped from Jeffrey's own phone screenshots, taken 2026-10-11 on jbrain2's test world. They're his, and they're covered by this repo's [MIT license](LICENSE) like the rest of the repo.
+
+| Image | Shows |
+| --- | --- |
+| [`escape-pod-crater.jpg`](assets/crash-site/escape-pod-crater.jpg) | The escape pod smoking in its crater |
+| [`mothership-overhead.jpg`](assets/crash-site/mothership-overhead.jpg) | The damaged mothership overhead |
+| [`escape-pod-parachute.jpg`](assets/crash-site/escape-pod-parachute.jpg) | The pod and its parachute on the sand |
+| [`tricorder-world-spawn-arrow.jpg`](assets/crash-site/tricorder-world-spawn-arrow.jpg) | The Tricorder in hand with its "World spawn · 17 blocks" arrow |
+
+## Everything else
+
+Everything else in `assets/` (the storage hall sketch and the flow diagram) is Jeffrey's own or made for this repo, under the same MIT license.

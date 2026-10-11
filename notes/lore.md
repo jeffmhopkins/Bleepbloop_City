@@ -166,6 +166,20 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 - **When it appears:** only on a world jbrain2 generates itself (a new world, or a reset with a seed) while the "Crash site at spawn" setting is on (default on). It's built once, on the world's first load.
 - **Never in imported or already-played worlds.** jbrain2 never "arms" an imported or restored world, and passes over any world that has already been played. The PWA's import sheet says it outright: *No crash site is added.*
 
+#### First look (test world, 2026-10-11)
+
+Jeffrey walked the crash site in game as a player on **jbrain2's test world**, not the Bleepbloop_City world (which is imported, so it never gets a wreck). These are cropped from his phone screenshots, with the game's buttons and hotbar cut out. They show what jbrain2 built that day; the build itself still belongs to jbrain2 and may change.
+
+![The black-and-orange escape pod half-buried in a scorched desert crater, smoke rising from it](../assets/crash-site/escape-pod-crater.jpg)
+
+![The battle-damaged grey mothership hanging in the sky overhead, debris drifting from a breach](../assets/crash-site/mothership-overhead.jpg)
+
+![The pod beside its white-and-orange parachute laid out across the sand](../assets/crash-site/escape-pod-parachute.jpg)
+
+The Tricorder worked too. With it in hand, the on-screen arrow pointed to world spawn, which jbrain2 sets at the pod's hatch:
+
+![The Tricorder in the player's hand next to the pod, with the on-screen label "World spawn · 17 blocks"](../assets/crash-site/tricorder-world-spawn-arrow.jpg)
+
 ### Dave, the crew and the Tricorder
 
 **Who's who:**
