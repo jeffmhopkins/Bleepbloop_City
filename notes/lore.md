@@ -181,6 +181,7 @@ This describes what jbrain2 actually builds (PRs [#1621](https://github.com/jeff
 **A Power Pack** (nine Eyes of Ender) is the ship's old fuel. With one in your inventory alongside your own Tricorder, the Tricorder can make a local field around you, and the transporter locks onto it. That does two things, each using up one pack:
 - **When you fall,** it brings you **and everything you carry** home.
 - **Transport on request** (endgame, canon 2026-10-11): ask Dave to take you to **one of your saved places** ("home", "tree farm"…), and he transports you there with your things, as long as you have your Tricorder and a Power Pack. Only places you've already saved; he can't send you somewhere you've never marked (2026-10-11). **Saving a place always marks where you're standing right now**: you can't save a spot by its coordinates, so you can only ever transport to somewhere you've been.
+  - **Saved places are transport beacons** (canon, 2026-10-11). When you save a place, Dave plants a beacon on your Tricorder's signal right where you stand, and that beacon is what his transporter locks onto. Either way of asking works: *"Dave, place a transport beacon here named mine entrance"* or *"Dave, save this place as mine entrance"*. Your beacons also guide your Tricorder's arrow ("take me to mine entrance").
 
 *(Shown in game once jbrain2 builds the Power Pack's uses.)*
 
