@@ -293,7 +293,7 @@ Canon, 2026-10-11. Old Maker doors that fold the way between two places, opened 
 - **Re-aiming.** Within 4 blocks of your gate, ask Dave to point it at another of your saved places. Each re-aim burns one **Power Pack**.
 - **Story beat:** Dave explains wormholes the first time someone plants a seed, once gates are built.
 - **Anyone can step through** (canon, 2026-10-11). Only the one who planted it can open or re-aim it.
-- *Still open (Jeffrey):* whether mining the gate gives the seed back.
+- **Breaking the gate loses the seed** (canon, 2026-10-11): the fold collapses and the seed burns out. While the gate stands, ask Dave and he can re-point it.
 
 ### The No-Spawn Beacon
 
@@ -304,7 +304,7 @@ Canon, 2026-10-11. Old Maker tech for a safe home, even one built out in the sky
 - **What it leaves alone:** players, pets, anything with a name tag or on a lead, animals you've fed or bred, villagers you've traded with, golems (the copper golems are Old Maker helpers), and the great bosses.
 - **Breaking it** switches it off.
 - **Anyone can break it, like any other block** (canon, 2026-10-11), and it drops itself.
-- *Still open (Jeffrey):* whether the Warden is beamed away.
+- **Even the Warden is beamed away** (canon, 2026-10-11).
 
 ### Worlds without a wreck
 
