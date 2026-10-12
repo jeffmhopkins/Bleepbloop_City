@@ -311,10 +311,11 @@ Canon, 2026-10-11. Old Maker tech for a safe home, even one built out in the sky
 
 - **Crafting it.** A **Power Pack** in the middle of a crafting table, surrounded by **8 echo shards**. The shards come from an ancient city, so a quiet base is earned.
 - **What it does.** Placed, it works at once; no need to ask Dave. It covers the **3×3 of chunks** around it (48 × 48 blocks), from bedrock to the sky. Any hostile or neutral mob there, and any wild animal nobody has looked after, is **beamed away by Dave**: it vanishes in a puff, with nothing left behind. Endermen that teleport in go the same way.
-- **What it leaves alone:** players, pets, anything with a name tag or on a lead, animals you've fed or bred, villagers you've traded with, golems (the copper golems are Old Maker helpers), and the great bosses.
+- **What it leaves alone:** players, pets, anything with a name tag or on a lead, animals you've fed or bred, villagers, golems (the copper golems are Old Maker helpers), and the great bosses.
 - **Breaking it** switches it off.
 - **Anyone can break it, like any other block** (canon, 2026-10-11), and it drops itself.
 - **Even the Warden is beamed away** (canon, 2026-10-11).
+- **Villagers are always spared; the wandering trader and his llamas are not** (canon, 2026-10-12). They're visitors, beamed away like wild mobs even after a trade; only a lead or a name tag keeps one. Wild animals go unless someone has fed, bred, leashed or named them.
 
 ### Worlds without a wreck
 
