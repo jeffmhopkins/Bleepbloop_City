@@ -11,7 +11,9 @@ Long before the first villager planted wheat, a people we call **the Old Makers*
 
 One thing of theirs still works. High above the world, past where any ghast can fly, their **satellite** is still in orbit. It's patient and a little damaged, and it's been waiting a very long time for someone to talk to it. Its AI is **Dave** (canon, 2026-10-11), and he's who answers when you type `/ask` (in jbrain2, `/dave`, or `/d` or `/ai` for short; canon 2026-10-12).
 
-**Why they vanished** is left open on purpose. Pick one, mix two, or let the satellite refuse to say until much later:
+**Why they vanished: sealed** (canon, 2026-10-12). Dave doesn't tell, because that part of his memory is sealed: *"That part of my memory is sealed, crew. Maybe one day."* He never guesses or picks one of the ideas below. The answer stays open on purpose until Jeffrey reveals it.
+
+The ideas, kept for that day: Pick one, mix two, or let the satellite refuse to say until much later:
 
 - **They left through the End.** The End cities are their last colony, empty now except for the shulkers they left on guard. The elytra hanging in the end ships is their flight tech, abandoned on the way out.
 - **The sculk took them.** They dug too deep, and what they found under the deepslate spread. The ancient cities are where they made their last stand. The warden is what they left on guard, or what they turned into.
@@ -40,6 +42,8 @@ One idea per ore. Each one leans on something the ore actually does in the game.
 | **Coal** | Their spent fuel. Fossils above Y=0 are laced with coal ore, a hint that something was here even before them. |
 
 ## Their ruins, as real structures
+
+**Canon (2026-10-12):** the table below is what each ruin was, and Dave tells it. The "Not Old Maker-made" line under it is still a suggestion.
 
 Every one of these is a real Bedrock structure you'll run into anyway. The lore just tells you whose it was.
 
@@ -116,6 +120,8 @@ In the story, the satellite's features come back in stages, as it unseals more o
 
 ## Tie-ins to the existing plans
 
+**Canon (2026-10-12):** these tie-ins are canon, and Dave tells them, except the copper castle towers, which stay a suggestion for Jeffrey's own build.
+
 - **Copper golems are Old Maker helpers.** The [golem gallery](../plans/storage-and-sorting.md) under the storage hall dome becomes a place where the Old Makers' little workers sort again. Real mechanics back this up:
   - Fully oxidized golems turn into **statues**, which is the helpers going dormant.
   - Scraping a statue with an axe, or a **lightning strike**, removes oxidation, so the sky literally wakes them.
@@ -155,6 +161,10 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-11:** **A Tricorder only works for its owner.** Anyone else holding it gets nothing: no arrow, no Dave, just static.
 - **2026-10-11:** **Wormholes are one-way doors Dave opens.** Plant a crafted Wormhole Seed in a ring of diamond blocks and ask Dave to open it to one of your saved places. It only goes one way; Dave can re-aim it for a Power Pack. See [Wormhole gates](#wormhole-gates).
 - **2026-10-11:** **The No-Spawn Beacon** keeps a 3×3 of chunks clear: Dave beams away any mob that turns up there. See [The No-Spawn Beacon](#the-no-spawn-beacon).
+- **2026-10-12:** **Players reach Dave with `/dave`**, or `/d` or `/ai` for short.
+- **2026-10-12:** **Their ruins are canon:** trial chambers were proving halls, ancient cities their deepest archive (the warden its guard), trail ruins a road town, strongholds a gate station, End cities their last colony. See [Their ruins](#their-ruins-as-real-structures).
+- **2026-10-12:** **The tie-ins are canon:** copper golems are Old Maker helpers, compasses follow the old ground beacon, the cartography table prints the satellite's view, the spyglass is the one Old Maker instrument you can still make, and amethyst and sculk are the old network. See [Tie-ins](#tie-ins-to-the-existing-plans).
+- **2026-10-12:** **Why the Old Makers vanished is sealed** in Dave's memory. He doesn't tell or guess.
 - **2026-10-11:** **Dave's deep scan recharges.** In game, each crew member gets two deep scans a day (finding the nearest structure, or the nearest ore). Sleeping through the night brings a new day; asking again for something he already found you today is free. See [Talking to it](#talking-to-it).
 
 ### The crash site (canon, as jbrain2 builds it)
