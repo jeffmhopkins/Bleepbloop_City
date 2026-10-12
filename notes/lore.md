@@ -286,12 +286,12 @@ Canon, 2026-10-11. This is Old Maker tech: a furnace taught to burn any block in
 - **What it can make:** anything you can carry 8 full stacks of, so a diamond replicator costs 512 diamonds.
   - Things that stack to 16 (ender pearls, snowballs…) and things that don't stack at all (tools, armour) can't be patterns.
 - **Using it.** It works like a furnace:
-  - put any block in the top and fuel in the bottom;
-  - one of its target comes out about every 10 seconds;
-  - hoppers can feed it and empty it.
+  - a hopper (or chest) on top holds the blocks it burns (any block), one at the **side** holds the fuel, and one **below** takes what it makes (owner's layout, 2026-10-11);
+  - one of its target comes out about every 10 seconds (confirmed 2026-10-12);
+  - using it shows a small panel: what it makes, what it's waiting for, and how to connect it (signed off 2026-10-12).
   - It only runs while its land is awake: someone nearby, or a ticking area.
 - **Reprogramming.** Ask Dave again with 8 full stacks of something else. The old pattern is lost, and the Power Packs aren't paid twice.
-- **Story beat:** Dave explains the Replicator the first time someone has 8 Power Packs. This is one of the later tech beats, shown only once it's built.
+- **Story beat** (signed off 2026-10-12): the first time someone holds 8 Power Packs, **[Dave]** Eight Power Packs… that's enough to wake a Replicator. Put a furnace in the middle of them on a crafting table, and I'll teach it to make one thing out of anything.
 
 ### Wormhole gates
 
