@@ -199,7 +199,7 @@ The Tricorder worked too. With it in hand, the on-screen arrow pointed to world 
 **The Tricorder:**
 - **It's how Dave sees and hears you.** With a Tricorder anywhere on you, `/dave` (or `/d`, `/ai`) reaches him. Without one there's only static, and Dave can't answer.
 - **Hold it to follow its arrow.** The waypoint arrow only shows while it's in your hand, and only if it's yours.
-- **It only works for its owner** (canon, 2026-10-11). *"BlockyFox's Tricorder"* works for BlockyFox only. Anyone else holding or carrying it gets nothing: no arrow, no Dave, just static. A sibling who picks up your Tricorder can't follow your arrow or reach Dave with it.
+- **It only works for its owner** (canon, 2026-10-11). *"BlockyFox's Tricorder"* works for BlockyFox only. Since it never leaves you (below), nobody else can normally hold it; the static a copy gives anyone else (*"…static… that one isn't tuned to you."*) is only a safety net, for a Tricorder that turns up some other way, like a command. Dave doesn't bring it up (2026-10-12).
 - **It never leaves you** (canon, 2026-10-11). It's bound to you: it can't be dropped, thrown, stored in a chest or taken from your inventory, and it stays with you when you die.
 - **Dave beams it down when you wake.** That's the first time, in the welcome. After that, he checks every time you wake, whether you're joining or coming back from a death. If your Tricorder is somehow missing, he beams you a new one, and any stray copy stops working.
 
