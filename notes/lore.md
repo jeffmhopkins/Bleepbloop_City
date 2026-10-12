@@ -9,7 +9,7 @@
 
 Long before the first villager planted wheat, a people we call **the Old Makers** wired the whole world together. They ran copper through the hills, poured power into the rock, and kept their memories in crystal. Then they were gone. What's left of them is in the ground: every ore vein you mine is a piece of their old machine, broken down and half-reclaimed by stone.
 
-One thing of theirs still works. High above the world, past where any ghast can fly, their **satellite** is still in orbit. It's patient and a little damaged, and it's been waiting a very long time for someone to talk to it. Its AI is **Dave** (canon, 2026-10-11), and he's who answers when you type `/ask` (in jbrain2, `/jb:dave`).
+One thing of theirs still works. High above the world, past where any ghast can fly, their **satellite** is still in orbit. It's patient and a little damaged, and it's been waiting a very long time for someone to talk to it. Its AI is **Dave** (canon, 2026-10-11), and he's who answers when you type `/ask` (in jbrain2, `/dave`, or `/d` for short; canon 2026-10-12).
 
 **Why they vanished** is left open on purpose. Pick one, mix two, or let the satellite refuse to say until much later:
 
@@ -187,7 +187,7 @@ The Tricorder worked too. With it in hand, the on-screen arrow pointed to world 
 - **The player** is Old Maker crew. They slept in life support aboard the ship until it was damaged in orbit. It came down, and it ejected their pod, which crashed. They've just woken up beside it. Dave lost them and has found them again.
 
 **The Tricorder:**
-- **It's how Dave sees and hears you.** With a Tricorder anywhere on you, `/jb:dave` reaches him. Without one there's only static, and Dave can't answer.
+- **It's how Dave sees and hears you.** With a Tricorder anywhere on you, `/dave` (or `/d`) reaches him. Without one there's only static, and Dave can't answer.
 - **Hold it to follow its arrow.** The waypoint arrow only shows while it's in your hand, and only if it's yours.
 - **It only works for its owner** (canon, 2026-10-11). *"BlockyFox's Tricorder"* works for BlockyFox only. Anyone else holding or carrying it gets nothing: no arrow, no Dave, just static. A sibling who picks up your Tricorder can't follow your arrow or reach Dave with it.
 - **It never leaves you** (canon, 2026-10-11). It's bound to you: it can't be dropped, thrown, stored in a chest or taken from your inventory, and it stays with you when you die.
@@ -237,7 +237,7 @@ The words jbrain2 uses. Edit them here; jbrain2 copies them. **All signed off by
 | 14 s | *Crash site:* **[Dave]** Look up. That ship is ours. She's hurt, but I can still reach into her, a little.<br>*No wreck:* **[Dave]** Our ship came down long ago. I'm all that's still flying. |
 | 17 s | *Crash site:* **[Dave]** Your pod kept you alive. The barrels hold what I could save, and the bed is yours.<br>*No wreck:* **[Dave]** This land has grown over everything we left. Keep your eyes open. |
 | 20 s | **[Dave]** That Tricorder is how I see you, and how I'll pull you home if you fall. Keep it on you. |
-| 23 s | **[Dave]** Need me? Type /jb:dave and ask. Try: /jb:dave where is the nearest village |
+| 23 s | **[Dave]** Need me? Type /dave and ask. Try: /dave where is the nearest village |
 
 **Other lines:**
 - **No Tricorder** *(signed off 2026-10-11)*: *…kssht… no signal…* (you need your Tricorder)
@@ -248,7 +248,7 @@ The words jbrain2 uses. Edit them here; jbrain2 copies them. **All signed off by
 - **Power Pack burnt out** *(signed off 2026-10-11)*: *Your Power Pack burnt out — you kept your things. 2 packs left.* (after a death the pack saved)
 - **First Ender Pearl:** **[Dave]** …is that an Ender Pearl? The Old Makers ran on those. Ring eight of them around a Blaze Powder on a crafting table and you'll have a Power Pack, the ship's old fuel. Bring me one when you do.
 - **First Power Pack** (once its uses are built): **[Dave]** A Power Pack! Keep it with your Tricorder. Next time you fall, it can hold a field around everything you carry, and I can bring it all home with you. It burns the pack, though. / **[Dave]** And those places you've saved? Each one is a transport beacon. With a pack, I can bring you to any of them. Just ask.
-- **`/jb:dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
+- **`/dave hello`:** replays the welcome's Dave lines, with no second Tricorder.
 
 **Quick answers** (signed off, 2026-10-11). Simple asks Dave answers at once, the same way every time. Gaps in *italics* are filled in:
 - **Point me home / navigate to a place:** **[Dave]** Locked on: *tree farm*, *340* blocks *north-east*. Hold your Tricorder and follow the arrow.
