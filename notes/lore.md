@@ -137,7 +137,7 @@ In the story, the satellite's features come back in stages, as it unseals more o
 
 ## Open questions for Jeffrey
 
-- [ ] **What happened to the Old Makers?** The End, the sculk, the Nether, becoming villagers, or sealed until the end? (See [Core premise](#core-premise).)
+- [x] **What happened to the Old Makers?** The End, the sculk, the Nether, becoming villagers, or sealed until the end? (See [Core premise](#core-premise).) Sealed for now (2026-10-12): Dave never tells or guesses, and Jeffrey reveals it later.
 - [x] **Is the satellite friendly?** Yes (2026-10-11). Dave is the crew's own AI, glad to have them back, and he watches over them. Why his oldest map is torn exactly where the strongholds and Nether forts should be is still open, and could be a clue for later.
 - [ ] **Villager connection:** are villagers the Old Makers' descendants who forgot, or just later settlers? Are illagers a group that rejected the satellite?
 - [x] **Names:** the **Old Makers**; the satellite's AI is **Dave** (2026-10-11).
