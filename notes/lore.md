@@ -67,6 +67,8 @@ Every one of these is a real Bedrock structure you'll run into anyway. The lore 
 
 **The deep scan** (canon, 2026-10-11). Finding something new, like the nearest village or the nearest diamond, takes the satellite's deep scan, and it has to recharge. In game, each crew member gets **two deep scans a day**: a new day (sleeping through the night counts) brings two more. Asking again for something Dave already found you today is free, and so is everything that isn't a search: what's at a spot, your saved places, where the others are. Out of scans, Dave says so: *"…the deep scan needs to recharge, crew. Ask me again tomorrow."* Jeffrey's own chats with Dave outside the game have no limit.
 
+**The Tricorder's short-range scan** (canon, 2026-10-12). Up close, Dave doesn't need the satellite: through your Tricorder he can look inside the chests, barrels, shulker boxes and item frames within about **3 chunks (48 blocks)** of you, and spot what's lying on the ground, **for free**. Looking farther, across the whole world, takes a **deep scan**. Dave can look in any chest (chests have no owner), but never in another player's own inventory or ender chest. His memory of the wider world runs a little behind, so he says so: *"…as of a few minutes ago."* Unopened loot chests stay a mystery until someone opens them.
+
 ### Three ways it knows the world
 
 These are the real limits dressed as lore. The satellite knows the world in three different ways, and each one matches how the tools actually work.
@@ -164,6 +166,7 @@ As Jeffrey picks ideas, list them here with the date. Anything marked *(proposal
 - **2026-10-12:** **Players reach Dave with `/dave`**, or `/d` or `/ai` for short.
 - **2026-10-12:** **Their ruins are canon:** trial chambers were proving halls, ancient cities their deepest archive (the warden its guard), trail ruins a road town, strongholds a gate station, End cities their last colony. See [Their ruins](#their-ruins-as-real-structures).
 - **2026-10-12:** **The tie-ins are canon:** copper golems are Old Maker helpers, compasses follow the old ground beacon, the cartography table prints the satellite's view, the spyglass is the one Old Maker instrument you can still make, and amethyst and sculk are the old network. See [Tie-ins](#tie-ins-to-the-existing-plans).
+- **2026-10-12:** **Dave can look inside chests.** Within 3 chunks it's the Tricorder's free short-range scan; farther is a deep scan. Any chest, never another player's own inventory. See [Talking to it](#talking-to-it).
 - **2026-10-12:** **Why the Old Makers vanished is sealed** in Dave's memory. He doesn't tell or guess.
 - **2026-10-11:** **Dave's deep scan recharges.** In game, each crew member gets two deep scans a day (finding the nearest structure, or the nearest ore). Sleeping through the night brings a new day; asking again for something he already found you today is free. See [Talking to it](#talking-to-it).
 
