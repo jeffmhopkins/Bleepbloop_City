@@ -301,7 +301,14 @@ Canon, 2026-10-11. Old Maker doors that fold the way between two places, opened 
 - **Opening it.** Standing at your gate, ask Dave: *"Dave, open the wormhole to tree farm."* He opens it to **one of your saved places**, the same places he can transport you to, and only ones you've marked yourself.
 - **One way only.** Step in and you come out at the saved place, but nothing comes back through. To get home the same way, build a second gate there. That's the cost: every round trip is two seeds and two diamond rings.
 - **Re-aiming.** Within 4 blocks of your gate, ask Dave to point it at another of your saved places. Each re-aim burns one **Power Pack**.
-- **Story beat:** Dave explains wormholes the first time someone plants a seed, once gates are built.
+- **Story beat** (signed off 2026-10-12): the first time someone plants a seed, **[Dave]** …a fold, held open. Stand close and tell me where it should lead.
+- **What the gate says** (signed off 2026-10-12):
+  - Planted: *The gate wakes, but stays dark. Ask Dave to open it to one of your saved places.*
+  - Wrong ring: *The seed needs a ring of diamond blocks shaped like a Nether portal: 4 wide, 5 tall, empty inside.*
+  - Ring already used: *That ring already holds a gate.*
+  - Broken (to the one who planted it): *The gate collapses. Its seed burns out.*
+  - Landing blocked: *The way to* tree farm *is blocked on the other side.*
+- **Cost** (confirmed 2026-10-12): the seed (a Power Pack), a ring of 10 to 14 blocks of diamond, the first opening free, and one Power Pack per re-aim.
 - **Anyone can step through** (canon, 2026-10-11). Only the one who planted it can open or re-aim it.
 - **Breaking the gate loses the seed** (canon, 2026-10-11): the fold collapses and the seed burns out. While the gate stands, ask Dave and he can re-point it.
 
