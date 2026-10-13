@@ -240,7 +240,7 @@ The Tricorder worked too. With it in hand, the on-screen arrow pointed to world 
 
 The words jbrain2 uses. Edit them here; jbrain2 copies them. **All signed off by Jeffrey** (2026-10-11): the welcome, the other lines, the quick answers and the everyday examples.
 
-**The welcome** (about 25 s, private to the player):
+**The welcome** (about 40 s, private to the player):
 
 | Time | What happens |
 | --- | --- |
