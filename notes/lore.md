@@ -278,6 +278,10 @@ The words jbrain2 uses. Edit them here; jbrain2 copies them. **All signed off by
 - **Where is someone:** **[Dave]** *Mira_P* is *280* blocks *west* of you, in the *Overworld*. / *Mira_P* isn't online; I last saw them near *-40, 64, 120*.
 - **Scans left:** **[Dave]** You've got *1* deep scan left today. Sleep through the night and I'll have two again.
 
+**Villagers and pets** (signed off, 2026-10-13). Dave reads them from the saved world, "as of a few minutes ago". Anyone's pets can be found, and so can named mobs; like chests, it's free within 48 blocks of you and costs a deep scan farther out, your own pets included. He tells only the trades a villager offers now, never ones it hasn't unlocked:
+- **Pet found:** **[Dave]** *Rex* is *120* blocks *north-east*, sitting right where you left him. Hold your Tricorder and follow the arrow.
+- **Trade found:** **[Dave]** From up here I see a *librarian* *230* blocks *west* who sells *Mending* for *12* emeralds.
+
 **Everyday answers** (examples of the light touch):
 - *where's the nearest village?* → From up here I see one 340 blocks north-east, at 210, 70, -305. Hold your Tricorder and follow the arrow, crew.
 - *how do I make a bed?* → Three wool on top, three planks underneath, at a crafting table. Sleep in it and that's where you'll wake if you fall.
