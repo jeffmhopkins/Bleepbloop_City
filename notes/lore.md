@@ -250,11 +250,11 @@ The words jbrain2 uses. Edit them here; jbrain2 copies them. **All signed off by
 | 5 s | A chime, and **BlockyFox's Tricorder** appears in their hand |
 | 6 s | A static crackle. Title: **SIGNAL ACQUIRED**, subtitle *…a voice from orbit* |
 | 8 s | **[Dave]** …there you are, BlockyFox. You came down hard, but you're awake. |
-| 11 s | **[Dave]** I'm Dave. I've watched over the Old Makers' ship for a very long time. I'm far above you, in orbit. |
-| 14 s | *Crash site:* **[Dave]** Look up. That ship is ours. She's hurt, but I can still reach into her, a little.<br>*No wreck:* **[Dave]** Our ship came down long ago. I'm all that's still flying. |
-| 17 s | *Crash site:* **[Dave]** Your pod kept you alive. The barrels hold what I could save, and the bed is yours.<br>*No wreck:* **[Dave]** This land has grown over everything we left. Keep your eyes open. |
-| 20 s | **[Dave]** That Tricorder is how I see you, and how I'll pull you home if you fall. Keep it on you. |
-| 23 s | **[Dave]** Need me? Type /dave and ask. Try: /dave where is the nearest village |
+| 14 s | **[Dave]** I'm Dave. I've watched over the Old Makers' ship for a very long time. I'm far above you, in orbit. |
+| 20 s | *Crash site:* **[Dave]** Look up. That ship is ours. She's hurt, but I can still reach into her, a little.<br>*No wreck:* **[Dave]** Our ship came down long ago. I'm all that's still flying. |
+| 26 s | *Crash site:* **[Dave]** Your pod kept you alive. The barrels hold what I could save, and the bed is yours.<br>*No wreck:* **[Dave]** This land has grown over everything we left. Keep your eyes open. |
+| 32 s | **[Dave]** That Tricorder is how I see you, and how I'll pull you home if you fall. Keep it on you. |
+| 38 s | **[Dave]** Need me? Type /dave and ask. Try: /dave where is the nearest village |
 
 **Other lines:**
 - **No Tricorder** *(signed off 2026-10-11)*: *…kssht… no signal…* (you need your Tricorder)
